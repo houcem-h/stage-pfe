@@ -13,14 +13,15 @@ class CreateInternshipsTable extends Migration
      */
     public function up()
     {
+        //Stage
         Schema::create('internships', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('student');
             $table->date('start_date');
             $table->date('end_date');
             $table->enum('type',['init','perf','pfe']);
-            $table->unsignedInteger('framer')->nullable();
-            $table->unsignedInteger('company_framer');
+            $table->unsignedInteger('framer')->nullable();//encadreur
+            $table->unsignedInteger('company_framer');//encadreur societé
             $table->timestamps();
             $table->unsignedInteger('created_by')->nullable();
             $table->unsignedInteger('updated_by')->nullable();

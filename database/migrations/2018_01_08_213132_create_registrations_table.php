@@ -13,6 +13,7 @@ class CreateRegistrationsTable extends Migration
      */
     public function up()
     {
+        // Inscription
         Schema::create('registrations', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('student');
