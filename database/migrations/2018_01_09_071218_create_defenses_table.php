@@ -13,6 +13,7 @@ class CreateDefensesTable extends Migration
      */
     public function up()
     {
+        //Soutenances
         Schema::create('defenses', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date_d');

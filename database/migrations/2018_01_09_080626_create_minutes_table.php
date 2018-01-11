@@ -13,6 +13,7 @@ class CreateMinutesTable extends Migration
      */
     public function up()
     {
+        //PV: Procès Verbal
         Schema::create('minutes', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('defense');

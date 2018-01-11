@@ -18,6 +18,6 @@ class Registration extends Model
 
     public function internship()
     {
-        return $this->hasMany('App\Registration');
+        return $this->hasMany('App\Internship');
     }
 }
