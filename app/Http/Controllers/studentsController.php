@@ -16,7 +16,7 @@ class studentsController extends Controller
     public function show_students(){
         $all_students = User::where("role",0)->simplePaginate(6);
 
-        return view("student.student")->with("students",$all_students);
+        return view("student-admin.student")->with("students",$all_students);
     }
 
     //return the student that has a group
@@ -62,7 +62,7 @@ class studentsController extends Controller
       //// the part "group edit" should be availble before February
       $Current_month = Carbon::now();
 
-      return view("student.update")->with([
+      return view("student-admin.update")->with([
         "student" => $student,
         "hasGroup" => $hasGroup,
         "session" => $session,
