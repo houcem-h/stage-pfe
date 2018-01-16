@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Group;
 use App\Registration;
-class groupController extends Controller
+class groupsController extends Controller
 {
     //show the blade
     public function index(){

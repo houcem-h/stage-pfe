@@ -5,24 +5,22 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+                <div class="panel-heading">Créer un compte</div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
 
-                        <!-- First Name -->
+                        <!-- User Profile Role -->
                         <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
-                                <label for="type" class="col-md-4 control-label">Type</label>
+                                <label for="type" class="col-md-4 control-label">Rôle</label>
     
                                 <div class="col-md-6">
                                         <div class="radio">
-                                                <label><input type="radio" name="role" value="0" checked>Student</label>&nbsp;
-                                                <label><input type="radio" name="role" value="1">Teacher</label>&nbsp;
-                                                <label><input type="radio" name="role" value="2">Admin</label>&nbsp;
-                                        </div>
-                                        
+                                                <label><input type="radio" name="role" value="0" checked>Etudiant</label>&nbsp;&nbsp; 
+                                                <label><input type="radio" name="role" value="1">Enseignant</label>&nbsp;                                                
+                                        </div>                                        
                                 </div>
                         </div>
 
@@ -31,10 +29,10 @@
 
                         <!-- First Name -->
                         <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">
-                            <label for="firstname" class="col-md-4 control-label">First Name</label>
+                            <label for="firstname" class="col-md-4 control-label">Prénom</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="firstname" value="{{ old('firstname') }}" required autofocus>
+                                <input id="name" type="text" class="form-control" name="firstname" value="{{ old('firstname') }}" placeholder="Saisir votre prénom ici" required autofocus>
 
                                 @if ($errors->has('firstname'))
                                     <span class="help-block">
@@ -45,10 +43,10 @@
                         </div>
                         <!-- Last Name -->
                         <div class="form-group{{ $errors->has('lastname') ? ' has-error' : '' }}">
-                            <label for="lastname" class="col-md-4 control-label">Last Name</label>
+                            <label for="lastname" class="col-md-4 control-label">Nom</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" required autofocus>
+                                <input id="name" type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" placeholder="Saisir votre nom de famille ici" required autofocus>
 
                                 @if ($errors->has('lastname'))
                                     <span class="help-block">
@@ -60,10 +58,10 @@
 
                         <!-- Email Adresse  -->
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                                <label for="email" class="col-md-4 control-label">Addresse E-Mail</label>
     
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="personne@exemple.dom" required>
     
                                     @if ($errors->has('email'))
                                         <span class="help-block">
@@ -75,18 +73,18 @@
 
                         <!-- Birthdate -->
                         <div class="form-group{{ $errors->has('birthdate') ? ' has-error' : '' }}">
-                                <label for="birthdate" class="col-md-4 control-label">Birthdate</label>
+                                <label for="birthdate" class="col-md-4 control-label">Date de Naissance</label>
                                 <div class="col-md-6">
-                                        <input class="form-control" name="birthdate" type="text" id="datepicker" value="{{ old('birthdate') }}">
+                                        <input class="form-control" name="birthdate" type="date" id="datepicker" value="{{ old('birthdate') }}">
                                 </div>
                             </div>
                         <!-- CIN -->
 
                         <div class="form-group{{ $errors->has('cin') ? ' has-error' : '' }}">
-                                <label for="cin" class="col-md-4 control-label">CIN</label>
+                                <label for="cin" class="col-md-4 control-label">N° CIN</label>
     
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="cin" value="{{ old('cin') }}" required autofocus>
+                                    <input id="name" type="text" class="form-control" name="cin" value="{{ old('cin') }}" placeholder="12345678" required autofocus>
     
                                     @if ($errors->has('cin'))
                                         <span class="help-block">
@@ -98,10 +96,10 @@
 
                         <!-- Phone -->
                         <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                                <label for="phone" class="col-md-4 control-label">Phone</label>
+                                <label for="phone" class="col-md-4 control-label">Téléphone</label>
     
                                 <div class="col-md-6">
-                                    <input id="name" type="number" class="form-control" name="phone" value="{{ old('phone') }}" required autofocus>
+                                    <input id="name" type="number" class="form-control" name="phone" value="{{ old('phone') }}" placeholder="(+216)" required autofocus>
     
                                     @if ($errors->has('phone'))
                                         <span class="help-block">
@@ -112,7 +110,7 @@
                         </div>
 
                         <!-- Password  -->
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        {{--  <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
@@ -124,16 +122,16 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>
+                        </div>  --}}
 
                         <!-- Confirm Pass  -->
-                        <div class="form-group">
+                        {{--  <div class="form-group">
                             <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
-                        </div>
+                        </div>  --}}
                         <!-- submit  -->
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
