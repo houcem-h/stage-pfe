@@ -17,6 +17,9 @@
 
 	<!-- Main styles for this application -->
 	<link href="{{ asset('dashboard_assets/css/style.css') }}" rel="stylesheet">
+	{{--  AMINE BEJAOUI MODIFICATIONS--}}
+	<link href="{{ asset('dashboard_assets/css/custom_nav_dashboard.css') }}" rel="stylesheet">
+	{{--  END MODIFICATIONS--}}
 	<!-- Styles required by this views -->
 	<link href="{{ asset('dashboard_assets/node_modules/calendar/fullcalendar.min.css') }}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -40,8 +43,12 @@
 		</button>
 
 
-		<ul class="nav navbar-nav ml-auto">
-
+		<ul class="nav navbar-nav ml-auto" id="custom">
+			{{--  AMINE BEJAOUI MODIFICATIONS --}}
+			<li><a href="{{route('group')}}">Group list</a></li>
+			<li><a href="{{route('show_blade_add')}}">Add group</a></li>
+      <li><a href="{{route('show_all_students')}}">List of students</a></li>
+			{{--  END MODIFICATIONS --}}
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 					<img src="{{ asset('dashboard_assets/img/avatars/user.png') }}" class="img-avatar" alt="admin@stage.com">
@@ -77,9 +84,9 @@
 					<br>
 					<div class="sidebar-header">
 						<img src="http://stage.pfe/dashboard_assets/img/avatars/user.png" width="35%" class="img-avatar" alt="Avatar">
-						
+
 						<div>
-								
+
 							<strong>{{ Auth::user()->firstname }}  {{ Auth::user()->lastname }} </strong>
 						</div>
 						<div class="text-muted">
@@ -186,7 +193,7 @@
 									<a class="nav-link" href="{{ route('interships_pfe')}}">
 										<i class="kk kk-parallel_tasks"></i>PFE</a>
 								</li>
-	
+
 							</ul>
 						</li>
 					<li class="nav-item">
@@ -198,7 +205,7 @@
 						<a class="nav-link" href="#">
 							<i class="kk kk-piechart"></i> Reports</a>
 					</li>
-					
+
 					<li class="divider"></li>
 					<li class="nav-title">
 						Extras

@@ -1,0 +1,136 @@
+@import "app.css";
+
+/**CUSTON NAVBAR*/
+
+.navbar{
+  background: #465F78!important;
+  border: none!important;
+  box-shadow: -5px 8px 8px -3px rgba(122,105,122,0.66)!important;
+   border-radius: 0
+}
+.navbar  a{
+  color: white!important;
+}
+
+/**END NAVBAR*/
+.group,.student{
+  background-color: #465f78;
+  height: auto;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease 0s;
+  color: white;
+  border-radius: 6px
+}
+
+.group:hover{
+    -webkit-box-shadow: 7px 6px 5px -3px rgba(122,105,122,0.66);
+    -moz-box-shadow: 7px 6px 5px -3px rgba(122,105,122,0.66);
+     box-shadow: 7px 6px 5px -3px rgba(122,105,122,0.66);
+}
+
+.actions{
+  margin-bottom: 10px!important;
+  border-top: 1px solid lightgrey;
+  padding-top: 10px!important
+}
+
+.update_group,#add,#save_group,.update_student,.save_update_group_student,#save_student{
+  background: #26a69a!important;
+  border: none!important;
+  border-radius: 0
+}
+.delete_group,.delete_student{
+  background: #da4e4e!important;
+  border: none!important;
+  border-radius: 0
+}
+.toggle-modal-show{
+  color: #59c3ff
+}
+.toggle-modal-show:hover{
+    color:#59c3ff;
+}
+.toggle-modal-show:focus{
+      text-decoration: none;
+}
+/**CUTSOM FROM ADD GROUP**/
+.form,.form_update,.student,.form_update_student,.save_update_studen_group {
+  background: #465F78;
+  color: white;
+  height: 320px;
+  transition: all 0.3s ease 0s;
+  border-radius: 6px
+}
+.form:hover{
+  -webkit-box-shadow: 7px 6px 5px -3px rgba(122,105,122,0.66);
+  -moz-box-shadow: 7px 6px 5px -3px rgba(122,105,122,0.66);
+   box-shadow: 7px 6px 5px -3px rgba(122,105,122,0.66);
+}
+#add,#save_group{
+      font-size: large;
+}
+a:hover{
+  text-decoration: none;
+}
+.name_span_add_err{
+  color: #ffc7c6!important
+}
+
+/*** CUSTOM FROM UPDATE GROUP ***/
+.danger,#stream_span_err,#nom_span_err{
+  color: #ffc7c6!important
+}
+
+.form_update{
+  height: 400px
+}
+
+/*CUSTOM SHOW ALL STUDENTS*/
+.student{
+  margin-bottom: 40px;
+  margin-right: 40px;
+  width: 300px;
+  height: 300px;
+  transition: all 0.3s ease 0s;
+  border-radius: 6px
+}
+.student:hover{
+  -webkit-box-shadow: 7px 6px 5px -3px rgba(122,105,122,0.66);
+  -moz-box-shadow: 7px 6px 5px -3px rgba(122,105,122,0.66);
+   box-shadow: 7px 6px 5px -3px rgba(122,105,122,0.66);
+}
+
+.student .actions{
+  margin-top: 60px
+}
+
+.items{
+  list-style: none;
+  margin-left: -36px;
+}
+.items li{
+  margin-bottom: 1px
+}
+
+
+.form_update_student,.save_update_studen_group{
+  height: auto;
+}
+.help-block{
+  color: #ffc7c6!important
+}
+
+.Dispo_group{
+  float: left;
+  width: 60px;
+  background: red;
+  text-align: center;
+  margin-right: 10px
+}
+
+.save_update_group_student{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: white
+}
