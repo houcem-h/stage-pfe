@@ -1,0 +1,19 @@
+header{
+  background: #465F78!important;
+  border: none!important;
+  box-shadow: -5px 8px 8px -3px rgba(122,105,122,0.66)!important;
+  border-radius: 0;
+}
+
+.navbar  a{
+  color: white!important
+}
+.navbar li{
+  margin-right: 10px;
+}
+.navbar a:hover{
+  text-decoration: none;
+}
+.nav-item .dropdown-menu a{
+  color: #465F78!important;
+}

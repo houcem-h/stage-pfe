@@ -83,3 +83,36 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Adem Routes //
 
+
+
+/******************************************** AMINE BEJAOUI ROUTES ***************************************************/
+/******* route group-admin *******/
+//GET
+Route::get('/group',"groupController@index")->name('group');
+Route::get("Show_blade_update/{id}","groupController@showFormUpdate");
+Route::get("Show_blade_delete/{id}","groupController@showFormDelete");
+Route::get('show_blade_add',"groupController@showFormAdd")->name("show_blade_add");
+
+
+
+//post (AJAX)
+Route::post('saveUpdateGroup',"groupController@saveUpdateGroup")->name("saveUpdateGroup");
+Route::post('saveDeleteGroup/{id}',"groupController@saveDeleteGroup")->name("saveDeleteGroup");
+Route::post('add_group',"groupController@add_group")->name("add_group");
+Route::post('check_group','groupController@check_group')->name("check_group");
+Route::post("get_students","groupController@get_students")->name("get_students"); //for group
+
+
+/******* route student-admin *******/
+//GET
+Route::get("show_students","studentsController@show_students")->name("show_all_students");
+Route::get("Show_blade_update_student/{id}","studentsController@show_update")->name("Show_blade_update_student");
+
+//post (AJAX)
+Route::post("check_group_name","studentsController@check_groupName")->name("check_group_name");
+Route::post("get_group_name","studentsController@get_groupName")->name("get_group_name");
+//post (form)
+Route::post("save_updates/{id}","studentsController@save_updates")->name("save_updates");
+Route::post("update_Students_Group","studentsController@save_updated_group")->name("update_Students_Group");
+/******************************************** END  ***************************************************/
+

@@ -12,78 +12,42 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+@include('../navbar/navbar')
+@yield('content')
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        Stage PFE
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('connect') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                   Hello! {{ Auth::user()->firstname }}  {{ Auth::user()->lastname }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        @yield('content')
-    </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-    <script>
-    $(function() {
-      $( "#datepicker" ).datepicker({dateFormat: 'yy-mm-dd' });
-    });
-    </script>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
+<!-- <script src="//code.jquery.com/jquery-1.10.2.js"></script> -->
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script>
+$(function() {
+  $( "#datepicker" ).datepicker({dateFormat: 'yy-mm-dd' });
+});
+</script>
+<!-- SCRIPTS AMINE BEJOUI-->
+<script src="{{ asset('js/jquery.js')}}"></script>
+<script src="{{ asset('js/app.js')}}"></script>
+<script src="{{ asset('js/sweetalert.min.js')}}"></script>
+<script src="{{ asset('js/script_group.js')}}"></script>
+<script src="{{ asset('js/script_students.js')}}"></script>
+<script>
+var url_check_group_name = "{{ route('check_group_name') }}";
+var url_get_group_name = "{{ route('get_group_name')}}";
+var add_group = "{{ route('add_group') }}";
+var url_save_update = "{{ route('saveUpdateGroup') }}";
+var url_check_id_group = "{{route('check_group')}}";
+//for location.href
+var url_group = "{{ route('group')}}";
+var url_get_students = "{{ route('get_students') }}";
+var url_update_group_student = "{{ route('update_Students_Group')}}";
+var success;
+var token = "{{ Session::token() }}";
+</script>
 </body>
 </html>
