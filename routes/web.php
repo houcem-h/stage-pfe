@@ -17,36 +17,36 @@ Route::get('/', function () {
 
 
 
-// Adem Routes //
+//********************************************* Routes by Adem-kk *************************************//
 
-//dashboard
+//********dashboard
 Route::get('/dashboard', function () {
     return View('dashboards.admin.dash');
 })->middleware("auth")->name('dash');
 
-//login
+//********login
 Route::get('/connect', function () {
     return View('dashboards.admin.login');
 })->name('connect');
 
 /************* USERS **************/
 
-//all users
+//*****all users
 Route::get('/dashboard/Users/All', function () {
     return View('dashboards.admin.allusers');
 })->name('Allusers');
 
-//only students
+//*****only students
 Route::get('/dashboard/Users/Students', function () {
     return View('dashboards.admin.students');
 })->name('students');
 
-//only teachers
+//*****only teachers
 Route::get('/dashboard/Users/Teachers', function () {
     return View('dashboards.admin.teachers');
 })->name('teachers');
 
-//only admins
+//*****only admins
 Route::get('/dashboard/Users/Admins', function () {
     return View('dashboards.admin.admins');
 })->name('admins');
@@ -56,22 +56,22 @@ Route::get('/dashboard/Users/Admins', function () {
 
 /************* Interships **************/
 
-//All Interships
+//*******All Interships
 Route::get('/dashboard/Interships/all', function () {
     return View('dashboards.admin.interships_all');
 })->name('interships_all');
 
-//Initiation
+//*******Initiation
 Route::get('/dashboard/Interships/init', function () {
     return View('dashboards.admin.interships_init');
 })->name('interships_init');
 
-//Perfectionnement
+//*******Perfectionnement
 Route::get('/dashboard/Interships/perf', function () {
     return View('dashboards.admin.interships_perf');
 })->name('interships_perf');
 
-//PFE
+//*******PFE
 Route::get('/dashboard/Interships/pfe', function () {
     return View('dashboards.admin.interships_pfe');
 })->name('interships_pfe');
@@ -81,26 +81,26 @@ Route::get('/dashboard/Interships/pfe', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Adem Routes //
+//******************************************End of Routes by Adem-kk *************************************************//
 
 
 
-/******************************************** AMINE BEJAOUI ROUTES ***************************************************/
+/******************************************** ROUTES BY AMINE BEJAOUI ***************************************************/
 /******* route group-admin *******/
 //GET
-Route::get('/group',"groupController@index")->name('group');
-Route::get("Show_blade_update/{id}","groupController@showFormUpdate");
-Route::get("Show_blade_delete/{id}","groupController@showFormDelete");
-Route::get('show_blade_add',"groupController@showFormAdd")->name("show_blade_add");
+Route::get('/group',"groupsController@index")->name('group');
+Route::get("Show_blade_update/{id}","groupsController@showFormUpdate");
+Route::get("Show_blade_delete/{id}","groupsController@showFormDelete");
+Route::get('show_blade_add',"groupsController@showFormAdd")->name("show_blade_add");
 
 
 
 //post (AJAX)
-Route::post('saveUpdateGroup',"groupController@saveUpdateGroup")->name("saveUpdateGroup");
-Route::post('saveDeleteGroup/{id}',"groupController@saveDeleteGroup")->name("saveDeleteGroup");
-Route::post('add_group',"groupController@add_group")->name("add_group");
-Route::post('check_group','groupController@check_group')->name("check_group");
-Route::post("get_students","groupController@get_students")->name("get_students"); //for group
+Route::post('saveUpdateGroup',"groupsController@saveUpdateGroup")->name("saveUpdateGroup");
+Route::post('saveDeleteGroup/{id}',"groupsController@saveDeleteGroup")->name("saveDeleteGroup");
+Route::post('add_group',"groupsController@add_group")->name("add_group");
+Route::post('check_group','groupsController@check_group')->name("check_group");
+Route::post("get_students","groupsController@get_students")->name("get_students"); //for group
 
 
 /******* route student-admin *******/
@@ -114,5 +114,5 @@ Route::post("get_group_name","studentsController@get_groupName")->name("get_grou
 //post (form)
 Route::post("save_updates/{id}","studentsController@save_updates")->name("save_updates");
 Route::post("update_Students_Group","studentsController@save_updated_group")->name("update_Students_Group");
-/******************************************** END  ***************************************************/
+/******************************************** END OF ROUTES BY AMINE BEJAOUI ***************************************************/
 
