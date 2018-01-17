@@ -13,6 +13,16 @@
       <li><a href="{{route('group')}}">Group list</a></li>
       <li><a href="{{route('show_blade_add')}}">Add group</a></li>
       <li><a href="{{route('show_all_students')}}">List of students</a></li>
+      <li>
+         <a href="{{ route('logout') }}"
+             onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();">
+                 Logout
+         </a>
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+             {{ csrf_field() }}
+         </form>
+      </li>
     </ul>
     </div><!-- /.navbar-collapse -->
   </div>

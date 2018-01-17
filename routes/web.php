@@ -116,3 +116,21 @@ Route::post("save_updates/{id}","studentsController@save_updates")->name("save_u
 Route::post("update_Students_Group","studentsController@save_updated_group")->name("update_Students_Group");
 /******************************************** END OF ROUTES BY AMINE BEJAOUI ***************************************************/
 
+
+// ***************************  Routes Oussama  **********************************
+
+    Route::resource('/company','CompaniesController');
+    Route::resource('/companiesmanagers','CompaniesManagersController');
+
+    Route::group(['middleware'=>['auth']],function(){
+        Route::get('/studentdashboard','PagesController@studentDashboard');
+        Route::get('/ordinaryteacherdashboard','PagesController@ordinaryTeacherDashboard');
+        Route::get('/managerteacherdashboard','PagesController@managerTeacherDashboard');  
+    });
+
+    Route::get('/internships','InternShipsController@index');
+    Route::get('/internships/create','InternShipsController@create');
+    Route::get('/internships/{id}','InternShipsController@show')->where('id','[0-9]+')->name('showinternship');
+    Route::get('/internships/{id}/edit','InternshipsController@edit');
+    Route::post('/internships/store','InternshipsController@store');
+    Route::put('/internships/update/{id}','InternshipsController@update')->where('id','[0-9]+');
