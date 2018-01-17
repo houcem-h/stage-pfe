@@ -6,19 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 class Registration extends Model
 {
-    public function student()
+    public function studentRecord()
     {
-        return $this->belongsTo('App\User','foreign_key');
+        return $this->belongsTo('App\User','student');
     }
 
-    public function group()
+    public function groupRecord()
     {
-        return $this->belongsTo('App\Group','foreign_key');
+        return $this->belongsTo('App\Group','group');
     }
 
-    public function internship()
+    public function internships()
     {
-        return $this->hasMany('App\Internship');
+        return $this->hasMany('App\Internship','student');
     }
 
 

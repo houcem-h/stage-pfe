@@ -1,0 +1,47 @@
+#formcreatecompany,
+#formcreatecompanymanager,
+#formupdatecompanymanager,
+    #formupdatecompany,
+#formcreateinternship,#formeditinternship {
+    background-color:white;
+    padding:50px 30px 30px 30px;
+}
+#animationloadingbarcontainer{
+    overflow: hidden;
+}
+#animationloadingbarcontainer{
+    margin-top:30px;
+}#successajax,#errorsajax{
+    margin-top: 20px;
+}
+#fillbottomjumbotron{
+    position: relative;
+    top: 100%;
+    /* background-color: lemonchiffon; */
+    margin-bottom: 0px;
+    
+}
+#jumbotronstudentdashboard{
+    padding-bottom: 0px;
+}
+.barloading{
+    height: 2px;
+    width: 100%;
+    background-color:blueviolet;
+    animation-name: loadingbar;
+    animation-delay: 0.5s;
+    animation-duration: 1.5s;
+   animation-play-state: running; 
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    margin-left:-100%;
+    -moz-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+@keyframes loadingbar{
+    from{
+      margin-left:-100%;
+    }to{
+        margin-left:100%;
+    }
+}
