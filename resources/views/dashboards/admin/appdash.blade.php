@@ -44,6 +44,10 @@
 
 
 		<ul class="nav navbar-nav ml-auto" id="custom">
+				{{-- Hazem MODIFICATIONS --}}
+			<li><a href="{{route('teachers')}}">Teachers  list</a></li>
+			<li><a href="{{'teachers/create'}}">Add teacher</a></li>
+			
 			{{--  AMINE BEJAOUI MODIFICATIONS --}}
 			<li><a href="{{route('group')}}">Group list</a></li>
 			<li><a href="{{route('show_blade_add')}}">Add group</a></li>
