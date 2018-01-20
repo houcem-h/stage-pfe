@@ -1,4 +1,4 @@
-<nav class="navbar  navbar-inverse">
+<nav class="navbar navbarteach  ">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -7,15 +7,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand">CRUD</a>
+      <a class="navbar-brand">welcome Mr {{auth()->user()->lastname}}</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="{{route('teacherhome')}}">Home</a></li>
-      <li><a href="{{route('group')}}">Group list</a></li>
-      <li><a href="{{route('teachers')}}">Teachers  list</a></li>
-      <li><a href="{{route('show_blade_add')}}">Add group</a></li>
-      <li><a href="{{'teachers/create'}}">Add teacher</a></li>
-      <li><a href="{{route('show_all_students')}}">List of students</a></li>
+      {{-- still working one  --}}
+      <li><a href="">Calendar</a></li>
       <li><a href="{{route('settings')}}">Settings</a></li>
       <li><a href="{{Auth::logout()}}">logout</a></li>
     </ul>

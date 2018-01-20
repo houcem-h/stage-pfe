@@ -18,8 +18,17 @@
 
 </head>
 <body>
+  @if (!Auth::guest())
+    @if (Auth::user()->role==1)
+      @include('../navbar/teachernav')
+    @else
+      @include('../navbar/navbar')
+    @endif
+    @else
+      @include('../navbar/navbar')
+      
+ @endif
 
-@include('../navbar/navbar')
 @yield('content')
 
 <!-- Scripts -->
