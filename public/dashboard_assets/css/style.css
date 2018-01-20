@@ -3204,6 +3204,7 @@ tbody.collapse.show {
 
 .page-item.active .page-link, .pagination-datatables li.active .page-link, .pagination li.active .page-link, .page-item.active .pagination-datatables li a, .pagination-datatables li .page-item.active a, .pagination-datatables li.active a, .page-item.active .pagination li a, .pagination li .page-item.active a, .pagination li.active a {
   z-index: 2;
+  padding: 5px;
   color: #fff;
   background-color: #20a8d8;
   border-color: #20a8d8; }
@@ -7846,12 +7847,12 @@ base-chart.chart {
     height: 55px;
     padding: 0.5rem 1rem;
     margin-right: 0;
-    background-color: #fff;
+    background-color: #fff0;
     background-image: url("../img/logo.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 120px auto;
-    border-bottom: 1px solid #c2cfd6; }
+     }
   .app-header.navbar .navbar-toggler {
     min-width: 50px;
     padding: 0.25rem 0; }

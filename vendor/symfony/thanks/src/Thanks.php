@@ -12,12 +12,10 @@
 namespace Symfony\Thanks;
 
 use Composer\Composer;
+use Composer\Console\Application;
 use Composer\EventDispatcher\EventSubscriberInterface;
+use Composer\Installer\PackageEvents;
 use Composer\IO\IOInterface;
-use Composer\Plugin\CommandEvent;
-use Composer\Plugin\Capability\CommandProvider;
-use Composer\Plugin\Capable;
-use Composer\Plugin\PluginEvents;
 use Composer\Plugin\PluginInterface;
 use Composer\Script\Event as ScriptEvent;
 use Composer\Script\ScriptEvents;
@@ -25,7 +23,7 @@ use Composer\Script\ScriptEvents;
 /**
  * @author Nicolas Grekas <p@tchwork.com>
  */
-class Thanks implements Capable, CommandProvider, EventSubscriberInterface, PluginInterface
+class Thanks implements EventSubscriberInterface, PluginInterface
 {
     private $io;
     private $displayReminder = false;
@@ -33,27 +31,18 @@ class Thanks implements Capable, CommandProvider, EventSubscriberInterface, Plug
     public function activate(Composer $composer, IOInterface $io)
     {
         $this->io = $io;
-    }
 
-    public function getCapabilities()
-    {
-        return [
-            CommandProvider::class => __CLASS__,
-        ];
-    }
-
-    public function getCommands()
-    {
-        return [
-            new Command\ThanksCommand(),
-        ];
-    }
-
-    public function inspectCommand(CommandEvent $event)
-    {
-        if ('update' === $event->getCommandName()) {
-            $this->displayReminder = true;
+        foreach (debug_backtrace() as $trace) {
+            if (isset($trace['object']) && $trace['object'] instanceof Application) {
+                $trace['object']->add(new Command\ThanksCommand());
+                break;
+            }
         }
+    }
+
+    public function enableReminder()
+    {
+        $this->displayReminder = version_compare('1.1.0', PluginInterface::PLUGIN_API_VERSION, '<=');
     }
 
     public function displayReminder(ScriptEvent $event)
@@ -63,7 +52,7 @@ class Thanks implements Capable, CommandProvider, EventSubscriberInterface, Plug
         }
 
         $love = '\\' === DIRECTORY_SEPARATOR ? 'love' : '💖 ';
-        $star = '\\' === DIRECTORY_SEPARATOR ? 'star' : '⭐ ';
+        $star = '\\' === DIRECTORY_SEPARATOR ? 'star' : '★ ';
 
         $this->io->writeError('');
         $this->io->writeError('What about running <comment>composer thanks</> now?');
@@ -74,8 +63,8 @@ class Thanks implements Capable, CommandProvider, EventSubscriberInterface, Plug
     public static function getSubscribedEvents()
     {
         return [
+            PackageEvents::POST_PACKAGE_UPDATE => 'enableReminder',
             ScriptEvents::POST_UPDATE_CMD => 'displayReminder',
-            PluginEvents::COMMAND => 'inspectCommand',
         ];
     }
 }
