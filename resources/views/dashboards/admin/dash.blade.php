@@ -289,7 +289,7 @@
                       </div>
                       <div class="card-body">
                         <div class="chart-wrapper"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-                          
+
                         <div style="display: block; width: 483px; height: 241px;" width="483" height="241" class="chartjs-render-monitor">
                            <div>
                                 <div>
@@ -312,13 +312,13 @@
                                     <div class="text-muted text-uppercase font-weight-bold font-xs">Pending Defences</div>
                                 </div>
 
-                              </div>  
-                             
+                              </div>
+
 
 
                         </div>
-                        
-                      
+
+
                       </div>
                       </div>
                     </div>
@@ -333,8 +333,14 @@
 
 
 
+<<<<<<< HEAD
   <br id="mycalender">
  
+=======
+
+  <br id="mycalender">
+
+>>>>>>> master
 
 
 
@@ -368,7 +374,7 @@
                                 <script>
 
                                         $(document).ready(function() {
-                                      
+
                                           $('#calendar').fullCalendar({
                                             height: 600,
                                             header: {
@@ -433,9 +439,9 @@
                                               }
                                             ]
                                           });
-                                      
+
                                         });
-                                      
+
                                       </script>
 
                                 <div id='calendar'></div>
@@ -446,7 +452,7 @@
 
                 </div>
 
-                
+
 
 
         </div>

@@ -165,13 +165,15 @@ Route::post("update_Students_Group","studentsController@save_updated_group")->na
 
 // ***************************  Routes Oussama  **********************************
 
+// ***************************  Routes Oussama  **********************************
+
     Route::resource('/company','CompaniesController');
     Route::resource('/companiesmanagers','CompaniesManagersController');
 
     Route::group(['middleware'=>['auth']],function(){
         Route::get('/studentdashboard','PagesController@studentDashboard');
         Route::get('/ordinaryteacherdashboard','PagesController@ordinaryTeacherDashboard');
-        Route::get('/managerteacherdashboard','PagesController@managerTeacherDashboard');  
+        Route::get('/managerteacherdashboard','PagesController@managerTeacherDashboard');
     });
 
     Route::get('/internships','InternShipsController@index');
@@ -180,3 +182,20 @@ Route::post("update_Students_Group","studentsController@save_updated_group")->na
     Route::get('/internships/{id}/edit','InternshipsController@edit');
     Route::post('/internships/store','InternshipsController@store');
     Route::put('/internships/update/{id}','InternshipsController@update')->where('id','[0-9]+');
+
+
+
+
+/************************************************ Hazem's Route ************************************************/
+
+
+Route::get('teachers_list', 'TeachersController@index')->name("teachers");
+Route::get('dashboard/{id}/acc', 'DashboardsController@acc');
+Route::get('dashboard/{id}/ref', 'DashboardsController@ref');
+Route::get('dashboard/{id}/encadre', 'DashboardsController@encadre');
+Route::get('settings', 'DashboardsController@settings')->name("settings");
+Route::get('teacherhome','DashboardsController@index')->name("teacherhome");
+Route::get("updatepass","DashboardsController@updatepass")->name("updateinfo");
+Route::post("internsinfo","groupController@internsinfo")->name("internsinfo"); //for group
+
+Route::resource('teachers','TeachersController');
