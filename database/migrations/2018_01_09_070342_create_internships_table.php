@@ -22,11 +22,7 @@ class CreateInternshipsTable extends Migration
             $table->enum('type',['init','perf','pfe']);
             $table->unsignedInteger('framer')->nullable();//encadreur
             $table->unsignedInteger('company_framer');//encadreur societé
-<<<<<<< HEAD
             $table->enum('state',['waiting','accepted','rejected'])->default('waiting');
-=======
-            $table->enum('state',['waiting','accepted','rejected'])->default('waiting');
->>>>>>> master
             $table->timestamps();
             $table->unsignedInteger('created_by')->nullable();
             $table->unsignedInteger('updated_by')->nullable();
