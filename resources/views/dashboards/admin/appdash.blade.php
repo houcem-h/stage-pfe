@@ -14,7 +14,7 @@
 	<!-- Icons -->
 	<link href="{{ asset('dashboard_assets/node_modules/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('dashboard_assets/node_modules/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
-
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<!-- Main styles for this application -->
 	<link href="{{ asset('dashboard_assets/css/style.css') }}" rel="stylesheet">
 	{{--  AMINE BEJAOUI MODIFICATIONS--}}
@@ -23,10 +23,15 @@
 	<!-- Styles required by this views -->
 	<link href="{{ asset('dashboard_assets/node_modules/calendar/fullcalendar.min.css') }}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet">
   <link href="http://kouki.website/vendor/koukicons/koukicons.min.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.3.4/quill.js"></script>
   <style>
 	  * {
 		font-family: 'Raleway', sans-serif;
+	  }
+	  .active{
+		  padding: 8px !important;
 	  }
   </style>
 </head>
@@ -82,173 +87,168 @@
 	</header>
 
 	<div class="app-body">
-		<div class="sidebar">
-			<nav class="sidebar-nav">
-				<ul class="nav">
-					<br>
-					<div class="sidebar-header">
-						<img src="http://stage.pfe/dashboard_assets/img/avatars/user.png" width="35%" class="img-avatar" alt="Avatar">
-
-						<div>
-
-							<strong>{{ Auth::user()->firstname }}  {{ Auth::user()->lastname }} </strong>
-						</div>
-						<div class="text-muted">
-							<small><i class="kk kk-badge"></i> Admin</small>
-						</div>
-						<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-
-							<div class="btn-group" role="group">
-
-								<div class="dropdown-menu">
-									<div class="dropdown-header text-center">
-										<strong>Settings</strong>
+			<div class="sidebar">
+				<nav class="sidebar-nav">
+					<ul class="nav">
+						<br>
+						<div class="sidebar-header">
+							<img src="http://stage.pfe/dashboard_assets/img/avatars/user.png" width="35%" class="img-avatar" alt="Avatar">
+	
+							<div>
+	
+								<strong>{{ Auth::user()->firstname }}  {{ Auth::user()->lastname }} </strong>
+							</div>
+							<div class="text-muted">
+								<small><i class="kk kk-badge"></i> Admin</small>
+							</div>
+							<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+	
+								<div class="btn-group" role="group">
+	
+									<div class="dropdown-menu">
+										<div class="dropdown-header text-center">
+											<strong>Settings</strong>
+										</div>
+										<a class="dropdown-item" href="#">
+											<i class="fa fa-user"></i> Profile</a>
+										<a class="dropdown-item" href="#">
+											<i class="fa fa-wrench"></i> Settings</a>
+										<a class="dropdown-item" href="#">
+											<i class="fa fa-file"></i> Projets
+											<span class="badge badge-primary">42</span>
+										</a>
+										<div class="divider"></div>
+	
+										<a class="dropdown-item" href="#">
+											<i class="fa fa-lock"></i> Logout</a>
 									</div>
-									<a class="dropdown-item" href="#">
-										<i class="fa fa-user"></i> Profile</a>
-									<a class="dropdown-item" href="#">
-										<i class="fa fa-wrench"></i> Settings</a>
-									<a class="dropdown-item" href="#">
-										<i class="fa fa-usd"></i> Payments
-										<span class="badge badge-secondary">42</span>
-									</a>
-									<a class="dropdown-item" href="#">
-										<i class="fa fa-file"></i> Projects
-										<span class="badge badge-primary">42</span>
-									</a>
-									<div class="divider"></div>
-									<a class="dropdown-item" href="#">
-										<i class="fa fa-shield"></i> Lock Account</a>
-									<a class="dropdown-item" href="#">
-										<i class="fa fa-lock"></i> Logout</a>
 								</div>
 							</div>
 						</div>
-					</div>
-					<br>
-					<li class="nav-item">
-						<a class="nav-link" href="{{ route('dash') }}">
-							<i class="kk kk-dashboard"></i> Dashboard </a>
-					</li>
-
-
-					<li class="nav-item nav-dropdown">
-						<a class="nav-link nav-dropdown-toggle" href="#">
-							<i class="kk kk-users"></i> Manage Users</a>
-						<ul class="nav-dropdown-items">
-							<li class="nav-item">
-								<a class="nav-link" href="{{ route('Allusers') }}">
-									<i class="kk kk-users2"></i>All Users</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="{{ route('students') }}">
-									<i class="kk kk-users2"></i>Students</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="{{ route('teachers') }}">
-									<i class="kk kk-users2"></i>Teacher</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="{{ route('admins') }}">
-									<i class="kk kk-users2"></i>Admins</a>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-item nav-dropdown">
-						<a class="nav-link nav-dropdown-toggle" href="#">
-							<i class="kk kk-event-date2"></i>Defences</a>
-						<ul class="nav-dropdown-items">
-							<li class="nav-item">
-								<a class="nav-link" href="#">
-										<i class="kk kk-event-date2"></i>All Defences</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">
-										<i class="kk kk-event-date2"></i>Verified Defences</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">
-										<i class="kk kk-event-date2"></i>Waiting Defences</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">
-										<i class="kk kk-event-date2"></i>Refused Defences</a>
-							</li>
-
-						</ul>
-					</li>
-					<li class="nav-item nav-dropdown">
+						<br>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ route('dash') }}">
+								<i class="kk kk-dashboard"></i> Dashboard </a>
+						</li>
+	
+	
+						<li class="nav-item nav-dropdown">
 							<a class="nav-link nav-dropdown-toggle" href="#">
-								<i class="kk kk-department"></i>Interships</a>
+								<i class="kk kk-users"></i> Utilisateurs</a>
 							<ul class="nav-dropdown-items">
-									<li class="nav-item">
-											<a class="nav-link" href="{{ route('interships_all')}}">
-												<i class="kk kk-parallel_tasks"></i>All Interships</a>
-										</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('interships_init')}}">
-										<i class="kk kk-parallel_tasks"></i>Initiation</a>
+									<a class="nav-link" href="{{ route('Allusers') }}">
+										<i class="kk kk-users2"></i>All</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('interships_perf')}}">
-										<i class="kk kk-parallel_tasks"></i>Perfectionnement</a>
+									<a class="nav-link" href="{{ route('students') }}">
+										<i class="kk kk-users2"></i>Étudiants</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('interships_pfe')}}">
-										<i class="kk kk-parallel_tasks"></i>PFE</a>
+									<a class="nav-link" href="{{ route('teachers') }}">
+										<i class="kk kk-users2"></i>Enseignants</a>
 								</li>
-
+								<li class="nav-item">
+									<a class="nav-link" href="{{ route('admins') }}">
+										<i class="kk kk-users2"></i>Admins</a>
+								</li>
 							</ul>
 						</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							<i class="kk kk-overtime"></i> Logs
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							<i class="kk kk-piechart"></i> Reports</a>
-					</li>
-
-					<li class="divider"></li>
-					<li class="nav-title">
-						Extras
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							<i class="kk kk-settings4"></i> Settings</a>
-					</li>
-					<!--<li class="nav-item mt-auto">
-            <a class="nav-link nav-link-success" href="http://coreui.io/" target="_top"><i class="icon-cloud-download"></i> Download CoreUI</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-danger" href="http://coreui.io/pro/" target="_top"><i class="icon-layers"></i> Try CoreUI <strong>PRO</strong></a>
-          </li>-->
-
-				</ul>
-			</nav>
-			<button class="sidebar-minimizer brand-minimizer" type="button"></button>
-		</div>
-
-		<!-- Main content -->
-		<main class="main">
-
-
-			<div class="container-fluid">
-				<div class="animated fadeIn">
-					<!-- Contains START -->
-					@yield('dash_content')
-
-
-					<!-- Contains END -->
-				</div>
-
+						<li class="nav-item nav-dropdown">
+							<a class="nav-link nav-dropdown-toggle" href="#">
+								<i class="kk kk-event-date2"></i>Soutenances</a>
+							<ul class="nav-dropdown-items">
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+											<i class="kk kk-event-date2"></i>All</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+											<i class="kk kk-event-date2"></i>Accepted</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+											<i class="kk kk-event-date2"></i>Waiting</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+											<i class="kk kk-event-date2"></i>Refused</a>
+								</li>
+	
+							</ul>
+						</li>
+						<li class="nav-item nav-dropdown">
+								<a class="nav-link nav-dropdown-toggle" href="#">
+									<i class="kk kk-department"></i>Stages</a>
+								<ul class="nav-dropdown-items">
+										<li class="nav-item">
+												<a class="nav-link" href="{{ route('interships_all')}}">
+													<i class="kk kk-parallel_tasks"></i>Tous Les Stages</a>
+											</li>
+									<li class="nav-item">
+										<a class="nav-link" href="{{ route('interships_init')}}">
+											<i class="kk kk-parallel_tasks"></i>Initiation</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="{{ route('interships_perf')}}">
+											<i class="kk kk-parallel_tasks"></i>Perfectionnement</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="{{ route('interships_pfe')}}">
+											<i class="kk kk-parallel_tasks"></i>PFE</a>
+									</li>
+	
+								</ul>
+							</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/dashboard/Mailer">
+								<i class="kk kk-envelope-forward"></i> Mailer
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/dashboard/reports">
+								<i class="kk kk-piechart"></i> Reports</a>
+						</li>
+	
+						<li class="divider"></li>
+						<li class="nav-title">
+							Extras
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="kk kk-settings4"></i> Settings</a>
+						</li>
+						<!--<li class="nav-item mt-auto">
+				<a class="nav-link nav-link-success" href="http://coreui.io/" target="_top"><i class="icon-cloud-download"></i> Download CoreUI</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link nav-link-danger" href="http://coreui.io/pro/" target="_top"><i class="icon-layers"></i> Try CoreUI <strong>PRO</strong></a>
+			  </li>-->
+	
+					</ul>
+				</nav>
+				<button class="sidebar-minimizer brand-minimizer" type="button"></button>
 			</div>
-		</main>
-
-
-
-	</div>
+	
+			<!-- Main content -->
+			<main class="main">
+	
+	
+				<div class="container-fluid">
+					<div class="animated fadeIn">
+						<!-- Contains START -->
+						@yield('dash_content')
+	
+	
+						<!-- Contains END -->
+					</div>
+	
+				</div>
+			</main>
+	
+	
+	
+		</div>
 
 	<footer class="app-footer">
 		<span>
@@ -272,7 +272,9 @@
 	<script src="{{ asset('dashboard_assets/js/app.js') }}"></script>
 	<script src="{{ asset('dashboard_assets/node_modules/moment/moment.js') }}"></script>
 	<script src="{{ asset('dashboard_assets/node_modules/calendar/fullcalendar.min.js') }}"></script>
-	<script src="{{ asset('dashboard_assets/js/views/my_code_chart.js') }}"></script>
+	<script src="{{ asset('js/sweetalert.min.js')}}"></script>
+	
+	<!--<script src="{{ asset('dashboard_assets/js/views/my_code_chart.js') }}"></script>-->
 
 	</script>
 </body>

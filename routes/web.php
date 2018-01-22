@@ -33,25 +33,71 @@ Route::get('/connect', function () {
 
 //*****all users
 Route::get('/dashboard/Users/All', function () {
-    return View('dashboards.admin.allusers');
-})->name('Allusers');
+    $allusers =  \App\User::orderBy('created_at')->paginate(10);   
+    return View('dashboards.admin.allusers', ['allusers' => $allusers]);})->name('Allusers');
 
 //*****only students
 Route::get('/dashboard/Users/Students', function () {
-    return View('dashboards.admin.students');
-})->name('students');
+    $allstudents =  Illuminate\Support\Facades\DB::table("users")->where('role', '=', '0')->paginate(10);
+    return View('dashboards.admin.students', ['allstudents' => $allstudents]);})->name('students');
 
 //*****only teachers
 Route::get('/dashboard/Users/Teachers', function () {
-    return View('dashboards.admin.teachers');
-})->name('teachers');
+    $allteachers =  Illuminate\Support\Facades\DB::table("users")->where('role', '=', '1')->paginate(10);
+    return View('dashboards.admin.teachers', ['allteachers' => $allteachers]);})->name('teachers');
 
 //*****only admins
 Route::get('/dashboard/Users/Admins', function () {
-    return View('dashboards.admin.admins');
-})->name('admins');
+    $alladmins =  Illuminate\Support\Facades\DB::table("users")->where('role', '=', '2')->paginate(10);
+    return View('dashboards.admin.admins',  ['alladmins' => $alladmins]);})->name('admins');
+
+//**Recherche Utilisateur */
+Route::get('/dashboard/Users/Search/{query}', function($query) {
+    $result = App\User::SearchByKeyword($query)->get();    
+    return View('dashboards.admin.search', ['result' => $result]);
+});
 
 
+
+
+/** Ajax Delete User from Dashboard as admin */
+Route::get('/deleteuser/{id}' , 'GetStat@destroyuser');
+
+/** Test */
+Route::get('/getuserinfo/{id}' , 'GetStat@getuserdata');
+
+/** Ajax Update Users Info */
+Route::post('/updateuser' , 'GetStat@updateinfousers');
+
+
+Route::get('dashboard/Companies', function() {
+    $allcompanies = Illuminate\Support\Facades\DB::table("companies")->get();
+    return View('dashboards.admin.companies' , ['companies' => $allcompanies]);
+});
+
+
+Route::get('/test', 'GetStat@getalldefences');
+
+/************* Mailer **************/
+
+//** Mail to students */
+Route::get('/dashboard/Mailer', 'sendmail@index')->name('Mailer');
+// (Ajax) Send emails
+Route::post('/sendmail', 'sendmail@send');
+
+/************* Reports **************/
+
+//**** Get list of students as PDF ****/
+Route::get('/pdf/students', "GetStat@ExportStudentsAsPDF")->middleware("auth")->name('studentspdf');
+//**** Get list of Teachers as PDF ****/
+Route::get('/pdf/teachers', "GetStat@ExportTeachersAsPDF")->middleware("auth")->name('teacherspdf');
+//*** Get list of students as Excel ***/
+Route::get('/excel/students', 'GetStat@ExportStudentsAsExcel')->middleware("auth")->name('studentsxls');
+//*** Get list of teachers as Excel ***/
+Route::get('/excel/teachers', 'GetStat@ExportTeachersAsExcel')->middleware("auth")->name('teachersxls');
+Route::get('/dashboard/reports', function(){
+     return View('dashboards.admin.reports');
+    })->middleware("auth");
 
 
 /************* Interships **************/
