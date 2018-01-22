@@ -333,14 +333,8 @@
 
 
 
-<<<<<<< HEAD
   <br id="mycalender">
  
-=======
-
-  <br id="mycalender">
-
->>>>>>> master
 
 
 
