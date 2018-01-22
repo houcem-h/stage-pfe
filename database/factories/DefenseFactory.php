@@ -4,7 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Defense::class, function (Faker $faker) {
     return [
-        'date_d' => $faker->date,
+        'date_d' => $faker->dateTimeThisMonth($max = 'now', $timezone = null),
         'start_time' => $faker->time('H:i'),
         'end_time' => $faker->time('H:i'),
         'classroom' => $faker->numerify('I#.#'),

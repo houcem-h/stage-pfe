@@ -179,4 +179,113 @@ class GetStat extends Controller
 
 
 
+
+/********************* Useful for Javascript ******************************/
+
+    public static function javascriptchart() {
+
+                  $groups_array = \App\Http\Controllers\GetStat::getEnumValues("groups", "stream"); //names of groups
+                  $groups_nb = array(); //number of students in groups (same)
+                  
+                  foreach ($groups_array as $group) {
+                      $val_array =  DB::table('groups')->where('stream', '=', "$group")->get();
+                      $val_count = count($val_array);
+                      array_push($groups_nb, $val_count); // push number of students in group
+                  }
+
+                  $s1 = '[';
+                  $s2 = '[';
+
+                
+                foreach($groups_array as $group) {
+                    $s1 .= "'" .$group ."'" . " , ";
+                }
+                $s1 .= "]";
+                foreach($groups_nb as $nb) {
+                    $s2 .= $nb . ' , ';
+                }
+                $s2 .= ']';
+
+                
+                    if ($groups_nb[0] > 0) {
+                        $final_string = ' labels: '.$s1.',
+                        datasets: [{
+                            data: '.$s2.',';
+                    }
+
+                  else { //fake data
+                    $final_string = ' labels: '.$s1.',
+                    datasets: [{
+                        data: '.'[300, 220, 100, 130, 70]'.',';
+                  }
+
+                        return   $final_string ;
+
+        }
+
+
+
+
+    //return enum Values from table
+    public static function getEnumValues($table, $column) {
+        $type = DB::select(DB::raw("SHOW COLUMNS FROM $table WHERE Field = '{$column}'"))[0]->Type ;
+        preg_match('/^enum\((.*)\)$/', $type, $matches);
+        $enum = array();
+        foreach( explode(',', $matches[1]) as $value )
+        {
+          $v = trim( $value, "'" );
+          $enum = array_add($enum, $v, $v);
+        }
+        return array_keys($enum);
+      }
+
+
+
+
+      public static function destroyuser($id) {
+              $user =  \App\User::find($id); 
+              $user->delete();
+              return "User $id Deleted"; 
+      }
+
+
+      public static function getuserdata($id) {
+          $user = \App\User::find($id);
+           return $user; 
+      }
+
+      public static function updateinfousers(Request $request) {
+        $id = $request->input('id');
+        $user =  \App\User::find($id); 
+        $user->firstname = $request->input('firstname'); 
+        $user->lastname = $request->input('lastname'); 
+        $user->email = $request->input('email'); 
+        $user->cin = $request->input('cin'); 
+        $user->phone = $request->input('phone'); 
+        $user->save();
+        return "Done ! User info Updated";
+    }
+
+        public function getalldefences () {
+            $alldefences = \App\Defense::orderBy('created_at')->get();
+            $array_of_internship = array();
+            $array_of_students = array();
+
+            foreach ($alldefences as $defense) {
+                $x = $defense->internship;
+                //return $x;
+                array_push($array_of_internship, $x);
+            }
+
+            foreach($array_of_internship as $internship){
+                $x1 = DB::table('internships')->where('id', '=', "$internship")->pluck('student')->first();
+               array_push($array_of_students, $x1);
+            }
+
+
+            return  $array_of_students;
+        }
+        
+
+
 }

@@ -3,97 +3,95 @@
 
 @section('dash_content')
 
+
 <!-- Hidden Moddel -->
 <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h4 class="modal-title">Modify User</h4>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      
-                        <!--body-->
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Modify User</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+                <!--body-->
 
-                        <div class="row">
-                                        <input type="hidden" id="id">
-                                        <div class="form-group col-sm-6">
-                                          <label for="city">First Name</label>
-                                          <input type="text" class="form-control" id="firstname" >
-                                        </div>
-                    
-                                        <div class="form-group col-sm-6">
-                                          <label for="postal-code">Last Name</label>
-                                          <input type="text" class="form-control" id="lastname" >
-                                        </div>
-                    
-                                      </div>
+                <div class="row">
+                                <input type="hidden" id="id">
+                                <div class="form-group col-sm-6">
+                                  <label for="city">First Name</label>
+                                  <input type="text" class="form-control" id="firstname" >
+                                </div>
+            
+                                <div class="form-group col-sm-6">
+                                  <label for="postal-code">Last Name</label>
+                                  <input type="text" class="form-control" id="lastname" >
+                                </div>
+            
+                              </div>
 
-                        <div class="row">
+                <div class="row">
 
-                                        <div class="col-sm-12">
-                    
-                                          <div class="form-group">
-                                            <label for="name">Email</label>
-                                            <input type="text" class="form-control" id="email">
-                                          </div>
-                    
-                                        </div>
-                    
-                        </div>
-
-
-                        <div class="row">
-
-                                        <div class="col-sm-12">
-                    
-                                          <div class="form-group">
-                                            <label for="name">CIN</label>
-                                            <input type="text" class="form-control" id="cin">
-                                          </div>
-                    
-                                        </div>
-                    
-                        </div>
-
-                        <div class="row">
-
-                                        <div class="col-sm-12">
-                    
-                                          <div class="form-group">
-                                            <label for="name">Phone</label>
-                                            <input type="text" class="form-control" id="phone">
-                                          </div>
-                    
-                                        </div>
-                    
-                        </div>
-
-
-
-
-
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button id="savechanges" type="button" class="btn btn-primary" onclick="updateinfo()">Save changes</button>
-                    </div>
-                  </div>
-                  <!-- /.modal-content -->
+                                <div class="col-sm-12">
+            
+                                  <div class="form-group">
+                                    <label for="name">Email</label>
+                                    <input type="text" class="form-control" id="email">
+                                  </div>
+            
+                                </div>
+            
                 </div>
-                <!-- /.modal-dialog -->
+
+
+                <div class="row">
+
+                                <div class="col-sm-12">
+            
+                                  <div class="form-group">
+                                    <label for="name">CIN</label>
+                                    <input type="text" class="form-control" id="cin">
+                                  </div>
+            
+                                </div>
+            
+                </div>
+
+                <div class="row">
+
+                                <div class="col-sm-12">
+            
+                                  <div class="form-group">
+                                    <label for="name">Phone</label>
+                                    <input type="text" class="form-control" id="phone">
+                                  </div>
+            
+                                </div>
+            
+                </div>
+
+
+
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="savechanges" type="button" class="btn btn-primary" onclick="updateinfo()">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
 </div>
-
-
-
 
 <br>
 
 <div class="card">
         <div class="card-header">
-                <i class="icon-people"></i> Tous Les Utilisateurs
+                <i class="icon-people"></i> Résultat de la recherche :
               </div>
 <div class="card-body">
         <div class="row">
@@ -106,8 +104,10 @@
                                 <option value="/dashboard/Users/Admins">Admins</option>
                         </select>   
                 </div>
-
-                    <div class="col-md-8">
+                    <div class="col-md-3">
+                            
+                    </div>
+                    <div class="col-md-5 ">
                             <div class="input-group">
 
                                     <input type="text" id="search" class="form-control" placeholder="Recherche ( Nom | Prénom | CIN | Email )">
@@ -116,7 +116,9 @@
                                           </span>
                                   </div>
                     </div>
-        </div><br>
+        </div>
+        <br>
+        @if (count($result) > 0) 
         <table class="table table-responsive-sm table-hover table-outline mb-0">
                 <thead class="thead-light">
                   <tr>
@@ -131,7 +133,12 @@
                 </thead>
                 <tbody>
                    
-                        @foreach ($allusers as $user) 
+
+
+
+         
+                  
+                        @foreach ($result as $user) 
                             <tr>
                                 <td class="text-center">
                                     @if( $user->role == 0 )
@@ -172,53 +179,37 @@
                              <td>
                                     {{$user->cin}}
                             </td>
-                                    <!-- Edit and Delete Btn -->
+                                        <!-- Edit and Delete Btn -->
                              <td>
-                                            <div class="center">
-                                                <a href="#" onclick="deleteuser({{$user->id}})" style="color: red !important;"><i class="icon-trash"></i></a>
-                                                &nbsp;&nbsp;
-                                                <a href="#"  onclick="modifyinfo({{$user->id}})"><i class="icon-pencil"></i></a>
-                                            </div>
-                            </td>
+                                    <div class="center">
+                                        <a href="#" onclick="deleteuser({{$user->id}})" style="color: red !important;"><i class="icon-trash"></i></a>
+                                        &nbsp;&nbsp;
+                                        <a href="#"  onclick="modifyinfo({{$user->id}})"><i class="icon-pencil"></i></a>
+                                    </div>
+                    </td>
                         @endforeach
 
-
+          
 
 
                 </tbody>
               </table>
-
+              @else 
               <br>
-             <div class="row align-items-center justify-content-center">
+              <div> 
+                  <h1 class="text-center"><i class="kk kk-error"></i></h1>
+                <h1 class="text-center">Nous N'avons trouvé aucun résultat</h1>
+                    <h3 class="text-center"> Veuillez recommancer votre recherche</h3>
+            
+                </div>  
+              @endif
 
-                    <div class="row">
-                            <div class="col">
-                            
-                            </div>
-                            <div class="col">
-                                    <div>{{$allusers->links()}}</div>
-                            </div>
-                            <div class="col">
-                           
-                            </div>
-                          </div>
-                        </div>
+             
 
-
-
-
-
-
-
-             </div>
 
 </div>
 
 </div>
-
-
-
-
 
 <script>
         /*********** Ajax Delete User ***************/
@@ -413,20 +404,4 @@ function updateinfo() {
                 
                 
         </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @endsection

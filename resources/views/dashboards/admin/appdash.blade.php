@@ -270,7 +270,7 @@
 	<script src="{{ asset('dashboard_assets/node_modules/calendar/fullcalendar.min.js') }}"></script>
 	<script src="{{ asset('js/sweetalert.min.js')}}"></script>
 	
-	<script src="{{ asset('dashboard_assets/js/views/my_code_chart.js') }}"></script>
+	<!--<script src="{{ asset('dashboard_assets/js/views/my_code_chart.js') }}"></script>-->
 
 	</script>
 </body>

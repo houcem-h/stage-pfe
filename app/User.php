@@ -118,5 +118,25 @@ class User extends Authenticatable
         return $LegalInternships;
     }
 
+    //Methode qui permet de rechercher un utilisateur par son nom - prenom - email - cin - phone
+    //Cette Methode est Utile pour le dashboard Admin 
+
+    public function scopeSearchByKeyword($query, $keyword)
+    {
+        if ($keyword!='') {
+            $query->where(function ($query) use ($keyword) {
+                $query->where("firstname", "LIKE","%$keyword%")
+                    ->orWhere("lastname", "LIKE", "%$keyword%")
+                    ->orWhere("email", "LIKE", "%$keyword%")
+                    ->orWhere("cin", "LIKE", "%$keyword%")
+                    ->orWhere("phone", "LIKE", "%$keyword%");
+            });
+        }
+        return $query;
+    }
+
+
+
+
 
 }

@@ -71,10 +71,10 @@
         <div class="card text-white" style="background-color:#e67e22 !important; border-color: #e67e22 !important; ">
           <div class="card-body">
             <div class="h1 text-muted text-right mb-4">
-              <i class="kk kk-calendar"></i>
+              <i class="kk kk-pos"></i>
             </div>
-            <div class="h5 mb-0">Rapports</div>
-            <small>Tous les Rapports</small>
+            <div class="h5 mb-0">Sociétés</div>
+            <small>Tous les Sociétés</small>
           </div>
         </div>
       </div>
@@ -503,7 +503,7 @@ $('#4').click(function() {
 });
 
 $('#5').click(function() {
-  window.location.href="./dashboard/reports"; 
+  window.location.href="./dashboard/Companies"; 
 });
 
 $('#6').click(function() {
@@ -537,5 +537,47 @@ $('#12').click(function() {
 
 </script>
 
+
+
+
+<!-- Chart Code -->
+<script>
+
+
+    $(function (){
+      'use strict';
+    
+      var pieData = {
+        {!!  \App\Http\Controllers\GetStat::javascriptchart() !!}
+          backgroundColor: [
+            '#FF6384',
+            '#36A2EB',
+            '#FFCE56',
+            '#EE6352',
+            '#8ACB88'
+          ],
+          hoverBackgroundColor: [
+            '#FF6384',
+            '#36A2EB',
+            '#FFCE56',
+            '#EE6352',
+            '#8ACB88'
+          ]
+        }]
+      };
+      var ctx = document.getElementById('canvas-5');
+      var chart = new Chart(ctx, {
+        type: 'pie',
+        data: pieData,
+        options: {
+          responsive: true
+        }
+      });
+    
+    
+  
+  
+  });
+</script>
 
 @endsection
