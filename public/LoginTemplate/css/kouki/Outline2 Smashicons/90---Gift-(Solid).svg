@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="59px" viewBox="0 0 58 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>90 - Gift (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-121.000000, -3838.000000)" fill="#000000">
+            <g id="90---Gift-(Solid)" sketch:type="MSLayerGroup" transform="translate(121.000000, 3837.000000)">
+                <path d="M41.741,12 C42.556,10.836 43,9.451 43,7.993 C43,6.118 42.274,4.36 40.957,3.043 C38.227,0.314 33.787,0.314 31.058,3.043 L28.229,5.871 L25.401,3.043 C24.084,1.726 22.326,1 20.451,1 C18.577,1 16.819,1.726 15.502,3.043 C14.184,4.36 13.458,6.118 13.458,7.993 C13.458,9.451 13.903,10.836 14.718,12 L0,12 L0,26 L58,26 L58,12 L41.741,12 L41.741,12 Z M32.472,4.457 C34.422,2.508 37.594,2.508 39.543,4.457 C40.482,5.398 41,6.652 41,7.993 C41,9.333 40.482,10.589 39.543,11.528 L39.071,12 L24.929,12 L32.472,4.457 L32.472,4.457 Z M16.916,11.528 C15.976,10.589 15.459,9.333 15.459,7.993 C15.459,6.652 15.976,5.398 16.916,4.457 C17.855,3.518 19.111,3 20.451,3 C21.792,3 23.047,3.518 23.987,4.457 L26.815,7.286 L23.279,10.821 C23.073,11.028 22.882,11.262 22.698,11.511 L22.54,11.74 C22.48,11.828 22.417,11.907 22.359,12 L17.387,12 L16.916,11.528 L16.916,11.528 Z" id="Fill-1161" sketch:type="MSShapeGroup"></path>
+                <path d="M5,45 L28,45 L28,60 L5,60 L5,45 Z" id="Fill-1162" sketch:type="MSShapeGroup"></path>
+                <path d="M30,45 L53,45 L53,60 L30,60 L30,45 Z" id="Fill-1163" sketch:type="MSShapeGroup"></path>
+                <path d="M30,28 L53,28 L53,43 L30,43 L30,28 Z" id="Fill-1164" sketch:type="MSShapeGroup"></path>
+                <path d="M5,28 L28,28 L28,43 L5,43 L5,28 Z" id="Fill-1165" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

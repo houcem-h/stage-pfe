@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>226 - Warning (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-603.000000, -2161.000000)" fill="#1A1718">
+            <g id="226---Warning-(Solid)" sketch:type="MSLayerGroup" transform="translate(603.000000, 2161.000000)">
+                <path d="M26,0 C11.664,0 0,11.663 0,26 C0,40.337 11.664,52 26,52 C40.336,52 52,40.337 52,26 C52,11.663 40.336,0 26,0 L26,0 Z M28,41 C28,42.104 27.105,43 26,43 C24.896,43 24,42.104 24,41 L24,39 C24,37.896 24.896,37 26,37 C27.105,37 28,37.896 28,39 L28,41 L28,41 Z M28,33 C28,34.104 27.105,35 26,35 C24.896,35 24,34.104 24,33 L24,11 C24,9.896 24.896,9 26,9 C27.105,9 28,9.896 28,11 L28,33 L28,33 Z" id="Fill-94" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

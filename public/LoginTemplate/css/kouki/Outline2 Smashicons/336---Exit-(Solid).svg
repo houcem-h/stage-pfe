@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="53px" height="56px" viewBox="0 0 53 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>336 - Exit (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-604.000000, -839.000000)" fill="#1A1718">
+            <g id="336---Exit-(Solid)" sketch:type="MSLayerGroup" transform="translate(604.000000, 839.000000)">
+                <path d="M52.923,28.382 C53.024,28.138 53.024,27.862 52.923,27.618 C52.872,27.495 52.799,27.384 52.706,27.292 L40.707,15.293 C40.316,14.902 39.684,14.902 39.293,15.293 C38.902,15.684 38.902,16.316 39.293,16.707 L49.586,27 L19,27 C18.448,27 18,27.447 18,28 C18,28.553 18.448,29 19,29 L49.586,29 L39.293,39.293 C38.902,39.684 38.902,40.316 39.293,40.707 C39.488,40.902 39.744,41 40,41 C40.256,41 40.512,40.902 40.707,40.707 L52.706,28.708 C52.799,28.616 52.872,28.505 52.923,28.382" id="Fill-720" sketch:type="MSShapeGroup"></path>
+                <path d="M15,28 C15,25.791 16.791,24 19,24 L36,24 L36,1 C36,0.447 35.552,0 35,0 L1,0 C0.448,0 0,0.447 0,1 L0,55 C0,55.553 0.448,56 1,56 L35,56 C35.552,56 36,55.553 36,55 L36,32 L19,32 C16.791,32 15,30.209 15,28" id="Fill-721" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

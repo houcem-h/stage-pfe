@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<g id="Stand_4_">
+	<g>
+		<path style="fill:#4D4D4D;" d="M62,52.001H14c-1.104,0-2,0.895-2,2c0,1.104,0.896,2,2,2h48c1.104,0,2-0.896,2-2
+			C64,52.896,63.104,52.001,62,52.001z"/>
+	</g>
+</g>
+<g id="Tube_7_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#4D4D4D;" d="M20,12h-4v4.001v28v4h4c2.209,0,4-1.792,4-4v-28
+			C24,13.791,22.209,12,20,12z"/>
+	</g>
+</g>
+<g id="Tube_5_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#666666;" d="M28,16.001h-4v4V40v4.001h4c2.209,0,4-1.792,4-4.001V20.001
+			C32,17.791,30.209,16.001,28,16.001z"/>
+	</g>
+</g>
+<g id="Tube_3_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#4D4D4D;" d="M36,20.001h-4v4v12V40h4c2.209,0,4-1.791,4-3.999v-12
+			C40,21.791,38.209,20.001,36,20.001z"/>
+	</g>
+</g>
+<g id="Tube_4_">
+	<g>
+		<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#666666;" points="40,24.001 40,28.001 40,32.001 40,36.001 48,36.001 
+			48,32.001 48,28.001 48,24.001 		"/>
+	</g>
+</g>
+<g id="Lens_20_">
+	<g>
+		<path style="fill:#333333;" d="M58,24.001h-4c-1.104,0-2,0.895-2,2v8c0,1.104,0.896,2,2,2h4c1.104,0,2-0.896,2-2v-8
+			C60,24.896,59.104,24.001,58,24.001z"/>
+	</g>
+</g>
+<g id="Shape_72_">
+	<g>
+		<path style="fill:#4D4D4D;" d="M54,20.001h-4c-1.104,0-2,0.895-2,2v16C48,39.104,48.896,40,50,40h4c1.104,0,2-0.896,2-1.999v-16
+			C56,20.896,55.104,20.001,54,20.001z"/>
+	</g>
+</g>
+<g id="Arm_3_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#4D4D4D;" d="M52,34.001c-1.104,0-2,0.895-2,2c0,11.5-8,16-8,16h12v-16
+			C54,34.896,53.104,34.001,52,34.001z"/>
+	</g>
+</g>
+<g id="Arm_4_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#CCCCCC;" d="M46,48.001H34c0,0-3.385,0.439-8-4C23.652,41.741,16,42,16,42
+			v4c0,0,5.322-0.162,8,2.001c5.201,4.201,8,4,8,4h14c1.104,0,2-0.896,2-2C48,48.896,47.104,48.001,46,48.001z"/>
+	</g>
+</g>
+<g id="Shape_73_">
+	<g>
+		<path style="fill:#999999;" d="M12,0H4C1.791,0,0,1.791,0,4v56.001C0,62.21,1.791,64,4,64h8c2.209,0,4-1.79,4-3.999V4
+			C16,1.791,14.209,0,12,0z"/>
+	</g>
+</g>
+<g id="Shape_74_">
+	<g>
+		<path style="fill:#4D4D4D;" d="M10,4H6C4.896,4,4,4.896,4,6v52.001c0,1.104,0.896,2,2,2h4c1.104,0,2-0.896,2-2V6
+			C12,4.896,11.104,4,10,4z"/>
+	</g>
+</g>
+<g id="Pins_3_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#808080;" d="M8,12c1.104,0,2-0.896,2-1.999C10,8.896,9.104,8,8,8
+			s-2,0.896-2,2.001C6,11.104,6.896,12,8,12z M8,52.001c-1.104,0-2,0.895-2,2c0,1.104,0.896,2,2,2s2-0.896,2-2
+			C10,52.896,9.104,52.001,8,52.001z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>

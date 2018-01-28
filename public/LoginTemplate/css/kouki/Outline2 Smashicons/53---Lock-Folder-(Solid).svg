@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="53px" viewBox="0 0 60 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>53 - Lock Folder (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-960.000000, -4201.000000)" fill="#000000">
+            <g id="53---Lock-Folder-(Solid)" sketch:type="MSLayerGroup" transform="translate(960.000000, 4201.000000)">
+                <path d="M30,22 C27.794,22 26,23.794 26,26 L26,31 L34,31 L34,26 C34,23.794 32.206,22 30,22" id="Fill-1199" sketch:type="MSShapeGroup"></path>
+                <path d="M26.515,7 L21.515,0 L0,0 L0,53 L60,53 L60,7 L26.515,7 L26.515,7 Z M40,48 L20,48 L20,31 L24,31 L24,26 C24,22.691 26.691,20 30,20 C33.309,20 36,22.691 36,26 L36,31 L40,31 L40,48 L40,48 Z M58,14 L31.515,14 L27.943,9 L58,9 L58,14 L58,14 Z" id="Fill-1200" sketch:type="MSShapeGroup"></path>
+                <path d="M30,35 C27.794,35 26,36.794 26,39 C26,40.859 27.28,42.411 29,42.858 L29,45 C29,45.553 29.447,46 30,46 C30.553,46 31,45.553 31,45 L31,42.858 C32.721,42.411 34,40.859 34,39 C34,36.794 32.206,35 30,35 L30,35 Z M30,41 C28.895,41 28,40.104 28,39 C28,37.896 28.895,37 30,37 C31.105,37 32,37.896 32,39 C32,40.104 31.105,41 30,41 L30,41 Z" id="Fill-1201" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

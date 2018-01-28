@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Registration;
 use DB;
+use Auth;
 use App\Traits\CommonTasks;
 
 
@@ -136,7 +137,11 @@ class User extends Authenticatable
     }
 
 
-
+     /************AMINE BEJAOUI WORK ****************/
+	    public function tryToConnect($password){
+	      if(Auth::attempt(["email"=>$this->email, "password"=>$password]))
+	            return true;
+	    }
 
 
 }

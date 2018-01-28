@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="60px" viewBox="0 0 56 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>33 - Calendar (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-962.000000, -4437.000000)" fill="#1A1718">
+            <g id="33---Calendar-(Solid)" sketch:type="MSLayerGroup" transform="translate(962.000000, 4437.000000)">
+                <path d="M20,43 L27,43 L27,50 L20,50 L20,43 Z" id="Fill-627" sketch:type="MSShapeGroup"></path>
+                <path d="M20,25 L27,25 L27,32 L20,32 L20,25 Z" id="Fill-628" sketch:type="MSShapeGroup"></path>
+                <path d="M20,34 L27,34 L27,41 L20,41 L20,34 Z" id="Fill-629" sketch:type="MSShapeGroup"></path>
+                <path d="M11,34 L18,34 L18,41 L11,41 L11,34 Z" id="Fill-630" sketch:type="MSShapeGroup"></path>
+                <path d="M11,25 L18,25 L18,32 L11,32 L11,25 Z" id="Fill-631" sketch:type="MSShapeGroup"></path>
+                <path d="M11,43 L18,43 L18,50 L11,50 L11,43 Z" id="Fill-632" sketch:type="MSShapeGroup"></path>
+                <path d="M38,25 L45,25 L45,32 L38,32 L38,25 Z" id="Fill-633" sketch:type="MSShapeGroup"></path>
+                <path d="M55,4 L48,4 L48,1 C48,0.447 47.553,0 47,0 L40,0 C39.447,0 39,0.447 39,1 L39,4 L17,4 L17,1 C17,0.447 16.553,0 16,0 L9,0 C8.447,0 8,0.447 8,1 L8,4 L1,4 C0.447,4 0,4.447 0,5 L0,59 C0,59.552 0.447,60 1,60 L55,60 C55.553,60 56,59.552 56,59 L56,5 C56,4.447 55.553,4 55,4 L55,4 Z M47,32 L47,52 L9,52 L9,23 L47,23 L47,32 L47,32 Z M54,15 L2,15 L2,6 L8,6 L8,9 C8,9.553 8.447,10 9,10 L16,10 C16.553,10 17,9.553 17,9 L17,6 L39,6 L39,9 C39,9.553 39.447,10 40,10 L47,10 C47.553,10 48,9.553 48,9 L48,6 L54,6 L54,15 L54,15 Z" id="Fill-634" sketch:type="MSShapeGroup"></path>
+                <path d="M38,34 L45,34 L45,41 L38,41 L38,34 Z" id="Fill-635" sketch:type="MSShapeGroup"></path>
+                <path d="M38,43 L45,43 L45,50 L38,50 L38,43 Z" id="Fill-636" sketch:type="MSShapeGroup"></path>
+                <path d="M29,43 L36,43 L36,50 L29,50 L29,43 Z" id="Fill-637" sketch:type="MSShapeGroup"></path>
+                <path d="M29,34 L36,34 L36,41 L29,41 L29,34 Z" id="Fill-638" sketch:type="MSShapeGroup"></path>
+                <path d="M29,25 L36,25 L36,32 L29,32 L29,25 Z" id="Fill-639" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

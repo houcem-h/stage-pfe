@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="60px" viewBox="0 0 54 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>320 - Lock Orientation (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-123.000000, -1077.000000)" fill="#1A1718">
+            <g id="320---Lock-Orientation-(Solid)" sketch:type="MSLayerGroup" transform="translate(123.000000, 1077.000000)">
+                <path d="M33,16 C33,12.691 30.309,10 27,10 C23.691,10 21,12.691 21,16 L21,21 L16,21 L16,40 L38,40 L38,21 L33,21 L33,16 L33,16 Z M23,16 C23,13.794 24.794,12 27,12 C29.206,12 31,13.794 31,16 L31,21 L23,21 L23,16 L23,16 Z M28,32.858 L28,35 C28,35.553 27.552,36 27,36 C26.448,36 26,35.553 26,35 L26,32.858 C24.28,32.411 23,30.859 23,29 C23,26.794 24.794,25 27,25 C29.206,25 31,26.794 31,29 C31,30.859 29.72,32.411 28,32.858 L28,32.858 Z" id="Fill-313" sketch:type="MSShapeGroup"></path>
+                <path d="M27,27 C25.897,27 25,27.897 25,29 C25,30.103 25.897,31 27,31 C28.103,31 29,30.103 29,29 C29,27.897 28.103,27 27,27" id="Fill-314" sketch:type="MSShapeGroup"></path>
+                <path d="M27,0 C12.112,0 0,12.112 0,27 C0,41.109 10.881,52.719 24.691,53.895 L20.293,58.293 C19.902,58.684 19.902,59.316 20.293,59.707 C20.488,59.902 20.744,60 21,60 C21.256,60 21.512,59.902 21.707,59.707 L27.706,53.708 C27.799,53.615 27.872,53.505 27.923,53.382 C28.024,53.138 28.024,52.862 27.923,52.618 C27.872,52.495 27.799,52.385 27.706,52.292 L21.707,46.293 C21.316,45.902 20.684,45.902 20.293,46.293 C19.902,46.684 19.902,47.316 20.293,47.707 L24.457,51.871 C11.862,50.593 2,39.927 2,27 C2,13.215 13.215,2 27,2 C40.785,2 52,13.215 52,27 C52,33.633 49.43,39.881 44.762,44.593 C44.374,44.985 44.377,45.619 44.769,46.008 C45.161,46.395 45.794,46.393 46.183,46.001 C51.224,40.911 54,34.163 54,27 C54,12.112 41.888,0 27,0" id="Fill-315" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

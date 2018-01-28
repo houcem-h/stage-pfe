@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="58px" viewBox="0 0 54 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>28 - Notebook (Webby)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-361.000000, -4558.000000)">
+            <g id="28---Notebook-(Webby)" sketch:type="MSLayerGroup" transform="translate(362.000000, 4559.000000)">
+                <path d="M4,48 L4,51 M4,7 L4,0 L15,0 L15,56 L4,56 L4,51 M4,51 C1.791,51 0,49.209 0,47 C0,44.791 1.791,43 4,43 C6.209,43 8,44.791 8,47 M8,41 C8,38.791 6.209,37 4,37 C1.791,37 0,38.791 0,41 M8,35 C8,32.791 6.209,31 4,31 C1.791,31 0,32.791 0,35 M8,29 C8,26.791 6.209,25 4,25 C1.791,25 0,26.791 0,29 M8,23 C8,20.791 6.209,19 4,19 C1.791,19 0,20.791 0,23 M8,17 C8,14.791 6.209,13 4,13 C1.791,13 0,14.791 0,17 M8,11 C8,8.791 6.209,7 4,7 C1.791,7 0,8.791 0,11" id="Stroke-250" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M49.003,56 L15,56 L15,0.003 L49.003,0.003 C50.658,0.003 52,1.345 52,3 L52,53.003 C52,54.658 50.658,56 49.003,56 L49.003,56 Z" id="Fill-255" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M49.003,56 L15,56 L15,0.003 L49.003,0.003 C50.658,0.003 52,1.345 52,3 L52,53.003 C52,54.658 50.658,56 49.003,56 L49.003,56 Z" id="Stroke-256" stroke="#0F81E0" stroke-width="2" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M41,0.003 L46,0.003 L46,55.999 L41,55.999 L41,0.003 Z" id="Fill-257" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M41,0.003 L46,0.003 L46,55.999 L41,55.999 L41,0.003 Z" id="Stroke-258" stroke="#0F81E0" stroke-width="2" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

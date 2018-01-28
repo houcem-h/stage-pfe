@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="60px" viewBox="0 0 57 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>9 - Search Phone (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-241.000000, -4797.000000)" fill="#000000">
+            <g id="9---Search-Phone-(Solid)" sketch:type="MSLayerGroup" transform="translate(241.000000, 4797.000000)">
+                <path d="M40,51 C38.897,51 38,51.897 38,53 C38,54.102 38.897,55 40,55 C41.103,55 42,54.102 42,53 C42,51.897 41.103,51 40,51" id="Fill-479" sketch:type="MSShapeGroup"></path>
+                <path d="M52.595,0 L27.405,0 C24.976,0 23,1.977 23,4.406 L23,13.939 C17.746,15.958 14,21.043 14,27 C14,30.259 15.128,33.253 17.002,35.634 L0.316,51.271 C-0.087,51.648 -0.107,52.281 0.271,52.684 C0.467,52.894 0.733,53 1,53 C1.245,53 1.491,52.91 1.684,52.729 L18.347,37.115 C19.677,38.384 21.254,39.39 23,40.061 L23,55.595 C23,58.023 24.976,60 27.405,60 L52.595,60 C55.024,60 57,58.023 57,55.595 L57,4.406 C57,1.977 55.024,0 52.595,0 L52.595,0 Z M43,3 L44,3 C44.552,3 45,3.448 45,4 C45,4.553 44.552,5 44,5 L43,5 C42.448,5 42,4.553 42,4 C42,3.448 42.448,3 43,3 L43,3 Z M36,3 L40,3 C40.552,3 41,3.448 41,4 C41,4.553 40.552,5 40,5 L36,5 C35.448,5 35,4.553 35,4 C35,3.448 35.448,3 36,3 L36,3 Z M16,27 C16,20.383 21.383,15 28,15 C34.617,15 40,20.383 40,27 C40,33.617 34.617,39 28,39 C21.383,39 16,33.617 16,27 L16,27 Z M28,41 C35.72,41 42,34.719 42,27 C42,19.28 35.72,13 28,13 C26.97,13 25.968,13.12 25,13.332 L25,8 L55,8 L55,46 L25,46 L25,40.668 C25.968,40.88 26.97,41 28,41 L28,41 Z M40,57 C37.794,57 36,55.206 36,53 C36,50.794 37.794,49 40,49 C42.206,49 44,50.794 44,53 C44,55.206 42.206,57 40,57 L40,57 Z" id="Fill-480" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

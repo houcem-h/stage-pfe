@@ -49,15 +49,58 @@
 
 
 		<ul class="nav navbar-nav ml-auto" id="custom">
-				{{-- Hazem MODIFICATIONS --}}
-			<li><a href="{{route('teachers')}}">Teachers  list</a></li>
+			{{-- Hazem MODIFICATIONS --}}
+			<!-- <li><a href="{{route('teachers')}}">Teachers  list</a></li>
 			<li><a href="{{'teachers/create'}}">Add teacher</a></li>
 			
 			{{--  AMINE BEJAOUI MODIFICATIONS --}}
 			<li><a href="{{route('group')}}">Group list</a></li>
 			<li><a href="{{route('show_blade_add')}}">Add group</a></li>
-      <li><a href="{{route('show_all_students')}}">List of students</a></li>
+      		<li><a href="{{route('show_all_students')}}">List of students</a></li> -->
 			{{--  END MODIFICATIONS --}}
+
+			<!-- new navbar -->
+			<li><a href="{{ route('dash') }}">Acceuil</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					Groupe
+				</a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="{{route('group')}}">
+						Liste des groups
+					</a>
+					<a class="dropdown-item" href="{{route('show_blade_add')}}">
+						Ajouter un groupe
+					</a>
+				</div>
+			</li>
+
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					Etudiants
+				</a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="{{route('show_all_students')}}">
+						Liste des etudiants
+					</a>
+					<a  class="dropdown-item" href="{{route('add_student')}}">
+						Ajouter un etudiant
+					</a>
+				</div>
+			</li>
+
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					Enseignants
+				</a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="{{route('teachers')}}">Liste des enseignants</a>
+					<a class="dropdown-item" href="{{'teachers/create'}}">Ajouter un enseignant</a>
+				</div>
+			</li>
+
+			<li><a href="{{route('settings')}}">Parametres</a></li>
+			<!-- end-->
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 					<img src="{{ asset('dashboard_assets/img/avatars/user.png') }}" class="img-avatar" alt="admin@stage.com">
@@ -273,6 +316,7 @@
 	<script src="{{ asset('dashboard_assets/node_modules/moment/moment.js') }}"></script>
 	<script src="{{ asset('dashboard_assets/node_modules/calendar/fullcalendar.min.js') }}"></script>
 	<script src="{{ asset('js/sweetalert.min.js')}}"></script>
+	<script src="{{ asset('js/dashboardInvitations.js')}}"></script>
 	
 	<!--<script src="{{ asset('dashboard_assets/js/views/my_code_chart.js') }}"></script>-->
 

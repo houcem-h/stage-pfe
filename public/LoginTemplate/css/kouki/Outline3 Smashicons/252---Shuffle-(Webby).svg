@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="49px" height="42px" viewBox="0 0 49 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>252 - Shuffle (Webby)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-1086.000000, -1807.000000)">
+            <g id="252---Shuffle-(Webby)" sketch:type="MSLayerGroup" transform="translate(1087.000000, 1808.000000)">
+                <path d="M14,20 C14,26.633 8.633,32 2,32 M14,20 C14,13.367 19.367,8 26,8 L36,8 M18.061,29.002 C20.176,30.868 22.954,32 26,32 L36,32 M0,8 L2,8 C5.076,8 7.88,9.154 10.003,11.054 M0,32 L2,32" id="Stroke-515" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M36,16 L47,8 L36,0 L36,16 L36,16 Z" id="Fill-516" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M36,16 L47,8 L36,0 L36,16 L36,16 Z" id="Stroke-517" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M36,40 L47,32 L36,24 L36,40 L36,40 Z" id="Fill-521" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M36,40 L47,32 L36,24 L36,40 L36,40 Z" id="Stroke-522" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>155 - Location Pin (Webby)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-720.000000, -2997.000000)">
+            <g id="155---Location-Pin-(Webby)" sketch:type="MSLayerGroup" transform="translate(721.000000, 2997.000000)">
+                <path d="M29.177,53 L14.635,32 C9.208,24.764 9.928,12.72 16.324,6.324 C23.422,-0.775 34.931,-0.775 42.03,6.324 C48.426,12.72 49.145,24.764 43.718,32 L29.177,53 L29.177,53 Z" id="Fill-312" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M29.177,53 L14.635,32 C9.208,24.764 9.928,12.72 16.324,6.324 C23.422,-0.775 34.931,-0.775 42.03,6.324 C48.426,12.72 49.145,24.764 43.718,32 L29.177,53 L29.177,53 Z" id="Stroke-313" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M48,38 L39.563,38 L29.177,53 L18.79,38 L10,38 L0,59 L58,59 L48,38 L48,38 Z" id="Fill-314" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M48,38 L39.563,38 L29.177,53 L18.79,38 L10,38 L0,59 L58,59 L48,38 L48,38 Z" id="Stroke-315" stroke="#0F81E0" stroke-width="2" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M35.354,19 C35.354,22.314 32.667,25 29.354,25 C26.04,25 23.354,22.314 23.354,19 C23.354,15.686 26.04,13 29.354,13 C32.667,13 35.354,15.686 35.354,19 L35.354,19 Z" id="Fill-626" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M35.354,19 C35.354,22.314 32.667,25 29.354,25 C26.04,25 23.354,22.314 23.354,19 C23.354,15.686 26.04,13 29.354,13 C32.667,13 35.354,15.686 35.354,19 L35.354,19 Z" id="Stroke-627" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

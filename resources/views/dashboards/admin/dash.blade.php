@@ -182,7 +182,32 @@
       <!--/.end-->
 
 
+      <!-- added by amine --->
+      <!-- invitations -->
+      <div id="13" class="col-sm-6 col-md-2">
+        <div class="card text-white" style="background-color:#c44569 !important; border-color: #c44569 !important; ">
+          <div class="card-body">
+            <div class="h1 text-muted text-right mb-4">
+              <i class="kk kk-invite "></i>
+            </div>
+            <div class="h5 mb-0">Invitations</div>
+            <small>Demandes d'inscription pour les etudiants</small>
+          </div>
+        </div>
+      </div>
 
+      <div id="14" class="col-sm-6 col-md-2">
+          <div class="card text-white" style="background-color:#c44569 !important; border-color: #c44569 !important; ">
+            <div class="card-body">
+              <div class="h1 text-muted text-right mb-4">
+                <i class="kk kk-invite "></i>
+              </div>
+              <div class="h5 mb-0">Invitations</div>
+              <small>Demandes d'inscription pour les enseignants</small>
+            </div>
+          </div>
+        </div>
+    <!--/.end-->
 
 
 
@@ -484,6 +509,9 @@
     $('#10').css( 'cursor', 'pointer' );
     $('#11').css( 'cursor', 'pointer' );
     $('#12').css( 'cursor', 'pointer' );
+    //added by amine
+    $("#13").css("cursor", "pointer");
+    $("#14").css("cursor","pointer");
   
 $('#1').click(function() {
   
@@ -535,6 +563,14 @@ $('#12').click(function() {
   window.location.href="./dashboard/Interships/pfe"; 
 });
 
+//added by amine
+$("#13").click(function(){
+    window.location.href = "./dashboard/studentInvitations";
+});
+
+$("#14").click(function(){
+  window.location.href = "./dashboard/teacherInvitations";
+});
 </script>
 
 

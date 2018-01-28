@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="42px" height="36px" viewBox="0 0 42 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>217 - Divide (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-489.000000, -2289.000000)" fill="#1A1718">
+            <g id="217---Divide-(Solid)" sketch:type="MSLayerGroup" transform="translate(489.000000, 2289.000000)">
+                <path d="M0,16 L42,16 L42,20 L0,20 L0,16 Z" id="Fill-118" sketch:type="MSShapeGroup"></path>
+                <path d="M21,10 C23.757,10 26,7.757 26,5 C26,2.243 23.757,0 21,0 C18.243,0 16,2.243 16,5 C16,7.757 18.243,10 21,10" id="Fill-119" sketch:type="MSShapeGroup"></path>
+                <path d="M21,26 C18.243,26 16,28.243 16,31 C16,33.757 18.243,36 21,36 C23.757,36 26,33.757 26,31 C26,28.243 23.757,26 21,26" id="Fill-120" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

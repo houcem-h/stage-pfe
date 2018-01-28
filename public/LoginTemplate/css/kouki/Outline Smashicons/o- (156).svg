@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>115 - Controls (Outline)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-720.000000, -3477.000000)" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <g id="115---Controls-(Outline)" sketch:type="MSLayerGroup" transform="translate(721.000000, 3478.000000)">
+                <path d="M19,11 C19,14.314 16.314,17 13,17 C9.686,17 7,14.314 7,11 C7,7.686 9.686,5 13,5 C16.314,5 19,7.686 19,11 L19,11 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M51,11 L19,11 L51,11 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M39,47 C39,50.314 41.686,53 45,53 C48.314,53 51,50.314 51,47 C51,43.686 48.314,41 45,41 C41.686,41 39,43.686 39,47 L39,47 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M24,29 C24,32.314 26.686,35 30,35 C33.314,35 36,32.314 36,29 C36,25.686 33.314,23 30,23 C26.686,23 24,25.686 24,29 L24,29 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M7,47 L39,47 L7,47 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M51,29 L36,29 L51,29 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M24,29 L7,29 L24,29 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M0,0 L58,0 L58,58 L0,58 L0,0 Z" id="Path" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

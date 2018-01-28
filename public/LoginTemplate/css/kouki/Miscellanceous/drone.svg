@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<g id="Shape_3_">
+	<g>
+		<path style="fill:#999999;" d="M54,52H10c-3.313,0-6,2.686-6,6c0,3.313,2.687,6,6,6h44c3.313,0,6-2.687,6-6
+			C60,54.686,57.313,52,54,52z"/>
+	</g>
+</g>
+<g id="Shape_4_">
+	<g>
+		<path style="fill:#CCCCCC;" d="M54,56H10c-1.104,0-2,0.896-2,2s0.896,2,2,2h44c1.104,0,2-0.896,2-2S55.104,56,54,56z"/>
+	</g>
+</g>
+<g id="Wheels_6_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#4D4D4D;" d="M10,54c-2.209,0-4,1.791-4,4s1.791,4,4,4s4-1.791,4-4
+			S12.209,54,10,54z M24,54c-2.209,0-4,1.791-4,4s1.791,4,4,4s4-1.791,4-4S26.209,54,24,54z M40,54c-2.209,0-4,1.791-4,4
+			s1.791,4,4,4s4-1.791,4-4S42.209,54,40,54z M54,54c-2.209,0-4,1.791-4,4s1.791,4,4,4s4-1.791,4-4S56.209,54,54,54z"/>
+	</g>
+</g>
+<g id="Base_3_">
+	<g>
+		<rect x="12" y="48" style="fill:#997A3D;" width="40" height="4"/>
+	</g>
+</g>
+<g id="Body_28_">
+	<g>
+		<path style="fill:#FFCC66;" d="M60,20H4c-2.209,0-4,1.791-4,4v20c0,2.209,1.791,4,4,4h56c2.209,0,4-1.791,4-4V24
+			C64,21.791,62.209,20,60,20z"/>
+	</g>
+</g>
+<g id="Fans">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#CCA352;" d="M10,28c-1.104,0-2,0.896-2,2v8c0,1.104,0.896,2,2,2
+			s2-0.896,2-2v-8C12,28.896,11.104,28,10,28z M18,28c-1.104,0-2,0.896-2,2v8c0,1.104,0.896,2,2,2s2-0.896,2-2v-8
+			C20,28.896,19.104,28,18,28z"/>
+	</g>
+</g>
+<g id="Lights_1_">
+	<g>
+		<path style="fill:#FFEAC0;" d="M60,30c-2.209,0-4,1.791-4,4s1.791,4,4,4h4v-8H60z"/>
+	</g>
+</g>
+<g id="Legs_1_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#CCCCCC;" d="M40,20h8V4h-4L40,20z M52,6v4h8V6H52z M14,20h4v-8h-4V20z"/>
+	</g>
+</g>
+<g id="Antena">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#999999;" d="M44,8c0,4.418,3.582,8,8,8V0C47.582,0,44,3.582,44,8z M20,4
+			h-8C9.791,4,8,5.791,8,8s1.791,4,4,4h8c2.209,0,4-1.791,4-4S22.209,4,20,4z"/>
+	</g>
+</g>
+<g id="Antena_1_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#4D4D4D;" d="M60,4c-2.209,0-4,1.791-4,4s1.791,4,4,4s4-1.791,4-4
+			S62.209,4,60,4z M14,12h4V4h-4V12z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>

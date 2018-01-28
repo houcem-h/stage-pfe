@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>113 - Controls (Webby)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-960.000000, -3477.000000)">
+            <g id="113---Controls-(Webby)" sketch:type="MSLayerGroup" transform="translate(961.000000, 3478.000000)">
+                <path d="M0,0 L58,0 L58,58 L0,58 L0,0 Z" id="Fill-75" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M0,0 L58,0 L58,58 L0,58 L0,0 Z" id="Stroke-76" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M21,10 L53,10" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M9,5 L21,5 L21,15 L9,15 L9,5 Z" id="Fill-86" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M9,5 L21,5 L21,15 L9,15 L9,5 Z" id="Stroke-87" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M9,10 L5,10 M35,29 L53,29" id="Stroke-88" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M23,24 L35,24 L35,34 L23,34 L23,24 Z" id="Fill-89" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M23,24 L35,24 L35,34 L23,34 L23,24 Z" id="Stroke-90" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M23,29 L5,29 M37,48 L5,48" id="Stroke-91" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M37,43 L49,43 L49,53 L37,53 L37,43 Z" id="Fill-92" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M37,43 L49,43 L49,53 L37,53 L37,43 Z" id="Stroke-93" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M49,48 L53,48" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('phone');
             $table->string('password');
             $table->unsignedTinyInteger('role'); // 0: student ... 1: teacher ... 2:admin
+            $table->enum("state",['waiting',"accepted","rejected"])->default("waiting");
             $table->rememberToken();
             $table->timestamps();
             $table->unsignedInteger('created_by')->nullable();

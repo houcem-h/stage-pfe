@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="44px" viewBox="0 0 50 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>252 - Shuffle (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-1086.000000, -1806.000000)" fill="#000000">
+            <g id="252---Shuffle-(Solid)" sketch:type="MSLayerGroup" transform="translate(1086.000000, 1806.000000)">
+                <path d="M27,11 L36,11 L36,19.964 L49.7,10 L36,0.036 L36,9 L27,9 C19.832,9 14,14.832 14,22 C14,28.065 9.065,33 3,33 L1,33 C0.447,33 0,33.447 0,34 C0,34.553 0.447,35 1,35 L3,35 C10.168,35 16,29.168 16,22 C16,15.935 20.935,11 27,11" id="Fill-107" sketch:type="MSShapeGroup"></path>
+                <path d="M1,11 L3,11 C5.713,11 8.318,11.994 10.336,13.799 C10.527,13.97 10.766,14.054 11.003,14.054 C11.277,14.054 11.551,13.941 11.748,13.721 C12.116,13.309 12.081,12.677 11.67,12.309 C9.285,10.175 6.206,9 3,9 L1,9 C0.447,9 0,9.447 0,10 C0,10.553 0.447,11 1,11" id="Fill-108" sketch:type="MSShapeGroup"></path>
+                <path d="M36,33 L27,33 C24.315,33 21.73,32.024 19.722,30.252 C19.311,29.887 18.678,29.925 18.311,30.341 C17.945,30.755 17.984,31.387 18.399,31.752 C20.773,33.847 23.828,35 27,35 L36,35 L36,43.964 L49.7,34 L36,24.036 L36,33" id="Fill-109" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

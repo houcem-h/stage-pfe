@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>225 - Help (Outline)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-725.000000, -2161.000000)" stroke-width="2">
+            <g id="225---Help-(Outline)" sketch:type="MSLayerGroup" transform="translate(726.000000, 2162.000000)">
+                <path d="M50,25 C50,38.807 38.807,50 25,50 C11.193,50 0,38.807 0,25 C0,11.193 11.193,0 25,0 C38.807,0 50,11.193 50,25 L50,25 Z" id="Stroke-152" stroke="#1A1718" sketch:type="MSShapeGroup"></path>
+                <path d="M25,37 L25,39" id="Stroke-156" stroke="#000000" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M18,16 C18,12.101 21.188,8.946 25.1,9.001 C28.817,9.052 31.948,12.183 31.999,15.9 C32.034,18.411 30.747,20.624 28.79,21.886 C26.355,23.457 25,26.26 25,29.158 L25,32" id="Stroke-158" stroke="#000000" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="59px" viewBox="0 0 50 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>313 - Navigator (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-965.000000, -1078.000000)" fill="#000000">
+            <g id="313---Navigator-(Solid)" sketch:type="MSLayerGroup" transform="translate(965.000000, 1078.000000)">
+                <path d="M26,9.025 L26,7.858 C27.721,7.411 29,5.859 29,4 C29,1.794 27.206,0 25,0 C22.794,0 21,1.794 21,4 C21,5.859 22.28,7.411 24,7.858 L24,9.025 C10.677,9.553 0,20.55 0,34 C0,47.785 11.215,59 25,59 C38.785,59 50,47.785 50,34 C50,20.55 39.323,9.553 26,9.025 L26,9.025 Z M23,4 C23,2.897 23.898,2 25,2 C26.102,2 27,2.897 27,4 C27,5.103 26.102,6 25,6 C23.898,6 23,5.103 23,4 L23,4 Z M12.72,47.622 C12.577,47.693 12.425,47.728 12.273,47.728 C12.014,47.728 11.758,47.627 11.565,47.435 C11.261,47.13 11.186,46.665 11.378,46.28 L19.541,29.955 L29.045,39.459 L12.72,47.622 L12.72,47.622 Z M38.622,21.72 L30.459,38.045 L20.955,28.541 L37.28,20.378 C37.666,20.186 38.13,20.261 38.435,20.565 C38.739,20.87 38.815,21.335 38.622,21.72 L38.622,21.72 Z" id="Fill-749" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

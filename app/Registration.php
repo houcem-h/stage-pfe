@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 class Registration extends Model
 {
     public function studentRecord()
@@ -42,22 +43,29 @@ class Registration extends Model
 
     //get session
     public static function get_session($id_user){
-      $user_session = Self::where("student",$id_user)->get(['session'])->first();
-      return $user_session['session'];
+      $user_session = Self::where("student",$id_user)->get(['session']); // return an object
+      foreach($user_session as $s){
+          if(Carbon::now()->year -1 == $s['session'])
+            return $s['session'];
+      }
+
+      return false;
+      
     }
 
     //group name for that session and user id
     public static function get_group_name($id_user){
         //$group = self::where("student",$id_user)->where("session",self::get_session($id_user))->get(['group'])->first();
-        $group = DB::table("registrations")
+        if(self::get_session($id_user) != false){
+            $group = DB::table("registrations")
                 ->join("groups","groups.id","=","registrations.group")
                 ->select("groups.name")
                 ->where("registrations.student","=",$id_user)
                 ->where("registrations.session","=",self::get_session($id_user))
                 ->get()->first();
-
-      if(!empty($group->name))
-          return $group->name;
+                return $group->name;
+        }
+         return false;
     }
 
     //get valid group name choice, means if ancian group of a user is TI11, so the choice are TI15,TI14

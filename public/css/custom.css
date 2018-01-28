@@ -1,6 +1,5 @@
 @import "app.css";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-
 /**CUSTON NAVBAR*/
 
 .navbar{
@@ -36,7 +35,7 @@
   padding-top: 10px!important
 }
 
-.update_group,#add,#save_group,.update_student,.save_update_group_student,#save_student{
+.update_group,#add,#save_group,.update_student,.save_update_group_student,#save_student,#addStudent{
   background: #26a69a!important;
   border: none!important;
   border-radius: 0
@@ -92,7 +91,7 @@ a:hover{
   margin-bottom: 40px;
   margin-right: 40px;
   width: 300px;
-  height: 300px;
+  height: 320px;
   transition: all 0.3s ease 0s;
   border-radius: 6px
 }
@@ -135,6 +134,8 @@ a:hover{
   margin-bottom: 10px;
   color: white
 }
+
+
 
 /*********** Card's teachers   ******/
 
@@ -318,4 +319,9 @@ a:hover{
   border: none!important;
   box-shadow: -5px 8px 8px -3px rgba(122,105,122,0.66)!important;
    border-radius: 0
+}
+
+/***** add student form ******/
+#addStudentForm{
+  height: auto!important
 }
