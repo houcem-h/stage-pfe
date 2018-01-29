@@ -288,4 +288,362 @@ class GetStat extends Controller
         
 
 
+        public function AcceptSingleUser($id) {
+            $user = \App\User::find($id);
+            $user->state = "accepted";
+            $user->save();
+            return "Done! User Accepted";
+        }
+
+        public function RejectSingleUser($id){
+            $user = \App\User::find($id);
+            $user->state = "rejected";
+            $user->save();
+            return "Done! User Rejected";
+        }
+
+        public function AcceptSelectedUser(Request $request) {
+                    $alldata = $request;
+                    $ids = $request->only(['ids']);
+                    $ids = $ids['ids'];
+                    $ids = str_replace('[', '', $ids);
+                    $ids = str_replace(']', '', $ids);    
+                    $ids = str_replace('"', '', $ids);
+                    $ids_array  = explode(",", $ids);
+                    foreach ($ids_array as $id ){
+                        $userX = \App\User::find($id);
+                        $userX->state = "accepted";
+                        $userX->save();
+                    }
+
+        }
+
+        public function RejectSelectedUser(Request $request) {
+            $alldata = $request;
+            $ids = $request->only(['ids']);
+            $ids = $ids['ids'];
+            $ids = str_replace('[', '', $ids);
+            $ids = str_replace(']', '', $ids);    
+            $ids = str_replace('"', '', $ids);
+            $ids_array  = explode(",", $ids);
+            foreach ($ids_array as $id ){
+                $userX = \App\User::find($id);
+                $userX->state = "rejected";
+                $userX->save();
+            }
+            
+
+        }
+
+        public static function getNBwaitingUsers() {
+            $Waitingusers = \App\User::where('state' , '=',  'waiting')->get();
+            return count($Waitingusers);
+        }
+
+        public static function getNBacceptedUsers() {
+            $Waitingusers = \App\User::where('state' , '=',  'accepted')->get();
+            return count($Waitingusers);
+        }
+
+        public static function getNBrejectedUsers() {
+            $Waitingusers = \App\User::where('state' , '=',  'rejected')->get();
+            return count($Waitingusers);
+        }
+
+
+
+       /* public static function pdf_note($annee , $niveau , $note) {
+               
+                $students = \App\Http\Controllers\GetStat::getAllstudents();
+                $pdf = PDF::loadView('pdfs.studentlist', ['students' => $students]);
+                return $pdf->stream();
+            
+        }*/
+
+        public function get_defenses_with_note($year, $egal, $type, $note  ) {
+            $year = str_replace("-" , '/' , $year) ; // replace '-' with '/' (ROUTE Problem)       
+           
+                $alldata1 = DB::table('minutes')
+                ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
+                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                ->join('users' , 'internships.student', '=' , 'users.id')
+                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+                ->where('session' , '=' , "$year")
+                ->where('final_note' , '>' , "$note")
+                ->where('type' , "=" , "$type")
+                ->get(); 
+
+                $alldata2 = DB::table('minutes')
+                ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
+                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                ->join('users' , 'internships.student', '=' , 'users.id')
+                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+                ->where('session' , '=' , "$year")
+                ->where('final_note' , '>' , "$note")
+                ->where('type' , "<>" , "$type") /* ! important  */
+                ->get(); 
+
+               
+                if($egal == "egal") {
+                    $pdf = PDF::loadView('pdfs.pdf_custom1', ['alldata' => $alldata1]);
+                    return $pdf->stream();
+                }
+
+               /* noteq */
+               else {
+                $pdf = PDF::loadView('pdfs.pdf_custom1', ['alldata' => $alldata2]);
+                return $pdf->stream();
+                }
+
+        }
+        
+        public function get_defenses_by_teacher() {
+            // $year = "2017/2018";
+            // $type = "init";
+            // $teacher = "Polly Berge";
+
+            $alldata1 = DB::table('minutes')
+            ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
+            ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+            ->join('users' , 'internships.reporter', '=' , 'users.id')
+            ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+            
+            ->get(); 
+            return $alldata1;
+        }
+
+
+        public static function showResultPage() {
+            $allteachers = \App\User::where('role', '=', '1')->orderBy('firstname')->get();
+            return View('dashboards.admin.reports' , ['Teachers' => $allteachers ]);
+        }
+
+        public function internships_all() {
+            $alldata1 = DB::table('internships')
+                        ->join('users', 'internships.student', '=' , 'users.id')
+                        ->join('companies', 'internships.company_framer', '=' , 'companies.id')
+                        ->get();
+                        return View('dashboards.admin.interships_all' , ['alldata' => $alldata1]);
+            
+        }
+
+        public function internships_init() {
+            $alldata1 = DB::table('internships')
+                        ->join('users', 'internships.student', '=' , 'users.id')
+                        ->join('companies', 'internships.company_framer', '=' , 'companies.id')
+                        ->where('type', '=' , 'init')
+                        ->get();
+                        return View('dashboards.admin.interships_init' , ['alldata' => $alldata1]);
+            
+        }
+
+        public function internships_perf() {
+            $alldata1 = DB::table('internships')
+                        ->join('users', 'internships.student', '=' , 'users.id')
+                        ->join('companies', 'internships.company_framer', '=' , 'companies.id')
+                        ->where('type', '=' , 'perf')
+                        ->get();
+                        return View('dashboards.admin.interships_perf' , ['alldata' => $alldata1]);
+            
+        }
+
+        public function internships_pfe() {
+            $alldata1 = DB::table('internships')
+                        ->join('users', 'internships.student', '=' , 'users.id')
+                        ->join('companies', 'internships.company_framer', '=' , 'companies.id')
+                        ->where('type', '=' , 'pfe')
+                        ->get();
+                        return View('dashboards.admin.interships_pfe' , ['alldata' => $alldata1]);
+            
+        }
+
+        public static function get_teacher_fullname($id) {
+            $firstname = DB::table('users')->where('id', '=', "$id")->pluck('firstname')->first();
+            $lastname = DB::table('users')->where('id', '=', "$id")->pluck('lastname')->first();
+            return $firstname . " " . $lastname ;
+        }
+
+
+
+        public static function soutenance_all(){
+            $alldata = DB::table('minutes')
+                ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
+                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                ->join('users' , 'internships.student', '=' , 'users.id')
+                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+                ->join('groups', 'registrations.group' , 'groups.id')
+                ->get(); 
+               // return $alldata;
+                return View('dashboards.admin.soutenance_all' , ['alldata' => $alldata]);
+                
+        }
+
+       
+        public static function soutenance_accepted(){
+            $alldata = DB::table('minutes')
+                ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
+                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                ->join('users' , 'internships.student', '=' , 'users.id')
+                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+                ->join('groups', 'registrations.group' , 'groups.id')
+                ->where('internships.state' , '=' , 'accepted')
+                ->get(); 
+               // return $alldata;
+                return View('dashboards.admin.soutenance_all' , ['alldata' => $alldata]);
+                
+        }
+
+        public static function soutenance_waiting(){
+            $alldata = DB::table('minutes')
+                ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
+                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                ->join('users' , 'internships.student', '=' , 'users.id')
+                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+                ->join('groups', 'registrations.group' , 'groups.id')
+                ->where('internships.state' , '=' , 'waiting')
+                ->get(); 
+               // return $alldata;
+                return View('dashboards.admin.soutenance_all' , ['alldata' => $alldata]);
+                
+        }
+
+        public static function soutenance_rejected(){
+            $alldata = DB::table('minutes')
+                ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
+                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                ->join('users' , 'internships.student', '=' , 'users.id')
+                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+                ->join('groups', 'registrations.group' , 'groups.id')
+                ->where('internships.state' , '=' , 'rejected')
+                ->get(); 
+               // return $alldata;
+                return View('dashboards.admin.soutenance_all' , ['alldata' => $alldata]);
+                
+        }
+
+        public function get_teachers_data_pdf($teacher_type, $year, $type , $id){
+            $year = str_replace("-" , '/' , $year) ; // replace '-' with '/' (ROUTE Problem)       
+         
+
+
+            if ($teacher_type == "reporter") {
+                 //as reporter
+                     $alldata = DB::table('minutes')
+                     ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
+                     ->join('users as teacher' , 'defenses.reporter', '=' , 'teacher.id')
+                     ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                     ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+                     ->join('users as student' , 'registrations.student' , '=' , 'student.id')
+                     ->select('teacher.id as teacher_id',
+                             'teacher.firstname as teacher_firstname',
+                             'teacher.lastname as teacher_lastname',
+                             'student.id as std_id',
+                             'student.firstname as std_firstname',
+                             'student.lastname as std_lastname' ,
+                             'minutes.final_note' ,
+                             'internships.type' ,
+                             'registrations.session',
+                             'defenses.date_d',
+                             'defenses.start_time',
+                             'minutes.notes')      
+                     ->where('teacher.id' , '=' , $id)
+                     ->where('internships.type', '=' , $type)
+                     ->where('registrations.session' , '=' , $year)
+                     ->get(); 
+
+                     $pdf = PDF::loadView('pdfs.teachers', ['alldata' => $alldata]);
+                     return $pdf->stream();
+            }
+           
+
+            else {
+                //as president
+                $alldata = DB::table('minutes')
+                     ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
+                     ->join('users as teacher' , 'defenses.president', '=' , 'teacher.id')
+                     ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                     ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+                     ->join('users as student' , 'registrations.student' , '=' , 'student.id')
+                     ->select('teacher.id as teacher_id',
+                             'teacher.firstname as teacher_firstname',
+                             'teacher.lastname as teacher_lastname',
+                             'student.id as std_id',
+                             'student.firstname as std_firstname',
+                             'student.lastname as std_lastname' ,
+                             'minutes.final_note' ,
+                             'internships.type' ,
+                             'registrations.session',
+                             'defenses.date_d',
+                             'defenses.start_time',
+                             'minutes.notes')      
+                             ->where('teacher.id' , '=' , $id)
+                             ->where('internships.type', '=' , $type)
+                             ->where('registrations.session' , '=' , $year)
+                     ->get(); 
+
+                     $pdf = PDF::loadView('pdfs.teachers', ['alldata' => $alldata]);
+                     return $pdf->stream();
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+        public static function companystat($id){
+            $alldata = DB::table('minutes')
+                ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
+                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                ->join('companies' , 'internships.company_framer', '=' , 'companies.id')
+                ->select('companies.id',
+                         'companies.name',
+                         'companies.activity',
+                         'companies.phone',
+                         'companies.fax',
+                         'companies.address',
+                         'minutes.final_note'
+                )
+                
+                ->get();
+                
+                $counter = 0;
+                $somme = 0;
+
+                foreach ($alldata as $data) {
+                    if ($data->id == $id) {
+                        $counter++;
+                        $somme = $somme + $data->final_note; 
+                    }
+                        
+
+                }
+
+                if($counter > 0)
+                     return round($somme/$counter , 2) .'/20' ;
+                else {
+                    return "?";
+                }
+        }
+
+        public function companiesview() {
+            $allcompanies = DB::table("companies")->get();
+             return View('dashboards.admin.companies' , ['companies' => $allcompanies]);
+        }
+
+
+
+        public function test() {
+            $pdf = PDF::loadView('pdfs.s');
+            return $pdf->stream();
+        }
+
 }

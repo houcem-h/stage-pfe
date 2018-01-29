@@ -293,23 +293,23 @@
                         <div style="display: block; width: 483px; height: 241px;" width="483" height="241" class="chartjs-render-monitor">
                            <div>
                                 <div>
-                                  <i class="icon-drawer bg-danger p-4 font-2xl mr-3 float-left"></i>
-                                  <div class="h5 text-danger mb-0 pt-3">25</div>
+                                  <i class="icon-user-follow bg-warning p-4 font-2xl mr-3 float-left"></i>
+                                  <div class="h5 text-warning mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBwaitingUsers()}}</div>
                                   <div class="text-muted text-uppercase font-weight-bold font-xs">Pending Accounts</div>
                                 </div>
 
                                 <br>
 
                                 <div>
-                                    <i class="icon-user-follow bg-warning p-4 font-2xl mr-3 float-left"></i>
-                                    <div class="h5 text-warning mb-0 pt-3">50</div>
-                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Pending Interships</div>
+                                    <i class="icon-user-following bg-success p-4 font-2xl mr-3 float-left"></i>
+                                    <div class="h5 text-success mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBacceptedUsers()}}</div>
+                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Accepted Users</div>
                                 </div>
                                 <br>
                                 <div>
-                                    <i class="icon-book-open bg-success p-4 font-2xl mr-3 float-left"></i>
-                                    <div class="h5 text-success mb-0 pt-3">70</div>
-                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Pending Defences</div>
+                                    <i class="icon-user-unfollow bg-danger p-4 font-2xl mr-3 float-left"></i>
+                                    <div class="h5 text-danger mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBrejectedUsers()}}</div>
+                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Rejected Users</div>
                                 </div>
 
                               </div>

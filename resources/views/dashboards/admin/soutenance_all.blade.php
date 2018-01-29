@@ -6,7 +6,7 @@
     <div class="card">
 
         <div class="card-header">
-                <i class="fa fa-edit"></i> Interships (All)
+                <i class="fa fa-edit"></i> Soutenances
         </div>
 
 <div class="card-body">
@@ -17,12 +17,15 @@
                     <thead class="thead-light">
                             <tr>
                               <th class="text-center">Full Name</th>
-                              <th class="text-center">Start Date</th>
-                              <th class="text-center">End Date</th>
-                              <th class="text-center">Type</th>
+                              <th class="text-center">Session</th>
+                              <th class="text-center">Group</th>
+                              <th class="text-center">Date - Time</th>
+                              <th class="text-center">Classroom</th>
+                              <th class="text-center">Reporter</th>
+                              <th class="text-center">President</th>
                               <th class="text-center">Framer</th>
-                              <th class="text-center">Comapny Framer</th>
-                              <th class="text-center">Status</th>
+                              <!--<th class="text-center">State</th>-->
+                             
                             </tr>
                           </thead>
 
@@ -30,17 +33,19 @@
                     @foreach ( $alldata as $s )
                         <tr role="row" class="odd">
                                 <td class="text-center">{{$s->firstname}} {{$s->lastname}}</td>
-                                <td  class="text-center">{{$s->start_date}}</td>
-                                <td class="text-center">{{$s->end_date}}</td>
-                                <td class="text-center">{{$s->type}}</td>
-                                <td class="text-center">{{\App\Http\Controllers\GetStat::get_teacher_fullname( $s->framer ) }}</td>
+                                <td  class="text-center">{{$s->session}}</td>
                                 <td class="text-center">{{$s->name}}</td>
-                                <td class="text-center">
+                                <td class="text-center">{{$s->date_d}} - {{$s->start_time}}</td>
+                                <td class="text-center">{{$s->classroom }}</td>
+                                <td class="text-center">{{\App\Http\Controllers\GetStat::get_teacher_fullname( $s->reporter ) }}</td>
+                                <td class="text-center">{{\App\Http\Controllers\GetStat::get_teacher_fullname( $s->president ) }}</td>
+                                <td class="text-center">{{\App\Http\Controllers\GetStat::get_teacher_fullname( $s->framer ) }}</td>
+                               <!-- <td class="text-center">
                                     
                                     <span class="badge badge-success">{{$s->state}}</span>
                                     
                                    
-                                </td>
+                                </td>-->
                         </tr>
                     @endforeach  
                 </tbody>
