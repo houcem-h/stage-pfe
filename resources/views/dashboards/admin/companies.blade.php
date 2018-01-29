@@ -30,6 +30,7 @@
                      <th class="text-center">Phone</th>
                      <th class="text-center">Fax</th>
                      <th class="text-center">Adresse</th>
+                     <th class="text-center">Moyenne</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -53,6 +54,9 @@
                                 </td>
                                 <td>
                                         <span>{{$user->address}}</span>
+                                </td>
+                                <td>
+                                        <span>{{ \App\Http\Controllers\GetStat::companystat($user->id)}} </span>
                                 </td>
                                         <!-- Edit and Delete Btn -->
                             

@@ -76,7 +76,6 @@ Route::get('dashboard/Companies', function() {
 });
 
 
-Route::get('/test', 'GetStat@getalldefences');
 
 /************* Mailer **************/
 
@@ -95,39 +94,50 @@ Route::get('/pdf/teachers', "GetStat@ExportTeachersAsPDF")->middleware("auth")->
 Route::get('/excel/students', 'GetStat@ExportStudentsAsExcel')->middleware("auth")->name('studentsxls');
 //*** Get list of teachers as Excel ***/
 Route::get('/excel/teachers', 'GetStat@ExportTeachersAsExcel')->middleware("auth")->name('teachersxls');
-Route::get('/dashboard/reports', function(){
-     return View('dashboards.admin.reports');
-    })->middleware("auth");
+Route::get('/dashboard/reports', 'GetStat@showResultPage');
 
 
 /************* Interships **************/
 
 //*******All Interships
-Route::get('/dashboard/Interships/all', function () {
-    return View('dashboards.admin.interships_all');
-})->name('interships_all');
-
-//*******Initiation
-Route::get('/dashboard/Interships/init', function () {
-    return View('dashboards.admin.interships_init');
-})->name('interships_init');
-
-//*******Perfectionnement
-Route::get('/dashboard/Interships/perf', function () {
-    return View('dashboards.admin.interships_perf');
-})->name('interships_perf');
-
-//*******PFE
-Route::get('/dashboard/Interships/pfe', function () {
-    return View('dashboards.admin.interships_pfe');
-})->name('interships_pfe');
+Route::get('/pdf/{teacher_type}/{year}/{type}/{teacher_name}','GetStat@get_teachers_data_pdf');
 
 
+Route::get('/dashboard/Interships/all', 'GetStat@internships_all')->name('interships_all');
+Route::get('/dashboard/Interships/init', 'GetStat@internships_init')->name('interships_init');
+Route::get('/dashboard/Interships/perf', 'GetStat@internships_perf')->name('interships_perf');
+Route::get('/dashboard/Interships/pfe', 'GetStat@internships_pfe')->name('interships_pfe');
 
+
+Route::get('/dashboard/Requests', function() {
+    $allwaitingUsers = Illuminate\Support\Facades\DB::table("users")->where("state" , '=' , "waiting")->get();
+    return View('dashboards.admin.acceptReq', ['Allwaiting' => $allwaitingUsers]);
+})->name('Requests');
+
+
+// Accept & reject users by id (only one user per operation)
+Route::get('/AcceptUser/{id}' , 'GetStat@AcceptSingleUser');
+Route::get('/RejectUser/{id}' , 'GetStat@RejectSingleUser');
+
+Route::post('/AcceptUsers' , 'GetStat@AcceptSelectedUser');
+Route::post('/RejectUsers' , 'GetStat@RejectSelectedUser');
+
+//test
+Route::get('/dashboard/defenses/all', 'GetStat@soutenance_all')->name('defences_all');
+Route::get('/dashboard/defenses/accepted', 'GetStat@soutenance_accepted')->name('defences_accepted');
+Route::get('/dashboard/defenses/waiting', 'GetStat@soutenance_waiting')->name('defences_waiting');
+Route::get('/dashboard/defenses/rejected', 'GetStat@soutenance_rejected')->name('defences_rejected');
+
+
+//PDF (get by year - type - note)
+Route::get('/pdf/reports_1/{year}/{egal}/{type}/{note}' , 'GetStat@get_defenses_with_note'); 
+
+Route::get('/test', 'GetStat@test');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //******************************************End of Routes by Adem-kk *************************************************//
+
 
 
 

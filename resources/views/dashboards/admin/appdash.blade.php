@@ -48,7 +48,7 @@
 		</button>
 
 
-		<ul class="nav navbar-nav ml-auto" id="custom">
+		<ul class="nav navbar-nav ml-auto d-md-down-none" id="custom">
 				{{-- Hazem MODIFICATIONS --}}
 			<li><a href="{{route('teachers')}}">Teachers  list</a></li>
 			<li><a href="{{'teachers/create'}}">Add teacher</a></li>
@@ -136,6 +136,10 @@
 							<a class="nav-link nav-dropdown-toggle" href="#">
 								<i class="kk kk-users"></i> Utilisateurs</a>
 							<ul class="nav-dropdown-items">
+							<li class="nav-item">
+									<a class="nav-link" href="{{ route('Requests') }}">
+										<i class="kk kk-user-m"></i>User Requests</a>
+								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="{{ route('Allusers') }}">
 										<i class="kk kk-users2"></i>All</a>
@@ -159,19 +163,19 @@
 								<i class="kk kk-event-date2"></i>Soutenances</a>
 							<ul class="nav-dropdown-items">
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="{{route('defences_all')}}">
 											<i class="kk kk-event-date2"></i>All</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="{{route('defences_accepted')}}">
 											<i class="kk kk-event-date2"></i>Accepted</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="{{route('defences_waiting')}}">
 											<i class="kk kk-event-date2"></i>Waiting</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="{{route('defences_rejected')}}">
 											<i class="kk kk-event-date2"></i>Refused</a>
 								</li>
 	
@@ -210,14 +214,11 @@
 								<i class="kk kk-piechart"></i> Reports</a>
 						</li>
 	
-						<li class="divider"></li>
-						<li class="nav-title">
-							Extras
-						</li>
-						<li class="nav-item">
+						
+						<!--<li class="nav-item">
 							<a class="nav-link" href="#">
 								<i class="kk kk-settings4"></i> Settings</a>
-						</li>
+						</li>-->
 						<!--<li class="nav-item mt-auto">
 				<a class="nav-link nav-link-success" href="http://coreui.io/" target="_top"><i class="icon-cloud-download"></i> Download CoreUI</a>
 			  </li>
