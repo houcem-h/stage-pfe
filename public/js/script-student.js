@@ -219,15 +219,32 @@ $(function(){
         var idFrame = $(this).parent().parent().attr('id')
         $.post("acceptDemande",{id_frame: idFrame},function(data){
             if(data == "done"){
-              swal("Super!","Votre acceptation sera envoyée à cet enseignant","success");
+              swal({
+                title: "Super!",
+                text: "Votre acceptation sera envoyée à cet enseignant",
+                icon:"success",
+                button: false,
+              });
+
+              //replace the button of the selected teacher (success)
+              $("#"+idFrame+" .actions").html('<span class="text-success"><i class="fa fa-check" aria-hidden="true"></i> Accepté</span>');
+
+              //replace the rest of the non-selected teacher (X)
+              // $("tr [id !='"+idFrame+"']").find(" td .actions").html('<span class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i> Refusée</span>');
+              $(".requests tr").each(function(index){
+                var id = $(this).attr("id");
+                if(id != idFrame)
+                  $("#"+id+" .actions").html('<span class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i> Refusée</span>')
+              });
             }
+
+            console.log(data);
         })
 
         
         //redirect student to his home page when he click "OK"
         $(document).on("click",".swal-button--confirm",function(){
-          $("tbody tr#"+idFrame).fadeOut("slow")
-          console.log("removed");
+          location.reload();
         });
     });
 

@@ -33,16 +33,6 @@
                 </div>
                 
 
-                <div class="wrap-input100 validate-input" data-validate = "Date de naissance est obligatoire">
-					<input class="input100" type="date" name="dob" placeholder="Date de naissance" id="dob">
-					<span class="focus-input100"></span>
-					<span class="symbol-input100">
-						{{--  <i class="fa fa-calendar" aria-hidden="true"></i>  --}}
-						<i class="kk kk-calendar-month"></i>
-					</span>
-                </div>
-
-
                 <div class="wrap-input100 validate-input" data-validate = "Adresse email est obligatoire">
 					<input class="input100" type="text" name="email" placeholder="Adresse email" id="email">
 					<span class="focus-input100"></span>
@@ -55,6 +45,15 @@
 
                 <div class="wrap-input100 validate-input" data-validate = "Mot de passe est obligatoire">
 					<input class="input100" type="password" name="password" placeholder="Mot de passe" id="pass">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						{{--  <i class="fa fa-lock" aria-hidden="true"></i>  --}}
+						<i class="kk kk-lock2"></i>
+					</span>
+				</div>
+				
+				<div class="wrap-input100 validate-input" data-validate = "Confirmation de mot de passe  est obligatoire">
+					<input class="input100" type="password" name="password_confirmation" placeholder="confirmer mot de passe" id="passconfirm">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
 						{{--  <i class="fa fa-lock" aria-hidden="true"></i>  --}}

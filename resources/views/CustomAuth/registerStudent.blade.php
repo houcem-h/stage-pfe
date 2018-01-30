@@ -86,7 +86,9 @@
 
                 <div class="wrap-input100 validate-input">
 					<select class="input100" name="group" id="classe">
-						
+						@foreach($groups as $group)
+							<option value="{{ $group->id }}">{{ $group->name }}</option>
+						@endforeach
 					</select>
 					<span class="symbol-input100">
 						<i class="kk kk-camera-bag "></i>

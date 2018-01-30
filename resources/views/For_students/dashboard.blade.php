@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="page-head-line">Dashboard</h4>
+                <h4 class="page-head-line">Tableau de bord</h4>
             </div>
         </div>
         <div class="row">
@@ -29,11 +29,11 @@
                     </div>
                 </div>
             </a>
-            <a href="{{ route('showAllTeachers')}}">
+            <a href="{{ route('history')}}">
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="dashboard-div-wrapper" style="background-color:#2980b9">
-                        <i  class="fa fa-users dashboard-div-icon" ></i>
-                        <h5>Les enseignants </h5>
+                        <i  class="fa fa-history dashboard-div-icon" ></i>
+                        <h5>Historiques </h5>
                     </div>
                 </div>
             </a>
@@ -49,7 +49,7 @@
         <div class="col-xs-12">
             <div class="row">
                 <div class="col-md-12">
-                    <h5 class="page-head-line">Activité</h5>
+                    <h5 class="page-head-line">Activité en cours</h5>
                 </div>
             </div>
             <div class="activite">

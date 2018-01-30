@@ -20,12 +20,12 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="requests">
                         @foreach($teachers as $teacher)
                             <tr id="{{ $teacher->id }}">
                                 <td>{{ $teacher->firstname }} {{ $teacher->lastname }}</td>
                                 <td>{{ $teacher->type }}</td>
-                                <td>
+                                <td class="actions">
                                     <button class="btn btn-success accept">Accepter</button>
                                     <button class="btn btn-danger decline">Refuser</button>
                                 </td>

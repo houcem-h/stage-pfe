@@ -33,14 +33,13 @@
             <div class="col-sm-6"><h4>{{ $student->phone}}</h4> </div>
             <div class="col-xs-12" style="margin-bottom:40px;"></div>
         </div>
-        {{--  <div class="group_registre col-md-5 col-sm-12 col-md-offset-1">
-            @if($group_found != false)
-                <h4>*Vous ete inscrit dans le groupe {{ $group }}</h4> 
-                <h4>*Session {{ $session }}</h4>
-            @else
-                <h4>Vous n'etes pas inscri cette année universitaire</h4>
-            @endif
-        </div>  --}}
+        <div class="col-md-5 col-xs-12 col-md-offset-1">
+            <div class="col-md-6 col-xs-12 col-md-offset-3">
+                <a href="{{ route('edit_profile')}}">
+                    <button class="btn btn-primary input-lg">Modifier mes information</button>
+                </a>
+            </div>
+        </div> 
     </div>
 </div>
 @endsection

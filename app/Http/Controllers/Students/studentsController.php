@@ -9,12 +9,14 @@ use App\User;
 use App\Registration;
 use App\Internship;
 use App\FramingRequest;
+use App\Minute;
 use Session;
 use Mail;
 use Auth;
 use App\Mail\edit_email;
 use Illuminate\Validation\Rule;
 use Carbon\Carbon;
+use DB;
 class studentsController extends Controller
 {
     public function __construct(){
@@ -137,10 +139,77 @@ class studentsController extends Controller
     }
 
 
+    public function show_history(){
+        $user_id = auth()->user()->id;
 
+        #1: check if student has realy passed an internship and have a defense, if it's true then search his note in "minutes" table
+        #if it doesn't exist in "minutes" table then the students didn"t passe the defense
+        $hasDefenses = $this->hasDefenses($user_id);
+        $this->hasNote($user_id);
+        // return $hasDefenses;
+       
+       
+         return view("For_students/history");
+    }
 
+    private function hasNote($user_id){
+        $tab = $this->hasDefenses($user_id);
+        $result = [];
+        foreach($tab as $t){ 
+            $table = (array)$t;
+            if(count(Minute::whereDefense($t->id)->get()) == 0 ){
+                $t->hasNote = "false";
+                echo "false <br>";
+                echo json_encode($t);
+                //array_push($result,$table);
+            }else {
+                echo "true<br>";
+                echo json_encode($t);
+            }
+            
+        }
+    }
+    private function hasDefenses($user_id){
+        $check = DB::table("defenses")
+                ->join("internships","internships.id","=","defenses.internship")
+                ->join("registrations","registrations.id","=","internships.student")
+                ->where("registrations.student","=",$user_id)
+                ->get(['defenses.id']);
 
+        return $check;
 
+    }
+    private function getAllHistory($user_id){
+        $histories = DB::table("minutes")
+                    ->join("defenses","defenses.id","=","minutes.defense")
+                    ->join("internships","internships.id","=","defenses.internship")
+                    ->join("registrations","registrations.id","=","internships.student")
+                    ->join("users as reporter","reporter.id","=","defenses.reporter")
+                    ->join("users as president","president.id","=","defenses.president")
+                    ->join("users as framer","framer.id","=","internships.framer")
+                    ->join("companies","companies.id","=","internships.company_framer")
+                    ->where("registrations.student","=",$user_id)
+                    ->select(
+                        "final_note",
+                        "mention",
+                        "date_d",
+                        "start_time",
+                        "end_time",
+                        "classroom",
+                        "reporter.firstname as repo_name",
+                        "reporter.lastname as repo_last",
+                        "president.firstname as pres_name",
+                        "president.lastname as pres_last",
+                        "start_date",
+                        "end_date",
+                        "type",
+                        "framer.firstname as framer_firstname",
+                        "framer.lastname as framer_lastname",
+                        "companies.name"   
+                    )
+                    ->get();
+        return $histories;
+    }
 
 
     /***************************POST FORMS****************************/
@@ -285,13 +354,24 @@ class studentsController extends Controller
 
     //when student accept the teacher's demande
     public function acceptDemande(Request $request){
+        #1: change the statu of request to accepted
         $requestFind = FramingRequest::find($request['id_frame']);
         $requestFind->status = "accepeted";
         if($requestFind->save()){
-            return "done";
-        }else{
+            #2: make the rest of the request to rejected
+            $restWish = FramingRequest::whereStatus("waiting")
+            ->whereRequestType("wish")
+            ->whereInternship($requestFind->internship)
+            ->update(["status"=>"rejected"]);
+
+            if($restWish > 0){
+                return "done";
+            }
             return "error";
         }
+        return "error";
+        
+                
     }
 
     //when student reject the teacher's demande

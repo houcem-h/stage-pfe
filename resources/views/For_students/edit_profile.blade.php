@@ -12,7 +12,7 @@
             </div>
       </div>
       <div class="row">
-          <div class="form-edit col-lg-6 col-lg-offset-3">
+          <div class="form-edit col-md-6 col-md-offset-3">
             <form action="{{route('student_save_info')}}" method="POST">
               {{ csrf_field() }}
                 <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">

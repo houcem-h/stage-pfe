@@ -8,17 +8,22 @@
   })();
 
 
-//load group name for a select box
-$(function(){
-    $.post("getNameGroup",{},function(data){
-        var i=0;
-        while(i<data.length){
-            $("#classe").append('<option value="'+data[i]["id"]+'">'+data[i]['name']+'</option>')
-            i+=1;
-        }
-    });
-});
 
+
+// $(function(){
+//     $.when(getAllCin()).done(function(data){
+//         var i =0;
+//         while(i<data.length){
+//             if("12345678" == data[i]['cin'])
+//                 console.log("found")
+//             i+=1;
+//         }
+//     });
+
+//     function getAllCin(){
+//         return $.post("getAllCin",{});
+//     }
+// });
 
 
 
@@ -39,7 +44,8 @@ $(function(){
         $("#cin").parent().attr("data-validate","Cin est obligatoire")
         // $("#pass").parent().attr("data-validate","Mot de passe est obligatoire")
         var check = true;
-
+        var isValidCin = true;
+        var isValidEmail = true;
         for(var i=0; i<input.length; i++) {
             if(validate(input[i]) == false){
                 e.preventDefault();
@@ -63,48 +69,39 @@ $(function(){
                     check=false;
             }
             
+            
+
+                
+            //ajax request
             if($("#cin").val() != ""){
-                $.post("RegistercheckCin",{cin: $("#cin").val()},function(data){
-                    e.preventDefault();
-                    if(data == "false"){
-                        showValidate($("#cin"));
-                        $("#cin").parent().attr("data-validate","Cin existe déja")
-                        check=false;
-                    }
-                });
+                if(checkCin($("#cin").val()) == "false"){
+                    showValidate($("#cin"));
+                    $("#cin").parent().attr("data-validate","Cin est deja existe")
+                    isValidCin = false;
+                }
             }
-
-        
-            /****************** check password ******************/
-            //1: length of password is 8
-            // if($("#pass").val().length < 8){
-            //     e.preventDefault();
-            //     showValidate($("#pass"));
-            //     $("#pass").parent().attr("data-validate","Mot de passe doit avoir au minimum 8 caractere")
-            //     check=false;
-            // }
-
-            /****************** check email ******************/
-            //1: email should unique
-
+            
+                
             if($("#email").val() != ""){
-                $.post("RegisterCheckEmail",{email: $("#email").val()},function(data){
-                    e.preventDefault();
-                    if(data == "false"){
-                        showValidate($("#email"));
-                        $("#email").parent().attr("data-validate","Cette email exist déja")
-                        check=false;
-                    }
-                    
-                });
+                if(checkEmail($("#email").val()) == "false"){
+                    showValidate($("#email"));
+                    $("#email").parent().attr("data-validate","Adresse email est deja existe")
+                    isValidEmail = false;
+                }
             }
+            
+               
+
+            
             
 
 
+
+
         /*************IF ALL DATA ARE CORRECT, TRY TO REGISTER THAT ACCOUNT ****************************/
-        if(check == true){
+        if(check == true && isValidCin == true && isValidEmail == true){
             e.preventDefault();
-           $.post("registerAccount",{
+               $.post("registerAccount",{
                 "nom":$("#nom").val(),
                 "prenom":$("#prenom").val(),
                 "email":$("#email").val(),
@@ -127,7 +124,9 @@ $(function(){
                    swal("Error!","Nous rencontrons un petit probleme!","warning")
                }
            });
-        }
+
+            
+        }   
     
     
     });
@@ -138,38 +137,37 @@ $(function(){
     });
 
 
+    function checkCin(){
+        var res;
+        $.ajax({
+            url:"RegistercheckCin",
+            async:false,
+            method: "post",
+            data:{cin: $("#cin").val()},
+            success:function(data){
+                res = data;
+            }
+        });
 
+        return res;
+    }
 
+    function checkEmail(){
+        var res;
+        $.ajax({
+            url:"RegisterCheckEmail",
+            async:false,
+            method: "post",
+            data:{email: $("#email").val()},
+            success:function(data){
+                res = data;
+            }
+        });
 
+        return res;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     //******************************  Show errors *************************************/
     $('.validate-form .input100').each(function(){
         $(this).focus(function(){

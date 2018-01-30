@@ -71,7 +71,7 @@
                     @auth
                         <a href="{{ url('/home') }}">Accueil</a>
                     @else
-                        <a href="{{ route('login') }}">Connexion</a>
+                        <a href="{{ route('connecter') }}">Connexion</a>
                         <a href="{{ route('chooseRole') }}">Inscription</a>
                     @endauth
                 </div>

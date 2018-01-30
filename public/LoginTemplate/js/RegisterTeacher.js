@@ -25,7 +25,7 @@
         $("#email").parent().attr("data-validate","Adresse email est obligatoire")
         $("#pass").parent().attr("data-validate","Mot de passe est obligatoire")
         var check = true;
-
+        var isValidEmail = true;
         for(var i=0; i<input.length; i++) {
             if(validate(input[i]) == false){
                 e.preventDefault();
@@ -38,11 +38,24 @@
 
         
             /****************** check password ******************/
-            //1: length of password is 8
-            if($("#pass").val().length < 8){
+            if($("#pass").val() == "" ){
+                e.preventDefault();
+                showValidate($("#pass"));
+                $("#pass").parent().attr("data-validate","Mot de passe est obligatoire")
+                check=false;
+            }else if($("#pass").val().length < 8){
                 e.preventDefault();
                 showValidate($("#pass"));
                 $("#pass").parent().attr("data-validate","Mot de passe doit avoir au minimum 8 caractere")
+                $("#passconfirm").val("")
+                $("#pass").val("")
+                check=false;
+            }else if($("#passconfirm").val() != $("#pass").val()){
+                e.preventDefault();
+                showValidate($("#pass"));
+                $("#pass").parent().attr("data-validate","Mot de passe doit etre identique")
+                $("#passconfirm").val("")
+                $("#pass").val("")
                 check=false;
             }
 
@@ -50,28 +63,23 @@
             //1: email should unique
 
             if($("#email").val() != ""){
-                $.post("RegisterCheckEmail",{email: $("#email").val()},function(data){
-                    e.preventDefault();
-                    if(data == "false"){
-                        showValidate($("#email"));
-                        $("#email").parent().attr("data-validate","Cette email exist déja")
-                        check=false;
-                    }
-                    
-                });
+                if(checkEmail($("#email").val()) == "false"){
+                    showValidate($("#email"));
+                    $("#email").parent().attr("data-validate","Adresse email est deja existe")
+                    isValidEmail = false;
+                }
             }
             
 
 
         /*************IF ALL DATA ARE CORRECT, TRY TO REGISTER THAT ACCOUNT ****************************/
-        if(check == true){
+        if(check == true && isValidEmail == true){
             e.preventDefault();
            $.post("registerAccountTeacher",{
                 "nom":$("#nom").val(),
                 "prenom":$("#prenom").val(),
                 "email":$("#email").val(),
                 "password":$("#pass").val(),
-                "dob":$("#dob").val(),
                 "tel":$("#tel").val(),
                 "role":$("#role").val(),
 
@@ -100,24 +108,20 @@
 
 
 
+    function checkEmail(){
+        var res;
+        $.ajax({
+            url:"RegisterCheckEmail",
+            async:false,
+            method: "post",
+            data:{email: $("#email").val()},
+            success:function(data){
+                res = data;
+            }
+        });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        return res;
+    }
 
 
 

@@ -9,7 +9,7 @@ use App\Group;
 use App\Registration;
 use Carbon\Carbon;
 use Mail;
-use App\Mail\Welcome;
+use App\Jobs\sendLoginToStudent;
 class customAuthregister extends Controller
 {
     /*****SOME TESTS FOR AJAX HERE */
@@ -57,7 +57,8 @@ class customAuthregister extends Controller
             $registre->session = strval(Carbon::now()->year)."/".strval(Carbon::now()->year+1);
 
             if($registre->save()){
-                //Mail::to($request['email'])->send(new Welcome($newUser));
+                $jobWelcome = (new sendLoginToStudent($user))->delay(Carbon::now()->addSeconds(10));
+                dispatch($jobWelcome);
                 return "done";
             }else{
                 return "error";
@@ -74,20 +75,18 @@ class customAuthregister extends Controller
        $newUser->lastname = $request['prenom'];
        $newUser->email = $request['email'];
        $newUser->password = bcrypt($request['password']);
-       $newUser->birthdate = $request['dob'];
        $newUser->phone = $request['tel'];
        $newUser->role = $request['role'];
 
        if($newUser->save()){
+        // $jobWelcome = (new sendLoginToStudent($newUser))->delay(Carbon::now()->addSeconds(10));
+        // dispatch($jobWelcome);
            return "done";
        }
        return "error";
     }
 
     
-    //get groups name for page RegisterStudent(select box)
-    public function getNameGroup(){
-      $groups = Group::get(['name',"id"]);
-      return $groups;
-    }
+
+
 }

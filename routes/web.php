@@ -11,14 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-
 //********************************************* Routes by Adem-kk *************************************//
-
+Route::get("/",function(){
+    return view("welcome");
+});
 //********dashboard
 Route::get('/dashboard', function () {
     return View('dashboards.admin.dash');
@@ -182,6 +178,7 @@ Route::get("student/informations","Students\studentsController@display_informati
 Route::get("student/demande","Students\studentsController@demande")->name("demande_stage");
 Route::get("student/notifications","Students\studentsController@displayNotification")->name("Notification");
 Route::get("student/showAllTeachers", "Students\studentsController@display_teacher")->name("showAllTeachers");
+Route::get("student/history","Students\studentsController@show_history")->name("history");
 //POST
 Route::post("student_save_info","Students\studentsController@save_informations")->name("student_save_info");
 Route::post("email_config","Students\studentsController@send_email")->name("send_email");
@@ -203,7 +200,8 @@ Route::get('/login',function(){
 })->name("connecter"); 
 
 Route::get('/signinStudent',function(){
-    return view('CustomAuth.registerStudent');
+    $groups = App\Group::get(['name',"id"]);
+    return view('CustomAuth.registerStudent')->with("groups",$groups);
 })->name("creerEtudiant"); 
 
 Route::get('/signinTeacher',function(){
@@ -237,8 +235,6 @@ Route::post("EmailExist","customAuth\customAuthLogin@checkEmailExist");
 Route::post("checkConnection","customAuth\customAuthLogin@checkConnection");
 //For reset password
 Route::post("sendCode","customAuth\customAuthReset@sendCode")->name("sendCodeReset");
-// Route::post("checkCode","customAuth\customAuthReset@checkCode")->name("checkCode");
-// Route::post("codeAjax","customAuth\customAuthReset@codeAjax");
 Route::post("FinalResetPassword","customAuth\customAuthReset@StoreNewPassword");
 /******************************************** END OF ROUTES BY AMINE BEJAOUI ***************************************************/
 
@@ -284,3 +280,5 @@ Route::resource('teachers','TeachersController');
 
 
 Route::post("/login","Auth\LoginController@login")->name("login");
+
+

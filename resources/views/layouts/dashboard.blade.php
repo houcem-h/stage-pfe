@@ -58,13 +58,24 @@
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse ">
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
-                            <li><a class="menu-top-active" href="{{ route('dashboard_student')}}">Dashboard</a></li>
-                            <li><a href="{{ route('edit_profile') }}">Modifier profile</a></li>
+                            <li><a class="menu-top-active" href="{{ route('dashboard_student')}}">Tableau de bord</a></li>
+                            <li>
+                                @if(Session::has("t"))
+                                    <a href="{{ url('student/demande?t='.Session::get('t')) }}">
+                                @else
+                                    <a href="{{ route('demande_stage') }}">
+                                @endif
+                                Demande d'un stage</a>
+                            </li>
+                            <li><a href="">Historique</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                                     Parametres
                                 </a>
                                 <div class="dropdown-menu dropdown-settings" style="width: 200px;">
+                                    <div>
+                                        <a href="{{ route('edit_profile') }}" style="color:black;font-size:12px">Modifier profile</a>
+                                    </div>
                                     <div>   
                                         <a href="{{ route('edit_email') }}" style="color:black;font-size:12px">Modifer email</a>
                                     </div>

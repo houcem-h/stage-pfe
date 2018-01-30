@@ -111,8 +111,8 @@ class Internship extends Model
         if($yearDefense == $current_year){
             return $myDefenses;
         }
-
-
     }
+
+    
 
 }

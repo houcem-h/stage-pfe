@@ -8,8 +8,6 @@ use App\User;
 use App\Registration;
 use Carbon\Carbon;
 use DB;
-use App\Mail\ResetPassword;
-use Mail;
 class dashboardController extends Controller
 {
     public function showStudentInvit(){
@@ -35,8 +33,6 @@ class dashboardController extends Controller
             $user = User::find($userId);
             $user->state = "accepted";
             if($user->save()){
-                //$when = now()->addMinutes(5);
-                //Mail::to($user->email)->later($when,new ResetPassword("amine"));
                 return "done";
             }
                 

@@ -4,18 +4,18 @@ namespace App\Http\Controllers\customAuth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Mail;
 use Session;
 use App\User;
-use App\Mail\ResetPassword;
+use Carbon\Carbon;
+use App\Jobs\sendResetPasswordJob;
 class customAuthReset extends Controller
 {
     public function sendCode(Request $request){
         $email = $request['email'];
         $code = uniqid();
         $generetToken = str_random(10)."-".$code."-".$request['email'];
-        //send email
-        Mail::to($email)->send(new ResetPassword($code));
+        $newJob = (new sendResetPasswordJob($email,$code))->delay(Carbon::now()->addSeconds(10));
+        dispatch($newJob);
         $request->session()->put('p', $request['password']);
         return redirect("/confirm?token=".$generetToken);
     }
