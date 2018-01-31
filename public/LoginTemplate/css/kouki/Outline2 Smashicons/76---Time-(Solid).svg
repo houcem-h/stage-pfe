@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>76 - Time (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-600.000000, -3957.000000)" fill="#1A1718">
+            <g id="76---Time-(Solid)" sketch:type="MSLayerGroup" transform="translate(600.000000, 3957.000000)">
+                <path d="M30,0.121 C13.458,0.121 0,13.579 0,30.121 C0,46.663 13.458,60 30,60 C46.542,60 60,46.663 60,30.121 C60,13.579 46.542,0.121 30,0.121 L30,0.121 Z M32,31 C32,32.105 31.105,33 30,33 L14,33 C12.896,33 12,32.105 12,31 C12,29.896 12.896,29 14,29 L28,29 L28,7 C28,5.896 28.896,5 30,5 C31.105,5 32,5.896 32,7 L32,31 L32,31 Z" id="Fill-1176" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

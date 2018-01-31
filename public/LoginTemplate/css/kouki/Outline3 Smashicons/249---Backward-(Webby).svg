@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>249 - Backward (Webby)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-240.000000, -1917.000000)">
+            <g id="249---Backward-(Webby)" sketch:type="MSLayerGroup" transform="translate(241.000000, 1918.000000)">
+                <path d="M0,29 C0,45.016 12.984,58 29,58 C45.016,58 58,45.016 58,29 C58,12.984 45.016,0 29,0 C12.984,0 0,12.984 0,29 L0,29 Z" id="Fill-526" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M0,29 C0,45.016 12.984,58 29,58 C45.016,58 58,45.016 58,29 C58,12.984 45.016,0 29,0 C12.984,0 0,12.984 0,29 L0,29 Z" id="Stroke-527" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M22,29 L44,44 L44,14 L22,29 L22,29 Z" id="Fill-692" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M22,29 L44,44 L44,14 L22,29 L22,29 Z" id="Stroke-693" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M13,44 L18,44 L18,14 L13,14 L13,44 Z" id="Fill-694" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M13,44 L18,44 L18,14 L13,14 L13,44 Z" id="Stroke-695" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

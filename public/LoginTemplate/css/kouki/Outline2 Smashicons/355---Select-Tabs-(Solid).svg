@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="51px" viewBox="0 0 56 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>355 - Select Tabs (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-722.000000, -599.000000)">
+            <g id="355---Select-Tabs-(Solid)" sketch:type="MSLayerGroup" transform="translate(722.000000, 599.000000)">
+                <path d="M3,10 L53,10 C53.553,10 54,9.552 54,9 C54,8.448 53.553,8 53,8 L3,8 C2.447,8 2,8.448 2,9 C2,9.552 2.447,10 3,10" id="Fill-4" fill="#1A1718" sketch:type="MSShapeGroup"></path>
+                <path d="M6,6 L50,6 C50.553,6 51,5.552 51,5 C51,4.448 50.553,4 50,4 L6,4 C5.447,4 5,4.448 5,5 C5,5.552 5.447,6 6,6" id="Fill-5" fill="#1A1718" sketch:type="MSShapeGroup"></path>
+                <path d="M9,2 L47,2 C47.553,2 48,1.552 48,1 C48,0.448 47.553,0 47,0 L9,0 C8.447,0 8,0.448 8,1 C8,1.552 8.447,2 9,2" id="Fill-6" fill="#1A1718" sketch:type="MSShapeGroup"></path>
+                <path d="M0,51 L56,51 L56,12 L0,12 L0,51 Z M6,18 L50,18 L50,45 L6,45 L6,18 Z" id="Fill-7" fill="#000000" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

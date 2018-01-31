@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+<g id="Devices">
+	<g id="Monitor">
+		<g>
+			<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#BDC3C7" points="22,32 22,27 19,27 19,32 15,32 15,33 26,33 26,32 			
+				"/>
+		</g>
+	</g>
+	<g id="Monitor_1_">
+		<g>
+			<rect x="6" y="7" fill-rule="evenodd" clip-rule="evenodd" fill="#201F1F" width="28" height="21"/>
+		</g>
+	</g>
+	<g id="Monitor_2_">
+		<g>
+			<rect x="8" y="9" fill-rule="evenodd" clip-rule="evenodd" fill="#2C3E50" width="24" height="16"/>
+		</g>
+	</g>
+	<g id="Monitor_3_">
+		<g>
+			<circle fill-rule="evenodd" clip-rule="evenodd" fill="#1ABC9C" cx="20.5" cy="26.5" r="0.5"/>
+		</g>
+	</g>
+</g>
+<g id="Lockup">
+</g>
+</svg>

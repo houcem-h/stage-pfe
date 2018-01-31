@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="46px" viewBox="0 0 58 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>271 - Camera (Outline)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="271---Camera-(Outline)" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)" stroke="#000000" stroke-width="2" stroke-linecap="round">
+            <path d="M53.63,44 L2.37,44 C1.061,44 0,42.939 0,41.63 L0,6.37 C0,5.061 1.061,4 2.37,4 L53.63,4 C54.939,4 56,5.061 56,6.37 L56,41.63 C56,42.939 54.939,44 53.63,44 L53.63,44 Z" id="Path" sketch:type="MSShapeGroup"></path>
+            <path d="M45,24 C45,32.837 37.836,40 29,40 C20.163,40 13,32.837 13,24 C13,15.163 20.163,8 29,8 C37.836,8 45,15.163 45,24 L45,24 Z" id="Path" sketch:type="MSShapeGroup"></path>
+            <path d="M19,0 L38,0 L19,0 Z" id="Path" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="59px" viewBox="0 0 48 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>348 - Trash Bin (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-365.000000, -717.000000)" fill="#000000">
+            <g id="348---Trash-Bin-(Solid)" sketch:type="MSLayerGroup" transform="translate(365.000000, 717.000000)">
+                <path d="M47,6 L32.956,6 C32.846,4.75 32.461,2.642 31.143,1.289 C30.309,0.434 29.251,0 27.999,0 L18,0 C16.748,0 15.69,0.434 14.856,1.289 C13.538,2.642 13.153,4.75 13.043,6 L1,6 C0.448,6 0,6.447 0,7 C0,7.553 0.448,8 1,8 L3.041,8 L4.956,54.021 C4.993,55.743 6.065,59 9.864,59 L38.136,59 C41.935,59 43.007,55.743 43.043,54.042 L44.959,8 L47,8 C47.552,8 48,7.553 48,7 C48,6.447 47.552,6 47,6 L47,6 Z M15,50 C15,50.553 14.552,51 14,51 C13.448,51 13,50.553 13,50 L13,17 C13,16.447 13.448,16 14,16 C14.552,16 15,16.447 15,17 L15,50 L15,50 Z M25,50 C25,50.553 24.552,51 24,51 C23.448,51 23,50.553 23,50 L23,17 C23,16.447 23.448,16 24,16 C24.552,16 25,16.447 25,17 L25,50 L25,50 Z M35,50 C35,50.553 34.552,51 34,51 C33.448,51 33,50.553 33,50 L33,17 C33,16.447 33.448,16 34,16 C34.552,16 35,16.447 35,17 L35,50 L35,50 Z M16.293,2.681 C16.74,2.223 17.299,2 18,2 L27.999,2 C28.7,2 29.259,2.223 29.707,2.681 C30.512,3.504 30.834,4.952 30.946,6 L15.053,6 C15.165,4.952 15.488,3.504 16.293,2.681 L16.293,2.681 Z" id="Fill-702" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

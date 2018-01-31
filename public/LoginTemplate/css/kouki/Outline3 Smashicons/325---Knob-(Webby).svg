@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="51px" viewBox="0 0 52 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>325 - Knob (Webby)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-724.000000, -961.000000)">
+            <g id="325---Knob-(Webby)" sketch:type="MSLayerGroup" transform="translate(725.000000, 962.000000)">
+                <path d="M36.314,44.314 C30.065,50.562 19.935,50.562 13.686,44.314 C7.438,38.065 7.438,27.935 13.686,21.686 C19.935,15.438 30.065,15.438 36.314,21.686 C42.562,27.935 42.562,38.065 36.314,44.314 L36.314,44.314 Z" id="Fill-819" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M36.314,44.314 C30.065,50.562 19.935,50.562 13.686,44.314 C7.438,38.065 7.438,27.935 13.686,21.686 C19.935,15.438 30.065,15.438 36.314,21.686 C42.562,27.935 42.562,38.065 36.314,44.314 L36.314,44.314 Z" id="Stroke-820" stroke="#0F81E0" stroke-width="2" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M36.314,21.686 L25,33 M25,0 L25,6 M49.749,10.251 L45.506,14.494 M4.494,14.494 L0.251,10.251 M34.059,1.193 L32.506,6.988 M15.941,1.193 L17.494,6.988 M17.494,6.988 L15.941,1.193 M42.5,4.689 L39.5,9.885 M10.5,9.885 L7.5,4.689" id="Stroke-821" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

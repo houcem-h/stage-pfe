@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>245 - Fast Forward (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-720.000000, -1917.000000)" fill="#000000">
+            <g id="245---Fast-Forward-(Solid)" sketch:type="MSLayerGroup" transform="translate(720.000000, 1917.000000)">
+                <path d="M30,0 C13.458,0 0,13.458 0,30 C0,46.542 13.458,60 30,60 C46.542,60 60,46.542 60,30 C60,13.458 46.542,0 30,0 L30,0 Z M55.563,30.826 L33.563,45.826 C33.394,45.941 33.197,46 33,46 C32.84,46 32.68,45.962 32.533,45.884 C32.205,45.711 32,45.371 32,45 L32,31.892 L11.564,45.826 C11.394,45.941 11.197,46 11,46 C10.84,46 10.68,45.962 10.533,45.884 C10.205,45.711 10,45.371 10,45 L10,15 C10,14.629 10.205,14.289 10.533,14.116 C10.86,13.942 11.258,13.966 11.564,14.174 L32,28.108 L32,15 C32,14.629 32.205,14.289 32.533,14.116 C32.86,13.942 33.258,13.966 33.563,14.174 L55.563,29.174 C55.837,29.36 56,29.669 56,30 C56,30.331 55.837,30.64 55.563,30.826 L55.563,30.826 Z" id="Fill-863" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="28px" viewBox="0 0 60 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>329 - ON Trigger (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-240.000000, -973.000000)" fill="#000000">
+            <g id="329---ON-Trigger-(Solid)" sketch:type="MSLayerGroup" transform="translate(240.000000, 973.000000)">
+                <path d="M46,0 C38.268,0 32,6.268 32,14 C32,21.732 38.268,28 46,28 C53.732,28 60,21.732 60,14 C60,6.268 53.732,0 46,0" id="Fill-731" sketch:type="MSShapeGroup"></path>
+                <path d="M7,9 L28.719,9 C28.916,8.318 29.139,7.646 29.412,7 L7,7 C3.14,7 0,10.141 0,14 C0,17.859 3.14,21 7,21 L29.412,21 C29.139,20.354 28.916,19.683 28.719,19 L7,19 C4.243,19 2,16.757 2,14 C2,11.243 4.243,9 7,9" id="Fill-732" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

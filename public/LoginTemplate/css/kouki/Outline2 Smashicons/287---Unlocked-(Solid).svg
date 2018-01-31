@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="57px" viewBox="0 0 44 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>287 - Unlocked (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-489.000000, -1438.000000)" fill="#000000">
+            <g id="287---Unlocked-(Solid)" sketch:type="MSLayerGroup" transform="translate(489.000000, 1438.000000)">
+                <path d="M33,23 L33,11.601 C33,5.204 27.393,0 20.5,0 C13.607,0 8,5.204 8,11.601 L8,14.82 C8,15.373 8.448,15.82 9,15.82 C9.552,15.82 10,15.373 10,14.82 L10,11.601 C10,6.307 14.71,2 20.5,2 C26.29,2 31,6.307 31,11.601 L31,23 L0,23 L0,57 L44,57 L44,23 L33,23 L33,23 Z M2,45 L12,45 L2,55 L2,45 L2,45 Z M12,55 L22,45 L35,45 L25,55 L12,55 L12,55 Z M42,55 L35,55 L42,48 L42,55 L42,55 Z" id="Fill-2" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

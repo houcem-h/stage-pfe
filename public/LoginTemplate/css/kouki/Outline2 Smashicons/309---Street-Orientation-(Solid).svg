@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="45px" height="60px" viewBox="0 0 45 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>309 - Street Orientation (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-248.000000, -1197.000000)" fill="#000000">
+            <g id="309---Street-Orientation-(Solid)" sketch:type="MSLayerGroup" transform="translate(248.000000, 1197.000000)">
+                <path d="M31.859,19 L6.586,19 L0.586,25 L6.586,31 L21,31 L21,50 L16,50 L16,54 L13,54 L13,60 L31,60 L31,54 L28,54 L28,50 L23,50 L23,31 L31.859,31 C33.591,31 35,29.591 35,27.858 L35,22.142 C35,20.409 33.591,19 31.859,19 L31.859,19 Z M18,52 L26,52 L26,54 L18,54 L18,52 Z" id="Fill-76" sketch:type="MSShapeGroup"></path>
+                <path d="M40,11 L23,11 L23,9.899 C25.279,9.434 27,7.415 27,5 C27,2.243 24.757,0 22,0 C19.243,0 17,2.243 17,5 C17,7.415 18.721,9.434 21,9.899 L21,11 L15.141,11 C13.96,11 13,11.961 13,13.142 L13,17 L33.859,17 C35.04,17 36,17.961 36,19.142 L36,21 L40,21 L45,16 L40,11 L40,11 Z M19,5 C19,3.346 20.346,2 22,2 C23.654,2 25,3.346 25,5 C25,6.654 23.654,8 22,8 C20.346,8 19,6.654 19,5 L19,5 Z" id="Fill-77" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

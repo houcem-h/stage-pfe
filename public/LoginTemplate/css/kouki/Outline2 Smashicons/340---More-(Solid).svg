@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="16px" viewBox="0 0 60 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>340 - More (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-120.000000, -859.000000)" fill="#000000">
+            <g id="340---More-(Solid)" sketch:type="MSLayerGroup" transform="translate(120.000000, 859.000000)">
+                <path d="M8,0 C3.589,0 0,3.589 0,8 C0,12.411 3.589,16 8,16 C12.411,16 16,12.411 16,8 C16,3.589 12.411,0 8,0" id="Fill-51" sketch:type="MSShapeGroup"></path>
+                <path d="M52,0 C47.589,0 44,3.589 44,8 C44,12.411 47.589,16 52,16 C56.411,16 60,12.411 60,8 C60,3.589 56.411,0 52,0" id="Fill-52" sketch:type="MSShapeGroup"></path>
+                <path d="M30,0 C25.589,0 22,3.589 22,8 C22,12.411 25.589,16 30,16 C34.411,16 38,12.411 38,8 C38,3.589 34.411,0 30,0" id="Fill-53" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="55px" viewBox="0 0 60 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>88 - Ringing Alarm (Outline)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-360.000000, -3840.000000)" stroke-linecap="round" stroke-width="2" stroke-linejoin="round">
+            <g id="88---Ringing-Alarm-(Outline)" sketch:type="MSLayerGroup" transform="translate(361.000000, 3841.000000)">
+                <path d="M15.491,46.638 C26.193,48.486 32.15,48.486 42.851,46.638 L52.342,45 C47.656,40.343 45.024,34.585 45.024,28 L45.024,19 C45.063,12.953 41.068,8.522 37.079,6.699 C32.08,4.415 26.264,4.406 21.273,6.707 C17.319,8.53 13.038,12.958 13,19 L13,28 C13,34.585 10.685,40.343 6,45 L15.491,46.638 L15.491,46.638 Z" id="Path" stroke="#1A1718" sketch:type="MSShapeGroup"></path>
+                <path d="M18,19 C18.026,14.828 21.385,12.161 23.366,11.248 C25.16,10.421 27.167,9.983 29.171,9.983 C31.176,9.983 33.191,10.42 35.001,11.247" id="Path" stroke="#1A1718" sketch:type="MSShapeGroup"></path>
+                <path d="M33,5.381 L33,4 C33,1.791 31.209,0 29,0 C26.791,0 25,1.791 25,4 L25,5.453 C27.629,4.862 30.361,4.841 33,5.381 L33,5.381 Z" id="Path" stroke="#1A1718" sketch:type="MSShapeGroup"></path>
+                <path d="M20.906,47.46 C22.35,50.728 25.508,53 29.183,53 C32.859,53 36.017,50.726 37.461,47.457 C31.533,48.209 26.83,48.21 20.906,47.46 L20.906,47.46 Z" id="Path" stroke="#1A1718" sketch:type="MSShapeGroup"></path>
+                <path d="M3.095,34.966 C-1.031,30.84 -1.031,24.126 3.095,20 M7.305,32.69 C4.358,29.743 4.358,24.947 7.305,22 M54.905,34.966 C59.032,30.84 59.032,24.126 54.905,20 M50.695,32.69 C53.642,29.743 53.642,24.947 50.695,22" id="Stroke-21" stroke="#000000" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

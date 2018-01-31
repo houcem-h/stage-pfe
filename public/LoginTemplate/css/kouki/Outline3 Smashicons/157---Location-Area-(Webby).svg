@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>157 - Location Area (Webby)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-480.000000, -2997.000000)">
+            <g id="157---Location-Area-(Webby)" sketch:type="MSLayerGroup" transform="translate(481.000000, 2997.000000)">
+                <path d="M28.823,53 L14.282,32 C8.854,24.764 9.574,12.72 15.97,6.324 C23.069,-0.775 34.578,-0.775 41.676,6.324 C48.072,12.72 48.792,24.764 43.365,32 L28.823,53 L28.823,53 Z" id="Fill-307" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M28.823,53 L14.282,32 C8.854,24.764 9.574,12.72 15.97,6.324 C23.069,-0.775 34.578,-0.775 41.676,6.324 C48.072,12.72 48.792,24.764 43.365,32 L28.823,53 L28.823,53 Z" id="Stroke-308" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M17,44 C6.974,45.181 0,48.465 0,51.5 C0,55.642 12.984,59 29,59 C45.016,59 58,55.642 58,51.5 C58,48.465 51.026,45.181 41,44" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M35,19 C35,22.314 32.314,25 29,25 C25.686,25 23,22.314 23,19 C23,15.686 25.686,13 29,13 C32.314,13 35,15.686 35,19 L35,19 Z" id="Fill-630" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M35,19 C35,22.314 32.314,25 29,25 C25.686,25 23,22.314 23,19 C23,15.686 25.686,13 29,13 C32.314,13 35,15.686 35,19 L35,19 Z" id="Stroke-631" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="56px" viewBox="0 0 54 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>116 - Controls (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="116---Controls-(Solid)" sketch:type="MSLayerGroup" fill="#000000">
+            <path d="M40.08,48 L1,48 C0.447,48 0,48.448 0,49 C0,49.552 0.447,50 1,50 L40.08,50 C40.568,53.387 43.481,56 47,56 C50.859,56 54,52.86 54,49 C54,45.14 50.859,42 47,42 C43.481,42 40.568,44.614 40.08,48" id="Fill-1070" sketch:type="MSShapeGroup"></path>
+            <path d="M19.695,27 L1,27 C0.447,27 0,27.448 0,28 C0,28.552 0.447,29 1,29 L19.632,29 C20.028,32.602 23.088,35.414 26.793,35.414 C30.498,35.414 33.558,32.602 33.954,29 L53,29 C53.553,29 54,28.552 54,28 C54,27.448 53.553,27 53,27 L33.891,27 C33.314,23.6 30.355,21 26.793,21 C23.231,21 20.272,23.6 19.695,27" id="Fill-1071" sketch:type="MSShapeGroup"></path>
+            <path d="M7,0 C3.141,0 0,3.14 0,7 C0,10.86 3.141,14 7,14 C10.519,14 13.432,11.386 13.92,8 L53,8 C53.553,8 54,7.552 54,7 C54,6.448 53.553,6 53,6 L13.92,6 C13.432,2.613 10.519,0 7,0" id="Fill-1072" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="60px" viewBox="0 0 58 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>77 - Alarm Clock (Outline)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-481.000000, -3958.000000)" stroke="#1A1718" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <g id="77---Alarm-Clock-(Outline)" sketch:type="MSLayerGroup" transform="translate(482.000000, 3959.000000)">
+                <path d="M31,30.121 L39,30.121 L31,30.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M28,27.121 L28,16.121 L28,27.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M15.932,53.189 L12,57.121 L15.932,53.189 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M44,57.121 L40.037,53.158 L44,57.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M53.914,3.05 C56.695,5.831 56.695,10.34 53.914,13.121 L43.843,3.05 C46.624,0.269 51.133,0.269 53.914,3.05 L53.914,3.05 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M49.093,8.335 L46.093,11.335 L49.093,8.335 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M2.086,3.05 C-0.695,5.831 -0.695,10.34 2.086,13.121 L12.157,3.05 C9.376,0.269 4.867,0.269 2.086,3.05 L2.086,3.05 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M6.907,8.335 L9.907,11.335 L6.907,8.335 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M54,30.121 C54,44.481 42.359,56.121 28,56.121 C13.641,56.121 2,44.481 2,30.121 C2,15.762 13.641,4.121 28,4.121 C42.359,4.121 54,15.762 54,30.121 L54,30.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M31,30.121 C31,31.778 29.657,33.121 28,33.121 C26.343,33.121 25,31.778 25,30.121 C25,28.464 26.343,27.121 28,27.121 C29.657,27.121 31,28.464 31,30.121 L31,30.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M50,30.121 C50,42.272 40.15,52.121 28,52.121 C15.85,52.121 6,42.272 6,30.121 C6,17.971 15.85,8.121 28,8.121 C40.15,8.121 50,17.971 50,30.121 L50,30.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M28,8.121 L28,10.121 L28,8.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M28,50.121 L28,52.121 L28,50.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M50,30.121 L48,30.121 L50,30.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M8,30.121 L6,30.121 L8,30.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M17,11.069 L18,12.801 L17,11.069 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M38,47.442 L39,49.174 L38,47.442 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M8.947,19.121 L10.68,20.121 L8.947,19.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M45.321,40.121 L47.053,41.121 L45.321,40.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M8.947,41.121 L10.68,40.121 L8.947,41.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M45.321,20.121 L47.053,19.121 L45.321,20.121 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M17,49.174 L18,47.442 L17,49.174 Z" id="Path" sketch:type="MSShapeGroup"></path>
+                <path d="M38,12.801 L39,11.069 L38,12.801 Z" id="Path" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

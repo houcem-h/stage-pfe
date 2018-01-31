@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="44px" viewBox="0 0 56 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>353 - Select Windows (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-962.000000, -603.000000)" fill="#000000">
+            <g id="353---Select-Windows-(Solid)" sketch:type="MSLayerGroup" transform="translate(962.000000, 603.000000)">
+                <path d="M5,30 L0,30 L0,0 L42,0 L42,5 L5,5 L5,30" id="Fill-15" sketch:type="MSShapeGroup"></path>
+                <path d="M12,37 L7,37 L7,7 L49,7 L49,12 L12,12 L12,37" id="Fill-16" sketch:type="MSShapeGroup"></path>
+                <path d="M14,44 L56,44 L56,14 L14,14 L14,44 Z M18,18 L52,18 L52,40 L18,40 L18,18 Z" id="Fill-17" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

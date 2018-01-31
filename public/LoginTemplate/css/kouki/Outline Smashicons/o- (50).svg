@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>29 - Compose (Outline)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="29---Compose-(Outline)" sketch:type="MSLayerGroup" transform="translate(1.000000, 0.000000)" stroke="#000000" stroke-width="2" stroke-linejoin="round">
+            <path d="M24.192,40.483 L16.414,42.604 L18.536,34.826 L51.78,1.582 C52.555,0.806 53.812,0.806 54.587,1.582 L57.437,4.431 C58.212,5.206 58.212,6.463 57.437,7.238 L24.192,40.483 L24.192,40.483 Z M51.062,13.612 L45.406,7.956 L48.234,5.127 L53.891,10.784 L51.062,13.612 L51.062,13.612 Z M18.536,34.826 L24.192,40.483 L18.536,34.826 Z" id="Stroke-244" sketch:type="MSShapeGroup"></path>
+            <path d="M16.414,42.604 L15,44.018" id="Stroke-245" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M24.192,40.483 L16.414,42.604 L18.536,34.826 L48.362,5 L0,5 L0,59 L54,59 L54,10.675 L24.192,40.483 L24.192,40.483 Z" id="Path" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -61,5 +61,8 @@ class Kernel extends HttpKernel
         'AdminAccessRights'=>\App\Http\Middleware\AdminAccessRights::class,
         'IntershipsAccessRights'=>\App\Http\Middleware\IntershipsAccessRights::class,
         'redirectDependingRole'=>\App\Http\Middleware\RedirectDependingToRole::class,
+        "VerifyPreviousLocation" => \App\Http\Middleware\VerifyPreviousLocation::class,
+        "StudentPermission" => \App\Http\Middleware\StudentPermission::class,
+        "AdminPermission" => \App\Http\Middleware\AdminPermission::class
     ];
 }

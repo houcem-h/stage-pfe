@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="60px" viewBox="0 0 64 60" style="enable-background:new 0 0 64 60;" xml:space="preserve">
+<g id="Stand">
+	<g>
+		<rect x="16" y="44" style="fill:#B3B3B3;" width="32" height="8"/>
+	</g>
+</g>
+<g id="Leg">
+	<g>
+		<path style="fill:#CCCCCC;" d="M8,56c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4V6H8V56z M48,6v50c0,2.209,1.791,4,4,4
+			c2.209,0,4-1.791,4-4V6H48z"/>
+	</g>
+</g>
+<g id="Bar">
+	<g>
+		<path style="fill:#E6E6E6;" d="M60.445,15.999H3.556C1.592,15.999,0,17.609,0,19.596v8.789c0,1.986,1.592,3.597,3.556,3.597
+			h56.889c1.963,0,3.555-1.61,3.555-3.597v-8.789C64,17.609,62.408,15.999,60.445,15.999z"/>
+	</g>
+</g>
+<g id="Stripes_1_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FF8833;" d="M10,16L0,26v2.39c0.003,1.984,1.593,3.592,3.555,3.592h2.463
+			L22,16H10z M60.455,16H58L42.019,31.981h12l9.98-9.98v-2.405C64,17.612,62.413,16.006,60.455,16z M34,16L18,32h12l16-16H34z"/>
+	</g>
+</g>
+<g id="Lights">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFCC66;" d="M12,0C8.687,0,6,2.686,6,6c0,3.313,2.686,6,6,6
+			c3.313,0,6-2.687,6-6C18,2.686,15.314,0,12,0z M52,0c-3.314,0-6,2.686-6,6c0,3.313,2.687,6,6,6c3.313,0,6-2.687,6-6
+			C58,2.686,55.314,0,52,0z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>

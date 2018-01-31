@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>341 - Dial Pad (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-1202.000000, -719.000000)" fill="#000000">
+            <g id="341---Dial-Pad-(Solid)" sketch:type="MSLayerGroup" transform="translate(1202.000000, 719.000000)">
+                <path d="M8,40 C3.589,40 0,43.589 0,48 C0,52.411 3.589,56 8,56 C12.411,56 16,52.411 16,48 C16,43.589 12.411,40 8,40" id="Fill-42" sketch:type="MSShapeGroup"></path>
+                <path d="M28,40 C23.589,40 20,43.589 20,48 C20,52.411 23.589,56 28,56 C32.411,56 36,52.411 36,48 C36,43.589 32.411,40 28,40" id="Fill-43" sketch:type="MSShapeGroup"></path>
+                <path d="M48,40 C43.589,40 40,43.589 40,48 C40,52.411 43.589,56 48,56 C52.411,56 56,52.411 56,48 C56,43.589 52.411,40 48,40" id="Fill-44" sketch:type="MSShapeGroup"></path>
+                <path d="M8,20 C3.589,20 0,23.589 0,28 C0,32.411 3.589,36 8,36 C12.411,36 16,32.411 16,28 C16,23.589 12.411,20 8,20" id="Fill-45" sketch:type="MSShapeGroup"></path>
+                <path d="M28,20 C23.589,20 20,23.589 20,28 C20,32.411 23.589,36 28,36 C32.411,36 36,32.411 36,28 C36,23.589 32.411,20 28,20" id="Fill-46" sketch:type="MSShapeGroup"></path>
+                <path d="M48,20 C43.589,20 40,23.589 40,28 C40,32.411 43.589,36 48,36 C52.411,36 56,32.411 56,28 C56,23.589 52.411,20 48,20" id="Fill-47" sketch:type="MSShapeGroup"></path>
+                <path d="M8,0 C3.589,0 0,3.589 0,8 C0,12.411 3.589,16 8,16 C12.411,16 16,12.411 16,8 C16,3.589 12.411,0 8,0" id="Fill-48" sketch:type="MSShapeGroup"></path>
+                <path d="M28,0 C23.589,0 20,3.589 20,8 C20,12.411 23.589,16 28,16 C32.411,16 36,12.411 36,8 C36,3.589 32.411,0 28,0" id="Fill-49" sketch:type="MSShapeGroup"></path>
+                <path d="M48,16 C52.411,16 56,12.411 56,8 C56,3.589 52.411,0 48,0 C43.589,0 40,3.589 40,8 C40,12.411 43.589,16 48,16" id="Fill-50" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
