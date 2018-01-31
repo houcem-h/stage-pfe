@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="49px" viewBox="0 0 50 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>162 - Star (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-1086.000000, -2882.000000)" fill="#1A1718">
+            <g id="162---Star-(Solid)" sketch:type="MSLayerGroup" transform="translate(1086.000000, 2882.000000)">
+                <path d="M48.856,21.936 C49.84,20.978 50.187,19.571 49.763,18.265 C49.338,16.958 48.23,16.025 46.871,15.827 L34.779,14.07 C34.265,13.995 33.819,13.672 33.589,13.205 L28.182,2.248 C27.574,1.017 26.343,0.252 24.97,0.252 C23.598,0.252 22.366,1.017 21.759,2.248 L16.352,13.205 C16.121,13.672 15.676,13.995 15.16,14.07 L3.069,15.827 C1.71,16.025 0.603,16.958 0.178,18.265 C-0.246,19.571 0.101,20.978 1.084,21.936 L9.833,30.464 C10.206,30.828 10.377,31.352 10.289,31.864 L8.224,43.906 C8.041,44.966 8.318,45.997 9.005,46.811 C10.071,48.077 11.932,48.464 13.42,47.682 L24.234,41.996 C24.687,41.759 25.256,41.761 25.706,41.996 L36.522,47.682 C37.048,47.959 37.608,48.099 38.188,48.099 C39.244,48.099 40.246,47.629 40.936,46.811 C41.622,45.997 41.899,44.965 41.717,43.906 L39.651,31.864 C39.563,31.352 39.734,30.828 40.107,30.464 L48.856,21.936" id="Fill-188" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

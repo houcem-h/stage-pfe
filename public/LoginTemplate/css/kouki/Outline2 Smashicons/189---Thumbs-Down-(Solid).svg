@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="58px" viewBox="0 0 55 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>189 - Thumbs Down (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-242.000000, -2638.000000)" fill="#000000">
+            <g id="189---Thumbs-Down-(Solid)" sketch:type="MSLayerGroup" transform="translate(242.000000, 2638.000000)">
+                <path d="M39,0 L39,2 L11,2 C8.243,2 6,4.243 6,7 C6,8.164 6.4,9.236 7.069,10.087 C4.755,10.524 3,12.561 3,15 C3,16.164 3.4,17.236 4.069,18.087 C1.755,18.524 0,20.561 0,23 C0,25.495 1.375,26.662 2.715,27.233 C1.665,28.15 1,29.499 1,31 C1,33.757 3.243,36 6,36 L20.366,36 L19.637,39.41 C18.664,43.961 19.302,49.127 19.521,50.602 C20.039,54.094 23.128,58 26.487,58 L26.726,58 C28.322,58 31,57.091 31,51 C31,36.18 37.686,36 38,36 L39,36 L39,38 L55,38 L55,0 L39,0 L39,0 Z M41,2 L53,2 L53,36 L41,36 L41,2 Z" id="Fill-133" sketch:type="MSShapeGroup"></path>
+                <path d="M47,15 C49.757,15 52,12.757 52,10 C52,7.243 49.757,5 47,5 C44.243,5 42,7.243 42,10 C42,12.757 44.243,15 47,15" id="Fill-134" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

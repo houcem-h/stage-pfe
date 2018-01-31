@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>223 - Shutdown (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-964.000000, -2161.000000)" fill="#000000">
+            <g id="223---Shutdown-(Solid)" sketch:type="MSLayerGroup" transform="translate(964.000000, 2161.000000)">
+                <path d="M52,26 C52,11.663 40.337,0 26,0 C11.663,0 0,11.663 0,26 C0,31.153 1.513,35.956 4.108,40 L3.998,40 L5.2,41.601 C9.074,46.759 14.545,50.189 20.683,51.451 L20.852,51.486 C21.195,51.554 21.54,51.617 21.887,51.671 C22.041,51.696 22.197,51.717 22.352,51.739 C22.632,51.778 22.911,51.816 23.193,51.846 C23.445,51.873 23.699,51.892 23.953,51.912 C24.159,51.928 24.363,51.948 24.57,51.959 C25.044,51.985 25.52,52 26,52 C26.48,52 26.956,51.985 27.43,51.959 C27.637,51.948 27.841,51.928 28.047,51.912 C28.301,51.892 28.555,51.873 28.807,51.846 C29.089,51.816 29.368,51.778 29.648,51.739 C29.803,51.717 29.959,51.696 30.113,51.671 C30.46,51.617 30.805,51.554 31.148,51.486 L31.317,51.451 C37.455,50.189 42.926,46.759 46.8,41.601 L48.002,40 L47.892,40 C50.487,35.956 52,31.153 52,26 L52,26 Z M2,26 C2,12.767 12.767,2 26,2 C39.233,2 50,12.767 50,26 C50,31.222 48.318,36.056 45.475,40 L6.525,40 C3.682,36.056 2,31.222 2,26 L2,26 Z" id="Fill-893" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

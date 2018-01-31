@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>14 - Ringing Phone (Webby)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-840.000000, -4677.000000)">
+            <g id="14---Ringing-Phone-(Webby)" sketch:type="MSLayerGroup" transform="translate(841.000000, 4678.000000)">
+                <path d="M41.595,58 L16.405,58 C14.525,58 13,56.475 13,54.595 L13,3.405 C13,1.525 14.525,0 16.405,0 L41.595,0 C43.475,0 45,1.525 45,3.405 L45,54.595 C45,56.475 43.475,58 41.595,58 L41.595,58 Z" id="Fill-20" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M41.595,58 L16.405,58 C14.525,58 13,56.475 13,54.595 L13,3.405 C13,1.525 14.525,0 16.405,0 L41.595,0 C43.475,0 45,1.525 45,3.405 L45,54.595 C45,56.475 43.475,58 41.595,58 L41.595,58 Z" id="Stroke-21" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M32,52 C32,53.657 30.657,55 29,55 C27.343,55 26,53.657 26,52 C26,50.343 27.343,49 29,49 C30.657,49 32,50.343 32,52 L32,52 Z" id="Fill-22" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M32,52 C32,53.657 30.657,55 29,55 C27.343,55 26,53.657 26,52 C26,50.343 27.343,49 29,49 C30.657,49 32,50.343 32,52 L32,52 Z" id="Stroke-23" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M13,46 L45,46" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M13,6 L45,6" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M25,3 L29,3" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M32,3 L33,3" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M54.905,4.276 C59.031,8.402 59.031,15.116 54.905,19.242" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M50.695,6.552 C53.642,9.5 53.642,14.295 50.695,17.242" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M3.095,19.242 C-1.031,15.116 -1.031,8.402 3.095,4.276" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M7.305,16.966 C4.358,14.019 4.358,9.223 7.305,6.275" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

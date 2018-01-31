@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="40px" viewBox="0 0 64 40" style="enable-background:new 0 0 64 40;" xml:space="preserve">
+<g id="Joint">
+	<g>
+		<rect x="24" y="24.001" style="fill:#CCA352;" width="10" height="5.999"/>
+	</g>
+</g>
+<g id="Cover_1_">
+	<g>
+		<path style="fill:#999999;" d="M54,12H44v4h18C60,12,56,12,54,12z"/>
+	</g>
+</g>
+<g id="Body_1_">
+	<g>
+		<path style="fill:#FFCC66;" d="M62,16H48v0.001H28L20,24v6.001h8v-6c0,0,6,0,6,4V30c0,1.104,0.896,2,2,2h8c0,0,20,0,20-2v-4
+			C64,24,64,20,62,16z"/>
+	</g>
+</g>
+<g id="Cabin_1_">
+	<g>
+		<polygon style="fill:#B3B3B3;" points="30,4.001 26,20.001 40,20.001 46,14.001 46,4.001 		"/>
+	</g>
+</g>
+<g id="Window_1_">
+	<g>
+		<polygon style="fill:#E6E6E6;" points="34,4.001 32,16.001 38,16.001 42,12.001 42,4.001 		"/>
+	</g>
+</g>
+<g id="Roof_1_">
+	<g>
+		<path style="fill:#999999;" d="M32,0c-2,0.001-2,2-2,2v2.001L46,4V0H32z"/>
+	</g>
+</g>
+<g id="Wheels_1_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#666666;" d="M48,19.999c-5.523,0-10,4.478-10,10
+			C38,35.522,42.477,40,48,40c5.522,0,10-4.478,10-10.001C58,24.477,53.522,19.999,48,19.999z M16,15.999c-6.628,0-12,5.373-12,12
+			C4,34.627,9.372,40,16,40c6.627,0,12-5.373,12-12.001C28,21.372,22.627,15.999,16,15.999z"/>
+	</g>
+</g>
+<g id="Rims">
+	<g>
+		<circle style="fill:#B3B3B3;" cx="48" cy="30" r="6"/>
+	</g>
+</g>
+<g id="Support">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFCC66;" d="M2,24.001c-1.104,0-2,0.895-2,2v4c0,1.104,0.896,2,2,2h26v-8
+			H2z M16,30c-1.104,0-2-0.896-2-2s0.896-2,2-2s2,0.896,2,2S17.104,30,16,30z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>

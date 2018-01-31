@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>156 - Street Location (Webby)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-600.000000, -2997.000000)">
+            <g id="156---Street-Location-(Webby)" sketch:type="MSLayerGroup" transform="translate(601.000000, 2997.000000)">
+                <path d="M30.177,53 L15.635,32 C10.208,24.764 10.928,12.72 17.324,6.324 C24.422,-0.775 35.931,-0.775 43.03,6.324 C49.426,12.72 50.146,24.764 44.718,32 L30.177,53 L30.177,53 Z" id="Fill-309" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M30.177,53 L15.635,32 C10.208,24.764 10.928,12.72 17.324,6.324 C24.422,-0.775 35.931,-0.775 43.03,6.324 C49.426,12.72 50.146,24.764 44.718,32 L30.177,53 L30.177,53 Z" id="Stroke-310" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M0,59 L6,53 L25,53" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" sketch:type="MSShapeGroup"></path>
+                <path d="M21,48 L6,48 C5.803,48 5.607,48.021 5.413,48.059 C5.323,48.077 5.241,48.11 5.154,48.136 C5.053,48.166 4.951,48.189 4.853,48.23 C4.75,48.272 4.657,48.33 4.56,48.384 C4.486,48.424 4.408,48.457 4.337,48.505 C4.171,48.615 4.016,48.741 3.876,48.882 L0,52.758" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M58,47 L52,53 L35,53" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" sketch:type="MSShapeGroup"></path>
+                <path d="M6,59 L7.242,58 L52,58 C52.197,58 52.393,57.979 52.587,57.941 C52.677,57.923 52.759,57.89 52.846,57.864 C52.947,57.835 53.049,57.811 53.147,57.771 C53.25,57.728 53.343,57.67 53.44,57.617 C53.514,57.576 53.592,57.543 53.663,57.496 C53.829,57.385 53.984,57.259 54.124,57.119 L58,53.242" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M53.758,45 L50.758,48 L39,48" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M36.354,19 C36.354,22.314 33.667,25 30.354,25 C27.04,25 24.354,22.314 24.354,19 C24.354,15.686 27.04,13 30.354,13 C33.667,13 36.354,15.686 36.354,19 L36.354,19 Z" id="Fill-628" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M36.354,19 C36.354,22.314 33.667,25 30.354,25 C27.04,25 24.354,22.314 24.354,19 C24.354,15.686 27.04,13 30.354,13 C33.667,13 36.354,15.686 36.354,19 L36.354,19 Z" id="Stroke-629" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

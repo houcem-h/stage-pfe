@@ -2,6 +2,18 @@
 
 @section("content")
 <div class="container">
+    <div class="row">
+        <div class="form-group">
+            <label>Filter avec le statu de l'etudiant</label>
+            <select id="student_filter" class="form-control">
+            <option value="all">All</option>
+            <option value="waiting">En attente</option>
+            <option value="accepted">Acceptées</option>
+            <option value="rejected">Refusées</option>
+            </select>
+        </div>
+    
+    </div><br>
     <div class='row'>
         @foreach($students as $student)
             <div class="student col-lg-3" id="{{ $student['id'] }}">
@@ -10,10 +22,11 @@
                 </div><hr>
                 <div class="info-student">
                     <ul class="items">
-                    <li>Cin : {{ $student['cin'] }}</li>
-                    <li>Email :  {{ $student['email'] }}</li>
-                    <li>Date of birth : {{ $student['birthdate'] }}</li>
-                    <li id="groups_show"></li>
+                        <li>Cin : {{ $student['cin'] }}</li>
+                        <li>Email :  {{ $student['email'] }}</li>
+                        <li>Date of birth : {{ $student['birthdate'] }}</li>
+                        <li class="{{ $student['state'] }}">Statu: {{ $student['state'] }} </li>
+                        <li id="groups_show"></li>
                     </ul>
                 </div>
                 <div class="actions">
@@ -23,9 +36,6 @@
                 </div>
             </div>
         @endforeach
-        <center><div class="col-lg-12">
-            {{$students->links()}}
-        </div></center>
     </div>
 </div>
 <!-- modal show groups -->

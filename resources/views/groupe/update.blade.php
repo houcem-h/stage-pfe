@@ -10,7 +10,7 @@
       <div class="text-center">
         <h2>Update group</h2>
       </div>
-      <form action="" method="POST">
+      <form action="{{ route('saveUpdateGroup')}}" method="POST" id="saveUpGroup">
           {{ csrf_field() }}
         <div class="form-group">
             <label>Id group :</label>

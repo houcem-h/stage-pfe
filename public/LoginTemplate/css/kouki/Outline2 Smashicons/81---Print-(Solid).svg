@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>81 - Print (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-1200.000000, -3837.000000)" fill="#000000">
+            <g id="81---Print-(Solid)" sketch:type="MSLayerGroup" transform="translate(1200.000000, 3837.000000)">
+                <path d="M42,43 L18,43 C17.447,43 17,43.447 17,44 C17,44.553 17.447,45 18,45 L42,45 C42.553,45 43,44.553 43,44 C43,43.447 42.553,43 42,43" id="Fill-360" sketch:type="MSShapeGroup"></path>
+                <path d="M42,48 L18,48 C17.447,48 17,48.447 17,49 C17,49.553 17.447,50 18,50 L42,50 C42.553,50 43,49.553 43,49 C43,48.447 42.553,48 42,48" id="Fill-361" sketch:type="MSShapeGroup"></path>
+                <path d="M51,17 L51,0 L9,0 L9,17 L0,17 L0,51 L6,51 L6,54 L9,54 L9,60 L51,60 L51,54 L54,54 L54,51 L60,51 L60,17 L51,17 L51,17 Z M11,2 L49,2 L49,17 L11,17 L11,2 Z M49,54 L49,58 L11,58 L11,37 L49,37 L49,54 L49,54 Z M50,32 C47.243,32 45,29.757 45,27 C45,24.243 47.243,22 50,22 C52.757,22 55,24.243 55,27 C55,29.757 52.757,32 50,32 L50,32 Z" id="Fill-362" sketch:type="MSShapeGroup"></path>
+                <path d="M50,24 C48.346,24 47,25.346 47,27 C47,28.654 48.346,30 50,30 C51.654,30 53,28.654 53,27 C53,25.346 51.654,24 50,24" id="Fill-363" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

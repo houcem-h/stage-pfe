@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="59px" viewBox="0 0 44 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>194 - Download (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-847.000000, -2517.000000)" fill="#1A1718">
+            <g id="194---Download-(Solid)" sketch:type="MSLayerGroup" transform="translate(847.000000, 2517.000000)">
+                <path d="M13.394,27.606 C12.612,26.825 11.347,26.825 10.565,27.606 C9.784,28.388 9.784,29.653 10.565,30.435 L20.544,40.414 C20.919,40.789 21.428,41 21.958,41 L21.979,40.998 L22,41 C22.665,41 23.249,40.672 23.613,40.173 L33.394,30.394 C34.175,29.612 34.175,28.347 33.394,27.565 C32.612,26.784 31.347,26.784 30.565,27.565 L24,34.13 L24,2 C24,0.896 23.104,0 22,0 C20.896,0 20,0.896 20,2 L20,34.214 L13.394,27.606" id="Fill-952" sketch:type="MSShapeGroup"></path>
+                <path d="M26,16 L26,29.302 L29.151,26.151 C30.714,24.589 33.247,24.589 34.808,26.151 C36.37,27.713 36.37,30.246 34.808,31.808 L25.029,41.585 C24.295,42.444 23.218,43 22,43 L21.979,42.998 L21.958,43 C20.896,43 19.88,42.578 19.13,41.828 L9.151,31.849 C7.589,30.287 7.589,27.754 9.151,26.192 C10.714,24.63 13.247,24.63 14.808,26.192 L18,29.385 L18,16 L0,16 L0,59 L44,59 L44,16 L26,16" id="Fill-953" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

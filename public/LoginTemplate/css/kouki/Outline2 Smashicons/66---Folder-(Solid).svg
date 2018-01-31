@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="53px" viewBox="0 0 60 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>66 - Folder (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-600.000000, -4080.000000)" fill="#000000">
+            <g id="66---Folder-(Solid)" sketch:type="MSLayerGroup" transform="translate(600.000000, 4080.000000)">
+                <path d="M56.981,8 L28.019,8 L28.019,3.019 C28.019,1.354 26.665,0 25,0 L3.019,0 C1.354,0 0,1.354 0,3.019 L0,17 L60,17 L60,11.02 C60,9.354 58.646,8 56.981,8" id="Fill-1189" sketch:type="MSShapeGroup"></path>
+                <path d="M0,49.981 C0,51.646 1.354,53 3.019,53 L56.981,53 C58.646,53 60,51.646 60,49.981 L60,19 L0,19 L0,49.981 L0,49.981 Z M19,28 L33,28 C33.552,28 34,28.447 34,29 C34,29.553 33.552,30 33,30 L19,30 C18.448,30 18,29.553 18,29 C18,28.447 18.448,28 19,28 L19,28 Z M19,34 L41,34 C41.552,34 42,34.447 42,35 C42,35.553 41.552,36 41,36 L19,36 C18.448,36 18,35.553 18,35 C18,34.447 18.448,34 19,34 L19,34 Z M19,40 L41,40 C41.552,40 42,40.447 42,41 C42,41.553 41.552,42 41,42 L19,42 C18.448,42 18,41.553 18,41 C18,40.447 18.448,40 19,40 L19,40 Z" id="Fill-1190" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

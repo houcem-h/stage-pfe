@@ -18,7 +18,7 @@ class RedirectDependingToRole
                 return $response;
 
             if(auth()->user()->role==0)
-                return redirect('/studentdashboard');
+                return redirect('student/dashboard');
             else if(auth()->user()->role==1)
                 return redirect('/ordinaryteacherdashboard');
             else 

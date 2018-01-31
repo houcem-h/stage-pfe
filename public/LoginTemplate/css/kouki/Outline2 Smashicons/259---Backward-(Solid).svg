@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="31px" height="42px" viewBox="0 0 31 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>259 - Backward (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-254.000000, -1806.000000)" fill="#1A1718">
+            <g id="259---Backward-(Solid)" sketch:type="MSLayerGroup" transform="translate(254.000000, 1806.000000)">
+                <path d="M30.465,0.114 C30.136,-0.057 29.739,-0.034 29.432,0.177 L2,19.095 L2,1 C2,0.447 1.552,0 1,0 C0.448,0 0,0.447 0,1 L0,41 C0,41.553 0.448,42 1,42 C1.552,42 2,41.553 2,41 L2,22.905 L29.432,41.823 C29.603,41.94 29.801,42 30,42 C30.159,42 30.319,41.962 30.465,41.886 C30.794,41.713 31,41.372 31,41 L31,1 C31,0.628 30.794,0.287 30.465,0.114" id="Fill-99" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

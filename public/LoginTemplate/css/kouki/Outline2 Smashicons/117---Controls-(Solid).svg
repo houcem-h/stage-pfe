@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>117 - Controls (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="117---Controls-(Solid)" sketch:type="MSLayerGroup" fill="#000000">
+            <path d="M59,0 L1,0 C0.448,0 0,0.447 0,1 L0,59 C0,59.553 0.448,60 1,60 L59,60 C59.552,60 60,59.553 60,59 L60,1 C60,0.447 59.552,0 59,0 L59,0 Z M17,50 C17,50.553 16.552,51 16,51 L12,51 L12,54 C12,54.553 11.552,55 11,55 C10.448,55 10,54.553 10,54 L10,51 L6,51 C5.448,51 5,50.553 5,50 L5,38 C5,37.447 5.448,37 6,37 L10,37 L10,6 C10,5.447 10.448,5 11,5 C11.552,5 12,5.447 12,6 L12,37 L16,37 C16.552,37 17,37.447 17,38 L17,50 L17,50 Z M36,36 C36,36.553 35.552,37 35,37 L31,37 L31,54 C31,54.553 30.552,55 30,55 C29.448,55 29,54.553 29,54 L29,37 L25,37 C24.448,37 24,36.553 24,36 L24,24 C24,23.447 24.448,23 25,23 L29,23 L29,6 C29,5.447 29.448,5 30,5 C30.552,5 31,5.447 31,6 L31,23 L35,23 C35.552,23 36,23.447 36,24 L36,36 L36,36 Z M55,22 C55,22.553 54.552,23 54,23 L50,23 L50,54 C50,54.553 49.552,55 49,55 C48.448,55 48,54.553 48,54 L48,23 L44,23 C43.448,23 43,22.553 43,22 L43,10 C43,9.447 43.448,9 44,9 L48,9 L48,6 C48,5.447 48.448,5 49,5 C49.552,5 50,5.447 50,6 L50,9 L54,9 C54.552,9 55,9.447 55,10 L55,22 L55,22 Z" id="Fill-1069" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

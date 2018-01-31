@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="26px" viewBox="0 0 58 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>368 - View (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-361.000000, -494.000000)" fill="#000000">
+            <g id="368---View-(Solid)" sketch:type="MSLayerGroup" transform="translate(361.000000, 494.000000)">
+                <path d="M57.71,11.9 C50.097,4.227 39.952,0 29.142,0 L29.083,0.001 L29.055,0 L28.974,0.004 C18.228,0.048 8.148,4.267 0.575,11.9 L0.345,12.132 C-0.044,12.524 -0.041,13.158 0.351,13.546 C0.546,13.74 0.801,13.836 1.055,13.836 C1.313,13.836 1.57,13.738 1.765,13.541 L1.995,13.309 C7.249,8.012 13.777,4.454 20.89,2.897 C17.945,5.283 16.055,8.923 16.055,13 C16.055,20.169 21.887,26 29.055,26 C36.224,26 42.055,20.169 42.055,13 C42.055,8.89 40.132,5.226 37.145,2.842 C44.356,4.368 50.974,7.95 56.29,13.309 C56.679,13.702 57.313,13.704 57.704,13.314 C58.096,12.925 58.099,12.292 57.71,11.9 L57.71,11.9 Z M29.055,8 C26.298,8 24.055,10.243 24.055,13 C24.055,13.552 23.607,14 23.055,14 C22.503,14 22.055,13.552 22.055,13 C22.055,9.14 25.195,6 29.055,6 C29.607,6 30.055,6.448 30.055,7 C30.055,7.552 29.607,8 29.055,8 L29.055,8 Z" id="Fill-678" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

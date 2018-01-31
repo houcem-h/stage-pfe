@@ -19,6 +19,7 @@ class CreateRegistrationsTable extends Migration
             $table->unsignedInteger('student');
             $table->unsignedInteger('group');
             $table->string('session');
+            $table->enum("state",["waiting","accepted","rejected"]);
             $table->timestamps();
             $table->unsignedInteger('created_by')->nullable();
             $table->unsignedInteger('updated_by')->nullable();

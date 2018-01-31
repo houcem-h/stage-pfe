@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="60px" viewBox="0 0 50 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>110 - Safety (Outline)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-125.000000, -3597.000000)" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <g id="110---Safety-(Outline)" sketch:type="MSLayerGroup" transform="translate(126.000000, 3598.000000)">
+                <path d="M12,27 C8.684,23 3.316,23 0,27 M24,27 C20.684,23 15.316,23 12,27 M36,27 C32.684,23 27.316,23 24,27 M48,27 C44.684,23 39.316,23 36,27 M0,27 C0,13.745 10.745,3 24,3 C37.255,3 48,13.745 48,27 M24,3 L24,0 M24,27 L24,54 C24,56.209 22.209,58 20,58 C17.791,58 16,56.209 16,54" id="Stroke-470" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

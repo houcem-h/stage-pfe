@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="36px" viewBox="0 0 56 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>172 - Cloud (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-1082.000000, -2767.000000)" fill="#000000">
+            <g id="172---Cloud-(Solid)" sketch:type="MSLayerGroup" transform="translate(1082.000000, 2767.000000)">
+                <path d="M33,36 L35.353,36 L35.526,35.991 L35.725,35.98 L35.995,35.991 L36.169,36 L45.972,36 C51.501,36 56,31.501 56,25.972 C56,21.161 52.49,16.872 47.835,15.986 C47.698,15.968 45.378,15.651 43.15,15.988 L42.999,16 C42.513,16 42.087,15.646 42.012,15.15 C41.929,14.604 42.304,14.095 42.85,14.012 C44.381,13.779 45.911,13.816 46.933,13.888 C46.262,6.135 39.83,0 32.085,0 C27.388,0 22.667,2.379 19.8,6.129 C21.754,7.781 23,10.246 23,13 C23,13.553 22.553,14 22,14 C21.447,14 21,13.553 21,13 C21,10.538 19.719,8.373 17.791,7.124 C17.564,6.978 17.329,6.847 17.089,6.729 L16.88,6.627 C16.607,6.504 16.33,6.394 16.045,6.307 L15.939,6.279 C15.68,6.204 15.417,6.147 15.15,6.103 L14.917,6.067 C14.614,6.027 14.309,6 14,6 C10.141,6 7,9.141 7,13 L7.012,13.244 L7.023,13.454 L7.015,13.614 C7.008,13.744 7,13.873 7,14 L7,14.63 L6.433,14.901 C2.705,16.688 0,21 0,25.154 C0,31.135 4.865,36 10.845,36 L25,36" id="Fill-1026" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

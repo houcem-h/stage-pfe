@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+<g id="Devices">
+	<rect x="25" y="-1" fill-rule="evenodd" clip-rule="evenodd" fill="#7F8C8D" width="3" height="4"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="#302E2E" d="M25,2v2H11v31h17c0,0,0-20.3,0-21.4V2H25z"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="#1ABC9C" d="M18,33h3v-2h-3V33z M14,24h3v-2h-3V24z M18,30h3v-2h-3V30z M14,27
+		h3v-2h-3V27z M14,30h3v-2h-3V30z M18,24h3v-2h-3V24z M22,22v2h3v-2H22z M22,27h3v-2h-3V27z M22,30h3v-2h-3V30z M18,27h3v-2h-3V27z"
+		/>
+	<rect x="14" y="11" fill-rule="evenodd" clip-rule="evenodd" fill="#E74C3C" width="11" height="6"/>
+	<rect x="22" y="19" fill-rule="evenodd" clip-rule="evenodd" fill="#E74C3C" width="3" height="2"/>
+	<rect x="14" y="19" fill-rule="evenodd" clip-rule="evenodd" fill="#F1C40F" width="3" height="2"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#211F1F" cx="19.5" cy="6.5" r="0.5"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#211F1F" cx="19.5" cy="8.5" r="0.5"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#211F1F" cx="20.5" cy="7.5" r="0.5"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#211F1F" cx="18.5" cy="7.5" r="0.5"/>
+</g>
+<g id="Lockup">
+</g>
+</svg>

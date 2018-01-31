@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="49px" viewBox="0 0 60 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>272 - Camera (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-1080.000000, -1561.000000)" fill="#000000">
+            <g id="272---Camera-(Solid)" sketch:type="MSLayerGroup" transform="translate(1080.000000, 1561.000000)">
+                <path d="M30,15 C23.383,15 18,20.383 18,27 C18,33.617 23.383,39 30,39 C36.617,39 42,33.617 42,27 C42,20.383 36.617,15 30,15" id="Fill-835" sketch:type="MSShapeGroup"></path>
+                <path d="M55.201,10 L46.677,10 L42.677,0 L17.323,0 L13.323,10 L12,10 L12,5 L6,5 L6,10 L4.799,10 C2.152,10 0,12.152 0,14.799 L0,44.167 C0,46.832 2.168,49 4.833,49 L55.167,49 C57.832,49 60,46.832 60,44.167 L60,14.799 C60,12.152 57.848,10 55.201,10 L55.201,10 Z M8,7 L10,7 L10,10 L8,10 L8,7 Z M30,45 C20.075,45 12,36.925 12,27 C12,17.075 20.075,9 30,9 C39.925,9 48,17.075 48,27 C48,36.925 39.925,45 30,45 L30,45 Z M52,22 C49.794,22 48,20.206 48,18 C48,15.794 49.794,14 52,14 C54.206,14 56,15.794 56,18 C56,20.206 54.206,22 52,22 L52,22 Z" id="Fill-836" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

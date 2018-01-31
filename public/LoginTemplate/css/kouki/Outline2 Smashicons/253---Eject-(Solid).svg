@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="42px" height="39px" viewBox="0 0 42 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>253 - Eject (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-969.000000, -1807.000000)" fill="#1A1718">
+            <g id="253---Eject-(Solid)" sketch:type="MSLayerGroup" transform="translate(968.000000, 1807.000000)">
+                <path d="M2,31 L42,31 C42.372,31 42.713,30.794 42.886,30.465 C43.059,30.136 43.034,29.738 42.823,29.433 L22.823,0.433 C22.45,-0.11 21.55,-0.11 21.177,0.433 L1.177,29.433 C0.966,29.738 0.941,30.136 1.114,30.465 C1.287,30.794 1.628,31 2,31" id="Fill-100" sketch:type="MSShapeGroup"></path>
+                <path d="M42,37 L2,37 C1.447,37 1,37.447 1,38 C1,38.553 1.447,39 2,39 L42,39 C42.553,39 43,38.553 43,38 C43,37.447 42.553,37 42,37" id="Fill-101" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+<g id="Devices">
+	<rect x="11" y="7" fill-rule="evenodd" clip-rule="evenodd" fill="#C7C7C7" width="4" height="7"/>
+	<g id="GoPro_1_">
+		<rect x="12" y="8" fill-rule="evenodd" clip-rule="evenodd" fill="#1ABC9C" width="2" height="4"/>
+	</g>
+	<g id="GoPro_26_">
+		<g id="GoPro_2_">
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#ECF0F1" d="M32,14c0-2.2-1.8-4-4-4H12c-2.2,0-4,1.8-4,4v16c0,2.2,1.8,4,4,4
+				h16c2.2,0,4-1.8,4-4V14z"/>
+		</g>
+		<g id="GoPro_3_">
+			<rect x="21" y="27" fill-rule="evenodd" clip-rule="evenodd" fill="#C7C7C7" width="8" height="2"/>
+		</g>
+		<g id="GoPro_4_">
+			<rect x="17" y="9" fill-rule="evenodd" clip-rule="evenodd" fill="#908F8F" width="12" height="1"/>
+		</g>
+		<g id="GoPro_5_">
+			<rect x="18" y="8" fill-rule="evenodd" clip-rule="evenodd" fill="#585757" width="10" height="2"/>
+		</g>
+		<g id="GoPro_6_">
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#908F8F" d="M30,15c0-1.1-0.9-2-2-2h-9c-1.1,0-2,0.9-2,2v7c0,1.1,0.9,2,2,2
+				h9c1.1,0,2-0.9,2-2V15z"/>
+		</g>
+		<g id="GoPro_7_">
+			<rect x="11" y="16" fill-rule="evenodd" clip-rule="evenodd" fill="#F1C40F" width="4" height="6"/>
+		</g>
+		<g id="GoPro_8_">
+			<circle fill-rule="evenodd" clip-rule="evenodd" fill="#C7C7C7" cx="18" cy="27.5" r="1"/>
+		</g>
+		<g id="GoPro_9_">
+			<circle fill-rule="evenodd" clip-rule="evenodd" fill="#201F1F" cx="23.5" cy="18" r="3.5"/>
+		</g>
+		<g id="GoPro_10_">
+			<circle fill-rule="evenodd" clip-rule="evenodd" fill="#585757" cx="23.5" cy="18" r="2.5"/>
+		</g>
+		<g id="GoPro_11_">
+			<circle fill-rule="evenodd" clip-rule="evenodd" fill="#C7C7C7" cx="23" cy="17.5" r="1"/>
+		</g>
+		<g id="GoPro_12_">
+			<circle fill-rule="evenodd" clip-rule="evenodd" fill="#E74C3C" cx="13" cy="26.5" r="2"/>
+		</g>
+	</g>
+</g>
+<g id="Lockup">
+</g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="45px" viewBox="0 0 60 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>302 - Send (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-1080.000000, -1207.000000)">
+            <g id="302---Send-(Solid)" sketch:type="MSLayerGroup" transform="translate(1079.000000, 1207.000000)">
+                <path d="M60.538,1.843 L24.538,24.843 C24.372,24.949 24.186,25 24.001,25 C23.671,25 23.348,24.837 23.157,24.538 C22.86,24.073 22.996,23.455 23.462,23.157 L59.462,0.157" id="Fill-793" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M60.538,1.843 L24.538,24.843 C24.372,24.949 24.186,25 24.001,25 C23.671,25 23.348,24.837 23.157,24.538 C23.087,24.427 23.044,24.307 23.021,24.186 C23,24.066 23.001,23.943 23.023,23.825 C23.07,23.56 23.217,23.314 23.462,23.157 L59.462,0.157 L59.723,0.056 L1.737,15.827 C1.312,15.943 1.012,16.325 1,16.767 C0.989,17.208 1.269,17.604 1.689,17.742 L22.906,24.694 L21.008,39.876 C20.958,40.276 21.152,40.667 21.502,40.867 C21.657,40.956 21.829,41 22,41 C22.215,41 22.43,40.931 22.608,40.794 L30.373,34.848 L37.181,44.573 C37.369,44.842 37.675,45 38,45 L38.068,44.998 C38.418,44.974 38.729,44.769 38.89,44.456 M23.288,37.754 L24.67,26.701 L29.225,33.208 L23.288,37.754" id="Fill-794" fill="#1A1718" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

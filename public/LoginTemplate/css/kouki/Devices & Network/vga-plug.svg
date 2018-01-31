@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<g id="Plugin_Socket">
+	<g>
+		<path style="fill:#CCCCCC;" d="M48,0H16c-1.105,0-2,0.896-2,2v20.001c0,1.104,0.895,2,2,2h32c1.104,0,2-0.896,2-2V2
+			C50,0.896,49.104,0,48,0z"/>
+	</g>
+</g>
+<g id="Screws_6_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#CCCCCC;" d="M8,6.001c-1.105,0-2,0.896-2,2V16
+			c0,1.104,0.895,2.001,2,2.001c1.104,0,2-0.896,2-2.001V8.001C10,6.896,9.104,6.001,8,6.001z M56,6.001c-1.104,0-2,0.896-2,2V16
+			c0,1.104,0.896,2.001,2,2.001s2-0.896,2-2.001V8.001C58,6.896,57.104,6.001,56,6.001z"/>
+	</g>
+</g>
+<g id="Body_10_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#48A0DC;" d="M62,14.001H2c-1.105,0-2,0.895-2,1.999l2,24.001
+			C2.125,41.105,2.896,42,4,42h11.333L16,50c0.125,1.105,0.896,2.001,2,2.001h28c1.105,0,1.875-0.896,2-2.001l0.667-8H60
+			c1.104,0,1.875-0.895,2-1.999L64,16C64,14.896,63.104,14.001,62,14.001z"/>
+	</g>
+</g>
+<g id="Lines_1_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#387BA8;" d="M22,26.001h20c1.104,0,2-0.896,2-2c0-1.105-0.896-2-2-2H22
+			c-1.104,0-2,0.895-2,2C20,25.105,20.896,26.001,22,26.001z M42,30.001H22c-1.104,0-2,0.895-2,2c0,1.104,0.896,2,2,2h20
+			c1.104,0,2-0.896,2-2C44,30.896,43.104,30.001,42,30.001z M42,38.001H22c-1.104,0-2,0.895-2,2C20,41.105,20.896,42,22,42h20
+			c1.104,0,2-0.895,2-1.999C44,38.896,43.104,38.001,42,38.001z"/>
+	</g>
+</g>
+<g id="Screws_2_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#CCCCCC;" d="M4,46h8v-4H4V46z M52,42v4h8v-4H52z"/>
+	</g>
+</g>
+<g id="Knobs">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#408EC2;" d="M4,46H2v2.001v4V60c0,1.104,0.896,2.001,2,2.001h8
+			c1.104,0,2-0.896,2-2.001v-7.999v-4V46h-2H4z M60,46h-8h-2v2.001v4V60c0,1.104,0.895,2.001,2,2.001h8c1.104,0,2-0.896,2-2.001
+			v-7.999v-4V46H60z"/>
+	</g>
+</g>
+<g id="Cable_2_">
+	<g>
+		<rect x="26" y="52.001" style="fill:#CCCCCC;" width="12" height="11.999"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>

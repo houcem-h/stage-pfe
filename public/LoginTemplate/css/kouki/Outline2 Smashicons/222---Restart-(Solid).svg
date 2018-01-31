@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>222 - Restart (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-1084.000000, -2161.000000)" fill="#000000">
+            <g id="222---Restart-(Solid)" sketch:type="MSLayerGroup" transform="translate(1084.000000, 2161.000000)">
+                <path d="M26,0 C11.663,0 0,11.663 0,26 C0,40.337 11.663,52 26,52 C40.337,52 52,40.337 52,26 C52,11.663 40.337,0 26,0 L26,0 Z M26,50 C12.767,50 2,39.233 2,26 C2,12.767 12.767,2 26,2 C39.233,2 50,12.767 50,26 C50,39.233 39.233,50 26,50 L26,50 Z" id="Fill-894" sketch:type="MSShapeGroup"></path>
+                <path d="M32,36.783 L32,15.437 L14.043,25.806 L32,36.783" id="Fill-895" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
