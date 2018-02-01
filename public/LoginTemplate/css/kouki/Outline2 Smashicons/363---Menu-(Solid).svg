@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>363 - Menu (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-962.000000, -479.000000)" fill="#000000">
+            <g id="363---Menu-(Solid)" sketch:type="MSLayerGroup" transform="translate(962.000000, 479.000000)">
+                <path d="M28,0 C12.56,0 0,12.561 0,28 C0,43.439 12.56,56 28,56 C43.44,56 56,43.439 56,28 C56,12.561 43.44,0 28,0 L28,0 Z M40,41 L16,41 C14.896,41 14,40.104 14,39 C14,37.896 14.896,37 16,37 L40,37 C41.105,37 42,37.896 42,39 C42,40.104 41.105,41 40,41 L40,41 Z M40,30 L16,30 C14.896,30 14,29.104 14,28 C14,26.896 14.896,26 16,26 L40,26 C41.105,26 42,26.896 42,28 C42,29.104 41.105,30 40,30 L40,30 Z M40,19 L16,19 C14.896,19 14,18.104 14,17 C14,15.896 14.896,15 16,15 L40,15 C41.105,15 42,15.896 42,17 C42,18.104 41.105,19 40,19 L40,19 Z" id="Fill-703" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

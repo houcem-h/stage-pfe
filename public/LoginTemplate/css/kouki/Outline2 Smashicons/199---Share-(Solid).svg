@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="59px" viewBox="0 0 55 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>199 - Share (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-241.000000, -2518.000000)" fill="#000000">
+            <g id="199---Share-(Solid)" sketch:type="MSLayerGroup" transform="translate(241.000000, 2518.000000)">
+                <path d="M45,39 C42.329,39 39.818,40.04 37.929,41.929 C37.405,42.453 36.954,43.028 36.565,43.638 L19.285,33.149 C19.741,32.006 20,30.761 20,29.456 C20,28.151 19.741,26.907 19.285,25.763 L36.568,15.354 C38.345,18.142 41.456,20 45,20 C50.514,20 55,15.514 55,10 C55,4.486 50.514,0 45,0 C39.486,0 35,4.486 35,10 C35,11.256 35.243,12.454 35.667,13.562 L18.361,23.985 C16.572,21.261 13.495,19.456 10,19.456 C4.486,19.456 0,23.942 0,29.456 C0,34.97 4.486,39.456 10,39.456 C13.495,39.456 16.572,37.651 18.36,34.927 L35.664,45.43 C35.234,46.556 35,47.759 35,49 C35,51.671 36.04,54.183 37.929,56.071 C39.818,57.96 42.329,59 45,59 C47.671,59 50.182,57.96 52.071,56.071 C53.96,54.183 55,51.671 55,49 C55,46.329 53.96,43.817 52.071,41.929 C50.182,40.04 47.671,39 45,39" id="Fill-124" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

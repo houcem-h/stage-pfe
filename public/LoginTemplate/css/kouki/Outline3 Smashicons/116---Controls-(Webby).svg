@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="56px" viewBox="0 0 54 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>116 - Controls (Webby)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-603.000000, -3479.000000)">
+            <g id="116---Controls-(Webby)" sketch:type="MSLayerGroup" transform="translate(604.000000, 3480.000000)">
+                <path d="M12,6 C12,9.314 9.314,12 6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,0 12,2.686 12,6 L12,6 Z" id="Fill-23" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M12,6 C12,9.314 9.314,12 6,12 C2.686,12 0,9.314 0,6 C0,2.686 2.686,0 6,0 C9.314,0 12,2.686 12,6 L12,6 Z" id="Stroke-24" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M32.414,26.793 C32.414,30.221 29.635,33 26.207,33 C22.779,33 20,30.221 20,26.793 C20,23.365 22.779,20.586 26.207,20.586 C29.635,20.586 32.414,23.365 32.414,26.793 L32.414,26.793 Z" id="Fill-25" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+                <path d="M32.414,26.793 C32.414,30.221 29.635,33 26.207,33 C22.779,33 20,30.221 20,26.793 C20,23.365 22.779,20.586 26.207,20.586 C29.635,20.586 32.414,23.365 32.414,26.793 L32.414,26.793 Z" id="Stroke-26" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M52,6 L12,6" id="Stroke-27" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M40,48 C40,51.314 42.686,54 46,54 C49.314,54 52,51.314 52,48 C52,44.686 49.314,42 46,42 C42.686,42 40,44.686 40,48 L40,48 Z" id="Fill-28" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M40,48 C40,51.314 42.686,54 46,54 C49.314,54 52,51.314 52,48 C52,44.686 49.314,42 46,42 C42.686,42 40,44.686 40,48 L40,48 Z" id="Stroke-29" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M0,48 L40,48" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M52,27 L33,27" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M20,27 L0,27" id="Path" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

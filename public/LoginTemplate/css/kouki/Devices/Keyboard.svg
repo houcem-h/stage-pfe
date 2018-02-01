@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+<g id="Devices">
+	<g id="Keyboard">
+		<rect x="5" y="14" fill-rule="evenodd" clip-rule="evenodd" fill="#ECF0F1" width="29" height="19"/>
+	</g>
+	<g id="Keyboard_1_">
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1ABC9C" d="M15,17h-3v1h3V17z M19,17h-3v1h3V17z M23,17h-3v1h3V17z M27,17
+			h-3v1h3V17z M11,17H8v1h3V17z M28,17v1h3v-1H28z M15,19h-3v3h3V19z M19,19h-3v3h3V19z M23,19h-3v3h3V19z M27,19h-3v3h3V19z M28,22
+			h3v-3h-3V22z M11,19H8v3h3V19z M26,26h3v-3h-3V26z M28,30h3v-3h-3V30z M8,30h3v-3H8V30z M10,26h3v-3h-3V26z M12,30h15v-3H12V30z
+			 M22,26h3v-3h-3V26z M18,26h3v-3h-3V26z M14,26h3v-3h-3V26z"/>
+	</g>
+	<g id="Keyboard_2_">
+		<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#7F8C8D" points="20,12 20,8 19,8 19,12 17,12 17,14 22,14 22,12 		"/>
+	</g>
+</g>
+<g id="Lockup">
+</g>
+</svg>

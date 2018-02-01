@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>157 - Location Area (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-480.000000, -2997.000000)" fill="#1A1718">
+            <g id="157---Location-Area-(Solid)" sketch:type="MSLayerGroup" transform="translate(480.000000, 2997.000000)">
+                <path d="M42.117,43.007 C41.567,42.939 41.071,43.334 41.007,43.883 C40.942,44.432 41.334,44.929 41.883,44.993 C52.399,46.232 58,49.567 58,51.5 C58,54.214 47.348,58 30,58 C12.652,58 2,54.214 2,51.5 C2,49.567 7.601,46.232 18.117,44.993 C18.665,44.929 19.058,44.432 18.993,43.883 C18.928,43.334 18.433,42.938 17.883,43.007 C7.354,44.247 0,47.739 0,51.5 C0,55.724 10.305,60 30,60 C49.695,60 60,55.724 60,51.5 C60,47.739 52.646,44.247 42.117,43.007" id="Fill-1040" sketch:type="MSShapeGroup"></path>
+                <path d="M29.823,54.757 L45.164,32.6 C50.919,24.929 50.086,12.319 43.383,5.617 C39.761,1.995 34.945,0 29.823,0 C24.701,0 19.885,1.995 16.263,5.617 C9.561,12.319 8.728,24.928 14.46,32.569 L29.823,54.757 L29.823,54.757 Z M30,12 C33.86,12 37,15.141 37,19 C37,22.859 33.86,26 30,26 C26.14,26 23,22.859 23,19 C23,15.141 26.14,12 30,12 L30,12 Z" id="Fill-1041" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

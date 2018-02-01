@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>201 - Percent (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-1200.000000, -2397.000000)" fill="#000000">
+            <g id="201---Percent-(Solid)" sketch:type="MSLayerGroup" transform="translate(1200.000000, 2397.000000)">
+                <path d="M0,60 L60,60 L60,0 L0,0 L0,60 Z M17,10 C20.859,10 24,13.141 24,17 C24,20.859 20.859,24 17,24 C13.141,24 10,20.859 10,17 C10,13.141 13.141,10 17,10 L17,10 Z M10.586,46.586 L46.586,10.586 L49.414,13.414 L13.414,49.414 L10.586,46.586 L10.586,46.586 Z M43,50 C39.141,50 36,46.859 36,43 C36,39.141 39.141,36 43,36 C46.859,36 50,39.141 50,43 C50,46.859 46.859,50 43,50 L43,50 Z" id="Fill-949" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

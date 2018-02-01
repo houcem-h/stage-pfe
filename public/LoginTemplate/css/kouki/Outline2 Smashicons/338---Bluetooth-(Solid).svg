@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="57px" viewBox="0 0 36 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>338 - Bluetooth (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-372.000000, -839.000000)" fill="#000000">
+            <g id="338---Bluetooth-(Solid)" sketch:type="MSLayerGroup" transform="translate(372.000000, 839.000000)">
+                <path d="M19,43.37 L24.643,37.022 L19.024,31.102 L19,43.37" id="Fill-717" sketch:type="MSShapeGroup"></path>
+                <path d="M19,13.414 L19.024,25.373 L24.627,19.042 L19,13.414" id="Fill-718" sketch:type="MSShapeGroup"></path>
+                <path d="M18,0 C8.075,0 0,8.075 0,18 L0,39 C0,48.925 8.075,57 18,57 C27.925,57 36,48.925 36,39 L36,18 C36,8.075 27.925,0 18,0 L18,0 Z M27.357,36.978 L17,48.63 L17.037,30.28 L8.667,37.759 L7.333,36.267 L16.557,28.026 L7.402,19.755 L8.743,18.271 L17.035,25.762 L17,8.586 L27.373,18.958 L19.114,28.29 L27.357,36.978 L27.357,36.978 Z" id="Fill-719" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

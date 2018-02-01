@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="48px" viewBox="0 0 60 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>356 - Albums (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-600.000000, -604.000000)" fill="#000000">
+            <g id="356---Albums-(Solid)" sketch:type="MSLayerGroup" transform="translate(600.000000, 604.000000)">
+                <path d="M5,4 L8,4 L8,44 L5,44 L5,4 Z" id="Fill-686" sketch:type="MSShapeGroup"></path>
+                <path d="M52,4 L55,4 L55,44 L52,44 L52,4 Z" id="Fill-687" sketch:type="MSShapeGroup"></path>
+                <path d="M57,8 L60,8 L60,40 L57,40 L57,8 Z" id="Fill-688" sketch:type="MSShapeGroup"></path>
+                <path d="M0,8 L3,8 L3,40 L0,40 L0,8 Z" id="Fill-689" sketch:type="MSShapeGroup"></path>
+                <path d="M10,0 L50,0 L50,48 L10,48 L10,0 Z" id="Fill-690" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

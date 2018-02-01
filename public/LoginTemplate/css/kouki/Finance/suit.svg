@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<g id="Suit">
+	<g>
+		<path style="fill:#666666;" d="M60,12c-10-2-22-6-22-6H26c0,0-14,4-22,6c-1.94,0.484-4,1.791-4,4v44c0,2.209,1.791,4,4,4h56
+			c2.209,0,4-1.791,4-4V16C64,13.791,61.961,12.392,60,12z"/>
+	</g>
+</g>
+<g id="Shirt">
+	<g>
+		<polygon style="fill:#FFFFFF;" points="44,6 20,6 18,9.999 32,58 46,9.999 		"/>
+	</g>
+</g>
+<g id="Tie">
+	<g>
+		<polygon style="fill:#48A0DC;" points="34,30 36,26 32,22 28,26 30,30 26,44 32,54 38,44 		"/>
+	</g>
+</g>
+<g id="Shirt_Interior">
+	<g>
+		<path style="fill:#E6E6E6;" d="M32,0c-6.526,0-12,3.513-12,8c0,4.486,8.793,14,12,14s12-9.514,12-14C44,3.513,38.526,0,32,0z"/>
+	</g>
+</g>
+<g id="Collar_Interior">
+	<g>
+		<path style="fill:#CCCCCC;" d="M32,0c-6.526,0-12,3.513-12,8c0,0.587,0.157,1.263,0.426,1.988C21.778,6.513,26.494,4,32,4
+			s10.222,2.513,11.574,5.988C43.843,9.263,44,8.587,44,8C44,3.513,38.526,0,32,0z"/>
+	</g>
+</g>
+<g id="Suit_Collar">
+	<g>
+		<polygon style="fill:#4D4D4D;" points="58,16 46,8 32,52 18,8 6,16 14,18 8,24 32,60 56,24 50,18 		"/>
+	</g>
+</g>
+<g id="Hanky">
+	<g>
+		<polygon style="fill:#FFFFFF;" points="54,38 48,44 60,44 		"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>

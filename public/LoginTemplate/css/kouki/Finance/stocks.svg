@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<g id="Base_2_">
+	<g>
+		<path style="fill:#E6E6E6;" d="M60,0H4C1.791,0,0,1.79,0,3.999v56C0,62.209,1.791,64,4,64h56c2.209,0,4-1.791,4-4.001v-56
+			C64,1.79,62.209,0,60,0z"/>
+	</g>
+</g>
+<g id="Grid_1_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#CCCCCC;" d="M36,0v64h4V0H36z M24,64h4V0h-4V64z M12,64h4V0h-4V64z"/>
+	</g>
+</g>
+<g id="Current">
+	<g>
+		<rect x="48" style="fill:#88C057;" width="4" height="64"/>
+	</g>
+</g>
+<g id="Lines_2_">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#ED7161;" d="M64,24.862L51.732,12.596
+			c-0.475-0.475-1.113-0.674-1.732-0.617c-0.62-0.057-1.259,0.143-1.733,0.617L26,34.862L15.732,24.596
+			c-0.475-0.475-1.113-0.674-1.732-0.617c-0.62-0.057-1.259,0.143-1.733,0.617L0,36.862v6.137l14-14l10.335,10.335
+			c0.457,0.457,1.066,0.659,1.665,0.623c0.598,0.036,1.207-0.166,1.664-0.623L50,16.999l14,14V24.862z"/>
+	</g>
+</g>
+<g id="Bullets">
+	<g>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#ED7161;" d="M14,21.999c-2.209,0-4,1.791-4,4.001
+			c0,2.209,1.791,3.999,4,3.999s4-1.79,4-3.999C18,23.79,16.209,21.999,14,21.999z M26,34c-2.209,0-4,1.79-4,3.999
+			C22,40.209,23.791,42,26,42s4-1.791,4-4.001C30,35.79,28.209,34,26,34z M50,10c-2.209,0-4,1.79-4,3.999S47.791,18,50,18
+			s4-1.792,4-4.001S52.209,10,50,10z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>

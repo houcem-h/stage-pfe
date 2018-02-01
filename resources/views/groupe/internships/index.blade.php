@@ -25,7 +25,7 @@
                        <tr>
                            <td><strong>Framer</strong></td>
                            <td>
-                            {!!($internship->framerRecord)!=null ? $internship->framerRecord->firstname: '<u>Undefined Until Now</u>'!!}
+                            {!!($internship->framerRecord)!=null ? $internship->framerRecord->firstname: '<u>Undifined Until Now</u>'!!}
                            </td>
                        </tr>
                        <tr>
@@ -37,7 +37,7 @@
 
             </div>
             @empty
-            <h3 class="text-center">No Internships Available</h3>
+            <h3 class="text-center">No Interships Available</h3>
         @endforelse
         <div class="col-md-6 col-md-offset-3">
             <p class="text-center">{{$internships->links()}}</p>

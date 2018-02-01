@@ -77,18 +77,6 @@
       </div>
       <!--/.end-->
 
-
-
-
-
-  
-
-
-    
-
-
-   
-
   <!-- Div -->
   <div id="rapports" class="col-sm-6 col-md-2">
       <div class="card text-white" style="background-color:#c0392b !important; border-color: #c0392b !important; ">
@@ -100,30 +88,39 @@
           <small>Tous les rapports</small>
         </div>
       </div>
+
     </div>
+
+      <!--/.end-->
+
+      <!-- added by amine --->
+      <!-- invitations -->
+      <div id="13" class="col-sm-6 col-md-2">
+        <div class="card text-white" style="background-color:#c44569 !important; border-color: #c44569 !important; ">
+          <div class="card-body">
+            <div class="h1 text-muted text-right mb-4">
+              <i class="kk kk-invite "></i>
+            </div>
+            <div class="h5 mb-0">Invitations</div>
+            <small>Demandes d'inscription pour les etudiants</small>
+          </div>
+        </div>
+      </div>
+
+      <div id="14" class="col-sm-6 col-md-2">
+          <div class="card text-white" style="background-color:#c44569 !important; border-color: #c44569 !important; ">
+            <div class="card-body">
+              <div class="h1 text-muted text-right mb-4">
+                <i class="kk kk-invite "></i>
+              </div>
+              <div class="h5 mb-0">Invitations</div>
+              <small>Demandes d'inscription pour les enseignants</small>
+            </div>
+          </div>
+        </div>
     <!--/.end-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   </div>
-
-
-
-
 
 <br>
 
@@ -234,33 +231,14 @@
                                 </div>
 
                               </div>
-
-
-
                         </div>
-
-
                       </div>
                       </div>
                     </div>
         </div>
-
-
-
  </div>
 </div>
-
-
-
-
-
   <br id="mycalender">
- 
-
-
-
-
-
   <div class="card" >
     <div class="card-body">
       <div class="row">
@@ -313,36 +291,13 @@
 
                                 <div id='calendar'></div>
                         </div>
-
-
-
-
                 </div>
-
-
-
-
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
 
     </div>
 
   </div>
-
-
-
-
 
 <script>
     $('#1').css( 'cursor', 'pointer' );
@@ -357,8 +312,11 @@
     $('#10').css( 'cursor', 'pointer' );
     $('#11').css( 'cursor', 'pointer' );
     $('#12').css( 'cursor', 'pointer' );
-    $('#rapports').css( 'cursor', 'pointer' );
-    
+    $('#rapports').css( 'cursor', 'pointer' ); 
+    //added by amine
+    $("#13").css("cursor", "pointer");
+    $("#14").css("cursor","pointer");
+
   
 $('#1').click(function() {
   swal({
@@ -448,9 +406,7 @@ $('#1').click(function() {
       width: "80%",
       showCloseButton: true,
       showConfirmButton: false
-    
-   
-    
+          
   })
   //window.location.href="./dashboard/Users/All"; 
 });
@@ -526,8 +482,6 @@ $('#7').click(function() {
                 </div>
           </div>
 
-
-
         
           <div id="soutenance_nonvalide" class="col-md-3 col-sm-12"  style="cursor:pointer">
               <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
@@ -541,14 +495,10 @@ $('#7').click(function() {
                 </div>
           </div>
 
-
-
       </div>`,
       width: "80%",
       showCloseButton: true,
-      showConfirmButton: false
-    
-   
+      showConfirmButton: false      
     
   })
   
@@ -617,13 +567,10 @@ $('#10').click(function() {
                 </div>
           </div>
 
-
       </div>`,
       width: "80%",
       showCloseButton: true,
-      showConfirmButton: false
-    
-   
+      showConfirmButton: false     
     
   })
   //window.location.href="./dashboard/Interships/all"; 
@@ -637,11 +584,15 @@ $('#11').click(function() {
 $('#12').click(function() {
   window.location.href="./dashboard/Interships/pfe"; 
 });
+//added by amine
+$("#13").click(function(){
+    window.location.href = "./dashboard/studentInvitations";
+});
 
+$("#14").click(function(){
+  window.location.href = "./dashboard/teacherInvitations";
+});
 </script>
-
-
-
 
 <!-- Chart Code -->
 <script>
@@ -675,17 +626,9 @@ $('#12').click(function() {
         options: {
           responsive: true
         }
-      });
-    
-    
-  
-  
+      });    
   });
 </script>
-
-
-
-
 
 <script>
 
@@ -746,27 +689,5 @@ $('#12').click(function() {
     $( "body" ).on( "click", "#stage_pfe", function() {
       window.location.href="./dashboard/Interships/pfe";
     });
-
-
-
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @endsection

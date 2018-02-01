@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="47px" viewBox="0 0 52 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>251 - Repeat (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-1204.000000, -1804.000000)" fill="#000000">
+            <g id="251---Repeat-(Solid)" sketch:type="MSLayerGroup" transform="translate(1204.000000, 1804.000000)">
+                <path d="M2,23 C2.553,23 3,22.553 3,22 C3,15.935 7.935,11 14,11 L38,11 L38,19.964 L51.7,10 L38,0.036 L38,9 L14,9 C6.832,9 1,14.832 1,22 C1,22.553 1.447,23 2,23" id="Fill-110" sketch:type="MSShapeGroup"></path>
+                <path d="M50,24 C49.447,24 49,24.447 49,25 C49,31.065 44.065,36 38,36 L14,36 L14,27.036 L0.3,37 L14,46.964 L14,38 L38,38 C45.168,38 51,32.168 51,25 C51,24.447 50.553,24 50,24" id="Fill-111" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

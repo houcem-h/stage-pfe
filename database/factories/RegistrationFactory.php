@@ -9,5 +9,6 @@ $factory->define(App\Registration::class, function (Faker $faker) {
         'student' => $faker->numberBetween(1,200),
         'group' => $faker->numberBetween(1,200),
         'session' => "$year/$year1",
+        "state" => $faker->randomElement(["waiting","accepted","rejected"])
     ];
 });

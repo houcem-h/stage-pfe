@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="58px" viewBox="0 0 32 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>318 - Voice (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-374.000000, -1078.000000)" fill="#000000">
+            <g id="318---Voice-(Solid)" sketch:type="MSLayerGroup" transform="translate(374.000000, 1078.000000)">
+                <path d="M31,28 C30.448,28 30,28.447 30,29 L30,35 C30,42.72 23.72,49 16,49 C8.28,49 2,42.72 2,35 L2,29 C2,28.447 1.552,28 1,28 C0.448,28 0,28.447 0,29 L0,35 C0,43.485 6.644,50.429 15,50.949 L15,56 L10,56 C9.448,56 9,56.447 9,57 C9,57.553 9.448,58 10,58 L22,58 C22.552,58 23,57.553 23,57 C23,56.447 22.552,56 22,56 L17,56 L17,50.949 C25.356,50.429 32,43.485 32,35 L32,29 C32,28.447 31.552,28 31,28" id="Fill-66" sketch:type="MSShapeGroup"></path>
+                <path d="M16,46 C22.065,46 27,41.065 27,35 L27,11 C27,4.935 22.065,0 16,0 C9.935,0 5,4.935 5,11 L5,35 C5,41.065 9.935,46 16,46" id="Fill-67" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

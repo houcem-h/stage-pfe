@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>269 - Music Album (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-243.000000, -1680.000000)" fill="#1A1718">
+            <g id="269---Music-Album-(Solid)" sketch:type="MSLayerGroup" transform="translate(243.000000, 1680.000000)">
+                <path d="M42,10.996 L22,13.593 L22,18.861 L42,16.264 L42,10.996" id="Fill-839" sketch:type="MSShapeGroup"></path>
+                <path d="M41.824,0 L12.176,0 C5.462,0 0,5.462 0,12.176 L0,41.824 C0,48.538 5.462,54 12.176,54 L41.824,54 C48.538,54 54,48.538 54,41.824 L54,12.176 C54,5.462 48.538,0 41.824,0 L41.824,0 Z M44,34.857 C44,38.56 40.668,41.571 36.571,41.571 C32.476,41.571 29.143,38.56 29.143,34.857 C29.143,31.155 32.476,28.143 36.571,28.143 C38.754,28.143 40.713,29.003 42.073,30.362 C42.029,30.249 42,30.128 42,30 L42,18.28 L22,20.878 L22,41 C22,41.542 22,40.09 22,41.286 C22,44.988 18.636,48 14.5,48 C10.364,48 7,44.988 7,41.286 C7,37.584 10.364,34.571 14.5,34.571 C16.674,34.571 18.629,35.409 20,36.737 L20,12.714 C20,12.211 20.373,11.787 20.871,11.723 L42.871,8.866 C43.154,8.827 43.443,8.917 43.66,9.106 C43.876,9.296 44,9.569 44,9.857 L44,34 L44,34.857 Z" id="Fill-840" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

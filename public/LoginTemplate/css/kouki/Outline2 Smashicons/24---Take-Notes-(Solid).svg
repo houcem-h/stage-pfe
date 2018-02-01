@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>24 - Take Notes (Solid)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-840.000000, -4557.000000)" fill="#000000">
+            <g id="24---Take-Notes-(Solid)" sketch:type="MSLayerGroup" transform="translate(840.000000, 4557.000000)">
+                <path d="M50,13 L50,50.266 L54,57.266 L54,59 C54,59.552 54.447,60 55,60 C55.553,60 56,59.552 56,59 L56,57.266 L60,50.266 L60,11 L50,11 L50,13 L50,13 Z M57.277,51 L55,54.985 L52.723,51 L57.277,51 L57.277,51 Z" id="Fill-645" sketch:type="MSShapeGroup"></path>
+                <path d="M57.015,0 L52.985,0 C51.339,0 50,1.339 50,2.985 L50,9 L60,9 L60,2.985 C60,1.339 58.661,0 57.015,0" id="Fill-646" sketch:type="MSShapeGroup"></path>
+                <path d="M0,60 L46,60 L46,0 L0,0 L0,60 Z M10,2 L44,2 L44,58 L10,58 L10,2 Z" id="Fill-647" sketch:type="MSShapeGroup"></path>
+                <path d="M15,24 L39,24 L39,10 L15,10 L15,24 Z M20,18 L34,18 L34,20 L20,20 L20,18 Z M20,14 L34,14 L34,16 L20,16 L20,14 Z" id="Fill-648" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
