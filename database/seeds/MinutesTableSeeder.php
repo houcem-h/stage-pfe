@@ -11,6 +11,6 @@ class MinutesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Minute::class, 20)->create();
+        factory(App\Minute::class, 200)->create();
     }
 }

@@ -11,6 +11,6 @@ class DefensesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Defense::class, 100)->create();
+        factory(App\Defense::class, 200)->create();
     }
 }

@@ -11,6 +11,6 @@ class InternshipsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Internship::class, 20)->create();
+        factory(App\Internship::class, 200)->create();
     }
 }

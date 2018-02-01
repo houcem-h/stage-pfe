@@ -220,12 +220,14 @@
                       swal({
                         title: "Are you sure?",
                         text: "Once deleted, you will not be able to recover this User!",
-                        icon: "warning",
+                        type: "warning",
+                        showCancelButton: true,
                         buttons: true,
                         dangerMode: true,
+                        confirmButtonText: 'Yes, delete it!'
                       })
                       .then((willDelete) => {
-                        if (willDelete) {
+                        if (willDelete.value) {
                                          $.ajaxSetup({
                                                 headers: {
                                                      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -243,8 +245,8 @@
         
         
         
-                        } else {
-                          swal("This User is safe!");
+                        } else if (willDelete.dismiss === 'cancel') {
+                          swal("This User is Safe!","Operation Canceled", "success");
                         }
                       });
         
