@@ -639,11 +639,127 @@ class GetStat extends Controller
              return View('dashboards.admin.companies' , ['companies' => $allcompanies]);
         }
 
+        public static function getstream_by_student_id($id) {
+            $alldata = DB::table('registrations')
+            ->join('groups', 'registrations.group', '=' ,'groups.id')
+            ->where('registrations.student' , '=' , $id)
+            ->pluck('stream')
+            ->first();
+            return $alldata;
+        }
 
 
-        public function test() {
-            $pdf = PDF::loadView('pdfs.s');
+        public function testingPDF($datesign) {
+            $alldata = DB::table("internships")
+                            ->join('specifications' , "internships.specifications" , '=' , "specifications.id")
+                            ->join('registrations' , "internships.student" , '=' , "registrations.student")
+                            ->join('groups', 'registrations.group', '=', "groups.id")
+                            ->join('users' , 'internships.student' , '=' , "users.id")
+                            ->get();
+                            
+            //return $alldata;
+            $pdf = PDF::loadView('pdfs.s',  ['alldata' => $alldata , 'datesign' => $datesign]);
             return $pdf->stream();
         }
+
+
+        public function invitation($date) {
+           
+            $alldata = DB::table('defenses')
+                        ->join('internships', 'defenses.internship' , '=' , 'internships.id')
+                        ->join('managers', 'internships.company_framer' , "=" , "managers.company")
+                        ->select('defenses.date_d', 'defenses.start_time' , 'defenses.classroom' , 'managers.name' ,'managers.email' )
+                        ->where('internships.type' , '=' ,'pfe')
+                        ->get();
+            //return $alldata;
+            $pdf = PDF::loadView('pdfs.invit' , ['alldata' => $alldata , 'date' => $date]);
+            
+            return View('pdfs.invit' , ['alldata' => $alldata , 'date' => $date]);
+        }
+
+
+        public function upgrade_teacher() {
+            $alldata = DB::table('users')
+                        ->where('users.role' , '=' , '1')
+                        ->get();
+                return View('dashboards.admin.upgradeuser' , ['alldata' => $alldata]);
+                   
+        }
+
+
+
+        public static function upgrade_by_id($id) {
+           $x =  DB::table('users')->where('id', '=', $id)
+	                ->update(array('role' => '2'));
+                        return "done!";      
+        }
+
+        public static function color_by_type($type) {
+            if($type == "init")
+                return "#27ae60";
+            if($type == "perf")
+                return "#2980b9";
+            if ($type== "pfe")
+                return "#e74c3c";
+        }
+
+
+        public static function get_calendar_dates() {
+                $x = DB::table('internships')
+                        ->join('registrations' , 'internships.student', '=', 'registrations.student')
+                        ->join('users', 'internships.student' , "=" , 'users.id')
+                        ->join('defenses' , 'internships.id' , '=' , 'defenses.internship')
+                        ->select('date_d', 'firstname' , 'lastname' , 'start_time' , 'classroom' , 'type')
+                        ->get();
+                //return $x;
+                $jscode = '';
+                foreach($x as $def) {
+                    $jscode .= "{
+                        title: '" . $def->firstname . ' ' . $def->lastname . " (". $def->classroom ." )". "',
+                        start: '" . $def->date_d . "T". $def->start_time .  "',
+                        color  : '". \App\Http\Controllers\GetStat::color_by_type($def->type)."',
+                        textColor: 'white'
+                      },";
+                }
+                return $jscode;
+                //init = green
+                //perf = blue
+                //pfe = red
+
+        }
+
+
+        public static function pdf_calendar() {
+            $x = DB::table('internships')
+                        ->join('registrations' , 'internships.student', '=', 'registrations.student')
+                        ->join('users', 'internships.student' , "=" , 'users.id')
+                        ->join('defenses' , 'internships.id' , '=' , 'defenses.internship')
+                        ->join('groups' , 'registrations.group' , '=' , 'groups.id')
+                        ->join('companies as comp' , 'internships.company_framer' , '=' , 'comp.id')
+                        ->select(
+                            'comp.name as company_name',
+                            'defenses.date_d',
+                            'defenses.start_time',
+                            'defenses.classroom',
+                            'groups.name as group_name',
+                            'internships.type',
+                            'users.firstname',
+                            'users.lastname',
+                            'users.email',
+                            'users.cin',
+                            'users.phone',
+                            'defenses.reporter',
+                            'defenses.president'
+                            )
+                        ->get();
+                       // return $x;
+            //return View('pdfs.calendar', ['alldata' => $x]);
+
+
+                     $pdf = PDF::loadView('pdfs.calendar', ['alldata' => $x]);
+                     $pdf->setPaper('A4', 'landscape');
+                     return $pdf->stream('test_pdf.pdf');
+        }
+
 
 }

@@ -3,7 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+
 use DB;
+
 
 class FramingRequest extends Model
 {
@@ -22,10 +24,6 @@ class FramingRequest extends Model
     public function adminUpdator(){
         return $this->belongsTo('App\User','updated_by');
     }
-
-
-
-
 
 
 
@@ -50,4 +48,5 @@ class FramingRequest extends Model
                    ->get();
         return $myNotif;
     }
+
 }

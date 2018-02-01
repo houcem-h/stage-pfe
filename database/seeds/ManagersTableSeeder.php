@@ -11,6 +11,6 @@ class ManagersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Manager::class, 20)->create();
+        factory(App\Manager::class, 200)->create();
     }
 }
