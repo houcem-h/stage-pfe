@@ -21,6 +21,8 @@
 	<link href="{{ asset('dashboard_assets/css/custom_nav_dashboard.css') }}" rel="stylesheet">
 	{{--  END MODIFICATIONS--}}
 	<!-- Styles required by this views -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link href="{{ asset('dashboard_assets/node_modules/calendar/fullcalendar.min.css') }}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet">
@@ -188,7 +190,7 @@
 										<i class="kk kk-users2"></i>Étudiants</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('teachers') }}">
+									<a class="nav-link" href="{{ route('teachers_list') }}">
 										<i class="kk kk-users2"></i>Enseignants</a>
 								</li>
 								<li class="nav-item">

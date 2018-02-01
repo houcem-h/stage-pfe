@@ -65,7 +65,7 @@
                 </div>
                 <hr>
 
-
+                
 
 
 
@@ -144,9 +144,76 @@
 
                 <hr>
 
+               
 
 
 
+                        <br>
+                        <div class="row">
+                                        <div class="col-md-4 text-right">
+                                                <h3>Lettres d'affectations</h3>
+                                                
+                                        </div>
+                                        <div class="col-md-3">
+                                                        <input type="text" class="form-control" id="datepicker" placeholder="Date d'impression...">
+                                                        
+                                        </div>
+                                        <div class="col-md-4">
+                                                        <button class="btn btn-danger" id="lettre_affect_pdf">Download PDF</button>
+                                                        
+                                        </div>
+                                        <script>
+                                                        $("#lettre_affect_pdf").click(function() {
+                                                                var mydate =  $("#datepicker").val() ;
+                                                                
+                                                                if (mydate != "") {
+                                                                        swal({
+                                                                                title: 'Veuillez Patienter ...',
+                                                                                text: 'En Cours de générer PDF',
+                                                                                
+                                                                                onOpen: () => {
+                                                                                        swal.showLoading()
+                                                                                      }
+                                                                        });
+                                                                        window.location = "../dashboard/pdf/affectation/" + mydate ;
+                                                                }
+                                                       });
+                                                 </script>
+                        </div>
+<br>
+                        <div class="row">
+                                        <div class="col-md-4 text-right">
+                                                <h3>Invitations (Juri PFE)</h3>
+                                                
+                                        </div>
+                                        <div class="col-md-3">
+                                                        <input type="text" class="form-control" id="datepicker2" placeholder="Date d'impression...">
+                                                        
+                                        </div>
+                                        <div class="col-md-4">
+                                                        <button class="btn btn-danger" id="invit_pdf">Download PDF</button>
+                                                        
+                                        </div>
+                                        <script>
+                                                        $("#invit_pdf").click(function() {
+                                                                var mydate2 =  $("#datepicker2").val() ;
+                                                                
+                                                                if (mydate2 != "") {
+                                                                        swal({
+                                                                                title: 'Veuillez Patienter ...',
+                                                                                text: 'En Cours de générer PDF',
+                                                                                
+                                                                                onOpen: () => {
+                                                                                        swal.showLoading()
+                                                                                      }
+                                                                        });
+                                                                        window.location = "../dashboard/pdf/invit/" + mydate2 ;
+                                                                }
+                                                       });
+                                                 </script>
+                        </div>
+
+                <hr>
 
               <!--  <h3>Filtre : (Par Société)</h3>
                 <div class="row">
@@ -252,6 +319,20 @@
 </div>
 
 <script>
+
+                
+        
+                                $( function() {
+                                  $( "#datepicker" ).datepicker({
+                                          dateFormat: "dd-mm-yy"
+                                  });
+                                  $( "#datepicker2" ).datepicker({
+                                        dateFormat: "dd-mm-yy"
+                                });
+                                } );
+                        
+
+
         function  redirect_to_pdf1() {
 
                 var x1 = $("#f1_1").val(); //Année universitaire

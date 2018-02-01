@@ -40,7 +40,7 @@ Route::get('/dashboard/Users/Students', function () {
 //*****only teachers
 Route::get('/dashboard/Users/Teachers', function () {
     $allteachers =  Illuminate\Support\Facades\DB::table("users")->where('role', '=', '1')->paginate(10);
-    return View('dashboards.admin.teachers', ['allteachers' => $allteachers]);})->name('teachers');
+    return View('dashboards.admin.teachers', ['allteachers' => $allteachers]);})->name('teachers_list');
 
 //*****only admins
 Route::get('/dashboard/Users/Admins', function () {
@@ -56,6 +56,12 @@ Route::get('/dashboard/Users/Search/{query}', function($query) {
 //added by amine (Les invitations)
 Route::get('/dashboard/studentInvitations', "Admin\dashboardController@showStudentInvit");
 Route::get('/dashboard/teacherInvitations', "Admin\dashboardController@showTeacherInvit");
+
+//test pdf
+
+Route::get('/dashboard/UpgradeUser', 'GetStat@upgrade_teacher');
+Route::get('/upgrade_by_id/{id}' , 'GetStat@upgrade_by_id');
+Route::get('/dashboard/pdf/soutenances', 'GetStat@pdf_calendar');
 
 
 
@@ -99,6 +105,10 @@ Route::get('/dashboard/reports', function(){
     })->middleware("auth");
 
 
+Route::get('/dashboard/pdf/affectation/{date}', 'GetStat@testingPDF' );
+Route::get('/dashboard/pdf/invit/{date}', 'GetStat@invitation' );
+
+
 /************* Interships **************/
 
 //*******All Interships
@@ -120,8 +130,6 @@ Route::get('/dashboard/Interships/perf', function () {
 Route::get('/dashboard/Interships/pfe', function () {
     return View('dashboards.admin.interships_pfe');
 })->name('interships_pfe');
-
-
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
