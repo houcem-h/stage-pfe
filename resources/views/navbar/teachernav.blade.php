@@ -23,6 +23,11 @@
             <li><a href="{{route('settingspass')}}">Mot de passe</a></li>
           </ul>
         </li>
+        @if (auth()->user()->role == "2") 
+        <li>
+          <a class="btn btn-primary" href="./dashboard/">Connecter en tant qu'Admin</a>
+        </li>
+        @endif
       <li>
          <a href="{{ route('logout') }}"
              onclick="event.preventDefault();

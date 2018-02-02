@@ -11,38 +11,41 @@
 |
 */
 
-//********************************************* Routes by Adem-kk *************************************//
-Route::get("/",function(){
-    return view("welcome");
-});
-//********dashboard
-Route::get('/dashboard', function () {
-    return View('dashboards.admin.dash');
-})->middleware("auth")->name('dash');
+Route::get('/dashboard/encadrement_waiting', 'GetStat@encadrement_waiting')->name('encadrement_waiting');
+Route::get('/dashboard/encadrement_accepted', 'GetStat@encadrement_accepted')->name('encadrement_accepted');
+Route::get('/dashboard/encadrement_rejected', 'GetStat@encadrement_rejected')->name('encadrement_rejected');
+/** (Ajax) get frame_req data for modal */
+Route::get('frame_req/{id}' , 'GetStat@getframingreq_by_id');
+Route::get('frame_accept/{id}' , 'GetStat@accept_framing');
+Route::get('frame_reject/{id}' , 'GetStat@reject_framing');
+Route::get('frame_waiting/{id}' , 'GetStat@waiting_framing');
 
-//********login
-Route::get('/connect', function () {
-    return View('dashboards.admin.login');
-})->name('connect');
+
+//********************************************* Routes by Adem-kk *************************************//
+
+Route::get("/",function(){ return view("welcome"); });
+//** Dashboard
+Route::get('/dashboard', function () {return View('dashboards.admin.dash');})->middleware("auth")->name('dash');
+//** Login
+Route::get('/connect', function () { return View('dashboards.admin.login');})->name('connect');
 
 /************* USERS **************/
-
-//*****all users
+//***** All users
 Route::get('/dashboard/Users/All', function () {
     $allusers =  \App\User::orderBy('created_at')->paginate(10);
     return View('dashboards.admin.allusers', ['allusers' => $allusers]);})->name('Allusers');
 
-//*****only students
+//*****Only students
 Route::get('/dashboard/Users/Students', function () {
     $allstudents =  Illuminate\Support\Facades\DB::table("users")->where('role', '=', '0')->paginate(10);
     return View('dashboards.admin.students', ['allstudents' => $allstudents]);})->name('students');
 
-//*****only teachers
+//*****Only teachers
 Route::get('/dashboard/Users/Teachers', function () {
     $allteachers =  Illuminate\Support\Facades\DB::table("users")->where('role', '=', '1')->paginate(10);
     return View('dashboards.admin.teachers', ['allteachers' => $allteachers]);})->name('teachers_list');
 
-//*****only admins
+//*****only Admins
 Route::get('/dashboard/Users/Admins', function () {
     $alladmins =  Illuminate\Support\Facades\DB::table("users")->where('role', '=', '2')->paginate(10);
     return View('dashboards.admin.admins',  ['alladmins' => $alladmins]);})->name('admins');
@@ -52,85 +55,59 @@ Route::get('/dashboard/Users/Search/{query}', function($query) {
     $result = App\User::SearchByKeyword($query)->get();
     return View('dashboards.admin.search', ['result' => $result]);
 });
-
 //added by amine (Les invitations)
 Route::get('/dashboard/studentInvitations', "Admin\dashboardController@showStudentInvit");
 Route::get('/dashboard/teacherInvitations', "Admin\dashboardController@showTeacherInvit");
 
-//test pdf
-
+// upgrade + pdf
 Route::get('/dashboard/UpgradeUser', 'GetStat@upgrade_teacher');
 Route::get('/upgrade_by_id/{id}' , 'GetStat@upgrade_by_id');
 Route::get('/dashboard/pdf/soutenances', 'GetStat@pdf_calendar');
 
-
-
 /** Ajax Delete User from Dashboard as admin */
 Route::get('/deleteuser/{id}' , 'GetStat@destroyuser');
-
 /** Test */
 Route::get('/getuserinfo/{id}' , 'GetStat@getuserdata');
-
 /** Ajax Update Users Info */
 Route::post('/updateuser' , 'GetStat@updateinfousers');
-
-
 Route::get('dashboard/Companies', function() {
     $allcompanies = Illuminate\Support\Facades\DB::table("companies")->get();
     return View('dashboards.admin.companies' , ['companies' => $allcompanies]);
-});
-
-
+})->name('companies');
 Route::get('/test', 'GetStat@getalldefences');
 
 /************* Mailer **************/
-
 //** Mail to students */
 Route::get('/dashboard/Mailer', 'sendmail@index')->name('Mailer');
 // (Ajax) Send emails
 Route::post('/sendmail', 'sendmail@send');
-
 /************* Reports **************/
 
 //**** Get list of students as PDF ****/
 Route::get('/pdf/students', "GetStat@ExportStudentsAsPDF")->middleware("auth")->name('studentspdf');
-//**** Get list of Teachers as PDF ****/
 Route::get('/pdf/teachers', "GetStat@ExportTeachersAsPDF")->middleware("auth")->name('teacherspdf');
-//*** Get list of students as Excel ***/
 Route::get('/excel/students', 'GetStat@ExportStudentsAsExcel')->middleware("auth")->name('studentsxls');
-//*** Get list of teachers as Excel ***/
 Route::get('/excel/teachers', 'GetStat@ExportTeachersAsExcel')->middleware("auth")->name('teachersxls');
-Route::get('/dashboard/reports', function(){
-     return View('dashboards.admin.reports');
-    })->middleware("auth");
-
-
+Route::get('/dashboard/reports', 'GetStat@showResultPage')->name("reports");
 Route::get('/dashboard/pdf/affectation/{date}', 'GetStat@testingPDF' );
 Route::get('/dashboard/pdf/invit/{date}', 'GetStat@invitation' );
+Route::get('/dashboard/pdf/affectation/{date}', 'GetStat@testingPDF' );
+Route::get('/dashboard/pdf/invit/{date}', 'GetStat@invitation' );
+Route::get('/pdf/reports_1/{year}/{egal}/{type}/{note}' , 'GetStat@get_defenses_with_note'); 
 
 
 /************* Interships **************/
 
 //*******All Interships
-Route::get('/dashboard/Interships/all', function () {
-    return View('dashboards.admin.interships_all');
-})->name('interships_all');
-
-//*******Initiation
-Route::get('/dashboard/Interships/init', function () {
-    return View('dashboards.admin.interships_init');
-})->name('interships_init');
-
-//*******Perfectionnement
-Route::get('/dashboard/Interships/perf', function () {
-    return View('dashboards.admin.interships_perf');
-})->name('interships_perf');
-
-//*******PFE
-Route::get('/dashboard/Interships/pfe', function () {
-    return View('dashboards.admin.interships_pfe');
-})->name('interships_pfe');
-
+Route::get('/dashboard/Interships/all', 'GetStat@internships_all')->name('interships_all');
+Route::get('/dashboard/Interships/init', 'GetStat@internships_init')->name('interships_init');
+Route::get('/dashboard/Interships/perf', 'GetStat@internships_perf')->name('interships_perf');
+Route::get('/dashboard/Interships/pfe', 'GetStat@internships_pfe')->name('interships_pfe');
+//**defences */
+Route::get('/dashboard/defenses/all', 'GetStat@soutenance_all')->name('defences_all');
+Route::get('/dashboard/defenses/accepted', 'GetStat@soutenance_accepted')->name('defences_accepted');
+Route::get('/dashboard/defenses/waiting', 'GetStat@soutenance_waiting')->name('defences_waiting');
+Route::get('/dashboard/defenses/rejected', 'GetStat@soutenance_rejected')->name('defences_rejected');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 

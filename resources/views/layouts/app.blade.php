@@ -17,8 +17,28 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <link href="{{ asset('dashboard_assets/node_modules/calendar/fullcalendar.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('dashboard_assets/node_modules/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
+    
+    <!--nav fix by adem-->
+    <style>
 
 
+        .navbar-nav>li>.dropdown-menu {
+          background-color: #636b6f;
+        }
+
+        .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+          background-color: #636b6f !important;
+        }
+
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+          background-color: #636b6f !important;
+        }
+        ul.nav a:hover {
+          background-color: #4a5053 !important;
+        }
+
+    </style>
 </head>
 <body>
   @if (!Auth::guest())
