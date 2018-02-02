@@ -248,28 +248,24 @@ Route::post("FinalResetPassword","customAuth\customAuthReset@StoreNewPassword");
 
 
 // ***************************  Routes Oussama  **********************************
-
-// ***************************  Routes Oussama  **********************************
-
     Route::resource('/company','CompaniesController');
     Route::resource('/companiesmanagers','CompaniesManagersController');
-
+    Route::resource('/specifications','SpecificationsController');
+    Route::resource('/planning','PlanningController');
+    Route::post('/planninggetrestrictions','PlanningController@restrictions');
+    
     Route::group(['middleware'=>['auth']],function(){
-        //Pour oussema, route dashboard, fi route mte3i  ;)
-        //Route::get('/studentdashboard','PagesController@studentDashboard');
         Route::get('/ordinaryteacherdashboard','PagesController@ordinaryTeacherDashboard');
-        Route::get('/managerteacherdashboard','PagesController@managerTeacherDashboard');
+        Route::get('/managerteacherdashboard','PagesController@managerTeacherDashboard');  
     });
-
+    Route::post('/internshipsave','InternShipsController@storeInternshipDemand');
+    Route::get('/internshipdemand','InternShipsController@dynamicViewInternshipDemand');
     Route::get('/internships','InternShipsController@index');
     Route::get('/internships/create','InternShipsController@create');
     Route::get('/internships/{id}','InternShipsController@show')->where('id','[0-9]+')->name('showinternship');
     Route::get('/internships/{id}/edit','InternshipsController@edit');
     Route::post('/internships/store','InternshipsController@store');
     Route::put('/internships/update/{id}','InternshipsController@update')->where('id','[0-9]+');
-
-
-
 
 /************************************************ Hazem's Route ************************************************/
 

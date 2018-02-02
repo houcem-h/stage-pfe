@@ -9,7 +9,7 @@ use Carbon\Carbon;
 class Internship extends Model
 {
     //j ai changé le nom des méthodes(nom_table_relation."Record") a cause de la confusion entre l attribut du modele qui va etre cree apres le chargement des donnees et le nom de la methode qui effectue la relation avec l'autre table
-    public function companyFramer()
+ public function companyFramer()
     {
         return $this->belongsTo('App\Manager','company_framer');
     }
@@ -34,15 +34,18 @@ class Internship extends Model
         return $this->belongsTo('App\User','created_by');
     }
 
-	//retourne le modificateur de l'enregistrement dans la BD (updated_by)
+    //retourne le modificateur de l'enregistrement dans la BD (updated_by)
     public function adminUpdator(){
         return $this->belongsTo('App\User','updated_by');
+    }
+
+    public function specification(){
+       return  $this->belongsTo('App\Specification','specifications');
     }
 
     public function requestsFraming(){
         return $this->hasMany('App\FramingRequest','internship');
     }
-
     /*********** AMINE BEJAOUI WORK ***********/
     //get all  "internships" of a student (reference by id_student)
     public static function getCurrentInternships($student_id){

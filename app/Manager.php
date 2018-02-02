@@ -7,12 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Manager extends Model
 {
    public function getPhoneNumberAttribute(){
-        return substr($this->attributes['phone'],4);
+        return $this->attributes['phone'];
     }
 
-
     public function getFaxNumberAttribute(){
-        return substr($this->attributes['fax'],4);
+        return $this->attributes['fax'];
     }
 
 
