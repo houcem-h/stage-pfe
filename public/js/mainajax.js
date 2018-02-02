@@ -1,4 +1,4 @@
-(function(){
+$(function(){
     function successAddingCompany(response){
         $("#errorsajax").hide();
         $('#successajax').show(400).append('<p>Company added successefully</p>').addClass('alert alert-success');
@@ -86,4 +86,5 @@
         ajax.execute(successUpdatingCompany, failAddingCompany);
         return false;
     });
-})();
+    });
+

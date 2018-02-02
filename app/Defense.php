@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Defense extends Model
 {
-    public function internship()
+    public function internships()
     {
-        return $this->belongsTo('App\Internship','foreign_key');
+        return $this->belongsTo('App\Internship','internship');
     }
 
     public function minute()
