@@ -29,7 +29,7 @@ Route::get('/connect', function () {
 
 //*****all users
 Route::get('/dashboard/Users/All', function () {
-    $allusers =  \App\User::orderBy('created_at')->paginate(10);   
+    $allusers =  \App\User::orderBy('created_at')->paginate(10);
     return View('dashboards.admin.allusers', ['allusers' => $allusers]);})->name('Allusers');
 
 //*****only students
@@ -49,7 +49,7 @@ Route::get('/dashboard/Users/Admins', function () {
 
 //**Recherche Utilisateur */
 Route::get('/dashboard/Users/Search/{query}', function($query) {
-    $result = App\User::SearchByKeyword($query)->get();    
+    $result = App\User::SearchByKeyword($query)->get();
     return View('dashboards.admin.search', ['result' => $result]);
 });
 
@@ -205,16 +205,16 @@ Route::post("student/rejectDemande","Students\studentsController@rejectDemande")
 //custom login
 Route::get('/login',function(){
     return view('CustomAuth.login');
-})->name("connecter"); 
+})->name("connecter");
 
 Route::get('/signinStudent',function(){
     $groups = App\Group::get(['name',"id"]);
     return view('CustomAuth.registerStudent')->with("groups",$groups);
-})->name("creerEtudiant"); 
+})->name("creerEtudiant");
 
 Route::get('/signinTeacher',function(){
     return view('CustomAuth.registerTeacher');
-})->name("creerEnseignant"); 
+})->name("creerEnseignant");
 
 
 Route::get("/role",function(){
@@ -256,8 +256,8 @@ Route::post("FinalResetPassword","customAuth\customAuthReset@StoreNewPassword");
 
     Route::group(['middleware'=>['auth']],function(){
         //Pour oussema, route dashboard, fi route mte3i  ;)
-        //Route::get('/studentdashboard','PagesController@studentDashboard');
-        Route::get('/ordinaryteacherdashboard','PagesController@ordinaryTeacherDashboard');
+        Route::get('/studentdashboard','PagesController@studentDashboard');
+        Route::get('teacherhome','DashboardsController@index');
         Route::get('/managerteacherdashboard','PagesController@managerTeacherDashboard');
     });
 
@@ -274,19 +274,23 @@ Route::post("FinalResetPassword","customAuth\customAuthReset@StoreNewPassword");
 /************************************************ Hazem's Route ************************************************/
 
 
+
+/************************************************ Hazem's Route ************************************************/
+
+
 Route::get('teachers_list', 'TeachersController@index')->name("teachers");
 Route::get('dashboard/{id}/acc', 'DashboardsController@acc');
 Route::get('dashboard/{id}/ref', 'DashboardsController@ref');
 Route::get('dashboard/{id}/encadre', 'DashboardsController@encadre');
+Route::get("calendar","DashboardsController@calendar")->name("calendar");
 Route::get('settings', 'DashboardsController@settings')->name("settings");
+Route::get('settingspass', 'DashboardsController@settingspass')->name("settingspass");
 Route::get('teacherhome','DashboardsController@index')->name("teacherhome");
-Route::get("updatepass","DashboardsController@updatepass")->name("updateinfo");
-Route::post("internsinfo","groupController@internsinfo")->name("internsinfo"); //for group
+Route::get("teacherhome/{id}/info","DashboardsController@info");
+Route::get("information/{id}","DashboardsController@information")->name("information");
 
 Route::resource('teachers','TeachersController');
 
 
 
 Route::post("/login","Auth\LoginController@login")->name("login");
-
-

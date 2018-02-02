@@ -2,7 +2,14 @@
 
 @section('content')
 
+<style media="screen">
+input[type=submit] {
+  background: #fff0;;
+    border: 0;
 
+}
+
+</style>
 
 <div class="col-lg-8 col-md-8 col-lg-offset-2">
     <div class="card">
@@ -46,13 +53,13 @@
 
             </div>
 
-        <div class="card-footer  pull-right" data-background-color="bleu">
+        <div class="card-footer  pull-right btn sendbtn" >
           {{Form::hidden('_method','PUT')}}
           {!! Form::submit('Mettre à jour') !!}
       {!! Form::close() !!}
         </div>
-        <div class="card-footer  pull-left"  style="background-color:#f26058">
-          <a style="color:snow"href="{{ URL::previous() }}"">Retour</a>
+        <div class="card-footer btn deletebtn  pull-left"  style="background-color:#f26058">
+          <a style="color:snow"href="{{ URL::previous() }}">Retour</a>
         </div>
   </div>
   </div>

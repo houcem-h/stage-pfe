@@ -21,13 +21,13 @@ class PagesController extends Controller
     public function studentDashboard(){
         // $registration=Registration::where('session',$this->getFormattedSession())->where('student',auth()->user()->id)->first();
         // $internships=Internship::where('student',$registration->id)->where('start_date','>',date('Y-m-d'))->get();
-        
+
         // return view('/studentDashboard')->with('internships',$internships);
          return view('/studentDashboard');
     }
 
     public function ordinaryTeacherDashboard(){
-        return view('/ordinaryTeacherDashboard');
+        return view('teacherhome');
     }
 
     public function managerTeacherDashboard(){

@@ -2,16 +2,23 @@
 
 @section('content')
 
+<style media="screen">
+input[type=submit] {
+  background: #fff0;;
+    border: 0;
 
+}
+
+</style>
 
 <div class="col-lg-8 col-md-8 col-lg-offset-2">
     <div class="card">
         <div class="card-header" data-background-color="bleu">
-            <h4 class="title"><strong>Editer Mes information </h4>
+            <h4 class="title">Editer l'enseignant <strong>{{$teacher->firstname}} {{$teacher->lastname}}</h4>
             <p class="category">Last time ...</p>
         </div>
         <div class="card-content table-responsive">
-          {!! Form::open(['action' => ['DashboardsController@updatepass',$teacher->id]]) !!}
+          {!! Form::open(['action' => ['TeachersController@update',$teacher->id]]) !!}
               <div class="form-group">
                       {!! Form::label('firstname', 'Prénom'); !!}
                       {!! Form::text('firstname',$teacher->firstname,['class'=>'form-control', 'placeholder'=>'Prénom']); !!}
@@ -33,28 +40,25 @@
                       {!! Form::text('email',$teacher->email,['class'=>'form-control', 'placeholder'=>'Adresse E-Mail']); !!}
               </div>
               <div class="form-group">
-                      {!! Form::label('password', 'Old Password'); !!}
-                      {!! Form::password('password',['class'=>'form-control', 'placeholder'=>'old password']); !!}
-              </div>
-              <div class="form-group">
-                      {!! Form::label('passwordnew', 'New password'); !!}
-                      {!! Form::password('passwordnew',['class'=>'form-control', 'placeholder'=>'New password']); !!}
-              </div>
-              <div class="form-group">
                       {!! Form::label('phone', 'Téléphone'); !!}
                       {!! Form::text('phone',$teacher->phone,['class'=>'form-control', 'placeholder'=>'Téléphone']); !!}
               </div>
-
+              {{-- <div class="form-group " style="Display:none">
+                      {!! Form::label('role', 'Role'); !!}
+                      <select class='form-control' name='role'>
+                          <option value='1' @if($teacher->role === 1) selected @endif>Enseignant</option>
+                      </select>
+              </div> --}}
 
             </div>
 
-        <div class="card-footer  pull-right" data-background-color="bleu">
+        <div class="card-footer  pull-right btn sendbtn" >
           {{Form::hidden('_method','PUT')}}
           {!! Form::submit('Mettre à jour') !!}
       {!! Form::close() !!}
         </div>
-        <div class="card-footer  pull-left"  style="background-color:#f26058">
-          <a style="color:snow"href="/">Retour</a>
+        <div class="card-footer btn deletebtn  pull-left"  style="background-color:#f26058">
+          <a style="color:snow"href="{{ URL::previous() }}">Retour</a>
         </div>
   </div>
   </div>

@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
   <style media="screen">
   input[type="submit"]{
@@ -10,7 +11,7 @@
   <div class="col-lg-8 col-md-8 col-lg-offset-2">
       <div class="card">
           <div class="card-header" data-background-color="bleu">
-              <h4 class="title">Ajouter un enseignant </h4>
+              <h4 class="title">Ajouter un enseignant  </h4>
               <p class="category"></p>
           </div>
           <div class="card-content ">
@@ -47,12 +48,12 @@
               </select>
             </div>
           </div>
-        
-            {!! Form::submit('Create',['class'=>'btn btn-default pull-right','data-background-color'=>'bleu']) !!}
+
+            {!! Form::submit('Create',['class'=>'btn sendbtn pull-right','data-background-color'=>'bleu']) !!}
         {!! Form::close() !!}
-          
+
           <a href= "{{ URL::previous() }}">
-              <button class="btn btn-default" style="width:100px;color:snow;background-color:#f26058">Back</button>
+              <button class="btn deletebtn" style="width:100px;color:snow;background-color:#f26058">Back</button>
           </a>
 
         </div>

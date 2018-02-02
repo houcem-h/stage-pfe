@@ -20,9 +20,9 @@ class RedirectDependingToRole
             if(auth()->user()->role==0)
                 return redirect('student/dashboard');
             else if(auth()->user()->role==1)
-                return redirect('/ordinaryteacherdashboard');
-            else 
+                return redirect('teacherhome');
+            else
                return redirect()->route('dash');
     }
-    
+
 }

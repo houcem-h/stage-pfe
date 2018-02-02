@@ -3,13 +3,6 @@
 
 <!-- Delay table load until everything else is loaded -->
 @section('content')
-<style media="screen">
-input[type="submit"]{
-  background-color:  rgba(0, 0, 0, 0);
-  border-color: rgba(0, 0, 0, 0);
-}
-
-</style>
 
 <div class="col-md-10 col-md-offset-1">
 
@@ -35,9 +28,16 @@ input[type="submit"]{
 
                 <div class="card-footer">
                   <a href="teachers/{{$teacher->id}}/edit">
-                        <button class="btn btn-primary " style="background: linear-gradient(60deg, #0444ae, #0444ae);">Edit</button>
+                        <button class="btn sendbtn " >Edit</button>
                  </a>
-                  {!!Form::open(['action' => ['TeachersController@destroy', $teacher->id],'method' => 'POST','class'=>'btn btn-danger','style'=>'background: linear-gradient(60deg, #f26058, #f26058); height:36px;'])!!}
+                  <a onclick="event.preventDefault();
+                          document.getElementById('delete-form-{{$teacher->id}}').submit();">
+                        <button class="btn deletebtn" >Delete</button>
+                 </a>
+
+
+
+                  {!!Form::open(['action' => ['TeachersController@destroy', $teacher->id],'id'=>'delete-form-'.$teacher->id.'','method' => 'POST','class'=>'btn btn-danger','style'=>'display:none;'])!!}
                   {{Form::hidden('_method','DELETE')}}
                   {{-- <div class="card-footer pull-left "  style="background-color:#f26058"> --}}
                   {{Form::submit('delete')}}
