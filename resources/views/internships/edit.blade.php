@@ -1,12 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 @section('content')
 <div class="container">
     <div class="col-md-6 col-md-offset-3">
         <div class="row">
-             <a class="btn btn-default" style="margin-bottom:50px;" href="{{URL::previous()}}}">Precedent</a>
+           
               <div id="animationloadingbarcontainer">
                   <div  id="bar"></div>
                </div>  
+
+            
                  @if(isset($internship) && isset($managerTeachers))
                     {!!Form::open(["method"=>"POST","url"=>"/internships/update/".$internship->id,"class"=>"formcreateinternship","id"=>"formeditinternship"])!!}
                             <h3 class="text-center" style="color:black;"><b>Informations du Stage</b></h3><br><hr><br>

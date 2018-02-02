@@ -18,9 +18,7 @@
                 </div>
             </a>
             @if(Session::has("t"))
-                <a href="{{ url('student/demande?t='.Session::get('t')) }}">
-            @else
-                <a href="{{ route('demande_stage') }}">
+                <a href="{{URL('/internshipdemand?t='.Session::get('t'))}}">
             @endif
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="dashboard-div-wrapper bk-clr-two">
@@ -78,9 +76,11 @@
                                     @if($check->state == "waiting")
                                         <td><span class="label label-default customLabel">{{ $check->state }}</span></td>
                                         <td style="text-align:center">
-                                            <a href="">
-                                                <i class="fa fa-pencil fa-fw" aria-hidden="true" style="font-size:x-large;"></i>
-                                            </a>
+                                            @if(Session::has('t'))
+                                                <a href="{{URL('/internships/'.$check->id.'/edit?t='.Session::get('t'))}}">
+                                                    <i class="fa fa-pencil fa-fw" aria-hidden="true" style="font-size:x-large;"></i>
+                                                </a>
+                                            @endif
                                         </td>
                                     @elseif($check->state == "accepted")
                                         <td><span class="label label-success customLabel">{{ $check->state }}</span></td>

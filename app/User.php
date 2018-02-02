@@ -37,11 +37,11 @@ class User extends Authenticatable
     ];
 
     public function getPhoneNumberAttribute(){
-        return substr($this->attributes['phone'],4);
+        return $this->attributes['phone'];
     }
     
     public function getFaxNumberAttribute(){
-        return substr($this->attributes['fax'],4);
+        return $this->attributes['fax'];
     }
 
     public function registrations()
@@ -54,14 +54,18 @@ class User extends Authenticatable
         return $this->hasMany('App\Internship');
     }
 
+    public function framingRequests(){
+        return $this->hasMany('App\FramingRequest','teacher');
+    }
+
     //Methode(getter) qui retourne la route du dashboard de l'utilisatuer connecté
     public function getDashboardAttribute(){
         if($this->role==1)
-          return "/ordinaryteacherdashboard";
+          return "/dashboard";
         else if($this->role==2)
           return "/managerteacherdashboard";
         else
-          return "/studentdashboard";
+          return "/student/dashboard";
     }
     
     //Methode qui renvoi un tableau contenant les types des internships qu'ils peuvent etres passés par l etudiant
@@ -78,6 +82,7 @@ class User extends Authenticatable
                 $internships[]=$r->internships->toArray();
 
         $registration=Registration::where('student',auth()->user()->id)->latest()->first();
+        if($registration!=null){
         $stages=$this->arrayOfSimpleArrays($internships);
         $patternInit='/^[a-zA-Z]{2,}1{1}[0-9]+$/';        
         $patternPerf='/^[a-zA-Z]{2,}2{1}[0-9]+$/';
@@ -116,7 +121,28 @@ class User extends Authenticatable
                 }
             }
         }
-        return $LegalInternships;
+         return $LegalInternships;
+        }
+        return ["null"=>"vous n'avez pas une inscription"];
+    }
+    
+
+    public function getLegalInternshipsToUpdateAttribute(){
+         $registrationlist=Registration::where('student',auth()->user()->id)->get()->toArray();
+         $tabInternships=[];
+            if(count($registrationlist) ==0)
+              $lastregistration=null;
+            else
+              $lastregistration=$registrationlist[count($registrationlist)-1];
+         if($lastregistration!=null){
+                $internships=Internship::where('student',$lastregistration['id'])->get();
+                 foreach ($internships as $internship) {
+                     if($internship->state=='waiting')
+                         $tabInternships[]=$internship;
+                 }
+                 return $tabInternships;
+         }
+             return null;
     }
 
     //Methode qui permet de rechercher un utilisateur par son nom - prenom - email - cin - phone

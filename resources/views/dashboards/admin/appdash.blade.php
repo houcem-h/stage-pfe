@@ -76,6 +76,20 @@
 					</a>
 				</div>
 			</li>
+			
+				<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					Planning
+				</a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="{{URL('/planning?l=1')}}">
+						Init &amp; Perf
+					</a>
+					<a class="dropdown-item" href="{{route('show_blade_add')}}">
+						PFE
+					</a>
+				</div>
+			</li>
 
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -283,8 +297,6 @@
 					<div class="animated fadeIn">
 						<!-- Contains START -->
 						@yield('dash_content')
-
-
 						<!-- Contains END -->
 					</div>
 
