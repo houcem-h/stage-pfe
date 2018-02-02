@@ -7,101 +7,90 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Auth\RegisterController;
+use Illuminate\Support\Facades\Schema;
 use Calendar;
+use Mail;
+use App\Mail\TeacherAcc;
+use App\Mail\TeacherRef;
 use App\User;
+use App\FramingRequest;
 use App\Company;
+use App\Defense;
 use App\Internship;
+use App\Registration;
+use auth;
 
 
 
 class DashboardsController extends Controller
 {
-
+  public function __construct(){
+     // $this->middleware('TeachersAccessRights');
+  }
 // Teachers Dashbord
   public function index()
   {
 
-    // id for test cause there is a probleme with the auth i think it's coming from the middleware
 
-    $id=22;
 
-    // $id=auth()->user()->id;   a regle !!!!!!!!!!
-
+    $id=Auth::user()->id;
     $teacher = User::find($id);
 // les stage
-    $stageencadre =DB::table('internships')
-     ->where('framer', $id)->get();
+  $stageencadres = Internship::where(['framer'=>$id,'state'=>'accepted'])->get();
+  // Les etudient en attent eloquent
+  $waiting = FramingRequest::where(['teacher'=>$id, 'status'=>'waiting','request_type'=>'request'])->get();
+  //Les etudient demendé avec eloquent
+   $wishing = FramingRequest::where(['teacher'=>$id, 'status'=>'waiting','request_type'=>'wish'])->get();
+  // etudient sans encadremeent
+   $sans = Internship::where(['framer'=>null,'state'=>'accepted', 'type'=>'pfe'])->get();
 
-//Les etudient
-$stagers = DB::table('internships')
-        ->join('users', 'internships.student', '=', 'users.id' )
-        ->join('managers', 'internships.student', '=', 'managers.id' )
-        ->select('internships.*', 'users.firstname as nom','managers.company as com' , 'users.lastname as pre', 'managers.name as en')
-        ->where(['internships.framer'=>$id, 'internships.state'=>'accepted'])
-        ->get();
-        // reqframer 2 and id != null  Accepter
-
-//Les etudient en attent
-$waitting = DB::table('internships')
-        ->join('users', 'internships.student', '=', 'users.id' )
-        ->join('managers', 'internships.student', '=', 'managers.id' )
-        ->select('internships.*', 'users.firstname as nom','managers.company as com', 'users.lastname as pre', 'managers.name as en')
-        ->where(['internships.framer'=>null, 'internships.reqframer'=>$id, 'internships.state'=>'accepted'])
-        ->get();
-
-        // reqframer 1 en attent
-
-// etudient sans encadremeent
-
-$sans = DB::table('internships')
-        ->join('users', 'internships.student', '=', 'users.id' )
-        ->join('managers', 'internships.student', '=', 'managers.id' )
-        ->select('internships.*', 'users.firstname as nom','managers.company as com', 'users.lastname as pre', 'managers.name as en')
-        ->where(['internships.reqframer'=>null,'internships.framer'=>null, 'internships.state'=>'rejected'])
-        ->get();
-
-// reqframer 4 rejete
-
-
-$company =  Company::all();
-
-    return view('dashboards.teachersdash')->with(['teacher'=>$teacher, 'stageencadre'=>$stageencadre, 'stagers'=>$stagers, 'company'=>$company, 'waitting'=>$waitting, 'sans'=>$sans  ]);
+     return view('dashboards.teachersdash')->with(['teacher'=>$teacher, 'stageencadres'=>$stageencadres,   'waiting'=>$waiting, 'wishing'=>$wishing, 'sans'=>$sans  ]);
   }
 
 
 //
-
-public function schedule(/*id*/)
-{
-
-  $events = [];
-     $id=auth()->user()->id;
-      $data =  DB::table('internships')
-              ->join('users', 'internships.student', '=', 'users.id' )
-              ->join('managers', 'internships.student', '=', 'managers.id' )
-              ->select('internships.*', 'users.firstname as nom', 'users.lastname as pre', 'managers.name as en')
-              ->where('internships.framer', $id)
-              ->get();
-      if($data->count()) {
-          foreach ($data as $key => $value) {
-              $events[] = Calendar::event(
-                  $value->nom,
-                  true,
-                  new \DateTime($value->start_date),
-                  new \DateTime($value->end_date.' +1 day'),
-                  null,
-                  // Add color and link on event
-                [
-                    'color' => '#f05050',
-                    'url' => '',
-                ]
-              );
-          }
-      }
-      $calendar = Calendar::addEvents($events);
-
-    return view('dashboards.schedule')->with(['calendar'=> $calendar,'data'=>$data]);
-}
+// still working on
+// public  function calendar()
+// {
+//      $id=Auth::user()->id;
+//   // $x = DB::table('internships')
+//   //                       ->join('registrations' , 'internships.student', '=', 'registrations.student')
+//   //                       ->join('users', 'internships.student' , "=" , 'users.id')
+//   //                       ->join('defenses' , 'internships.id' , '=' , 'defenses.internship')
+//   //                       ->select('date_d', 'firstname' , 'lastname' , 'start_time' , 'classroom' , 'type')
+//   //                       ->get();
+//
+//   $x= Defense::where('reporter', $id)->get()->toArray();
+//   $y= Defense::where('president', $id)->get()->toArray();
+//   $xy = array_merge($x,$y);
+//                 //return $x;
+//                 $jscode = '';
+//                 foreach($x as $def) {
+//
+//
+//                     /**Fix Probleme Javascript */
+//                     $first_name = $def->firstname;
+//                     $last_name = $def->lastname;
+//                     $firstname = str_replace("'" , "" , $first_name);
+//                     $last_name = str_replace("'", "" ,$last_name);
+//                     /**Fix Probleme Javascript */
+//
+//
+//
+//                     $jscode .= "{
+//                         title: '" . $first_name . ' ' . $last_name . " (". $def->classroom ." )". "',
+//                         start: '" . $def->date_d . "T". $def->start_time .  "',
+//
+//                         textColor: 'white'
+//                       },";
+//                 }
+//
+//                 //init = green
+//                 //perf = blue
+//                 //pfe = red
+//
+//     return view('dashboards.admin.Teacherscalendar')->with('jscode', $jscode);
+// }
 
 /**
  * Update the specified resource in storage.
@@ -113,12 +102,29 @@ public function schedule(/*id*/)
 public function acc($id)
 {
 
-    // $id_framer= auth()->user()->id;
-    $id_framer= 22;
+
+  //
+
+  $id_framer= Auth::user()->id;
+    $framer=User::find($id_framer);
     //Accepte l'encadremeent
     $acc = Internship::find($id);
-    $acc->framer =$id_framer;
+    $acc->framer=$id_framer;
     $acc->save();
+    FramingRequest::where('internship', $id)->delete();
+
+
+
+
+    $stagers = DB::table('internships')
+            ->join('users', 'internships.student', '=', 'users.id' )
+            ->join('managers', 'internships.student', '=', 'managers.id' )
+            ->join('framing_requests', 'internships.id', '=', 'framing_requests.internship' )
+            ->select('internships.*', 'users.firstname as nom','managers.company as com' , 'users.lastname as pre', 'managers.name as en')
+            ->where(['internships.framer'=>$id_framer,'internships.framer'=>$id_framer ,'internships.state'=>'accepted'])
+            ->get();
+           //  $student=User::find($acc->student);
+           // Mail::to($student->email)->send(new TeacherAcc($framer,$acc,$student));
 
     return redirect('teacherhome');
 }
@@ -132,42 +138,44 @@ public function acc($id)
 public function ref($id)
 {
 
-    //
-    // refuse l'encadremeent
-    $ref = Internship::find($id);
-    $ref->reqframer =null;
-    $ref->framer =null;
-    $ref->state ='rejected';
-    $ref->save();
+  $id_framer= Auth::user()->id;
+       $framer=User::find($id_framer);
+       // refuse l'encadremeent
+     $req_id= FramingRequest::where(['internship'=>$id,'teacher'=>$id_framer])->delete();
 
     return redirect('teacherhome');
 }
 // encadre un etudient sans encadreur
 public function encadre($id)
 {
-    // $id_framer= auth()->user()->id;
-$id_framer=22;
-    $encadre = Internship::find($id);
-    $encadre->framer =$id_framer;
-    $encadre->reqframer =null;
-    $encadre->state ='accepted';
-    $encadre->save();
+  $id_framer= Auth::user()->id;
+       $framer=User::find($id_framer);
+
+     $req = new FramingRequest;
+     $req->internship=$id;
+     $req->teacher=$id_framer;
+     $req->request_type='wish';
+     $req->save();
 
     return redirect('teacherhome');
+    //  $student=User::find($encadre->student);
+    // Mail::to($student->email)->send(new TeacherAcc($teacher,$encadre,$student));
+   $encadre->save();
+
+     return redirect('teacherhome');
 }
 
 
-//get all sudents
-public function internsinfo(Request $request){
-  $id_inter = $request['idinter'];
+// student contact and internship information
+public function information($id){
 
-  $info = DB::table('internships')
-          ->join('users', 'internships.student', '=', 'users.id' )
-          ->join('managers', 'internships.student', '=', 'managers.id' )
-          ->select('internships.*', 'users.firstname as nom', 'users.lastname as pre', 'managers.name as en')
-          ->where('internships.id', $id_inter)
-          ->get();
-  return ($info);
+
+  $info = Internship::find($id);
+  $student = $info->registration->studentRecord;
+  $manger = $info->companyFramer;
+  $spec = $info->specification;
+
+   return ([$student,$manger,$spec]);
 }
 
 
@@ -175,40 +183,49 @@ public function internsinfo(Request $request){
 
 public function Settings()
 {
- $id=auth()->user()->id;
-
+ $id=Auth::user()->id;
 
    $teacher = User::find($id);
    return view('teachers.settings')->with('teacher',$teacher);
 
 
 }
-public function updatepass(Request $request, $id)
+public function Settingspass()
 {
-  $this->validate($request, [
-      'firstname' => 'required',
-      'lastname' => 'required',
-      'email' => 'required',
-      'phone' => 'required',
-      'birthdate' => 'nullable',
-      'cin' => 'nullable'
-      ]);
-  $teacher = User::find($id);
+ $id=Auth::user()->id;
 
+   $teacher = User::find($id);
+   return view('teachers.settingspass')->with('teacher',$teacher);
 
-if ($request->input('password')!==null) {
-  $teacher->firstname = $request->input('firstname');
-  $teacher->lastname = $request->input('lastname');
-  $teacher->email = $request->input('email');
-  $teacher->phone = $request->input('phone');
-  $teacher->birthdate = $request->input('birthdate');
-  $teacher->cin = $request->input('cin');
-  $teacher->save();
-  return redirect('teachers')->with('success','Enseignant mis à jour');
-}
-    //update teacher
 
 }
-
+// public function info(Request $request, $id)
+// {
+//     in first it was to update the teacher
+//   $this->validate($request, [
+//       'firstname' => 'required',
+//       'lastname' => 'required',
+//       'email' => 'required',
+//       'phone' => 'required',
+//       'birthdate' => 'nullable',
+//       'cin' => 'nullable'
+//   ]);
+//
+//     //update teacher
+//     $teacher = User::find($id);
+//     $teacher->firstname = $request->input('firstname');
+//     $teacher->lastname = $request->input('lastname');
+//     $teacher->email = $request->input('email');
+//     $teacher->phone = $request->input('phone');
+//     $teacher->birthdate = $request->input('birthdate');
+//     $teacher->cin = $request->input('cin');
+//     $teacher->save();
+//
+//     return redirect('teacherhome')->with('success','information mis à jour');
+//
+//
+//
+// }
+// //     //update teacher
 
 }

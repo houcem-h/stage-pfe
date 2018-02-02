@@ -32,7 +32,6 @@ class ComposerStaticInit02d54a9a8e6b19a419cb634ad715bd7b
         'W' => 
         array (
             'Whoops\\' => 7,
-            'Webmozart\\Assert\\' => 17,
         ),
         'T' => 
         array (
@@ -132,10 +131,6 @@ class ComposerStaticInit02d54a9a8e6b19a419cb634ad715bd7b
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
-        ),
-        'Webmozart\\Assert\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webmozart/assert/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -421,6 +416,8 @@ class ComposerStaticInit02d54a9a8e6b19a419cb634ad715bd7b
         'App\\Jobs\\sendResetPasswordJob' => __DIR__ . '/../..' . '/app/Jobs/sendResetPasswordJob.php',
         'App\\Mail\\Mail2Students' => __DIR__ . '/../..' . '/app/Mail/Mail2Students.php',
         'App\\Mail\\ResetPassword' => __DIR__ . '/../..' . '/app/Mail/ResetPassword.php',
+        'App\\Mail\\TeacherAcc' => __DIR__ . '/../..' . '/app/Mail/TeacherAcc.php',
+        'App\\Mail\\TeacherRef' => __DIR__ . '/../..' . '/app/Mail/TeacherRef.php',
         'App\\Mail\\Welcome' => __DIR__ . '/../..' . '/app/Mail/Welcome.php',
         'App\\Mail\\edit_email' => __DIR__ . '/../..' . '/app/Mail/edit_email.php',
         'App\\Manager' => __DIR__ . '/../..' . '/app/Manager.php',

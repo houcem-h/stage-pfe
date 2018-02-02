@@ -54,7 +54,7 @@
 			{{-- Hazem MODIFICATIONS --}}
 			<!-- <li><a href="{{route('teachers')}}">Teachers  list</a></li>
 			<li><a href="{{'teachers/create'}}">Add teacher</a></li>
-			
+
 			{{--  AMINE BEJAOUI MODIFICATIONS --}}
 			<li><a href="{{route('group')}}">Group list</a></li>
 			<li><a href="{{route('show_blade_add')}}">Add group</a></li>
@@ -152,18 +152,18 @@
 						<br>
 						<div class="sidebar-header">
 							<img src="http://stage.pfe/dashboard_assets/img/avatars/user.png" width="35%" class="img-avatar" alt="Avatar">
-	
+
 							<div>
-	
+
 								<strong>{{ Auth::user()->firstname }}  {{ Auth::user()->lastname }} </strong>
 							</div>
 							<div class="text-muted">
 								<small><i class="kk kk-badge"></i> Admin</small>
 							</div>
 							<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-	
+
 								<div class="btn-group" role="group">
-	
+
 									<div class="dropdown-menu">
 										<div class="dropdown-header text-center">
 											<strong>Settings</strong>
@@ -177,7 +177,7 @@
 											<span class="badge badge-primary">42</span>
 										</a>
 										<div class="divider"></div>
-	
+
 										<a class="dropdown-item" href="#">
 											<i class="fa fa-lock"></i> Logout</a>
 									</div>
@@ -189,8 +189,8 @@
 							<a class="nav-link" href="{{ route('dash') }}">
 								<i class="kk kk-dashboard"></i> Dashboard </a>
 						</li>
-	
-	
+
+
 						<li class="nav-item nav-dropdown">
 							<a class="nav-link nav-dropdown-toggle" href="#">
 								<i class="kk kk-users"></i> Utilisateurs</a>
@@ -233,7 +233,7 @@
 									<a class="nav-link" href="#">
 											<i class="kk kk-event-date2"></i>Refused</a>
 								</li>
-	
+
 							</ul>
 						</li>
 						<li class="nav-item nav-dropdown">
@@ -256,7 +256,7 @@
 										<a class="nav-link" href="{{ route('interships_pfe')}}">
 											<i class="kk kk-parallel_tasks"></i>PFE</a>
 									</li>
-	
+
 								</ul>
 							</li>
 						<li class="nav-item">
@@ -268,7 +268,7 @@
 							<a class="nav-link" href="/dashboard/reports">
 								<i class="kk kk-piechart"></i> Reports</a>
 						</li>
-	
+
 						<li class="divider"></li>
 						<li class="nav-title">
 							Extras
@@ -283,29 +283,28 @@
 			  <li class="nav-item">
 				<a class="nav-link nav-link-danger" href="http://coreui.io/pro/" target="_top"><i class="icon-layers"></i> Try CoreUI <strong>PRO</strong></a>
 			  </li>-->
-	
+
 					</ul>
 				</nav>
 				<button class="sidebar-minimizer brand-minimizer" type="button"></button>
 			</div>
-	
+
 			<!-- Main content -->
 			<main class="main">
-	
-	
+
+
 				<div class="container-fluid">
 					<div class="animated fadeIn">
 						<!-- Contains START -->
 						@yield('dash_content')
-
 						<!-- Contains END -->
 					</div>
-	
+
 				</div>
 			</main>
-	
-	
-	
+
+
+
 		</div>
 
 	<footer class="app-footer">
@@ -332,7 +331,7 @@
 	<script src="{{ asset('dashboard_assets/node_modules/calendar/fullcalendar.min.js') }}"></script>
 	<script src="{{ asset('js/sweetalert.min.js')}}"></script>
 	<script src="{{ asset('js/dashboardInvitations.js')}}"></script>
-	
+
 	<!--<script src="{{ asset('dashboard_assets/js/views/my_code_chart.js') }}"></script>-->
 
 	</script>

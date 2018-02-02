@@ -57,6 +57,8 @@ return array(
     'App\\Jobs\\sendResetPasswordJob' => $baseDir . '/app/Jobs/sendResetPasswordJob.php',
     'App\\Mail\\Mail2Students' => $baseDir . '/app/Mail/Mail2Students.php',
     'App\\Mail\\ResetPassword' => $baseDir . '/app/Mail/ResetPassword.php',
+    'App\\Mail\\TeacherAcc' => $baseDir . '/app/Mail/TeacherAcc.php',
+    'App\\Mail\\TeacherRef' => $baseDir . '/app/Mail/TeacherRef.php',
     'App\\Mail\\Welcome' => $baseDir . '/app/Mail/Welcome.php',
     'App\\Mail\\edit_email' => $baseDir . '/app/Mail/edit_email.php',
     'App\\Manager' => $baseDir . '/app/Manager.php',
