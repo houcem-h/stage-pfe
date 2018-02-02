@@ -7876,6 +7876,8 @@ base-chart.chart {
     .app-header.navbar .nav-item .nav-link, .app-header.navbar .nav-item .dropdown-toggle {
       padding-top: 0;
       padding-bottom: 0;
+      padding-left: 10px;
+      padding-right: 10px;
       background: 0;
       border: 0; }
       .app-header.navbar .nav-item .nav-link .badge, .app-header.navbar .nav-item .dropdown-toggle .badge {
@@ -7939,10 +7941,10 @@ base-chart.chart {
 @media (min-width: 992px) {
   .brand-minimized .app-header.navbar .navbar-brand {
     width: 50px;
-    background-color: #fff;
+    background-color: #465F78;
     background-image: url("../img/logo-symbol.png");
     background-size: 24px;
-    border-bottom: 1px solid #c2cfd6; } }
+     } }
 
 .progress-xs {
   height: 4px; }
