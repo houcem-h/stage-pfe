@@ -32,6 +32,7 @@ class ComposerStaticInit02d54a9a8e6b19a419cb634ad715bd7b
         'W' => 
         array (
             'Whoops\\' => 7,
+            'Webmozart\\Assert\\' => 17,
         ),
         'T' => 
         array (
@@ -131,6 +132,10 @@ class ComposerStaticInit02d54a9a8e6b19a419cb634ad715bd7b
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'Webmozart\\Assert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webmozart/assert/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -401,7 +406,7 @@ class ComposerStaticInit02d54a9a8e6b19a419cb634ad715bd7b
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\StudentAccessRights' => __DIR__ . '/../..' . '/app/Http/Middleware/StudentAccessRights.php',
         'App\\Http\\Middleware\\StudentPermission' => __DIR__ . '/../..' . '/app/Http/Middleware/StudentPermission.php',
-        'App\\Http\\Middleware\\TeacherAccessRights' => __DIR__ . '/../..' . '/app/Http/Middleware/TeacherAccessRights.php',
+        'App\\Http\\Middleware\\TeachersAccessRights' => __DIR__ . '/../..' . '/app/Http/Middleware/TeachersAccessRights.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
@@ -4075,6 +4080,7 @@ class ComposerStaticInit02d54a9a8e6b19a419cb634ad715bd7b
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
         'UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UsersTableSeeder.php',
+        'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',
         'Whoops\\Exception\\Frame' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Frame.php',

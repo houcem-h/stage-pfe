@@ -49,11 +49,11 @@
             </div>
           </div>
 
-            {!! Form::submit('Create',['class'=>'btn sendbtn pull-right','data-background-color'=>'bleu']) !!}
+            {!! Form::submit('Crée',['class'=>'btn sendbtn pull-right','data-background-color'=>'bleu']) !!}
         {!! Form::close() !!}
 
           <a href= "{{ URL::previous() }}">
-              <button class="btn deletebtn" style="width:100px;color:snow;background-color:#f26058">Back</button>
+              <button class="btn deletebtn" style="width:100px;color:snow;background-color:#f26058">Retour</button>
           </a>
 
         </div>

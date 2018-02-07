@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Schema;
 use Calendar;
+use PDF;
 use Mail;
 use App\Mail\TeacherAcc;
 use App\Mail\TeacherRef;
@@ -25,7 +26,7 @@ use auth;
 class DashboardsController extends Controller
 {
   public function __construct(){
-     // $this->middleware('TeachersAccessRights');
+     $this->middleware('TeachersAccessRights');
   }
 // Teachers Dashbord
   public function index()
@@ -49,48 +50,90 @@ class DashboardsController extends Controller
 
 
 //
-// still working on
-// public  function calendar()
-// {
-//      $id=Auth::user()->id;
-//   // $x = DB::table('internships')
-//   //                       ->join('registrations' , 'internships.student', '=', 'registrations.student')
-//   //                       ->join('users', 'internships.student' , "=" , 'users.id')
-//   //                       ->join('defenses' , 'internships.id' , '=' , 'defenses.internship')
-//   //                       ->select('date_d', 'firstname' , 'lastname' , 'start_time' , 'classroom' , 'type')
-//   //                       ->get();
-//
-//   $x= Defense::where('reporter', $id)->get()->toArray();
-//   $y= Defense::where('president', $id)->get()->toArray();
-//   $xy = array_merge($x,$y);
-//                 //return $x;
-//                 $jscode = '';
-//                 foreach($x as $def) {
-//
-//
-//                     /**Fix Probleme Javascript */
-//                     $first_name = $def->firstname;
-//                     $last_name = $def->lastname;
-//                     $firstname = str_replace("'" , "" , $first_name);
-//                     $last_name = str_replace("'", "" ,$last_name);
-//                     /**Fix Probleme Javascript */
-//
-//
-//
-//                     $jscode .= "{
-//                         title: '" . $first_name . ' ' . $last_name . " (". $def->classroom ." )". "',
-//                         start: '" . $def->date_d . "T". $def->start_time .  "',
-//
-//                         textColor: 'white'
-//                       },";
-//                 }
-//
-//                 //init = green
-//                 //perf = blue
-//                 //pfe = red
-//
-//     return view('dashboards.admin.Teacherscalendar')->with('jscode', $jscode);
-// }
+
+public  function calendar()
+{
+     $id=Auth::user()->id;
+  // $x = DB::table('internships')
+  //                       ->join('registrations' , 'internships.student', '=', 'registrations.student')
+  //                       ->join('users', 'internships.student' , "=" , 'users.id')
+  //                       ->join('defenses' , 'internships.id' , '=' , 'defenses.internship')
+  //                       ->select('date_d', 'firstname' , 'lastname' , 'start_time' , 'classroom' , 'type')
+  //                       ->get();
+
+  $x= Defense::where('reporter', $id)->get()->toArray();
+  $y= Defense::where('president', $id)->get()->toArray();
+  $xy = array_merge($x,$y);
+                //return $x;
+                $jscode = '';
+                foreach($xy as $day) {
+
+
+                    /**Fix Probleme Javascript */
+                    $first_name = Internship::find($day['internship'])->registration->studentRecord->firstname;
+                    $last_name =  Internship::find($day['internship'])->registration->studentRecord->lastname;
+                    // $first_name = Internship::find($day->internships)->first()->registration->studentRecord->firstname;
+                    // $last_name =  Internship::find($day->internships)->first()->registration->studentRecord->lastname;
+                    $first_name = str_replace("'" , "" , $first_name);
+                    $last_name = str_replace("'", "" ,$last_name);
+                    /**Fix Probleme Javascript */
+
+
+
+                    $jscode .= "{
+                        title: '" . $first_name . ' ' . $last_name . " (". $day['classroom'] ." )". "',
+                        start: '" . $day['date_d'] . "T". $day['start_time'] .  "',
+                        end: '" . $day['date_d'] . "T". $day['end_time'] .  "',
+
+                      },";
+
+                }
+
+                $first=$xy[0]['date_d'];
+                //init = green
+                //perf = blue
+                //pfe = red
+
+    return view('dashboards.admin.Teacherscalendar')->with(['jscode'=>$jscode,'first'=>$first]);
+}
+
+public  function pdf_defensescalendar() {
+
+     $id=Auth::user()->id;
+
+  $x = DB::table('internships')
+              ->join('registrations' , 'internships.student', '=', 'registrations.student')
+              ->join('users', 'internships.student' , "=" , 'users.id')
+              ->join('defenses' , 'internships.id' , '=' , 'defenses.internship')
+              ->join('groups' , 'registrations.group' , '=' , 'groups.id')
+              ->join('companies as comp' , 'internships.company_framer' , '=' , 'comp.id')
+              ->select(
+                  'comp.name as company_name',
+                  'defenses.date_d',
+                  'defenses.start_time',
+                  'defenses.classroom',
+                  'groups.name as group_name',
+                  'internships.type',
+                  'users.firstname',
+                  'users.lastname',
+                  'users.email',
+                  'users.cin',
+                  'users.phone',
+                  'defenses.reporter',
+                  'defenses.president'
+                  )
+                  ->where(function($q) use ($id) {
+                    $q->where('defenses.reporter', $id)
+                    ->orWhere('defenses.president', $id);
+                  })
+              ->get();
+             
+
+
+           $pdf = PDF::loadView('pdfs.defensescalendar', ['alldata' => $x]);
+           $pdf->setPaper('A4', 'landscape');
+           return $pdf->stream('soutenance.pdf');
+}
 
 /**
  * Update the specified resource in storage.
@@ -199,33 +242,35 @@ public function Settingspass()
 
 
 }
-// public function info(Request $request, $id)
-// {
-//     in first it was to update the teacher
-//   $this->validate($request, [
-//       'firstname' => 'required',
-//       'lastname' => 'required',
-//       'email' => 'required',
-//       'phone' => 'required',
-//       'birthdate' => 'nullable',
-//       'cin' => 'nullable'
-//   ]);
-//
-//     //update teacher
-//     $teacher = User::find($id);
-//     $teacher->firstname = $request->input('firstname');
-//     $teacher->lastname = $request->input('lastname');
-//     $teacher->email = $request->input('email');
-//     $teacher->phone = $request->input('phone');
-//     $teacher->birthdate = $request->input('birthdate');
-//     $teacher->cin = $request->input('cin');
-//     $teacher->save();
-//
-//     return redirect('teacherhome')->with('success','information mis à jour');
-//
-//
-//
-// }
-// //     //update teacher
+
+    public function edit_pass(Request $request){
+        $password_actuel = $request['password_actuel'];
+        $password_nouv = $request['password_nouv'];
+        $password_confirm = $request['password_confirm'];
+
+        //check if the actuel password is correct
+        if(auth()->user()->tryToConnect($password_actuel)){
+            //length of new password must be >=8
+            if(strlen($password_nouv)>=8){
+                //check if password == password confirmation
+                if($password_nouv == $password_confirm){
+                    //update
+                    User::where("email",auth()->user()->email)->update(['password'=>bcrypt($password_nouv)]);
+                    //delete session, that user must be login with new password
+                    $request->session()->flush();
+                    return "done";
+                }else{
+                    return "wrong password confirmation";
+                }
+
+            }else{
+                return "length";
+            }
+
+        }
+
+        return "wrong password";
+    }
+
 
 }

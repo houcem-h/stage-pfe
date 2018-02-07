@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand">Bienvenue Mr\Mme {{auth()->user()->lastname}}</a>
+      <a class="navbar-brand">Bienvenue  {{auth()->user()->lastname}}</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="{{route('teacherhome')}}">Accueil</a></li>

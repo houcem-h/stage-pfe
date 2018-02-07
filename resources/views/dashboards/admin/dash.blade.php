@@ -140,7 +140,7 @@
         </div>
       </div>
     </div>
-  
+
 
     <div class="col-12 col-lg-3">
       <div class="card">
@@ -167,7 +167,7 @@
         </div>
       </div>
     </div>
-  
+
 
     <div class="col-12 col-lg-3">
       <div class="card">
@@ -181,7 +181,7 @@
         </div>
       </div>
     </div>
- 
+
   </div>
 
 -->
@@ -257,7 +257,7 @@
         <!--/.col-->
       </div>
       <!--/.row-->
-    
+
       <div class="chart-wrapper" style="height:auto;margin-top:40px;"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
         <div >
                 <!-- calendar -->
@@ -282,7 +282,7 @@
                                             events: [
                                               {!! \App\Http\Controllers\GetStat::get_calendar_dates()!!}
                                             ],
-                                            
+
                                           });
 
                                         });
@@ -312,16 +312,16 @@
     $('#10').css( 'cursor', 'pointer' );
     $('#11').css( 'cursor', 'pointer' );
     $('#12').css( 'cursor', 'pointer' );
-    $('#rapports').css( 'cursor', 'pointer' ); 
+    $('#rapports').css( 'cursor', 'pointer' );
     //added by amine
     $("#13").css("cursor", "pointer");
     $("#14").css("cursor","pointer");
 
-  
+
 $('#1').click(function() {
   swal({
     title: '<h3>Selectionner :</h3>',
-   
+
     html:
       `<div class="row">
         <div class="col-md-4 col-sm-12" style="cursor:pointer" >
@@ -337,16 +337,16 @@ $('#1').click(function() {
               </div>
 
 
-        </div>  
+        </div>
         <div id="user_etudiant" class="col-md-4 col-sm-12"  style="cursor:pointer">
-         
+
             <div class="card text-white" style="background-color:rgb(67, 181, 31) !important; border-color: rgb(67, 181, 31) !important; cursor:pointer">
                 <div class="card-body">
                   <div class="h1 text-muted text-center mb-4">
                     <i class="kk kk-users"></i>
                   </div>
                   <div class="h6 mb-0">Étudiants</div>
-                 
+
                 </div>
               </div>
 
@@ -360,7 +360,7 @@ $('#1').click(function() {
                     <i class="kk kk-camera-bag"></i>
                   </div>
                   <div class="h6 mb-0">Enseignants</div>
-                  
+
                 </div>
               </div>
         </div>
@@ -373,7 +373,7 @@ $('#1').click(function() {
                     <i class="kk kk-reading_ebook"></i>
                   </div>
                   <div class="h6 mb-0">Admins</div>
-                  
+
                 </div>
               </div>
         </div>
@@ -385,7 +385,7 @@ $('#1').click(function() {
                     <i class="kk kk-plus"></i>
                   </div>
                   <div class="h6 mb-0" style="font-size: 12px !important;">Accepter Users</div>
-                  
+
                 </div>
               </div>
         </div>
@@ -396,7 +396,7 @@ $('#1').click(function() {
                     <i class="kk kk-Arrow-Up"></i>
                   </div>
                   <div class="h6 mb-0" style="font-size: 12px !important;">Upgrade Users</div>
-                  
+
                 </div>
               </div>
         </div>
@@ -406,41 +406,41 @@ $('#1').click(function() {
       width: "80%",
       showCloseButton: true,
       showConfirmButton: false
-          
+
   })
-  //window.location.href="./dashboard/Users/All"; 
+  //window.location.href="./dashboard/Users/All";
 });
 
 $('#rapports').click(function() {
-  window.location.href="./dashboard/reports"; 
+  window.location.href="./dashboard/reports";
 });
 
 
 $('#2').click(function() {
-  window.location.href="./dashboard/Users/Students"; 
+  window.location.href="./dashboard/Users/Students";
 });
 
 $('#3').click(function() {
-  window.location.href="./dashboard/Users/Teachers"; 
+  window.location.href="./dashboard/Users/Teachers";
 });
 
 $('#4').click(function() {
-  window.location.href="./group"; 
+  window.location.href="./group";
 });
 
 $('#5').click(function() {
-  window.location.href="./dashboard/Companies"; 
+  window.location.href="./dashboard/Companies";
 });
 
 $('#6').click(function() {
-  window.location.href="./dashboard/Mailer"; 
+  window.location.href="./dashboard/Mailer";
 });
 
 $('#7').click(function() {
-  
+
   swal({
     title: '<h3>Selectionner :</h3>',
-   
+
     html:
       `<div class="row">
 
@@ -469,7 +469,7 @@ $('#7').click(function() {
           </div>
 
 
-         
+
           <div id="soutenance_waiting" class="col-md-3 col-sm-12"  style="cursor:pointer">
               <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
                   <div class="card-body">
@@ -482,7 +482,7 @@ $('#7').click(function() {
                 </div>
           </div>
 
-        
+
           <div id="soutenance_nonvalide" class="col-md-3 col-sm-12"  style="cursor:pointer">
               <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
                   <div class="card-body">
@@ -498,25 +498,25 @@ $('#7').click(function() {
       </div>`,
       width: "80%",
       showCloseButton: true,
-      showConfirmButton: false      
-    
+      showConfirmButton: false
+
   })
-  
-  //window.location.href="#"; 
+
+  //window.location.href="#";
 });
 
 $('#8').click(function() {
-  window.location.href="#"; 
+  window.location.href="#";
 });
 
 $('#9').click(function() {
-  window.location.href="#"; 
+  window.location.href="#";
 });
 
 $('#10').click(function() {
   swal({
     title: '<h3>Selectionner :</h3>',
-   
+
     html:
       `<div class="row">
 
@@ -570,19 +570,19 @@ $('#10').click(function() {
       </div>`,
       width: "80%",
       showCloseButton: true,
-      showConfirmButton: false     
-    
+      showConfirmButton: false
+
   })
-  //window.location.href="./dashboard/Interships/all"; 
+  //window.location.href="./dashboard/Interships/all";
 });
 
 $('#11').click(function() {
-  window.location.href="./dashboard/Interships/perf"; 
+  window.location.href="./dashboard/Interships/perf";
 });
 
 
 $('#12').click(function() {
-  window.location.href="./dashboard/Interships/pfe"; 
+  window.location.href="./dashboard/Interships/pfe";
 });
 //added by amine
 $("#13").click(function(){
@@ -600,7 +600,7 @@ $("#14").click(function(){
 
     $(function (){
       'use strict';
-    
+
       var pieData = {
         {!!  \App\Http\Controllers\GetStat::javascriptchart() !!}
           backgroundColor: [
@@ -626,7 +626,7 @@ $("#14").click(function(){
         options: {
           responsive: true
         }
-      });    
+      });
   });
 </script>
 
@@ -635,27 +635,27 @@ $("#14").click(function(){
   /* Change URL (using on Function) */
 
     $( "body" ).on( "click", "#all_users", function() {
-         window.location.href="./dashboard/Users/All"; 
+         window.location.href="./dashboard/Users/All";
     });
 
     $( "body" ).on( "click", "#user_etudiant", function() {
-      window.location.href="./dashboard/Users/Students"; 
+      window.location.href="./dashboard/Users/Students";
    });
 
     $( "body" ).on( "click", "#user_enseignants", function() {
-      window.location.href="./dashboard/Users/Teachers"; 
+      window.location.href="./dashboard/Users/Teachers";
     });
 
     $( "body" ).on( "click", "#user_admin", function() {
-      window.location.href="./dashboard/Users/Admins"; 
+      window.location.href="./dashboard/Users/Admins";
     });
 
     $( "body" ).on( "click", "#user_accept", function() {
-      window.location.href="./dashboard/Requests"; 
+      window.location.href="./dashboard/Requests";
     });
 
     $( "body" ).on( "click", "#user_upgrade", function() {
-      window.location.href="./dashboard/UpgradeUser"; 
+      window.location.href="./dashboard/UpgradeUser";
     });
 
     $( "body" ).on( "click", "#soutenance_all", function() {
@@ -671,11 +671,11 @@ $("#14").click(function(){
     });
 
     $( "body" ).on( "click", "#soutenance_nonvalide", function() {
-      window.location.href="./dashboard/defenses/rejected"; 
+      window.location.href="./dashboard/defenses/rejected";
     });
 
     $( "body" ).on( "click", "#stage_all", function() {
-      window.location.href="./dashboard/Interships/all"; 
+      window.location.href="./dashboard/Interships/all";
     });
 
     $( "body" ).on( "click", "#stage_init", function() {

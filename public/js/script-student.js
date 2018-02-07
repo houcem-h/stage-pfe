@@ -33,7 +33,7 @@ $(function(){
           var password_confirmation = $("#password_confirmation").val();
           var email = $("#email").val();
           var isValid = true;
-          
+
           if(email == ""){
             console.log("empty");
             isValid = false;
@@ -134,7 +134,7 @@ $(function(){
               password_actuel: passAct,
               password_nouv: passNouv,
               password_confirm: passConfirm,
-            
+
             },function(data){
               //check if password actuel is wrong
               if(data == "wrong password"){
@@ -168,7 +168,7 @@ $(function(){
               }else{
                 swal("Sorry!", "There is a problem!Please re fresh your page and try it again :)","error");
               }
-              
+
           });
 
            //redirect student to his home page when he click "OK"
@@ -194,12 +194,12 @@ $(function(){
               heading: 'Notification',
               text: "l y'a des enseignants veux t'encadrer! Voir vos notifications pour plus info",
               icon: 'info',
-              loader: true,    
-              showHideTransition: 'slide',     
-              bgcolor: '#3d3d3d',  
+              loader: true,
+              showHideTransition: 'slide',
+              bgcolor: '#3d3d3d',
               loaderBg: "#7158e2",
               textAlign: 'left',
-              position: 'bottom-right', 
+              position: 'bottom-right',
           })
 
           $(".notification").addClass("animated infinite bounce")
@@ -243,7 +243,7 @@ $(function(){
             console.log(data);
         })
 
-        
+
         //redirect student to his home page when he click "OK"
         $(document).on("click",".swal-button--confirm",function(){
           location.reload();

@@ -16,7 +16,7 @@ class TeachersController extends Controller
 
   public function __construct(){
     $this->middleware('TeachersAccessRights')->only('update');
-    $this->middleware('AdminAccessRights');
+    $this->middleware('AdminAccessRights')->except('update');
   }
     /**
      * Display a listing of the resource.
@@ -114,7 +114,7 @@ class TeachersController extends Controller
     */
    public function update(Request $request, $id)
    {
-     return dd($request->all());
+
      $this->validate($request, [
          'firstname' => 'required',
          'lastname' => 'required',
@@ -135,19 +135,18 @@ class TeachersController extends Controller
        $teacher->cin = $request->input('cin');
        $teacher->role = $request->input('role');
        $teacher->save();
-       // if ($request->input('role')==null) {
-       //   $teacher->role =$teacher->role ;
-       //   $teacher->save();
-       //   return redirect('teacherhome')->with('success','information mis à jour');
-       //
-       // }else {
-       //
-       //   $teacher->role = $request->input('role');
-       //   $teacher->save();
-         //return redirect('teachers')->with('success','Enseignant mis à jour');
-         return back();
+       if ($request->input('role')==null) {
+         $teacher->role =1;
+         $teacher->save();
+         return redirect('teacherhome')->with('success','information mis à jour');
 
-       // }
+       }else {
+
+         $teacher->role = $request->input('role');
+         $teacher->save();
+         return redirect('teachers')->with('success','Enseignant mis à jour');
+
+       }
 
    }
     /**

@@ -3,7 +3,7 @@
 
 vous êtes acceptés par Mr/Mme {{$user->firstname}}
 pour être votre encadrée durant votre stage PFE :
-Vous pouvez connecte votre endreur par telephone : {{$user->phone}} ou  par mail : {{$user->email}}
+Vous pouvez connecte votre endreur   par mail : {{$user->email}}
 
 
 **votre stage commance le {{$int->start_date}} et se termine le {{$int->end_date}}**
