@@ -15,8 +15,9 @@ class CompaniesManagersController extends Controller
 {
    
     public function __construct(){
-      $this->middleware('StudentAccessRights')->except('index','show');
-      $this->middleware('AdminAccessRights')->only('index','show');
+        $this->middleware('auth');
+        $this->middleware('IntershipsAccessRights');
+        $this->middleware('VerifyPreviousLocation')->only('edit');
     }
 
     public function generateDesiredArray(array $baseArray){
@@ -31,7 +32,7 @@ class CompaniesManagersController extends Controller
        public function validateRequestInputs(Request &$request){
          $this->validate($request,[
            'name'=>'required|max:190',
-           'phone'=>'required|unique:managers|numeric|digits:8',
+           'phone'=>'required|numeric',
            'email'=>'unique:managers|email',
            'position'=>'required|max:190',
            'company'=>'required',
@@ -40,7 +41,7 @@ class CompaniesManagersController extends Controller
 
         public function setCompanyManagerFieldsFromRequest(Request &$request,Manager &$manager,bool $isUpdate){
             $manager->name=$request->input('name');
-            $manager->phone='+216'.$request->input('phone');
+            $manager->phone=$request->input('phone');
             $manager->email=$request->input('email'); 
             $manager->position=$request->input('position');
             if($isUpdate){
@@ -88,13 +89,7 @@ class CompaniesManagersController extends Controller
         $this->setCompanyManagerFieldsFromRequest($request,$manager,false);
         if($manager->save()){
             $id=$manager->id;
-            // $company_framer=$manager->id;
-            // $internShipController=new InternShipsController();
-            // $res=$internShipController->store($company_framer);
-            // if(!$res){
-            //     //student doesn't have registration for this current year
-            //      return redirect('/studentdashboard')->with('error','student not registred');
-            // }
+
             Session::put('cm',$id);
               return redirect('/internships/create');
         }
@@ -136,7 +131,7 @@ class CompaniesManagersController extends Controller
     {
        $this->validate($request,[
            'name'=>'required|max:190',
-           'phone'=>'required|numeric|digits:8',
+           'phone'=>'required|numeric',
            'email'=>'email',
            'position'=>'required|max:190',
         ]);
@@ -151,8 +146,12 @@ class CompaniesManagersController extends Controller
       
             if($request->ajax())
               return Response::json(["company"=>$manager->company],"200");
+               if(Session::has('t'))
+                 $t=Session::get('t');
+               else
+                 $t='false';
 
-        return redirect('/company/'.$manager->company.'/edit');
+        return redirect('/company/'.$manager->company.'/edit?t='.$t);
     }
 
     /**

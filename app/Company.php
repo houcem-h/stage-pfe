@@ -17,19 +17,19 @@ class Company extends Model
     }
 
     
-	//retourne le modificateur de l'enregistrement dans la BD (updated_by)
+    //retourne le modificateur de l'enregistrement dans la BD (updated_by)
     public function adminUpdator(){
         return $this->belongsTo('App\User','updated_by');
     }
 
 
-	//retourne le tel sans le prefix des pays (+216)
+    //retourne le tel sans le prefix des pays (+216)
     public function getPhoneNumberAttribute(){
-        return substr($this->attributes['phone'],4);
+        return $this->attributes['phone'];
     }
 
 
     public function getFaxNumberAttribute(){
-        return substr($this->attributes['fax'],4);
+        return $this->attributes['fax'];
     }
 }

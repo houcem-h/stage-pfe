@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Middleware;
-use Illuminate\Support\Facades\Request;
+
 use Closure;
-use Auth;
-use Session;
+use Illuminate\Support\Facades\Session;
 
 class VerifyPreviousLocation
 {
@@ -17,13 +16,12 @@ class VerifyPreviousLocation
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::check()){
-            if(Session::has("t") && Session::get('t') == $request->get('t')){
+       if(auth()->user()->role==0){
+            if(Session::has('t') &&  $request->get('t')==Session::get('t'))
                 return $next($request);
-            }
-
-            return redirect()->back();
-        }
-        
+            else 
+                return back();
+         }
+        return $next($request);
     }
 }

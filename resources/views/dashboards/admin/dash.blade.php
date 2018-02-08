@@ -6,121 +6,119 @@
 
 <div class="row">
 
-    <!-- All users -->
-    <div id="1" class="col-sm-6 col-md-2">
-        <div class="card text-white" style="background-color:#009cea !important; border-color: #009cea !important; ">
-          <div class="card-body">
-            <div class="h1 text-muted text-right mb-4">
-              <i class="kk kk-users2"></i>
-            </div>
-            <div class="h4 mb-0">Utilisateurs</div>
-            <small>Gestion Utilisateurs</small>
-          </div>
-        </div>
-      </div>
-      <!--/.end-->
+		<!-- All users -->
+		<div id="1" class="col-sm-6 col-md-2">
+			<div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
+			  <div class="card-body">
+				<div class="h1 text-muted text-center mb-4">
+				  <i class="kk kk-users2"></i>
+				</div>
+				<div class="h4 mb-0">Utilisateurs</div>
+				<small>Gestion Utilisateurs</small>
+			  </div>
+			</div>
+		  </div>
+		  <!--/.end-->
 
 
-    <!-- Soutenances -->
-    <div id="7" class="col-sm-6 col-md-2">
-        <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
-          <div class="card-body">
-            <div class="h1 text-muted text-right mb-4">
-              <i class="kk kk-approval"></i>
-            </div>
-            <div class="h5 mb-0">Soutenances</div>
-            <small>Gestion Des Stages</small>
-          </div>
-        </div>
-      </div>
-      <!--/.end-->
+		<!-- Soutenances -->
+		<div id="7" class="col-sm-6 col-md-2">
+			<div class="card text-white" style="background-color:#2980b9 !important; border-color: #2980b9 !important; ">
+			  <div class="card-body">
+				<div class="h1 text-muted text-center mb-4">
+				  <i class="kk kk-approval"></i>
+				</div>
+				<div class="h5 mb-0">Soutenances</div>
+				<small>Gestion Des Stages</small>
+			  </div>
+			</div>
+		  </div>
+		  <!--/.end-->
 
-<!-- Div -->
-<div id="10" class="col-sm-6 col-md-2">
-    <div class="card text-white" style="background-color:#1F4788 !important; border-color: #1F4788 !important; ">
-      <div class="card-body">
-        <div class="h1 text-muted text-right mb-4">
-          <i class="kk kk-department"></i>
-        </div>
-        <div class="h5 mb-0">Stages</div>
-        <small>Gestion Des Stages</small>
-      </div>
-    </div>
-  </div>
-  <!--/.end-->
+	<!-- Div -->
+	<div id="10" class="col-sm-6 col-md-2">
+		<div class="card text-white" style="background-color:#e74c3c !important; border-color: #e74c3c !important; ">
+		  <div class="card-body">
+			<div class="h1 text-muted text-center mb-4">
+			  <i class="kk kk-department"></i>
+			</div>
+			<div class="h5 mb-0">Stages</div>
+			<small>Gestion Des Stages</small>
+		  </div>
+		</div>
+	  </div>
+	  <!--/.end-->
 
-    <!-- Soutenances -->
-    <div id="5" class="col-sm-6 col-md-2">
-        <div class="card text-white" style="background-color:#e67e22 !important; border-color: #e67e22 !important; ">
-          <div class="card-body">
-            <div class="h1 text-muted text-right mb-4">
-              <i class="kk kk-pos"></i>
-            </div>
-            <div class="h5 mb-0">Sociétés</div>
-            <small>Tous les Sociétés</small>
-          </div>
-        </div>
-      </div>
-      <!--/.end-->
+		<!-- Soutenances -->
+		<div id="5" class="col-sm-6 col-md-2">
+			<div class="card text-white" style="background-color:#d35400 !important; border-color: #d35400 !important; ">
+			  <div class="card-body">
+				<div class="h1 text-muted text-center mb-4">
+				  <i class="kk kk-pos"></i>
+				</div>
+				<div class="h5 mb-0">Sociétés</div>
+				<small>Tous les Sociétés</small>
+			  </div>
+			</div>
+		  </div>
+		  <!--/.end-->
 
-    <!-- Soutenances -->
-    <div id="6" class="col-sm-6 col-md-2">
-        <div class="card text-white" style="background-color:#7f8c8d !important; border-color: #7f8c8d !important; ">
-          <div class="card-body">
-            <div class="h1 text-muted text-right mb-4">
-              <i class="kk kk-send3"></i>
-            </div>
-            <div class="h5 mb-0">Mailer</div>
-            <small>Envoyer Emails</small>
-          </div>
-        </div>
-      </div>
-      <!--/.end-->
 
-  <!-- Div -->
-  <div id="rapports" class="col-sm-6 col-md-2">
-      <div class="card text-white" style="background-color:#c0392b !important; border-color: #c0392b !important; ">
+
+
+
+	  
+
+
+		
+
+
+	 
+
+
+ 
+
+    <div id="14" class="col-sm-6 col-md-2">
+      <div class="card text-white" style="background-color:#c44569 !important; border-color: #c44569 !important; ">
         <div class="card-body">
-          <div class="h1 text-muted text-right mb-4">
-            <i class="kk kk-piechart"></i>
+          <div class="h1 text-muted text-center mb-4">
+            <i class="kk kk-invite "></i>
           </div>
-          <div class="h5 mb-0">Rapports</div>
-          <small>Tous les rapports</small>
+          <div class="h5 mb-0">Invitations</div>
+          <small>Demandes D'inscri</small>
         </div>
       </div>
-
     </div>
+<!--/.end-->
 
-      <!--/.end-->
 
-      <!-- added by amine --->
-      <!-- invitations -->
-      <div id="13" class="col-sm-6 col-md-2">
-        <div class="card text-white" style="background-color:#c44569 !important; border-color: #c44569 !important; ">
-          <div class="card-body">
-            <div class="h1 text-muted text-right mb-4">
-              <i class="kk kk-invite "></i>
-            </div>
-            <div class="h5 mb-0">Invitations</div>
-            <small>Demandes d'inscription pour les etudiants</small>
-          </div>
-        </div>
+
+
+<div id="15" class="col-sm-6 col-md-2">
+  <div class="card text-white" style="background-color:#2c3e50 !important; border-color: #2c3e50 !important; ">
+    <div class="card-body">
+      <div class="h1 text-muted text-center mb-4">
+        <i class="kk kk-Tools"></i>
       </div>
-
-      <div id="14" class="col-sm-6 col-md-2">
-          <div class="card text-white" style="background-color:#c44569 !important; border-color: #c44569 !important; ">
-            <div class="card-body">
-              <div class="h1 text-muted text-right mb-4">
-                <i class="kk kk-invite "></i>
-              </div>
-              <div class="h5 mb-0">Invitations</div>
-              <small>Demandes d'inscription pour les enseignants</small>
-            </div>
-          </div>
-        </div>
-    <!--/.end-->
-
+      <div class="h5 mb-0">Outils</div>
+      <small>Mailer - Rapports ...</small>
+    </div>
   </div>
+</div>
+<!--/.end-->
+
+
+
+
+
+
+
+    
+  </div>
+
+
+
+
 
 <br>
 
@@ -191,7 +189,7 @@
 
                 <div class="card">
                     <div class="card-header">
-                     <i class="kk kk-users"></i> Students (By Groups)
+                     <i class="kk kk-users"></i> Nombre D'Etudiant (Par Groupe)
                     </div>
                     <div class="card-body">
                       <div class="chart-wrapper"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
@@ -202,7 +200,7 @@
 
                   <div class="card">
                       <div class="card-header">
-                          <i class="kk kk-Activity"></i>  Activites
+                          <i class="kk kk-Activity"></i>  Comptes
 
                       </div>
                       <div class="card-body">
@@ -213,7 +211,7 @@
                                 <div>
                                   <i class="icon-user-follow bg-warning p-4 font-2xl mr-3 float-left"></i>
                                   <div class="h5 text-warning mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBwaitingUsers()}}</div>
-                                  <div class="text-muted text-uppercase font-weight-bold font-xs">Pending Accounts</div>
+                                  <div class="text-muted text-uppercase font-weight-bold font-xs">Comptes En Attente</div>
                                 </div>
 
                                 <br>
@@ -221,34 +219,53 @@
                                 <div>
                                     <i class="icon-user-following bg-success p-4 font-2xl mr-3 float-left"></i>
                                     <div class="h5 text-success mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBacceptedUsers()}}</div>
-                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Accepted Users</div>
+                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Comptes Vérifiés</div>
                                 </div>
                                 <br>
                                 <div>
                                     <i class="icon-user-unfollow bg-danger p-4 font-2xl mr-3 float-left"></i>
                                     <div class="h5 text-danger mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBrejectedUsers()}}</div>
-                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Rejected Users</div>
+                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Comptes Rejetés</div>
                                 </div>
 
                               </div>
+
+
+
                         </div>
+
+
                       </div>
                       </div>
                     </div>
         </div>
+
+
+
  </div>
 </div>
+
+
+
+
+
   <br id="mycalender">
+ 
+
+
+
+
+
   <div class="card" >
     <div class="card-body">
       <div class="row">
         <div class="col-sm-5">
-          <h4 class="card-title mb-0"><i class="kk kk-calendar-plus"></i> Defences</h4>
-          <div class="small text-muted">List of Defences</div>
+          <h4 class="card-title mb-0"><i class="kk kk-calendar-plus"></i> Soutenances</h4>
+          <div class="small text-muted">Liste des Soutenances <br><strong><span style="color:green">Vert : Stage D'initiation</span> - <span style="color:blue">Bleu : Stage De Perfectionnement</span> - <span style="color:red">Rouge : PFE</span></strong></div>
         </div>
         <!--/.col-->
         <div class="col-sm-7 d-none d-md-block">
-          <button type="button" class="btn btn-primary float-right"  onclick="location='../dashboard/pdf/soutenances'"><i class="icon-cloud-download"></i> Download As PDF</button>
+          <button type="button" class="btn btn-primary float-right"  onclick="location='../dashboard/pdf/soutenances'"><i class="icon-cloud-download"></i> Télécharger la liste</button>
           <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group mr-3" data-toggle="buttons" aria-label="First group">
             </div>
@@ -291,13 +308,36 @@
 
                                 <div id='calendar'></div>
                         </div>
+
+
+
+
                 </div>
+
+
+
+
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
 
   </div>
+
+
+
+
 
 <script>
     $('#1').css( 'cursor', 'pointer' );
@@ -482,7 +522,6 @@ $('#7').click(function() {
                 </div>
           </div>
 
-
           <div id="soutenance_nonvalide" class="col-md-3 col-sm-12"  style="cursor:pointer">
               <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
                   <div class="card-body">
@@ -494,6 +533,8 @@ $('#7').click(function() {
                   </div>
                 </div>
           </div>
+
+
 
       </div>`,
       width: "80%",
@@ -567,6 +608,7 @@ $('#10').click(function() {
                 </div>
           </div>
 
+
       </div>`,
       width: "80%",
       showCloseButton: true,
@@ -584,15 +626,134 @@ $('#11').click(function() {
 $('#12').click(function() {
   window.location.href="./dashboard/Interships/pfe";
 });
-//added by amine
-$("#13").click(function(){
-    window.location.href = "./dashboard/studentInvitations";
-});
+
 
 $("#14").click(function(){
-  window.location.href = "./dashboard/teacherInvitations";
+
+  swal({
+    title: '<h3>Selectionner :</h3>',
+   
+    html:
+      `<div class="row">
+
+        <!-- added by amine --->
+        <!-- invitations -->
+        <div id="invit_student" class="col-sm-6 col-md-6">
+          <div class="card text-white" style="background-color:#c44569 !important; border-color: #c44569 !important; style="cursor:pointer">
+            <div class="card-body">
+              <div class="h1 text-muted text-center mb-4">
+                <i class="kk kk-users"></i><i class="kk kk-invite "></i>
+              </div>
+              <div class="h5 mb-0">Invitations</div>
+              <small>Demandes d'inscription pour les etudiants</small>
+            </div>
+          </div>
+        </div>
+  
+        <div id="invit_teacher" class="col-sm-6 col-md-6">
+            <div class="card text-white" style="background-color:#c44569 !important; border-color: #c44569 !important; style="cursor:pointer">
+              <div class="card-body">
+                <div class="h1 text-muted text-center mb-4">
+                  <i class="kk kk-camera-bag"></i>&nbsp;<i class="kk kk-invite "></i>
+                </div>
+                <div class="h5 mb-0">Invitations</div>
+                <small>Demandes d'inscription pour les enseignants</small>
+              </div>
+            </div>
+          </div>
+      <!--/.end-->
+
+
+      </div>`,
+      width: "80%",
+      showCloseButton: true,
+      showConfirmButton: false
+    
+   
+    
+  })
+
+
+
+
 });
+
+
+
+
+$("#15").click(function(){
+
+  swal({
+    title: '<h3>Selectionner :</h3>',
+   
+    html:
+      `<div class="row">
+
+        
+    
+	  <!-- Div -->
+	  <div id="rapports" class="col-sm-6 col-md-6">
+		  <div class="card text-white" style="background-color:#c0392b !important; border-color: #c0392b !important; cursor:pointer">
+			<div class="card-body">
+			  <div class="h1 text-muted text-center mb-4">
+				<i class="kk kk-piechart"></i>
+			  </div>
+			  <div class="h5 mb-0">Rapports</div>
+			  <small>Tous les rapports</small>
+			</div>
+		  </div>
+		</div>
+		<!--/.end-->
+
+        
+		<!-- Soutenances -->
+		<div id="mailer" class="col-sm-6 col-md-6">
+			<div class="card text-white" style="background-color:#7f8c8d !important; border-color: #7f8c8d !important; cursor:pointer">
+			  <div class="card-body">
+				<div class="h1 text-muted text-center mb-4">
+				  <i class="kk kk-send3"></i>
+				</div>
+				<div class="h5 mb-0">Mailer</div>
+				<small>Envoyer Emails</small>
+			  </div>
+			</div>
+		  </div>
+		  <!--/.end-->
+
+
+      </div>`,
+      width: "80%",
+      showCloseButton: true,
+      showConfirmButton: false
+    
+   
+    
+  })
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
+
+
+
 
 <!-- Chart Code -->
 <script>
@@ -627,8 +788,13 @@ $("#14").click(function(){
           responsive: true
         }
       });
+
   });
 </script>
+
+
+
+
 
 <script>
 
@@ -689,5 +855,43 @@ $("#14").click(function(){
     $( "body" ).on( "click", "#stage_pfe", function() {
       window.location.href="./dashboard/Interships/pfe";
     });
+
+
+    $( "body" ).on( "click", "#invit_student", function() {
+      window.location.href="./dashboard/studentInvitations";
+    });
+
+
+    $( "body" ).on( "click", "#invit_teacher", function() {
+      window.location.href="./dashboard/teacherInvitations";
+    });
+
+    $( "body" ).on( "click", "#rapports", function() {
+      window.location.href="./dashboard/Mailer";
+    });
+
+    $( "body" ).on( "click", "#mailer", function() {
+      window.location.href="./dashboard/reports";
+    });
+
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @endsection

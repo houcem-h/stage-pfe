@@ -21,19 +21,21 @@
 	<link href="{{ asset('dashboard_assets/css/custom_nav_dashboard.css') }}" rel="stylesheet">
 	{{--  END MODIFICATIONS--}}
 	<!-- Styles required by this views -->
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link href="{{ asset('dashboard_assets/node_modules/calendar/fullcalendar.min.css') }}" rel="stylesheet">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet">
   <link href="http://kouki.website/vendor/koukicons/koukicons.min.css" rel="stylesheet">
   <script src="https://cdn.quilljs.com/1.3.4/quill.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
   <style>
 	  * {
 		font-family: 'Raleway', sans-serif;
 	  }
-	  .active{
-		  padding: 8px !important;
+	  .active span{
+		  padding: 10px 10px 10px 10px !important;
+		  font-size: 20px;
 	  }
   </style>
 </head>
@@ -49,12 +51,11 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-
-		<ul class="nav navbar-nav ml-auto" id="custom">
-			{{-- Hazem MODIFICATIONS --}}
+		<ul class="nav navbar-nav mr-auto">
+{{-- Hazem MODIFICATIONS --}}
 			<!-- <li><a href="{{route('teachers')}}">Teachers  list</a></li>
 			<li><a href="{{'teachers/create'}}">Add teacher</a></li>
-
+			
 			{{--  AMINE BEJAOUI MODIFICATIONS --}}
 			<li><a href="{{route('group')}}">Group list</a></li>
 			<li><a href="{{route('show_blade_add')}}">Add group</a></li>
@@ -62,10 +63,10 @@
 			{{--  END MODIFICATIONS --}}
 
 			<!-- new navbar -->
-			<li><a href="{{ route('dash') }}">Acceuil</a></li>
+			<li><a href="{{ route('dash') }}"><i class="icon-home"></i> Acceuil</a></li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-					Groupe
+					<i class="icon-share"></i> Groupe
 				</a>
 				<div class="dropdown-menu dropdown-menu-right">
 					<a class="dropdown-item" href="{{route('group')}}">
@@ -79,7 +80,7 @@
 
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-					Etudiants
+					<i class="icon-people"></i> Etudiants
 				</a>
 				<div class="dropdown-menu dropdown-menu-right">
 					<a class="dropdown-item" href="{{route('show_all_students')}}">
@@ -93,7 +94,7 @@
 
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-					Enseignants
+					<i class="icon-notebook"></i> Enseignants
 				</a>
 				<div class="dropdown-menu dropdown-menu-right">
 					<a class="dropdown-item" href="{{route('teachers')}}">Liste des enseignants</a>
@@ -101,9 +102,15 @@
 				</div>
 			</li>
 
-			<li><a href="{{route('settings')}}">Parametres</a></li>
+			<li><a href="{{route('settings')}}"><i class="icon-settings"></i> Parametres</a></li>
 			<!-- end-->
+
+
+		</ul>
+		<ul class="nav navbar-nav ml-auto" id="custom">
+			
 			<li class="nav-item dropdown">
+					<li><a class="btn btn-primary" style="pointer:cursor" href="../teacherhome"><i class="icon-briefcase"></i> Connecter En Tant Qu'Enseignant</a></li>
 				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 					<img src="{{ asset('dashboard_assets/img/avatars/user.png') }}" class="img-avatar" alt="admin@stage.com">
 				</a>
@@ -111,12 +118,10 @@
 					<div class="dropdown-header text-center">
 						<strong>Settings</strong>
 					</div>
-					<a class="dropdown-item" href="#">
-						<i class="fa fa-user"></i> Profile</a>
-					<a class="dropdown-item" href="#">
-						<i class="fa fa-wrench"></i> Settings</a>
+					
+				
 					<div class="divider"></div>
-					<a class="dropdown-item"  href="{{ route('logout') }}"
+					<a class="dropdown-item" style="color:black !important;"  href="{{ route('logout') }}"
 					onclick="event.preventDefault();
 							 document.getElementById('logout-form').submit();">
 						<i class="fa fa-lock"></i> Logout </a>
@@ -138,18 +143,18 @@
 						<br>
 						<div class="sidebar-header">
 							<img src="http://stage.pfe/dashboard_assets/img/avatars/user.png" width="35%" class="img-avatar" alt="Avatar">
-
+	
 							<div>
-
+	
 								<strong>{{ Auth::user()->firstname }}  {{ Auth::user()->lastname }} </strong>
 							</div>
 							<div class="text-muted">
 								<small><i class="kk kk-badge"></i> Admin</small>
 							</div>
 							<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-
+	
 								<div class="btn-group" role="group">
-
+	
 									<div class="dropdown-menu">
 										<div class="dropdown-header text-center">
 											<strong>Settings</strong>
@@ -163,7 +168,7 @@
 											<span class="badge badge-primary">42</span>
 										</a>
 										<div class="divider"></div>
-
+	
 										<a class="dropdown-item" href="#">
 											<i class="fa fa-lock"></i> Logout</a>
 									</div>
@@ -175,8 +180,8 @@
 							<a class="nav-link" href="{{ route('dash') }}">
 								<i class="kk kk-dashboard"></i> Dashboard </a>
 						</li>
-
-
+						
+	
 						<li class="nav-item nav-dropdown">
 							<a class="nav-link nav-dropdown-toggle" href="#">
 								<i class="kk kk-users"></i> Utilisateurs</a>
@@ -190,7 +195,7 @@
 										<i class="kk kk-users2"></i>Étudiants</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('teachers_list') }}">
+									<a class="nav-link" href="{{ route('teachers') }}">
 										<i class="kk kk-users2"></i>Enseignants</a>
 								</li>
 								<li class="nav-item">
@@ -204,22 +209,22 @@
 								<i class="kk kk-event-date2"></i>Soutenances</a>
 							<ul class="nav-dropdown-items">
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="/dashboard/defenses/all">
 											<i class="kk kk-event-date2"></i>All</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="/dashboard/defenses/accepted">
 											<i class="kk kk-event-date2"></i>Accepted</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="/dashboard/defenses/waiting">
 											<i class="kk kk-event-date2"></i>Waiting</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="/dashboard/defenses/rejected">
 											<i class="kk kk-event-date2"></i>Refused</a>
 								</li>
-
+	
 							</ul>
 						</li>
 						<li class="nav-item nav-dropdown">
@@ -242,64 +247,82 @@
 										<a class="nav-link" href="{{ route('interships_pfe')}}">
 											<i class="kk kk-parallel_tasks"></i>PFE</a>
 									</li>
-
+	
 								</ul>
 							</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/dashboard/Mailer">
+								<a class="nav-link" href="{{ route('companies')}}">
+									<i class="kk kk-pos"></i> Sociétés
+								</a>
+						</li>
+						<li class="nav-item nav-dropdown">
+								<a class="nav-link nav-dropdown-toggle" href="#">
+									<i class="kk kk-import"></i>Encadrements</a>
+								<ul class="nav-dropdown-items">
+										<li class="nav-item">
+												<a class="nav-link" href="{{route('encadrement_waiting')}}">
+													<i class="kk kk-import"></i>En Attente</a>
+											</li>
+									<li class="nav-item">
+										<a class="nav-link" href="{{ route('encadrement_accepted')}}">
+											<i class="kk kk-import"></i>Verifié</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="{{ route('encadrement_rejected')}}">
+											<i class="kk kk-import"></i>Refusé</a>
+									</li>
+								
+	
+								</ul>
+							</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{route('Mailer')}}">
 								<i class="kk kk-envelope-forward"></i> Mailer
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/dashboard/reports">
-								<i class="kk kk-piechart"></i> Reports</a>
+							<a class="nav-link" href="{{route('reports')}}">
+								<i class="kk kk-piechart"></i> Rapports</a>
 						</li>
-
-						<li class="divider"></li>
-						<li class="nav-title">
-							Extras
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
-								<i class="kk kk-settings4"></i> Settings</a>
-						</li>
+	
+						
 						<!--<li class="nav-item mt-auto">
 				<a class="nav-link nav-link-success" href="http://coreui.io/" target="_top"><i class="icon-cloud-download"></i> Download CoreUI</a>
 			  </li>
 			  <li class="nav-item">
 				<a class="nav-link nav-link-danger" href="http://coreui.io/pro/" target="_top"><i class="icon-layers"></i> Try CoreUI <strong>PRO</strong></a>
 			  </li>-->
-
+	
 					</ul>
 				</nav>
 				<button class="sidebar-minimizer brand-minimizer" type="button"></button>
 			</div>
-
+	
 			<!-- Main content -->
 			<main class="main">
-
-
+	
+	
 				<div class="container-fluid">
 					<div class="animated fadeIn">
 						<!-- Contains START -->
 						@yield('dash_content')
-
-
+	
+	
 						<!-- Contains END -->
 					</div>
-
+	
 				</div>
 			</main>
-
-
-
+	
+	
+	
 		</div>
 
 	<footer class="app-footer">
 		<span>
-			<a href="#">Stage PFE</a> © 2018 ISET Bizerte.</span>
+			<a href="#">Stage & PFE</a> © 2018 ISET Bizerte.</span>
 		<span class="ml-auto">Powered by
-			<a href="#">ISET Dev</a>
+			<a href="#">ISET Dev <i class="kk kk-code"></i></a>
 		</span>
 	</footer>
 
@@ -319,7 +342,7 @@
 	<script src="{{ asset('dashboard_assets/node_modules/calendar/fullcalendar.min.js') }}"></script>
 	<script src="{{ asset('js/sweetalert.min.js')}}"></script>
 	<script src="{{ asset('js/dashboardInvitations.js')}}"></script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/locale/fr.js"></script>
 	<!--<script src="{{ asset('dashboard_assets/js/views/my_code_chart.js') }}"></script>-->
 
 	</script>

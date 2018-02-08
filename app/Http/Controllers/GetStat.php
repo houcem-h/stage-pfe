@@ -88,14 +88,14 @@ class GetStat extends Controller
         $teachers = \App\Http\Controllers\GetStat::getAllTeachers();
        $pdf = PDF::loadView('pdfs.teacherlist', ['teachers' => $teachers]);
        return $pdf->stream();
-    }
+    }     
 
 
     //Export Student List As Excel
     public static function ExportStudentsAsExcel() {
         $students = \App\User::where('role', '=', '0')->get()->toArray();
 
-
+        
 		return \Excel::create('Students_iset', function($excel) use ($students) {
             $excel->getDefaultStyle()
             ->getAlignment()
@@ -109,16 +109,16 @@ class GetStat extends Controller
                 $sheet->row(6, array('ID', 'Nom', 'Prénom','Email', 'Date De Naissance' , 'CIN' , 'Tel', 'Role', 'Date De Création'));
                 $sheet->row(6, function($row) {
                         $row->setBackground('#4288CE'); //blue
-                        $row->setFontColor('#ffffff');
-                        $row->setFontSize(14);
+                        $row->setFontColor('#ffffff'); 
+                        $row->setFontSize(14);    
                 });
                 $sheet->cell('D3', function($cell) {
                     // titre
                     $cell->setValue('Liste Des étudiants');
-                    $cell->setFontSize(22);
+                    $cell->setFontSize(22);   
                     $cell->setBackground('#ffffff'); //blue
-                    $cell->setFontColor('#4288CEf');
-
+                    $cell->setFontColor('#4288CEf');  
+                   
                 });
                 $sheet->mergeCells('D3:J3');
                 $sheet->getStyle('D3')->getAlignment()->applyFromArray(
@@ -143,7 +143,7 @@ class GetStat extends Controller
     public static function ExportTeachersAsExcel() {
         $teachers = \App\User::where('role', '=', '1')->get()->toArray();
 
-
+        
 		return \Excel::create('teachers_iset', function($excel) use ($teachers) {
             $excel->getDefaultStyle()
             ->getAlignment()
@@ -157,16 +157,16 @@ class GetStat extends Controller
                 $sheet->row(6, array('ID', 'Nom', 'Prénom','Email', 'Date De Naissance' , 'CIN' , 'Tel', 'Role', 'Date De Création'));
                 $sheet->row(6, function($row) {
                         $row->setBackground('#4288CE'); //blue
-                        $row->setFontColor('#ffffff');
-                        $row->setFontSize(14);
+                        $row->setFontColor('#ffffff'); 
+                        $row->setFontSize(14);    
                 });
                 $sheet->cell('D3', function($cell) {
                     // titre
                     $cell->setValue('Liste Des Enseignants');
-                    $cell->setFontSize(22);
+                    $cell->setFontSize(22);   
                     $cell->setBackground('#ffffff'); //blue
-                    $cell->setFontColor('#4288CEf');
-
+                    $cell->setFontColor('#4288CEf');  
+                   
                 });
                 $sheet->mergeCells('D3:J3');
                 $sheet->getStyle('D3')->getAlignment()->applyFromArray(
@@ -186,7 +186,7 @@ class GetStat extends Controller
 
                   $groups_array = \App\Http\Controllers\GetStat::getEnumValues("groups", "stream"); //names of groups
                   $groups_nb = array(); //number of students in groups (same)
-
+                  
                   foreach ($groups_array as $group) {
                       $val_array =  DB::table('groups')->where('stream', '=', "$group")->get();
                       $val_count = count($val_array);
@@ -196,7 +196,7 @@ class GetStat extends Controller
                   $s1 = '[';
                   $s2 = '[';
 
-
+                
                 foreach($groups_array as $group) {
                     $s1 .= "'" .$group ."'" . " , ";
                 }
@@ -206,7 +206,7 @@ class GetStat extends Controller
                 }
                 $s2 .= ']';
 
-
+                
                     if ($groups_nb[0] > 0) {
                         $final_string = ' labels: '.$s1.',
                         datasets: [{
@@ -243,25 +243,25 @@ class GetStat extends Controller
 
 
       public static function destroyuser($id) {
-              $user =  \App\User::find($id);
+              $user =  \App\User::find($id); 
               $user->delete();
-              return "User $id Deleted";
+              return "User $id Deleted"; 
       }
 
 
       public static function getuserdata($id) {
           $user = \App\User::find($id);
-           return $user;
+           return $user; 
       }
 
       public static function updateinfousers(Request $request) {
         $id = $request->input('id');
-        $user =  \App\User::find($id);
-        $user->firstname = $request->input('firstname');
-        $user->lastname = $request->input('lastname');
-        $user->email = $request->input('email');
-        $user->cin = $request->input('cin');
-        $user->phone = $request->input('phone');
+        $user =  \App\User::find($id); 
+        $user->firstname = $request->input('firstname'); 
+        $user->lastname = $request->input('lastname'); 
+        $user->email = $request->input('email'); 
+        $user->cin = $request->input('cin'); 
+        $user->phone = $request->input('phone'); 
         $user->save();
         return "Done ! User info Updated";
     }
@@ -285,7 +285,7 @@ class GetStat extends Controller
 
             return  $array_of_students;
         }
-
+        
 
 
         public function AcceptSingleUser($id) {
@@ -307,7 +307,7 @@ class GetStat extends Controller
                     $ids = $request->only(['ids']);
                     $ids = $ids['ids'];
                     $ids = str_replace('[', '', $ids);
-                    $ids = str_replace(']', '', $ids);
+                    $ids = str_replace(']', '', $ids);    
                     $ids = str_replace('"', '', $ids);
                     $ids_array  = explode(",", $ids);
                     foreach ($ids_array as $id ){
@@ -323,7 +323,7 @@ class GetStat extends Controller
             $ids = $request->only(['ids']);
             $ids = $ids['ids'];
             $ids = str_replace('[', '', $ids);
-            $ids = str_replace(']', '', $ids);
+            $ids = str_replace(']', '', $ids);    
             $ids = str_replace('"', '', $ids);
             $ids_array  = explode(",", $ids);
             foreach ($ids_array as $id ){
@@ -331,7 +331,7 @@ class GetStat extends Controller
                 $userX->state = "rejected";
                 $userX->save();
             }
-
+            
 
         }
 
@@ -353,16 +353,16 @@ class GetStat extends Controller
 
 
        /* public static function pdf_note($annee , $niveau , $note) {
-
+               
                 $students = \App\Http\Controllers\GetStat::getAllstudents();
                 $pdf = PDF::loadView('pdfs.studentlist', ['students' => $students]);
                 return $pdf->stream();
-
+            
         }*/
 
         public function get_defenses_with_note($year, $egal, $type, $note  ) {
-            $year = str_replace("-" , '/' , $year) ; // replace '-' with '/' (ROUTE Problem)
-
+            $year = str_replace("-" , '/' , $year) ; // replace '-' with '/' (ROUTE Problem)       
+           
                 $alldata1 = DB::table('minutes')
                 ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
                 ->join('internships' , 'defenses.internship', '=' , 'internships.id')
@@ -371,7 +371,7 @@ class GetStat extends Controller
                 ->where('session' , '=' , "$year")
                 ->where('final_note' , '>' , "$note")
                 ->where('type' , "=" , "$type")
-                ->get();
+                ->get(); 
 
                 $alldata2 = DB::table('minutes')
                 ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
@@ -381,9 +381,9 @@ class GetStat extends Controller
                 ->where('session' , '=' , "$year")
                 ->where('final_note' , '>' , "$note")
                 ->where('type' , "<>" , "$type") /* ! important  */
-                ->get();
+                ->get(); 
 
-
+               
                 if($egal == "egal") {
                     $pdf = PDF::loadView('pdfs.pdf_custom1', ['alldata' => $alldata1]);
                     return $pdf->stream();
@@ -396,7 +396,7 @@ class GetStat extends Controller
                 }
 
         }
-
+        
         public function get_defenses_by_teacher() {
             // $year = "2017/2018";
             // $type = "init";
@@ -407,8 +407,8 @@ class GetStat extends Controller
             ->join('internships' , 'defenses.internship', '=' , 'internships.id')
             ->join('users' , 'internships.reporter', '=' , 'users.id')
             ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
-
-            ->get();
+            
+            ->get(); 
             return $alldata1;
         }
 
@@ -424,7 +424,7 @@ class GetStat extends Controller
                         ->join('companies', 'internships.company_framer', '=' , 'companies.id')
                         ->get();
                         return View('dashboards.admin.interships_all' , ['alldata' => $alldata1]);
-
+            
         }
 
         public function internships_init() {
@@ -434,7 +434,7 @@ class GetStat extends Controller
                         ->where('type', '=' , 'init')
                         ->get();
                         return View('dashboards.admin.interships_init' , ['alldata' => $alldata1]);
-
+            
         }
 
         public function internships_perf() {
@@ -444,7 +444,7 @@ class GetStat extends Controller
                         ->where('type', '=' , 'perf')
                         ->get();
                         return View('dashboards.admin.interships_perf' , ['alldata' => $alldata1]);
-
+            
         }
 
         public function internships_pfe() {
@@ -454,7 +454,7 @@ class GetStat extends Controller
                         ->where('type', '=' , 'pfe')
                         ->get();
                         return View('dashboards.admin.interships_pfe' , ['alldata' => $alldata1]);
-
+            
         }
 
         public static function get_teacher_fullname($id) {
@@ -466,64 +466,106 @@ class GetStat extends Controller
 
 
         public static function soutenance_all(){
-            $alldata = DB::table('minutes')
-                ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
+            $alldata = DB::table('defenses')
+                
                 ->join('internships' , 'defenses.internship', '=' , 'internships.id')
                 ->join('users' , 'internships.student', '=' , 'users.id')
                 ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
                 ->join('groups', 'registrations.group' , 'groups.id')
-                ->get();
-               // return $alldata;
+                ->get(); 
+                //return $alldata;
                 return View('dashboards.admin.soutenance_all' , ['alldata' => $alldata]);
-
+                
         }
 
-
+       
         public static function soutenance_accepted(){
-            $alldata = DB::table('minutes')
-                ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
-                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
-                ->join('users' , 'internships.student', '=' , 'users.id')
-                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
-                ->join('groups', 'registrations.group' , 'groups.id')
-                ->where('internships.state' , '=' , 'accepted')
-                ->get();
-               // return $alldata;
-                return View('dashboards.admin.soutenance_all' , ['alldata' => $alldata]);
+            $alldata = DB::table('defenses')
+                
+            ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+            ->join('users' , 'internships.student', '=' , 'users.id')
+            ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+            ->join('groups', 'registrations.group' , 'groups.id')
+            
+            ->get(); 
 
+
+            $f_data = $alldata->filter(function ($customer) {
+                return $customer->state == 'accepted';
+            });
+            
+
+               
+                return View('dashboards.admin.soutenance_verified' , ['alldata' => $f_data]);
+                
         }
 
         public static function soutenance_waiting(){
-            $alldata = DB::table('minutes')
-                ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
-                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
-                ->join('users' , 'internships.student', '=' , 'users.id')
-                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
-                ->join('groups', 'registrations.group' , 'groups.id')
-                ->where('internships.state' , '=' , 'waiting')
-                ->get();
-               // return $alldata;
-                return View('dashboards.admin.soutenance_all' , ['alldata' => $alldata]);
+            $alldata = DB::table('defenses')
+                
+            ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+            ->join('users' , 'internships.student', '=' , 'users.id')
+            ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+            ->join('groups', 'registrations.group' , 'groups.id')
+            
+            ->get(); 
 
+
+            $f_data = $alldata->filter(function ($customer) {
+                return $customer->state == 'waiting';
+            });
+            
+
+               
+                return View('dashboards.admin.soutenance_verified' , ['alldata' => $f_data]);
+                
         }
 
         public static function soutenance_rejected(){
-            $alldata = DB::table('minutes')
-                ->join('defenses', 'minutes.defense', '=', 'defenses.id' )
-                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
-                ->join('users' , 'internships.student', '=' , 'users.id')
-                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
-                ->join('groups', 'registrations.group' , 'groups.id')
-                ->where('internships.state' , '=' , 'rejected')
-                ->get();
-               // return $alldata;
-                return View('dashboards.admin.soutenance_all' , ['alldata' => $alldata]);
+            $alldata = DB::table('defenses')
+                
+            ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+            ->join('users' , 'internships.student', '=' , 'users.id')
+            ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+            ->join('groups', 'registrations.group' , 'groups.id')
+            
+            ->get(); 
+
+
+            $f_data = $alldata->filter(function ($customer) {
+                return $customer->state == 'rejected';
+            });
+            
+
+               
+                return View('dashboards.admin.soutenance_verified' , ['alldata' => $f_data]);
+                
+        }
+
+        public static function soutenance_by_id($id){
+            $alldata = DB::table('defenses')
+                
+            ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+            ->join('users' , 'internships.student', '=' , 'users.id')
+            ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+            ->join('groups', 'registrations.group' , 'groups.id')
+            
+            ->get(); 
+            $f_data = $alldata->filter(function ($customer) {
+                return $customer->id == "$id";
+            });
+            return $f_data;
+
 
         }
 
-        public function get_teachers_data_pdf($teacher_type, $year, $type , $id){
-            $year = str_replace("-" , '/' , $year) ; // replace '-' with '/' (ROUTE Problem)
 
+
+
+
+        public function get_teachers_data_pdf($teacher_type, $year, $type , $id){
+            $year = str_replace("-" , '/' , $year) ; // replace '-' with '/' (ROUTE Problem)       
+         
 
 
             if ($teacher_type == "reporter") {
@@ -545,16 +587,16 @@ class GetStat extends Controller
                              'registrations.session',
                              'defenses.date_d',
                              'defenses.start_time',
-                             'minutes.notes')
+                             'minutes.notes')      
                      ->where('teacher.id' , '=' , $id)
                      ->where('internships.type', '=' , $type)
                      ->where('registrations.session' , '=' , $year)
-                     ->get();
+                     ->get(); 
 
                      $pdf = PDF::loadView('pdfs.teachers', ['alldata' => $alldata]);
                      return $pdf->stream();
             }
-
+           
 
             else {
                 //as president
@@ -575,11 +617,11 @@ class GetStat extends Controller
                              'registrations.session',
                              'defenses.date_d',
                              'defenses.start_time',
-                             'minutes.notes')
+                             'minutes.notes')      
                              ->where('teacher.id' , '=' , $id)
                              ->where('internships.type', '=' , $type)
                              ->where('registrations.session' , '=' , $year)
-                     ->get();
+                     ->get(); 
 
                      $pdf = PDF::loadView('pdfs.teachers', ['alldata' => $alldata]);
                      return $pdf->stream();
@@ -612,18 +654,18 @@ class GetStat extends Controller
                          'companies.address',
                          'minutes.final_note'
                 )
-
+                
                 ->get();
-
+                
                 $counter = 0;
                 $somme = 0;
 
                 foreach ($alldata as $data) {
                     if ($data->id == $id) {
                         $counter++;
-                        $somme = $somme + $data->final_note;
+                        $somme = $somme + $data->final_note; 
                     }
-
+                        
 
                 }
 
@@ -656,15 +698,15 @@ class GetStat extends Controller
                             ->join('groups', 'registrations.group', '=', "groups.id")
                             ->join('users' , 'internships.student' , '=' , "users.id")
                             ->get();
-
+                            
             //return $alldata;
             $pdf = PDF::loadView('pdfs.s',  ['alldata' => $alldata , 'datesign' => $datesign]);
-            return $pdf->stream();
+            return $pdf->download('document.pdf');
         }
 
 
         public function invitation($date) {
-
+           
             $alldata = DB::table('defenses')
                         ->join('internships', 'defenses.internship' , '=' , 'internships.id')
                         ->join('managers', 'internships.company_framer' , "=" , "managers.company")
@@ -673,7 +715,7 @@ class GetStat extends Controller
                         ->get();
             //return $alldata;
             $pdf = PDF::loadView('pdfs.invit' , ['alldata' => $alldata , 'date' => $date]);
-
+            
             return View('pdfs.invit' , ['alldata' => $alldata , 'date' => $date]);
         }
 
@@ -683,7 +725,7 @@ class GetStat extends Controller
                         ->where('users.role' , '=' , '1')
                         ->get();
                 return View('dashboards.admin.upgradeuser' , ['alldata' => $alldata]);
-
+                   
         }
 
 
@@ -691,7 +733,7 @@ class GetStat extends Controller
         public static function upgrade_by_id($id) {
            $x =  DB::table('users')->where('id', '=', $id)
 	                ->update(array('role' => '2'));
-                        return "done!";
+                        return "done!";      
         }
 
         public static function color_by_type($type) {
@@ -714,8 +756,19 @@ class GetStat extends Controller
                 //return $x;
                 $jscode = '';
                 foreach($x as $def) {
+                    
+
+                    /**Fix Probleme Javascript */
+                    $first_name = $def->firstname;
+                    $last_name = $def->lastname;
+                    $firstname = str_replace("'" , "" , $first_name);
+                    $last_name = str_replace("'", "" ,$last_name);
+                    /**Fix Probleme Javascript */
+
+
+
                     $jscode .= "{
-                        title: '" . $def->firstname . ' ' . $def->lastname . " (". $def->classroom ." )". "',
+                        title: '" . $first_name . ' ' . $last_name . " (". $def->classroom ." )". "',
                         start: '" . $def->date_d . "T". $def->start_time .  "',
                         color  : '". \App\Http\Controllers\GetStat::color_by_type($def->type)."',
                         textColor: 'white'
@@ -761,5 +814,177 @@ class GetStat extends Controller
                      return $pdf->stream('test_pdf.pdf');
         }
 
+
+
+
+
+
+        public static function encadrement_waiting() {
+
+            $alldata = DB::table('framing_requests')
+                        ->join('users as teachers' , 'framing_requests.teacher' , "=" , "teachers.id")
+                        ->join('internships' , "framing_requests.internship" , "=" , "internships.id")
+                        ->join('users as students' , "internships.student", "=" , "students.id")
+                        ->join('specifications' , 'internships.specifications' , "=" , "specifications.id")
+                        ->select(
+                        'framing_requests.id',
+                         'framing_requests.request_type as request_type ',
+                         'framing_requests.status as status' ,
+                         'teachers.firstname as teacher_firstname' ,
+                         'teachers.lastname as teacher_lastname' ,
+                         'students.firstname as student_firstname' ,
+                         'students.lastname as student_lastname',
+                         'specifications.title',
+                         'specifications.project_type',
+                         'specifications.existing_desc',
+                         'specifications.requirement_spec',
+                         'specifications.hardware_env',
+                         'specifications.software_env',
+                         'specifications.provisional_planning'
+
+                       )
+                         ->where('framing_requests.request_type' , "=" , "wish")
+                         ->where('framing_requests.status', '=' , 'waiting')
+                         ->get();
+            
+            return View('dashboards.admin.encadrement_waiting')->with('alldata' , $alldata);
+        }
+
+
+
+        public static function encadrement_accepted() {
+
+            $alldata = DB::table('framing_requests')
+                        ->join('users as teachers' , 'framing_requests.teacher' , "=" , "teachers.id")
+                        ->join('internships' , "framing_requests.internship" , "=" , "internships.id")
+                        ->join('users as students' , "internships.student", "=" , "students.id")
+                        ->join('specifications' , 'internships.specifications' , "=" , "specifications.id")
+                        ->select(
+                        'framing_requests.id',
+                         'framing_requests.request_type as request_type ',
+                         'framing_requests.status as status' ,
+                         'teachers.firstname as teacher_firstname' ,
+                         'teachers.lastname as teacher_lastname' ,
+                         'students.firstname as student_firstname' ,
+                         'students.lastname as student_lastname',
+                         'specifications.title',
+                         'specifications.project_type',
+                         'specifications.existing_desc',
+                         'specifications.requirement_spec',
+                         'specifications.hardware_env',
+                         'specifications.software_env',
+                         'specifications.provisional_planning'
+
+                       )
+                         ->where('framing_requests.request_type' , "=" , "wish")
+                         ->where('framing_requests.status', '=' , 'accepeted')
+                         ->get();
+            
+            return View('dashboards.admin.encadrement_verified')->with('alldata' , $alldata);
+        }
+
+
+
+
+        public static function encadrement_rejected() {
+
+            $alldata = DB::table('framing_requests')
+                        ->join('users as teachers' , 'framing_requests.teacher' , "=" , "teachers.id")
+                        ->join('internships' , "framing_requests.internship" , "=" , "internships.id")
+                        ->join('users as students' , "internships.student", "=" , "students.id")
+                        ->join('specifications' , 'internships.specifications' , "=" , "specifications.id")
+                        ->select(
+                        'framing_requests.id',
+                         'framing_requests.request_type as request_type ',
+                         'framing_requests.status as status' ,
+                         'teachers.firstname as teacher_firstname' ,
+                         'teachers.lastname as teacher_lastname' ,
+                         'students.firstname as student_firstname' ,
+                         'students.lastname as student_lastname',
+                         'specifications.title',
+                         'specifications.project_type',
+                         'specifications.existing_desc',
+                         'specifications.requirement_spec',
+                         'specifications.hardware_env',
+                         'specifications.software_env',
+                         'specifications.provisional_planning'
+
+                       )
+                         ->where('framing_requests.request_type' , "=" , "wish")
+                         ->where('framing_requests.status', '=' , 'rejected')
+                         ->get();
+            
+            return View('dashboards.admin.encadrement_rejected')->with('alldata' , $alldata);
+        }
+
+
+
+
+
+
+      
+        public function getframingreq_by_id($id) {
+
+                        $alldata = DB::table('framing_requests')
+                        ->join('users as teachers' , 'framing_requests.teacher' , "=" , "teachers.id")
+                        ->join('internships' , "framing_requests.internship" , "=" , "internships.id")
+                        ->join('users as students' , "internships.student", "=" , "students.id")
+                        ->join('specifications' , 'internships.specifications' , "=" , "specifications.id")
+                        ->select(
+                        'framing_requests.id',
+                        'framing_requests.request_type as request_type ',
+                        'framing_requests.status as status' ,
+                        'teachers.firstname as teacher_firstname' ,
+                        'teachers.lastname as teacher_lastname' ,
+                        'students.firstname as student_firstname' ,
+                        'students.lastname as student_lastname',
+                        'specifications.title',
+                         'specifications.project_type',
+                         'specifications.existing_desc',
+                         'specifications.requirement_spec',
+                         'specifications.hardware_env',
+                         'specifications.software_env',
+                         'specifications.provisional_planning'
+                        )
+                   
+                        ->where("framing_requests.id" , "=" , "$id")
+                        ->get();
+
+                    return $alldata;
+        }
+
+
+        public function accept_framing($id) {
+
+            $alldata = DB::table('framing_requests')
+           
+       
+            ->where("id" , "=" , "$id")
+            ->update(['status' => 'accepeted']);
+
+        return "Framing Accepted!";
+    }
+
+    public function reject_framing($id) {
+
+        $alldata = DB::table('framing_requests')
+       
+   
+        ->where("id" , "=" , "$id")
+        ->update(['status' => 'rejected']);
+
+    return "Framing Rejected!";
+}
+
+public function waiting_framing($id) {
+
+    $alldata = DB::table('framing_requests')
+   
+
+    ->where("id" , "=" , "$id")
+    ->update(['status' => 'waiting']);
+
+return "Framing is waiting!";
+}
 
 }
