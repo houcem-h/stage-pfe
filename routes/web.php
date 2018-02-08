@@ -265,8 +265,10 @@ Route::get('settingspass', 'DashboardsController@settingspass')->name("settingsp
 Route::get('teacherhome','DashboardsController@index')->name("teacherhome");
 Route::get("teacherhome/{id}/info","DashboardsController@info");
 Route::get("information/{id}","DashboardsController@information")->name("information");
-
+Route::get('dashboard/Calendarsoutenances', 'DashboardsController@pdf_defensescalendar')->name("soutenancespdf");
 Route::resource('teachers','TeachersController');
+Route::post("editPasswordteacher","DashboardsController@edit_pass")->name("editPasswordteacher");
+
 
 
 

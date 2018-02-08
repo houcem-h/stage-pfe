@@ -15,7 +15,7 @@ input[type=submit] {
     <div class="card">
         <div class="card-header" data-background-color="bleu">
             <h4 class="title">Editer l'enseignant <strong>{{$teacher->firstname}} {{$teacher->lastname}}</h4>
-            <p class="category">Last time ...</p>
+            <p class="category"></p>
         </div>
         <div class="card-content table-responsive">
           {!! Form::open(['action' => ['TeachersController@update',$teacher->id]]) !!}

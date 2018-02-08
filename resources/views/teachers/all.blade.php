@@ -13,14 +13,14 @@
           <div class="card">
               <div class="card-header" data-background-color="bleu">
                   <h4 class="title">{{$teacher->firstname}} {{$teacher->lastname}}</h4>
-                  <p class="category">last time changed</p>
+                  <p class="category"></p>
               </div>
                 <div class="card-content table-responsive">
                   <centre>
                   <p>Email : {{$teacher->email}}</p>
-                  <p>Brirth date : {{$teacher->birthdate}}</p>
+                  <p>Date de naissance: {{$teacher->birthdate}}</p>
                   <p>Cin : {{$teacher->cin}}</p>
-                  <p>Phone : {{$teacher->phone}}</p>
+                  <p>Téléphone : {{$teacher->phone}}</p>
                   <p>Role : @if ($teacher->role == 2) Administrateur @else Enseignant @endif</p>
                     <hr class="divi">
                 </centre>
@@ -28,11 +28,11 @@
 
                 <div class="card-footer">
                   <a href="teachers/{{$teacher->id}}/edit">
-                        <button class="btn sendbtn " >Edit</button>
+                        <button class="btn sendbtn " >modifier</button>
                  </a>
                   <a onclick="event.preventDefault();
                           document.getElementById('delete-form-{{$teacher->id}}').submit();">
-                        <button class="btn deletebtn" >Delete</button>
+                        <button class="btn deletebtn" >Effacer</button>
                  </a>
 
 

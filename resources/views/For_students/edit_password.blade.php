@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12">
             <h4 class="page-head-line">
-                Modifier mot de passe
+                Modifier mot de passe 
             </h4>
         </div>
     </div>
@@ -36,4 +36,3 @@
         </div>
     </div>
 @endsection
-

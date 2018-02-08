@@ -30,7 +30,7 @@ class studentsController extends Controller
             "notifications",
             "showAllTeachers"
 
-            
+
         );
         $this->middleware("VerifyPreviousLocation")->only("demande");
     }
@@ -40,18 +40,18 @@ class studentsController extends Controller
     public function show_dashboard(){
         //display the activity table
         $check_result = Internship::getCurrentInternships(auth()->user()->id);
-        
+
         //if state is accepted, we should load the defense calender for that student
         $defense = $this->getDefenses($check_result);
-        
+
         if(count($defense) == 0 && $this->getState($check_result) == true)
             $defense = "no soutenance";
 
         // return $defense;
         return view("For_students/dashboard")->with([
             "check_demandes" => $check_result,
-            "defense" => $defense 
-        ]); 
+            "defense" => $defense
+        ]);
     }
 
 
@@ -115,15 +115,15 @@ class studentsController extends Controller
         return view('For_students/internship_details')->with("details",$result);
     }
 
-    
+
     // get Notifications
     public function Notifications(){
         $student_id = auth()->user()->id;
         $results = FramingRequest::getNotifications();
         return $results;
     }
-    
-    
+
+
     //show notifications
     public function displayNotification(){
         return view("For_students/show_notifications")->with("framing",$this->Notifications());
@@ -143,7 +143,7 @@ class studentsController extends Controller
         }else{
             $result = $this->hasMinute($user_id);
         }
-       
+
         //  return $result;
         return view("For_students/history")->with([
             "has_defense" => $hasDefense,
@@ -151,8 +151,8 @@ class studentsController extends Controller
         ]);
     }
 
-    
-   
+
+
 
     /***************************POST FORMS****************************/
 
@@ -248,20 +248,20 @@ class studentsController extends Controller
                         }else{
                             return "wrong password confirmation";
                         }
-                
+
                 }else{
                     return "wrong password";
                 }
-        
+
             }else{
                 return "email exist";
             }
-        
+
         }else{
             return "wrong email";
         }
-        
-         
+
+
     }
 
     public function edit_pass(Request $request){
@@ -275,7 +275,7 @@ class studentsController extends Controller
             if(strlen($password_nouv)>=8){
                 //check if password == password confirmation
                 if($password_nouv == $password_confirm){
-                    //update 
+                    //update
                     User::where("email",auth()->user()->email)->update(['password'=>bcrypt($password_nouv)]);
                     //delete session, that user must be login with new password
                     $request->session()->flush();
@@ -283,11 +283,11 @@ class studentsController extends Controller
                 }else{
                     return "wrong password confirmation";
                 }
-            
+
             }else{
                 return "length";
             }
-            
+
         }
 
         return "wrong password";
@@ -314,8 +314,8 @@ class studentsController extends Controller
             return "error";
         }
         return "error";
-        
-                
+
+
     }
 
     //when student reject the teacher's demande
@@ -339,7 +339,7 @@ class studentsController extends Controller
             $check = Internship::getInfoDefense($arr->id);
             if($check != null)
                 array_push($defenses,Internship::getInfoDefense($arr->id));
-            
+
         }
     }
 
@@ -367,8 +367,8 @@ private function hasMinute($user_id){
                 $t->mention = $minute->mention;
                 $t->notes = $minute->notes;
             }
-            
-            
+
+
         }
      return $tab;
 }
@@ -403,7 +403,7 @@ private function Defenses($user_id){
             )
             ->get();
 
-    return $check;  
+    return $check;
 }
 
 

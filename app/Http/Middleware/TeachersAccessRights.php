@@ -6,7 +6,7 @@ use Closure;
 use Auth;
 use App\User;
 
-class TeacherAccessRights
+class TeachersAccessRights
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class TeacherAccessRights
      */
     public function handle($request, Closure $next)
     {
-      if(auth()->user()->role==1)
+      if(auth()->user()->role==1 or auth()->user()->role==2 )
         return $next($request);
 
         return back();

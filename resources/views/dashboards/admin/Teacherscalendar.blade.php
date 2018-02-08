@@ -16,9 +16,8 @@
 	<link href="{{ asset('dashboard_assets/node_modules/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<!-- Main styles for this application -->
-	<link href="{{ asset('dashboard_assets/css/style.css') }}" rel="stylesheet">
 	{{--  AMINE BEJAOUI MODIFICATIONS--}}
-	<link href="{{ asset('dashboard_assets/css/custom_nav_dashboard.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 	{{--  END MODIFICATIONS--}}
 	<!-- Styles required by this views -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -39,94 +38,87 @@
 </head>
 
 
+  @if (!Auth::guest())
+    @if (Auth::user()->role==1)
+      @include('navbar/teachernav')
+    @else
+      @include('navbar/navbar')
+    @endif
+    @else
+      @include('navbar/navbar')
+
+ @endif
+
 <body class="">
-	<script>
+	<div class="container">
 
 
-	    $(document).ready(function() {
 
-	      $('#calendar').fullCalendar({
-	        header: {
-	          left: 'prev,next today',
-	          center: 'title',
-	          right: 'listDay,listWeek,month'
-	        },
 
-	        // customize the button names,
-	        // otherwise they'd all just say "list"
-	        views: {
-	          listDay: { buttonText: 'list day' },
-	          listWeek: { buttonText: 'list week' }
-	        },
 
-	        defaultView: 'listWeek',
-	        defaultDate: '2018-01-12',
-	        navLinks: true, // can click day/week names to navigate views
-	        editable: true,
-	        eventLimit: true, // allow "more" link when too many events
-	        events: [
-	          {
-	            title: 'All Day Event',
-	            start: '2018-01-01'
-	          },
-	          {
-	            title: 'Long Event',
-	            start: '2018-01-07',
-	            end: '2018-01-10'
-	          },
-	          {
-	            id: 999,
-	            title: 'Repeating Event',
-	            start: '2018-01-09T16:00:00'
-	          },
-	          {
-	            id: 999,
-	            title: 'Repeating Event',
-	            start: '2018-01-16T16:00:00'
-	          },
-	          {
-	            title: 'Conference',
-	            start: '2018-01-11',
-	            end: '2018-01-13'
-	          },
-	          {
-	            title: 'Meeting',
-	            start: '2018-01-12T10:30:00',
-	            end: '2018-01-12T12:30:00'
-	          },
-	          {
-	            title: 'Lunch',
-	            start: '2018-01-12T12:00:00'
-	          },
-	          {
-	            title: 'Meeting',
-	            start: '2018-01-12T14:30:00'
-	          },
-	          {
-	            title: 'Happy Hour',
-	            start: '2018-01-12T17:30:00'
-	          },
-	          {
-	            title: 'Dinner',
-	            start: '2018-01-12T20:00:00'
-	          },
-	          {
-	            title: 'Birthday Party',
-	            start: '2018-01-13T07:00:00'
-	          },
-	          {
-	            title: 'Click for Google',
-	            url: 'http://google.com/',
-	            start: '2018-01-28'
-	          }
-	        ]
-	      });
 
-	    });
 
-	      </script>
 
-	<div id='calendar'></div>
+	<div class="col-lg-8 col-md-8 col-lg-offset-2">
+      <div class="card">
+          <div class="card-header" data-background-color="bleu">
+              <h4 class="title">Calendrier de soutenances  </h4>
+              <p class="category"></p>
+          </div>
+          <div class="card-content ">
+
+						<script>
+
+
+								$(document).ready(function() {
+
+									$('#calendar').fullCalendar({
+										locale: 'fr',
+										header: {
+											left: 'prev,next today',
+											center: 'title',
+											right: 'listDay,listWeek,month'
+										},
+
+										// customize the button names,
+										// otherwise they'd all just say "list"
+										views: {
+											listDay: { buttonText: 'liste de jour' },
+											listWeek: { buttonText: 'liste de semaines' }
+										},
+
+										defaultView: 'listWeek',
+										defaultDate: "{{$first}}",
+										navLinks: true, // can click day/week names to navigate views
+										editable: true,
+										eventLimit: true, // allow "more" link when too many events
+										events: [{!! $jscode !!}]
+									});
+
+								});
+
+									</script>
+
+						<div id='calendar'></div>
+
+            </div>
+
+<a class="card-footer  pull-right btn sendbtn" href="{{route("soutenancespdf")}}">Telecharge </a>
+
+          <a href= "{{ URL::previous() }}">
+              <button class="btn deletebtn" style="width:100px;color:snow;background-color:#f26058">Retour</button>
+          </a>
+
+        </div>
+          </div>
+
+
+				</div>
+
+
+
+
+
 
 	<!-- Bootstrap and necessary plugins -->
 
@@ -142,6 +134,7 @@
 	<script src="{{ asset('dashboard_assets/js/app.js') }}"></script>
 	<script src="{{ asset('dashboard_assets/node_modules/moment/moment.js') }}"></script>
 	<script src="{{ asset('dashboard_assets/node_modules/calendar/fullcalendar.min.js') }}"></script>
+	<script src="{{ asset('dashboard_assets/node_modules/calendar/locale-all.js') }}"></script>
 	<script src="{{ asset('js/sweetalert.min.js')}}"></script>
 	<script src="{{ asset('js/dashboardInvitations.js')}}"></script>
 
