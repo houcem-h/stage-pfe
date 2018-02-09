@@ -88,13 +88,17 @@
             @if(in_array('pfe',auth()->user()->LegalIntershipsTypes) && Session::has('teachers'))
                 <div class="form-group" id="divforframerone" style='display:none;'>
                      {{Form::label('framer','Demande Encadreur')}}
-                     {{Form::select('framer',(array)Session::get('teachers'),null,['id'=>'framer','class'=>'form-control'])}}
+                     {{Form::select('framer',(array)Session::get('teachers'),null,['id'=>'framer','class'=>'form-control','placeholder' => 'selectionner'])}}
+                </div>
+                <div class="form-group" id="divforbuddy" style="display:none;">
+                    {{Form::label('buddy','Binôme')}}
+                    {{Form::select('buddy',(array)auth()->user()->Buddy,null,['id'=>'buddy','class'=>'form-control','placeholder' => 'selectionner'])}}
                 </div>
                 {{Session::forget('teachers')}}              
             @else
                 <div class="form-group" style="display:none;">
                      {{Form::label('framer','Encadreur Etablissement')}}
-                     {{Form::select('framer',(array)Session::get('teachers'),null,['id'=>'framer','class'=>'form-control'])}}
+                     {{Form::select('framer',(array)Session::get('teachers'),null,['id'=>'framer','class'=>'form-control','placeholder' => 'selectionner'])}}
                      {{Session::forget('teachers')}}
                 </div>            
             @endif
