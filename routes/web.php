@@ -11,6 +11,14 @@
 |
 */
 
+Route::get('a_propos', function() {
+    return View('CustomAuth.apropos');
+})->name('a_propos');
+
+Route::get('/dashboard/soutenances_cette_annee' , 'GetStat@soutenance_cette_annee')->name('soutenance_cette_annee');
+Route::get('/dashboard/soutenances_historique' , 'GetStat@soutenance_historique')->name('soutenance_historique');
+Route::get('/dashboard/soutenances_historique/{years}' , 'GetStat@soutenance_historique_by_years');
+Route::get('/dashboard/pdf/soutenance/{id}' , 'GetStat@soutenance_pdf_id');
 Route::get('/dashboard/encadrement_waiting', 'GetStat@encadrement_waiting')->name('encadrement_waiting');
 Route::get('/dashboard/encadrement_accepted', 'GetStat@encadrement_accepted')->name('encadrement_accepted');
 Route::get('/dashboard/encadrement_rejected', 'GetStat@encadrement_rejected')->name('encadrement_rejected');
@@ -19,7 +27,7 @@ Route::get('frame_req/{id}' , 'GetStat@getframingreq_by_id');
 Route::get('frame_accept/{id}' , 'GetStat@accept_framing');
 Route::get('frame_reject/{id}' , 'GetStat@reject_framing');
 Route::get('frame_waiting/{id}' , 'GetStat@waiting_framing');
-
+Route::get('/jobs' , 'GetStat@get_jobs_nb')->name('jobscount');
 
 //********************************************* Routes by Adem-kk *************************************//
 
@@ -62,12 +70,13 @@ Route::get('/dashboard/teacherInvitations', "Admin\dashboardController@showTeach
 // upgrade + pdf
 Route::get('/dashboard/UpgradeUser', 'GetStat@upgrade_teacher');
 Route::get('/upgrade_by_id/{id}' , 'GetStat@upgrade_by_id');
+Route::get('/downgrade_by_id/{id}' , 'GetStat@downgrade_by_id');															
 Route::get('/dashboard/pdf/soutenances', 'GetStat@pdf_calendar');
 
 /** Ajax Delete User from Dashboard as admin */
 Route::get('/deleteuser/{id}' , 'GetStat@destroyuser');
 /** Test */
-Route::get('/getuserinfo/{id}' , 'GetStat@getuserdata');
+Route::get('/getuserinfo/{id}' , 'GetStat@getuserdata')->name('getuserinfo');
 /** Ajax Update Users Info */
 Route::post('/updateuser' , 'GetStat@updateinfousers');
 Route::get('dashboard/Companies', function() {
@@ -235,7 +244,7 @@ Route::post("FinalResetPassword","customAuth\customAuthReset@StoreNewPassword");
 
         //Pour oussema, route dashboard, fi route mte3i  ;)
         Route::get('/studentdashboard','PagesController@studentDashboard');
-        Route::get('teacherhome','DashboardsController@index');
+         Route::get('/teacherhome','DashboardsController@index')->name("teacherhome");
         Route::get('/managerteacherdashboard','PagesController@managerTeacherDashboard');
 
     });

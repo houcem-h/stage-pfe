@@ -17,7 +17,7 @@
 
     <tbody>
         @foreach($teachers as $teacher)
-            <tr id="{{ $teacher->id }}">
+            <tr id="{{ $teacher->id }}" userEmail="{{$teacher->email}}">
                 <td><input type="checkbox" class="checkboxTeacher"></td>
                 <td>{{ $teacher->firstname }} {{ $teacher->lastname }}</td>
                 <td style="text-align:right">

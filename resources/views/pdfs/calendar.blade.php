@@ -28,12 +28,12 @@
                           <tr role="row">
                             <th>Date Soutenance</th>
                             <th>Nom et Prénom</th>
-                            <th>CIN</th>
+                            <th>CIN</th> 
                             <th>Salle</th>
-                            <th>Société</th>
-                            <th>Type Stage</th>
-                            <th>Rapporteur</th>
-                            <th>Président</th>
+                            <th>Société</th>   
+                            <th>Type Stage</th>   
+                            <th>Rapporteur</th> 
+                            <th>Président</th> 
                           </tr>
                         </thead>
                         <tbody>
@@ -51,6 +51,8 @@
                         @endforeach
                         </tbody>
                       </table>
-
+    
         </body>
         </html>
+    
+    

@@ -9,7 +9,7 @@
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h4 class="modal-title">Modify User</h4>
+                      <h4 class="modal-title">Modifier L'utilisateur</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                       </button>
@@ -21,12 +21,12 @@
                         <div class="row">
                                         <input type="hidden" id="id">
                                         <div class="form-group col-sm-6">
-                                          <label for="city">First Name</label>
+                                          <label for="city">Prénom</label>
                                           <input type="text" class="form-control" id="firstname" >
                                         </div>
                     
                                         <div class="form-group col-sm-6">
-                                          <label for="postal-code">Last Name</label>
+                                          <label for="postal-code">Nom</label>
                                           <input type="text" class="form-control" id="lastname" >
                                         </div>
                     
@@ -64,7 +64,7 @@
                                         <div class="col-sm-12">
                     
                                           <div class="form-group">
-                                            <label for="name">Phone</label>
+                                            <label for="name">Tel</label>
                                             <input type="text" class="form-control" id="phone">
                                           </div>
                     
@@ -78,8 +78,8 @@
 
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button id="savechanges" type="button" class="btn btn-primary" onclick="updateinfo()">Save changes</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                      <button id="savechanges" type="button" class="btn btn-primary" onclick="updateinfo()">Enregistrer</button>
                     </div>
                   </div>
                   <!-- /.modal-content -->
@@ -118,11 +118,9 @@
                 <thead class="thead-light">
                   <tr>
                     <th class="text-center">Type</th>
-                    <th>Full Name</th>
+                    <th>Nom et Prénom</th>
                     <th>Email</th>
-                    <th>Birthday</th>
                     <th>Phone</th>
-                    <th>CIN</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -146,7 +144,7 @@
                             <td>
                                         <div><i class="icon-user"></i>&nbsp; {{$user->firstname}} {{$user->lastname}}</div>
                                         <div class="small text-muted">
-                                          <span>Registered: {{$user->created_at}}</span>
+                                          <span>Date D'enregistrement: {{$user->created_at}}</span>
                                         </div>
 
                             </td>
@@ -155,20 +153,13 @@
                             <td>
                                     <span>{{$user->email}}</span>
                             </td>
-                                <!-- birthdate -->
-                            <td>
-                                       {{$user->birthdate}}
-                             </td>
+                               
                                <!-- tel -->
                             <td>
                                     {{$user->phone}}
                             </td>
                                 
-                                
-                                 <!-- cin -->
-                             <td>
-                                    {{$user->cin}}
-                            </td>
+                               
                                         <!-- Edit and Delete Btn -->
                              <td>
                                         <div class="center">
@@ -325,7 +316,8 @@
         
         
                 <script>
-                                /****** Ajax Modify User **********/
+                       
+                  /****** Ajax Modify User **********/
                         
         function modifyinfo(id) {
                 var firstname = '';

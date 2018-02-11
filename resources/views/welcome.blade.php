@@ -9,7 +9,9 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" type="text/css" href="{{ asset('LoginTemplate/css/koukicons.min.css') }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css" rel="stylesheet" type="text/css">
+        
         <!-- Styles -->
         <style>
             html, body {
@@ -65,28 +67,42 @@
         </style>
     </head>
     <body>
+
+
+        
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Accueil</a>
-                    @else
-                        <a href="{{ route('connecter') }}">Connexion</a>
-                        <a href="{{ route('chooseRole') }}">Inscription</a>
-                    @endauth
-                </div>
-            @endif
+           
 
             <div class="content">
                 <div class="title m-b-md">
-                    Stage &amp; PFE
+                    <i class="kk kk-graduation_cap"></i> Stage &amp; PFE
                 </div>
+             
 
                 <div class="links">
-                    <a href="http://www.isetb.rnu.tn/">Site ISET Bizerte</a>
-                    <a href="http://www.isetb.rnu.tn/">Site département TI</a>
-                    <a href="https://www.facebook.com/D%C3%A9partement-Technologies-de-lInformatique-ISET-de-Bizerte-292264790839063/">Page Facebook département TI</a>
+                        @if (Route::has('login'))
+                        
+                            @auth
+                                <a class="btn btn-lg btn-outline-info waves-effect" href="{{ url('/home') }}"><i class="kk kk-home"></i>&nbsp;&nbsp; Accueil</a>
+                            @else
+                                <a class="btn btn-lg btn-outline-danger waves-effect" href="{{ route('connecter') }}"><i class="kk kk-key-x"></i>&nbsp;&nbsp;Connexion</a>
+                                <a class="btn btn-lg btn-outline-success waves-effect" href="{{ route('chooseRole') }}"><i class="kk kk-Plus-Fill"></i>&nbsp;&nbsp;Inscription</a>
+                            @endauth
+                        
+                    @endif
                 </div>
+
+              
+                <br>
+                <div class="links">
+                        <a href="http://www.isetb.rnu.tn/" class="btn btn-outline-secondary btn-rounded waves-effect"><i class="kk kk-internet"></i>&nbsp;&nbsp;Site ISET Bizerte</a>
+                        <a class="btn btn-outline-primary btn-rounded waves-effect" href="https://www.facebook.com/D%C3%A9partement-Technologies-de-lInformatique-ISET-de-Bizerte-292264790839063/"><i class="kk kk-facebook"></i>&nbsp;&nbsp;Page Facebook ISET Bizerte</a>
+                        <a class="btn btn-outline-primary btn-rounded waves-effect" href="https://www.facebook.com/D%C3%A9partement-Technologies-de-lInformatique-ISET-de-Bizerte-292264790839063/"><i class="kk kk-facebook"></i>&nbsp;&nbsp;Page Facebook ISET Bizerte Département TI</a>
+                </div>
+
+
+
+
             </div>
         </div>
     </body>

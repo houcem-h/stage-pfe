@@ -26,7 +26,7 @@ use auth;
 class DashboardsController extends Controller
 {
   public function __construct(){
-     $this->middleware('TeachersAccessRights');
+     $this->middleware('TeacherAccessRights');
   }
 // Teachers Dashbord
   public function index()
@@ -50,6 +50,25 @@ class DashboardsController extends Controller
 
 
 //
+				   
+							  
+	
+							 
+									 
+																										   
+																					   
+																								 
+																												
+									  
+  
+														   
+															
+							  
+							   
+								
+										
+  
+  
 
 public  function calendar()
 {
@@ -64,6 +83,13 @@ public  function calendar()
   $x= Defense::where('reporter', $id)->get()->toArray();
   $y= Defense::where('president', $id)->get()->toArray();
   $xy = array_merge($x,$y);
+							 
+					
+  
+								 
+								
+							  
+  
                 //return $x;
                 $jscode = '';
                 foreach($xy as $day) {
@@ -257,7 +283,14 @@ public function Settingspass()
                     //update
                     User::where("email",auth()->user()->email)->update(['password'=>bcrypt($password_nouv)]);
                     //delete session, that user must be login with new password
+														  
+														
+												  
+												  
+														  
                     $request->session()->flush();
+						
+  
                     return "done";
                 }else{
                     return "wrong password confirmation";
@@ -266,6 +299,7 @@ public function Settingspass()
             }else{
                 return "length";
             }
+						  
 
         }
 

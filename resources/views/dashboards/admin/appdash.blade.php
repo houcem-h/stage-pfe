@@ -51,7 +51,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<ul class="nav navbar-nav mr-auto">
+		<ul class="nav navbar-nav mr-auto  d-md-down-none">
 {{-- Hazem MODIFICATIONS --}}
 			<!-- <li><a href="{{route('teachers')}}">Teachers  list</a></li>
 			<li><a href="{{'teachers/create'}}">Add teacher</a></li>
@@ -107,10 +107,10 @@
 
 
 		</ul>
-		<ul class="nav navbar-nav ml-auto" id="custom">
+		<ul class="nav navbar-nav ml-auto  d-md-down-none" id="custom">
 			
 			<li class="nav-item dropdown">
-					<li><a class="btn btn-primary" style="pointer:cursor" href="../teacherhome"><i class="icon-briefcase"></i> Connecter En Tant Qu'Enseignant</a></li>
+					<li><a class="btn btn-primary" style="pointer:cursor" href="{{route('teacherhome')}}"><i class="icon-briefcase"></i> Connecter En Tant Qu'Enseignant</a></li>
 				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 					<img src="{{ asset('dashboard_assets/img/avatars/user.png') }}" class="img-avatar" alt="admin@stage.com">
 				</a>
@@ -195,7 +195,7 @@
 										<i class="kk kk-users2"></i>Étudiants</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('teachers') }}">
+									<a class="nav-link" href="{{ route('teachers_list') }}">
 										<i class="kk kk-users2"></i>Enseignants</a>
 								</li>
 								<li class="nav-item">
@@ -204,29 +204,8 @@
 								</li>
 							</ul>
 						</li>
-						<li class="nav-item nav-dropdown">
-							<a class="nav-link nav-dropdown-toggle" href="#">
-								<i class="kk kk-event-date2"></i>Soutenances</a>
-							<ul class="nav-dropdown-items">
-								<li class="nav-item">
-									<a class="nav-link" href="/dashboard/defenses/all">
-											<i class="kk kk-event-date2"></i>All</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="/dashboard/defenses/accepted">
-											<i class="kk kk-event-date2"></i>Accepted</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="/dashboard/defenses/waiting">
-											<i class="kk kk-event-date2"></i>Waiting</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="/dashboard/defenses/rejected">
-											<i class="kk kk-event-date2"></i>Refused</a>
-								</li>
-	
-							</ul>
-						</li>
+
+
 						<li class="nav-item nav-dropdown">
 								<a class="nav-link nav-dropdown-toggle" href="#">
 									<i class="kk kk-department"></i>Stages</a>
@@ -250,34 +229,81 @@
 	
 								</ul>
 							</li>
+
+							<li class="nav-item nav-dropdown">
+									<a class="nav-link nav-dropdown-toggle" href="#">
+										<i class="kk kk-import"></i>Encadrements</a>
+									<ul class="nav-dropdown-items">
+											<li class="nav-item">
+													<a class="nav-link" href="{{route('encadrement_waiting')}}">
+														<i class="kk kk-import"></i>En Attente</a>
+												</li>
+										<li class="nav-item">
+											<a class="nav-link" href="{{ route('encadrement_accepted')}}">
+												<i class="kk kk-import"></i>Verifié</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="{{ route('encadrement_rejected')}}">
+												<i class="kk kk-import"></i>Refusé</a>
+										</li>
+									
+		
+									</ul>
+								</li>
+
+
+
+						<li class="nav-item nav-dropdown">
+							<a class="nav-link nav-dropdown-toggle" href="#">
+								<i class="kk kk-event-date2"></i>Soutenances</a>
+							<ul class="nav-dropdown-items">
+									<li class="nav-item">
+											<a class="nav-link" href="{{route('soutenance_cette_annee')}}">
+													<i class="kk kk-event-date2"></i>Cette Année</a>
+										</li>
+										<li class="nav-item">
+												<a class="nav-link" href="{{route('soutenance_historique')}}">
+														<i class="kk kk-event-date2"></i>Historique</a>
+											</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/dashboard/defenses/all">
+											<i class="kk kk-event-date2"></i>Tous</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/dashboard/defenses/accepted">
+											<i class="kk kk-event-date2"></i>Accepted</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/dashboard/defenses/waiting">
+											<i class="kk kk-event-date2"></i>Waiting</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/dashboard/defenses/rejected">
+											<i class="kk kk-event-date2"></i>Refused</a>
+								</li>
+	
+							</ul>
+						</li>
+
+
+
+						
+
+
 						<li class="nav-item">
 								<a class="nav-link" href="{{ route('companies')}}">
 									<i class="kk kk-pos"></i> Sociétés
 								</a>
 						</li>
-						<li class="nav-item nav-dropdown">
-								<a class="nav-link nav-dropdown-toggle" href="#">
-									<i class="kk kk-import"></i>Encadrements</a>
-								<ul class="nav-dropdown-items">
-										<li class="nav-item">
-												<a class="nav-link" href="{{route('encadrement_waiting')}}">
-													<i class="kk kk-import"></i>En Attente</a>
-											</li>
-									<li class="nav-item">
-										<a class="nav-link" href="{{ route('encadrement_accepted')}}">
-											<i class="kk kk-import"></i>Verifié</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="{{ route('encadrement_rejected')}}">
-											<i class="kk kk-import"></i>Refusé</a>
-									</li>
-								
-	
-								</ul>
-							</li>
+
+
+						
+
+
+
 						<li class="nav-item">
 							<a class="nav-link" href="{{route('Mailer')}}">
-								<i class="kk kk-envelope-forward"></i> Mailer
+								<i class="kk kk-envelope-forward"></i> Mailer <span class="badge badge-pill badge-danger" id="nb_mail"></span>
 							</a>
 						</li>
 						<li class="nav-item">
@@ -325,6 +351,33 @@
 			<a href="#">ISET Dev <i class="kk kk-code"></i></a>
 		</span>
 	</footer>
+
+
+
+	<!--get number of jobs -->
+	<script>
+			var i = setInterval(function(){
+				$.ajax({
+					type:"GET",
+					url:"{{ route('jobscount')}}",
+					datatype:"html",
+					success:function(data)
+					{
+						$('#nb_mail').text(data + " En Attente")
+					}
+				  });
+			 },3000)
+	</script>
+
+
+
+
+
+
+
+
+
+
 
 	<!-- Bootstrap and necessary plugins -->
 
