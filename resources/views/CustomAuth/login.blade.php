@@ -1,8 +1,18 @@
 @extends("../layouts/customApp")
 
 @section("content")
+
+
+
+	  
+
+<!--nav for login-->
+@include("../CustomAuth/homenav")
+
 <div class="limiter">
+	
 	<div class="container-login100" style="background:#eaeaea">
+		
 		<div class="wrap-login100">
 			<div class="login100-pic js-tilt" data-tilt>
 				<img src="{{ asset('LoginTemplate/images/img-01.png') }}" alt="IMG">
@@ -11,11 +21,11 @@
 			<form class="login100-form validate-form" action="{{ route('login') }}" method="POST" id="loginForm">
 					{{ csrf_field() }}
 				<span class="login100-form-title">
-					Se connecter
+						<i class="kk kk-key-x"></i>&nbsp;&nbsp;Se Connecter
 				</span>
 
 				<div class="wrap-input100 validate-input" data-validate = "Adresse email est obligatoire">
-					<input class="input100" type="text" name="email" placeholder="Email" id="emailLog">
+					<input class="input100" type="text" name="email" placeholder="Votre Email..." id="emailLog">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
 						{{--  <i class="fa fa-envelope" aria-hidden="true"></i>  --}}
@@ -24,7 +34,7 @@
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "Mot de passe est obligatoire">
-					<input class="input100" type="password" name="password" placeholder="Password" id="passLog">
+					<input class="input100" type="password" name="password" placeholder="Mot de passe..." id="passLog">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
 						{{--  <i class="fa fa-lock" aria-hidden="true"></i>  --}}
@@ -40,15 +50,16 @@
 
 				<div class="text-center p-t-12">
 					<a class="txt2" href="{{ route('reset') }}">
-						Mot de passe oubliée?
-					</a>
+						<i class="kk kk-Key"></i> Mot De Passe Oubliée ?
+					</a><br>
+					<a class="txt2" href="{{ route('chooseRole') }}" id="select_role">
+							<i class="kk kk-Plus-Fill"></i> Créer Un Compte
+							
+						</a>
 				</div>
 
 				<div class="text-center p-t-136">
-					<a class="txt2" href="{{ route('chooseRole') }}" id="select_role">
-						Creer votre compte
-						<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-					</a>
+					
 				</div>
 			</form>
 		</div>

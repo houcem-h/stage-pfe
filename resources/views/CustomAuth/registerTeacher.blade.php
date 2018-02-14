@@ -1,5 +1,6 @@
 @extends("../layouts/customApp")
-
+<!--nav for login-->
+@include("../CustomAuth/homenav")
 @section("content")
 <div class="limiter">
 	<div class="container-login100" style="background:#eaeaea">

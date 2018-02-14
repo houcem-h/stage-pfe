@@ -9,7 +9,7 @@
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h4 class="modal-title">Modify User</h4>
+                      <h4 class="modal-title">Modifier L'utilisateur</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                       </button>
@@ -21,12 +21,12 @@
                         <div class="row">
                                         <input type="hidden" id="id">
                                         <div class="form-group col-sm-6">
-                                          <label for="city">First Name</label>
+                                          <label for="city">Prénom</label>
                                           <input type="text" class="form-control" id="firstname" >
                                         </div>
                     
                                         <div class="form-group col-sm-6">
-                                          <label for="postal-code">Last Name</label>
+                                          <label for="postal-code">Nom</label>
                                           <input type="text" class="form-control" id="lastname" >
                                         </div>
                     
@@ -64,7 +64,7 @@
                                         <div class="col-sm-12">
                     
                                           <div class="form-group">
-                                            <label for="name">Phone</label>
+                                            <label for="name">Tel</label>
                                             <input type="text" class="form-control" id="phone">
                                           </div>
                     

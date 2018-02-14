@@ -59,7 +59,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'StudentAccessRights'=>\App\Http\Middleware\StudentAccessRights::class,
         'AdminAccessRights'=>\App\Http\Middleware\AdminAccessRights::class,
-        'TeachersAccessRights'=>\App\Http\Middleware\TeachersAccessRights::class,
+        'TeacherAccessRights'=>\App\Http\Middleware\TeacherAccessRights::class,
         'IntershipsAccessRights'=>\App\Http\Middleware\IntershipsAccessRights::class,
         'redirectDependingRole'=>\App\Http\Middleware\RedirectDependingToRole::class,
         "VerifyPreviousLocation" => \App\Http\Middleware\VerifyPreviousLocation::class,

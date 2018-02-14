@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use PDF;
-
+use Carbon\Carbon;
 
 class GetStat extends Controller
 {
@@ -468,16 +468,71 @@ class GetStat extends Controller
         public static function soutenance_all(){
             $alldata = DB::table('defenses')
                 
-                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
-                ->join('users' , 'internships.student', '=' , 'users.id')
-                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
-                ->join('groups', 'registrations.group' , 'groups.id')
+            ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+            ->join('users' , 'internships.student', '=' , 'users.id')
+            ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+            ->join('groups', 'registrations.group' , 'groups.id')
+            ->select("users.id as userid", "defenses.*" , "internships.*" , "registrations.*" , "groups.*" , "users.*")
                 ->get(); 
                 //return $alldata;
                 return View('dashboards.admin.soutenance_all' , ['alldata' => $alldata]);
                 
         }
 
+        public static function soutenance_cette_annee(){
+            $alldata = DB::table('defenses')
+                
+                
+
+
+                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                ->join('users' , 'internships.student', '=' , 'users.id')
+                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+                ->join('groups', 'registrations.group' , 'groups.id')
+                ->select("users.id as userid", "defenses.*" , "internships.*" , "registrations.*" , "groups.*" , "users.*")
+                ->where('session' , "=" , GetStat::thisYearSession())
+                ->get(); 
+                //return $alldata;
+                return View('dashboards.admin.soutenance_cette_annee' , ['alldata' => $alldata]);
+                
+        }
+
+        public static function soutenance_historique(){
+
+           
+                $alldata = DB::table('defenses')
+                
+                ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                ->join('users' , 'internships.student', '=' , 'users.id')
+                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+                ->join('groups', 'registrations.group' , 'groups.id')
+                ->select("users.id as userid", "defenses.*" , "internships.*" , "registrations.*" , "groups.*" , "users.*")
+                ->where('session' , "=" , GetStat::thisYearSession())
+                ->get(); 
+                //return $alldata;
+                return View('dashboards.admin.soutenance_historique' , ['alldata' => $alldata]);
+            
+                
+        }
+
+
+        public static function soutenance_historique_by_years($years){
+
+            $years  = str_replace('-' , '/' , $years);
+            $alldata = DB::table('defenses')
+            
+            ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+                ->join('users' , 'internships.student', '=' , 'users.id')
+                ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+                ->join('groups', 'registrations.group' , 'groups.id')
+                ->select("users.id as userid", "defenses.*" , "internships.*" , "registrations.*" , "groups.*" , "users.*")
+            ->where('session' , "=" , "$years")
+            ->get(); 
+            //return $alldata;
+            return View('dashboards.admin.soutenance_historique' , ['alldata' => $alldata]);
+        
+            
+    }
        
         public static function soutenance_accepted(){
             $alldata = DB::table('defenses')
@@ -531,7 +586,7 @@ class GetStat extends Controller
             
             ->get(); 
 
-
+            //return $alldata;
             $f_data = $alldata->filter(function ($customer) {
                 return $customer->state == 'rejected';
             });
@@ -722,7 +777,7 @@ class GetStat extends Controller
 
         public function upgrade_teacher() {
             $alldata = DB::table('users')
-                        ->where('users.role' , '=' , '1')
+                        ->where('users.role' , '!=' , '0')
                         ->get();
                 return View('dashboards.admin.upgradeuser' , ['alldata' => $alldata]);
                    
@@ -735,6 +790,12 @@ class GetStat extends Controller
 	                ->update(array('role' => '2'));
                         return "done!";      
         }
+
+        public static function downgrade_by_id($id) {
+            $x =  DB::table('users')->where('id', '=', $id)
+                     ->update(array('role' => '1'));
+                         return "done!";      
+         }
 
         public static function color_by_type($type) {
             if($type == "init")
@@ -986,5 +1047,45 @@ public function waiting_framing($id) {
 
 return "Framing is waiting!";
 }
+
+
+public static function get_jobs_nb(){
+    //return jobs count
+    $alldata = DB::table('jobs')->get();
+            return count($alldata);
+}
+
+
+
+
+public static function thisYearSession(){
+     //if date between 01 and 09 (jan to sept) return 'this_year' session else return 'this_year_+1'
+    if(Carbon::now()->between(
+        Carbon::create(Carbon::now()->year,1,1,0,0,0),
+        Carbon::create(Carbon::now()->year,9,1,0,0,0)
+    )){
+        return strval(Carbon::now()->year-1)."/".strval(Carbon::now()->year);
+    }
+
+    return strval(Carbon::now()->year)."/".strval(Carbon::now()->year+1);
+}
+
+public static function soutenance_pdf_id($id) {
+    $alldata = DB::table('defenses')
+                
+    ->join('internships' , 'defenses.internship', '=' , 'internships.id')
+    ->join('users' , 'internships.student', '=' , 'users.id')
+    ->join('registrations' , 'internships.student' , '=' , 'registrations.student')
+    ->join('groups', 'registrations.group' , 'groups.id')
+    ->select("users.id as userid", "defenses.*" , "internships.*" , "registrations.*" , "groups.*" , "users.*")
+    ->get();
+    $f_data =  $alldata->where('userid' , "=" , "$id")->take(1);
+   
+    $pdf = PDF::loadView('pdfs.fiche', ['fiche' => $f_data]);
+    return $pdf->stream();
+
+   
+}
+
 
 }

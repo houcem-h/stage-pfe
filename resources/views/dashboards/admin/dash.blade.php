@@ -6,7 +6,7 @@
 
 <div class="row">
 
-		<!-- All users -->
+		<!-- Utilisateurs -->
 		<div id="1" class="col-sm-6 col-md-2">
 			<div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
 			  <div class="card-body">
@@ -19,6 +19,20 @@
 			</div>
 		  </div>
 		  <!--/.end-->
+
+	<!-- Stages -->
+	<div id="10" class="col-sm-6 col-md-2">
+      <div class="card text-white" style="background-color:#e74c3c !important; border-color: #e74c3c !important; ">
+        <div class="card-body">
+        <div class="h1 text-muted text-center mb-4">
+          <i class="kk kk-department"></i>
+        </div>
+        <div class="h5 mb-0">Stages</div>
+        <small>Gestion Des Stages</small>
+        </div>
+      </div>
+      </div>
+  <!--/.end-->
 
 
 		<!-- Soutenances -->
@@ -35,19 +49,7 @@
 		  </div>
 		  <!--/.end-->
 
-	<!-- Div -->
-	<div id="10" class="col-sm-6 col-md-2">
-		<div class="card text-white" style="background-color:#e74c3c !important; border-color: #e74c3c !important; ">
-		  <div class="card-body">
-			<div class="h1 text-muted text-center mb-4">
-			  <i class="kk kk-department"></i>
-			</div>
-			<div class="h5 mb-0">Stages</div>
-			<small>Gestion Des Stages</small>
-		  </div>
-		</div>
-	  </div>
-	  <!--/.end-->
+
 
 		<!-- Soutenances -->
 		<div id="5" class="col-sm-6 col-md-2">
@@ -112,7 +114,6 @@
 
 
 
-
     
   </div>
 
@@ -125,126 +126,67 @@
 
 <div class="container-fluid">
 <div class="row">
-<!--
-    <div class="col-12 col-lg-3">
-      <div class="card">
-        <div class="card-body p-3 clearfix">
-          <i class="kk kk-users2 p-3 font-2xl mr-3 float-left"></i>
-          <div class="h5 text-primary mb-0 mt-2"> {{App\Http\Controllers\GetStat::getNumberofStudents()}} </div>
-          <div class="text-muted text-uppercase font-weight-bold font-xs"><i class="icon-badge"></i> Students</div>
+    <div class="col-sm-12 col-lg-6">
+
+        <div class="card">
+          <div class="card-header">
+              <i class="kk kk-users"></i> Nombre D'Etudiant (Par Groupe)
+            
+          </div>
+          <div class="card-body">
+            <div class="chart-wrapper">
+              <canvas id="canvas-5"></canvas>
+            </div>
+          </div>
         </div>
-        <div class="card-footer px-3 py-2">
-          <a class="font-weight-bold font-xs btn-block text-muted" href="{{ route('students') }}">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
-        </div>
+       <!--end card-->
+  
+
       </div>
-    </div>
-
-
-    <div class="col-12 col-lg-3">
-      <div class="card">
-        <div class="card-body p-3 clearfix">
-          <i class="kk kk-camera-bag p-3 font-2xl mr-3 float-left"></i>
-          <div class="h5 text-success mb-0 mt-2">{{App\Http\Controllers\GetStat::getNumberofTeachers()}}</div>
-          <div class="text-muted text-uppercase font-weight-bold font-xs"><i class="icon-badge"></i> Teachers</div>
-        </div>
-        <div class="card-footer px-3 py-2">
-          <a class="font-weight-bold font-xs btn-block text-muted" href="{{ route('teachers') }}">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-lg-3">
-      <div class="card">
-        <div class="card-body p-3 clearfix">
-          <i class="kk kk-department p-3 font-2xl mr-3 float-left"></i>
-          <div class="h5 text-warning mb-0 mt-2">{{App\Http\Controllers\GetStat::getNumberofInternships()}}</div>
-          <div class="text-muted text-uppercase font-weight-bold font-xs"><i class="icon-badge"></i> Interships</div>
-        </div>
-        <div class="card-footer px-3 py-2">
-          <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-12 col-lg-3">
-      <div class="card">
-        <div class="card-body p-3 clearfix">
-          <i class="kk kk-presentation-text  p-3 font-2xl mr-3 float-left"></i>
-          <div class="h5 text-danger mb-0 mt-2">{{App\Http\Controllers\GetStat::getNumberofDefences()}}</div>
-          <div class="text-muted text-uppercase font-weight-bold font-xs"><i class="icon-badge"></i> Defences</div>
-        </div>
-        <div class="card-footer px-3 py-2">
-          <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
--->
-
-<div class="card-columns cols-2">
-
-
-                <div class="card">
-                    <div class="card-header">
-                     <i class="kk kk-users"></i> Nombre D'Etudiant (Par Groupe)
-                    </div>
-                    <div class="card-body">
-                      <div class="chart-wrapper"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-                        <canvas id="canvas-5" style="display: block; width: 483px; height: 241px;" width="483" height="241" class="chartjs-render-monitor"></canvas>
-                      </div>
-                    </div>
+      <!--end col -->
+      <div class="col-sm-12 col-lg-6">
+       <div class="card">
+          <div class="card-header">
+              <i class="kk kk-Activity"></i>  Comptes
+          </div>
+          <div class="card-body">
+         
+                  <div>
+                    <i class="icon-user-follow bg-warning p-4 font-2xl mr-3 float-left"></i>
+                    <div class="h5 text-warning mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBwaitingUsers()}}</div>
+                    <div class="text-muted text-uppercase font-weight-bold font-xs">Comptes En Attente</div>
                   </div>
 
-                  <div class="card">
-                      <div class="card-header">
-                          <i class="kk kk-Activity"></i>  Comptes
+                  <br>
 
-                      </div>
-                      <div class="card-body">
-                        <div class="chart-wrapper"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                  <div>
+                      <i class="icon-user-following bg-success p-4 font-2xl mr-3 float-left"></i>
+                      <div class="h5 text-success mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBacceptedUsers()}}</div>
+                      <div class="text-muted text-uppercase font-weight-bold font-xs">Comptes Vérifiés</div>
+                  </div>
+                  <br>
+                  <div>
+                      <i class="icon-user-unfollow bg-danger p-4 font-2xl mr-3 float-left"></i>
+                      <div class="h5 text-danger mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBrejectedUsers()}}</div>
+                      <div class="text-muted text-uppercase font-weight-bold font-xs">Comptes Rejetés</div>
+                  </div>
 
-                        <div style="display: block; width: 483px; height: 241px;" width="483" height="241" class="chartjs-render-monitor">
-                           <div>
-                                <div>
-                                  <i class="icon-user-follow bg-warning p-4 font-2xl mr-3 float-left"></i>
-                                  <div class="h5 text-warning mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBwaitingUsers()}}</div>
-                                  <div class="text-muted text-uppercase font-weight-bold font-xs">Comptes En Attente</div>
-                                </div>
-
-                                <br>
-
-                                <div>
-                                    <i class="icon-user-following bg-success p-4 font-2xl mr-3 float-left"></i>
-                                    <div class="h5 text-success mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBacceptedUsers()}}</div>
-                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Comptes Vérifiés</div>
-                                </div>
-                                <br>
-                                <div>
-                                    <i class="icon-user-unfollow bg-danger p-4 font-2xl mr-3 float-left"></i>
-                                    <div class="h5 text-danger mb-0 pt-3">{{\App\Http\Controllers\GetStat::getNBrejectedUsers()}}</div>
-                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Comptes Rejetés</div>
-                                </div>
-
-                              </div>
-
-
-
-                        </div>
-
-
-                      </div>
-                      </div>
-                    </div>
+              
+          </div>
         </div>
+       <!--end card-->
+
+
+      </div>
+      <!--end col -->
 
 
 
- </div>
-</div>
-
+      
+    </div>
+    <!--end row-->
+  </div>
+  <!--end container-->
 
 
 
@@ -274,7 +216,7 @@
         <!--/.col-->
       </div>
       <!--/.row-->
-
+    
       <div class="chart-wrapper" style="height:auto;margin-top:40px;"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
         <div >
                 <!-- calendar -->
@@ -299,7 +241,7 @@
                                             events: [
                                               {!! \App\Http\Controllers\GetStat::get_calendar_dates()!!}
                                             ],
-
+                                            
                                           });
 
                                         });
@@ -356,12 +298,13 @@
     //added by amine
     $("#13").css("cursor", "pointer");
     $("#14").css("cursor","pointer");
-
-
+    
+    
+  
 $('#1').click(function() {
   swal({
     title: '<h3>Selectionner :</h3>',
-
+   
     html:
       `<div class="row">
         <div class="col-md-4 col-sm-12" style="cursor:pointer" >
@@ -377,16 +320,16 @@ $('#1').click(function() {
               </div>
 
 
-        </div>
+        </div>  
         <div id="user_etudiant" class="col-md-4 col-sm-12"  style="cursor:pointer">
-
+         
             <div class="card text-white" style="background-color:rgb(67, 181, 31) !important; border-color: rgb(67, 181, 31) !important; cursor:pointer">
                 <div class="card-body">
                   <div class="h1 text-muted text-center mb-4">
                     <i class="kk kk-users"></i>
                   </div>
                   <div class="h6 mb-0">Étudiants</div>
-
+                 
                 </div>
               </div>
 
@@ -400,7 +343,7 @@ $('#1').click(function() {
                     <i class="kk kk-camera-bag"></i>
                   </div>
                   <div class="h6 mb-0">Enseignants</div>
-
+                  
                 </div>
               </div>
         </div>
@@ -413,30 +356,20 @@ $('#1').click(function() {
                     <i class="kk kk-reading_ebook"></i>
                   </div>
                   <div class="h6 mb-0">Admins</div>
-
+                  
                 </div>
               </div>
         </div>
 
-        <div id="user_accept" class="col-md-4 col-sm-12"  style="cursor:pointer">
-            <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; cursor:pointer">
-                <div class="card-body">
-                  <div class="h1 text-muted text-center mb-4">
-                    <i class="kk kk-plus"></i>
-                  </div>
-                  <div class="h6 mb-0" style="font-size: 12px !important;">Accepter Users</div>
-
-                </div>
-              </div>
-        </div>
+       
         <div id="user_upgrade" class="col-md-4 col-sm-12"  style="cursor:pointer">
             <div class="card text-white" style="background-color:#2c3e50 !important; border-color: #2c3e50 !important; cursor:pointer">
                 <div class="card-body">
                   <div class="h1 text-muted text-center mb-4">
                     <i class="kk kk-Arrow-Up"></i>
                   </div>
-                  <div class="h6 mb-0" style="font-size: 12px !important;">Upgrade Users</div>
-
+                  <div class="h6 mb-0" style="font-size: 12px !important;">Upgrade/Downgrade Enseignants</div>
+                  
                 </div>
               </div>
         </div>
@@ -446,45 +379,72 @@ $('#1').click(function() {
       width: "80%",
       showCloseButton: true,
       showConfirmButton: false
-
+    
+   
+    
   })
-  //window.location.href="./dashboard/Users/All";
+  //window.location.href="./dashboard/Users/All"; 
 });
 
 $('#rapports').click(function() {
-  window.location.href="./dashboard/reports";
+  window.location.href="./dashboard/reports"; 
 });
 
 
 $('#2').click(function() {
-  window.location.href="./dashboard/Users/Students";
+  window.location.href="./dashboard/Users/Students"; 
 });
 
 $('#3').click(function() {
-  window.location.href="./dashboard/Users/Teachers";
+  window.location.href="./dashboard/Users/Teachers"; 
 });
 
 $('#4').click(function() {
-  window.location.href="./group";
+  window.location.href="./group"; 
 });
 
 $('#5').click(function() {
-  window.location.href="./dashboard/Companies";
+  window.location.href="./dashboard/Companies"; 
 });
 
 $('#6').click(function() {
-  window.location.href="./dashboard/Mailer";
+  window.location.href="./dashboard/Mailer"; 
 });
 
 $('#7').click(function() {
-
+  
   swal({
     title: '<h3>Selectionner :</h3>',
-
+   
     html:
       `<div class="row">
 
-          <div id="soutenance_all" class="col-md-3 col-sm-12"  style="cursor:pointer">
+          <div id="soutenance_cette_annee" class="col-md-4 col-sm-12"  style="cursor:pointer">
+              <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
+                  <div class="card-body">
+                    <div class="h1 text-muted text-center mb-4">
+                      <i class="kk kk-list-view"></i>
+                    </div>
+                    <div class="h5 mb-0">Soutenances</div>
+                    <small>Cette Année</small>
+                  </div>
+                </div>
+          </div>
+
+          <div id="soutenance_historique" class="col-md-4 col-sm-12"  style="cursor:pointer">
+              <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
+                  <div class="card-body">
+                    <div class="h1 text-muted text-center mb-4">
+                      <i class="kk kk-list-view"></i>
+                    </div>
+                    <div class="h5 mb-0">Soutenances</div>
+                    <small>Historique</small>
+                  </div>
+                </div>
+          </div>
+
+
+          <div id="soutenance_all" class="col-md-4 col-sm-12"  style="cursor:pointer">
               <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
                   <div class="card-body">
                     <div class="h1 text-muted text-center mb-4">
@@ -496,7 +456,7 @@ $('#7').click(function() {
                 </div>
           </div>
 
-          <div id="soutenance_valide" class="col-md-3 col-sm-12"  style="cursor:pointer">
+          <div id="soutenance_valide" class="col-md-4 col-sm-12"  style="cursor:pointer">
               <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
                   <div class="card-body">
                     <div class="h1 text-muted text-center mb-4">
@@ -509,8 +469,8 @@ $('#7').click(function() {
           </div>
 
 
-
-          <div id="soutenance_waiting" class="col-md-3 col-sm-12"  style="cursor:pointer">
+         
+          <div id="soutenance_waiting" class="col-md-4 col-sm-12"  style="cursor:pointer">
               <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
                   <div class="card-body">
                     <div class="h1 text-muted text-center mb-4">
@@ -522,7 +482,10 @@ $('#7').click(function() {
                 </div>
           </div>
 
-          <div id="soutenance_nonvalide" class="col-md-3 col-sm-12"  style="cursor:pointer">
+
+
+        
+          <div id="soutenance_nonvalide" class="col-md-4 col-sm-12"  style="cursor:pointer">
               <div class="card text-white" style="background-color:#27ae60 !important; border-color: #27ae60 !important; ">
                   <div class="card-body">
                     <div class="h1 text-muted text-center mb-4">
@@ -540,24 +503,26 @@ $('#7').click(function() {
       width: "80%",
       showCloseButton: true,
       showConfirmButton: false
-
+    
+   
+    
   })
-
-  //window.location.href="#";
+  
+  //window.location.href="#"; 
 });
 
 $('#8').click(function() {
-  window.location.href="#";
+  window.location.href="#"; 
 });
 
 $('#9').click(function() {
-  window.location.href="#";
+  window.location.href="#"; 
 });
 
 $('#10').click(function() {
   swal({
     title: '<h3>Selectionner :</h3>',
-
+   
     html:
       `<div class="row">
 
@@ -613,18 +578,20 @@ $('#10').click(function() {
       width: "80%",
       showCloseButton: true,
       showConfirmButton: false
-
+    
+   
+    
   })
-  //window.location.href="./dashboard/Interships/all";
+  //window.location.href="./dashboard/Interships/all"; 
 });
 
 $('#11').click(function() {
-  window.location.href="./dashboard/Interships/perf";
+  window.location.href="./dashboard/Interships/perf"; 
 });
 
 
 $('#12').click(function() {
-  window.location.href="./dashboard/Interships/pfe";
+  window.location.href="./dashboard/Interships/pfe"; 
 });
 
 
@@ -761,7 +728,7 @@ $("#15").click(function(){
 
     $(function (){
       'use strict';
-
+    
       var pieData = {
         {!!  \App\Http\Controllers\GetStat::javascriptchart() !!}
           backgroundColor: [
@@ -788,7 +755,10 @@ $("#15").click(function(){
           responsive: true
         }
       });
-
+    
+    
+  
+  
   });
 </script>
 
@@ -801,27 +771,27 @@ $("#15").click(function(){
   /* Change URL (using on Function) */
 
     $( "body" ).on( "click", "#all_users", function() {
-         window.location.href="./dashboard/Users/All";
+         window.location.href="./dashboard/Users/All"; 
     });
 
     $( "body" ).on( "click", "#user_etudiant", function() {
-      window.location.href="./dashboard/Users/Students";
+      window.location.href="./dashboard/Users/Students"; 
    });
 
     $( "body" ).on( "click", "#user_enseignants", function() {
-      window.location.href="./dashboard/Users/Teachers";
+      window.location.href="./dashboard/Users/Teachers"; 
     });
 
     $( "body" ).on( "click", "#user_admin", function() {
-      window.location.href="./dashboard/Users/Admins";
+      window.location.href="./dashboard/Users/Admins"; 
     });
 
     $( "body" ).on( "click", "#user_accept", function() {
-      window.location.href="./dashboard/Requests";
+      window.location.href="./dashboard/Requests"; 
     });
 
     $( "body" ).on( "click", "#user_upgrade", function() {
-      window.location.href="./dashboard/UpgradeUser";
+      window.location.href="./dashboard/UpgradeUser"; 
     });
 
     $( "body" ).on( "click", "#soutenance_all", function() {
@@ -837,11 +807,11 @@ $("#15").click(function(){
     });
 
     $( "body" ).on( "click", "#soutenance_nonvalide", function() {
-      window.location.href="./dashboard/defenses/rejected";
+      window.location.href="./dashboard/defenses/rejected"; 
     });
 
     $( "body" ).on( "click", "#stage_all", function() {
-      window.location.href="./dashboard/Interships/all";
+      window.location.href="./dashboard/Interships/all"; 
     });
 
     $( "body" ).on( "click", "#stage_init", function() {
@@ -872,6 +842,14 @@ $("#15").click(function(){
 
     $( "body" ).on( "click", "#mailer", function() {
       window.location.href="./dashboard/reports";
+    });
+
+    $( "body" ).on( "click", "#soutenance_cette_annee", function() {
+      window.location.href= "{{route('soutenance_cette_annee')}}";
+    });
+
+    $( "body" ).on( "click", "#soutenance_historique", function() {
+      window.location.href="{{route('soutenance_historique')}}";
     });
 
 </script>

@@ -14,14 +14,16 @@ $(function(){
         //add user to registration table
         var registrationId = $(this).parent().parent().attr("id");
         var userId = $(this).parent().parent().attr("class")
-        acceptAStudent(userId,registrationId);
+        var userEmail = $(this).parent().parent().attr("userEmail");
+        acceptAStudent(userId,registrationId, userEmail);
     })
 
     $(".deleteStudentInvit").click(function(){
         //add user to registration table
         var registrationId = $(this).parent().parent().attr("id");
         var userId = $(this).parent().parent().attr("class")
-        deleteAStudent(userId,registrationId);
+        var userEmail = $(this).parent().parent().attr("userEmail")
+        deleteAStudent(userId,registrationId, userEmail);
     })
 
 
@@ -107,13 +109,15 @@ $(function(){
 /////////////////////////////////// add action to teacher
 $(function(){
     $(".acceptTeacherInvit").click(function(){
-        var userId = $(this).parent().parent().attr("id")
-        acceptATeacher(userId);
+        var userId = $(this).parent().parent().attr("id");
+        var userEmail = $(this).parent().parent().attr("userEmail");
+        acceptATeacher(userId, userEmail);
     })
 
     $(".deleteTeacherInvit").click(function(){
-        var userId = $(this).parent().parent().attr("id")
-        deleteATeacher(userId);
+        var userId = $(this).parent().parent().attr("id");
+        var userEmail = $(this).parent().parent().attr("userEmail");
+        deleteATeacher(userId, userEmail);
     })
 
 
@@ -202,9 +206,10 @@ $(function(){
     function getAllChecked(){
         tab = new Array();
         $(".checkbox:checked").each(function(){
-            var registrationId = $(this).parent().parent().attr("id")
-            var userId = $(this).parent().parent().attr("class")
-            tab.push([registrationId,userId]);
+            var registrationId = $(this).parent().parent().attr("id");
+            var userId = $(this).parent().parent().attr("class");
+            var userEmail = $(this).parent().parent().attr("userEmail");
+            tab.push([registrationId,userId,userEmail]);
         })
 
         return tab;
@@ -218,8 +223,8 @@ $(function(){
         if ( i < tab.length){
             $.post("acceptStudent",{
                 registrationId: tab[i][0],
-                userId: tab[i][1]
-            
+                userId: tab[i][1],
+                userEmail: tab[i][2]
             },function(data){
                 if(data == "done"){
                     $("#"+tab[i][0]).fadeOut("slow");
@@ -242,8 +247,8 @@ $(function(){
         if ( i < tab.length){
             $.post("deleteStudent",{
                 registrationId: tab[i][0],
-                userId: tab[i][1]
-
+                userId: tab[i][1],
+                userEmail: tab[i][2]
             },function(data){
                 if(data == "done"){
                     $("#"+tab[i][0]).fadeOut("slow");
@@ -258,10 +263,11 @@ $(function(){
     }
 
 
-    function acceptAStudent(userId,registrationId){
+    function acceptAStudent(userId,registrationId,userEmail){
         $.post("acceptStudent",{
             registrationId: registrationId,
-            userId: userId
+            userId: userId,
+            userEmail : userEmail
         },function(data){
             if(data == "done"){
                 $("#"+registrationId).fadeOut("slow");
@@ -270,10 +276,11 @@ $(function(){
     }
 
 
-    function deleteAStudent(userId,registrationId){
+    function deleteAStudent(userId,registrationId, userEmail){
         $.post("deleteStudent",{
             registrationId: registrationId,
-            userId: userId
+            userId: userId,
+            userEmail: userEmail
         },function(data){
             if(data == "done"){
                 $("#"+registrationId).fadeOut("slow");
@@ -287,7 +294,8 @@ $(function(){
         tab = new Array();
         $(".checkboxTeacher:checked").each(function(){
             var userId = $(this).parent().parent().attr("id")
-            tab.push(userId);
+            var userEmail = $(this).parent().parent().attr("userEmail")
+            tab.push([userId,userEmail]);
         })
 
         return tab;
@@ -299,7 +307,7 @@ $(function(){
     function acceptTeacherAll(i){
         var tab=getAllCheckedTeachers();
         if ( i < tab.length){
-            $.post("acceptTeacher",{userId:tab[i]},function(data){
+            $.post("acceptTeacher",{userId:tab[i][0], userEmail:tab[0][1]},function(data){
                 if(data == "done"){
                     $("#"+tab[i]).fadeOut("slow");
                 }
@@ -319,7 +327,7 @@ $(function(){
     function deleteTeacherAll(i){
         var tab=getAllCheckedTeachers();
         if ( i < tab.length){
-            $.post("deleteTeacher",{userId:tab[i] },function(data){
+            $.post("deleteTeacher",{userId:tab[i][0], userEmail:tab[i][1] },function(data){
                 if(data == "done"){
                     $("#"+tab[i]).fadeOut("slow");
                 }
@@ -333,8 +341,8 @@ $(function(){
     }
 
 
-    function acceptATeacher(userId){
-        $.post("acceptTeacher",{userId: userId},function(data){
+    function acceptATeacher(userId, userEmail){
+        $.post("acceptTeacher",{userId: userId, userEmail: userEmail},function(data){
             if(data == "done"){
                 $("#"+userId).fadeOut("slow");
             }
@@ -342,10 +350,12 @@ $(function(){
     }
 
 
-    function deleteATeacher(userId){
-        $.post("deleteTeacher",{userId:userId},function(data){
+    function deleteATeacher(userId, userEmail){
+        $.post("deleteTeacher",{userId:userId, userEmail: userEmail},function(data){
             if(data == "done"){
                 $("#"+userId).fadeOut("slow");
             }
         })
     }
+
+    
