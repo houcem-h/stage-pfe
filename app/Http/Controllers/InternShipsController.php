@@ -25,9 +25,10 @@ class InternShipsController extends Controller
    }
 
    public function getFormattedSession(){
-        $year=date('Y');
-        $afterString=(int)$year+1;
-       return $year.'/'.$afterString;
+         $month=date('m');
+         if((int)$month>=9)
+            return date('Y').'/'.((int)date('Y')+1);
+        return ((int)date('Y')-1).'/'.date('Y');
    }
 
     public function generateDesiredArray(array $baseArray){
@@ -102,6 +103,7 @@ class InternShipsController extends Controller
                          $internship->start_date=$request->input('start_date');
                          $internship->end_date=$request->input('end_date');
                          $internship->type=$request->input('type');
+                         $internship->student1=$request->input('buddy');
                          $internship->company_framer=$companyManager->id;
                          $internship->created_by=auth()->user()->id;
                                 if($request->input('type') =='pfe'){
@@ -162,11 +164,10 @@ class InternShipsController extends Controller
         ]);
 
         $year=date('Y');
-        $fullYearString=$this->getFormattedSession();
-        $formattedYear=(int)((int)$year-1).'/'.$year;
+        $session=$this->getFormattedSession();
         $internship=new Internship();
-        $registration=Registration::where('student',auth()->user()->id)->where(function ($query) use($fullYearString,$formattedYear){
-            return $query->where('session',$fullYearString)->orWhere('session',$formattedYear);
+        $registration=Registration::where('student',auth()->user()->id)->where(function ($query) use($session){
+            return $query->where('session',$session);
         })->first();
 
         $internship->student=$registration->id;

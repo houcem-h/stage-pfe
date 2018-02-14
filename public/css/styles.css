@@ -45,8 +45,32 @@
     /* background-color: lemonchiffon; */
     margin-bottom: 0px;
 }
+
+.draggableframers:hover{
+    cursor: move;
+}
+.globalclassroombox {
+
+height: 100%;
+wifth:100;
+}
 .itemsdropdown {
     color:black;
+}
+.classesnames{
+font-size: 20px;
+color:black;
+font-weight: bolder;
+text-align: center;
+
+}
+.globalclassroombox{
+    margin-right:30px;
+    margin-bottom: 40px;
+    height: auto;
+}
+#sourceframers{
+    margin-top: 50px;
 }
 #jumbotronstudentdashboard{
     padding-bottom: 0px;

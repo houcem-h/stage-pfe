@@ -9,7 +9,7 @@
 
    @if(isset($done) && $done=='false')         
       @if(!isset($nbr_salles_first_day))
-         <div class="panel panel-default col-md-12">
+         <div class="panel panel-default col-md-6 col-md-offset-3">
              <div class="panel-heading">
                <h3 class="text-center">Info Planning</h3>
              </div>
@@ -166,9 +166,9 @@
                 <div class="col-md-4">
                   <center><a href="/planning/{{Request::instance()->get('l')}}" class="btn btn-success">Preview</a></center>
                 </div>
-               <div class="col-md-4"> 
+               {{--  <div class="col-md-4"> 
                   <center><a href="/planning/{{Request::instance()->get('l')}}/edit" class="btn btn-primary">Update</a></center>
-               </div>
+               </div>  --}}
                <div class="col-md-4">
                    <center>{!!Form::open(['method'=>"POST","action"=>["PlanningController@destroy",Request::instance()->get('l')]])!!}
                      {{Form::hidden('_method','DELETE')}}

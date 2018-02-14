@@ -4,8 +4,11 @@
         if ($(this).val() == 'pfe'){
             isPfeInternship = true;
             $('#divforframerone').show(200);
-        }else
-            $('#divforframerone').hide();       
+            $('#divforbuddy').show(200);
+        }else{
+            $('#divforframerone').hide();    
+            $('#divforbuddy').hide(); 
+        }  
         
     });
 
@@ -124,7 +127,7 @@
                 setTimeout(function () {
                     $('#bar').removeClass('barloading');
                         var ajax = Object.create(window.Ajax.prototype);
-                        ajax.init('http://stage/internshipsave', 'POST', true);
+                        ajax.init('/internshipsave', 'POST', true);
                         ajax.addData(dataToSendFormattedString);
                         ajax.execute(function (rep) {
                             $('#successajax').show().addClass('alert alert-success').text(rep['success']);

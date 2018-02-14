@@ -58,6 +58,33 @@ class User extends Authenticatable
         return $this->hasMany('App\FramingRequest','teacher');
     }
 
+
+    public static function studentLevel($ch){
+        for($i=0;$i<strlen($ch);$i++){
+            if(ctype_digit(substr($ch,$i,1)))
+              return substr($ch,$i,1);
+        }
+        return -1;
+     }
+
+    public  function getFormattedSessionAttribute(){
+         $month=date('m');
+         if((int)$month>=9)
+            return date('Y').'/'.((int)date('Y')+1);
+        return ((int)date('Y')-1).'/'.date('Y');
+    }
+
+    public function getBuddyAttribute(){
+        $session=$this->getFormattedSessionAttribute();
+        $legal=[];
+        $legalBuddies=Registration::with('studentRecord')->where('registrations.session','=',$session)->get();
+        foreach($legalBuddies->all() as $l){
+            if(self::studentLevel($l->groupRecord->name)=='3')
+               $legal[$l->student]=$l->studentRecord->firstname.' '.$l->studentRecord->lastname;
+        }
+        return $legal;
+    }
+
     //Methode(getter) qui retourne la route du dashboard de l'utilisatuer connecté
     public function getDashboardAttribute(){
         if($this->role==1)
@@ -72,9 +99,9 @@ class User extends Authenticatable
     //Cette Methode est Utile pour le dashboard du l'etudiant  
     // Methode qui fait appelle a des methodes du Trait CommonTasks
 
-    public function getLegalIntershipsTypesAttribute(){
-        $year=(int)date('Y');
-        $formattedYear=$year.'/'.(int)($year+1);
+   
+     public function getLegalIntershipsTypesAttribute(){
+        $formattedYear=$this->getFormattedSessionAttribute();
         $registrations=Registration::where('student',auth()->user()->id)->get();
         $internships=[];
         if($registrations!=null)
@@ -125,7 +152,6 @@ class User extends Authenticatable
         }
         return ["null"=>"vous n'avez pas une inscription"];
     }
-    
 
     public function getLegalInternshipsToUpdateAttribute(){
          $registrationlist=Registration::where('student',auth()->user()->id)->get()->toArray();

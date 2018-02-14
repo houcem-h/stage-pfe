@@ -12,6 +12,7 @@ use DB;
 use App\User;
 use App\Defense;
 use App\Manager;
+use App\Internship;
 use App\Company;
 class PlanningController extends Controller
 {
@@ -83,6 +84,7 @@ class PlanningController extends Controller
          'legal_duration_first_day'=>$first_day_legal_internships_duration,
          'legal_duration_second_day'=>$second_day_legal_internships_duration,
         ];
+        // return dd($data_view_required);
        return view('planning.index')->with($data_view_required);
     }
 
@@ -92,11 +94,9 @@ class PlanningController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(){
          $l=['init','perf','pfe'];
          $level=Req::instance()->get('l');
-        //  $defences=DB::table('defenses as d')->join('internships as i','d.internship','=','i.id')->where('d.date_d','>',date('Y-m-d'))->where('i.type','=',$l[$level-1])->first(['d.created_by']);
          $defenses=Defense::whereHas('internships',function($query)use($l,$level){
             $query->where('type','=',$l[$level-1]);
          })->where('date_d','>',date('Y-m-d'))->get()->toArray();
@@ -108,15 +108,12 @@ class PlanningController extends Controller
          return view('planning.index')->with('done','false');
     }
 
-
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create(){
         //here we return the view submitted to the store method
     }
 
@@ -126,16 +123,11 @@ class PlanningController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        $this->validate($request,[
-
-        ]);
+    public function store(Request $request){
         if($request->ajax()){
             
               $array_juries_first_day=$request->input('juries_first_day');
               $array_juries_second_day=$request->input('juries_second_day');
-            //   return Response::json( $array_juries_second_day);
               $array_classrooms_first_day=$request->input('classrooms_first_day');
               $array_classrooms_second_day=$request->input('classrooms_second_day');
               $start_time_first_day=$request->input('start_time_first_day');
@@ -181,13 +173,22 @@ class PlanningController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        $planning=Defense::whereHas('internships',function($query){
-           $query->where('type','init')->orWhere('type','perf');
-        })->where('date_d','>',date('Y-m-d'))->get()->groupBy('classroom');
-
-       return view('planning.show')->with('planning',$planning->toArray());
+    public function show($id){
+        if($id==1){
+            $planning=Defense::whereHas('internships',function($query){
+            $query->where('type','init')->orWhere('type','perf');
+            })->where('date_d','>',date('Y-m-d'))->get()->groupBy('classroom');
+            if(count($planning)==0)
+              return redirect('/planning?l=1');
+            return view('planning.show')->with('planning',$planning->toArray());
+        }else{
+             $planning=Defense::whereHas('internships',function($query){
+             $query->where('type','pfe');
+             })->where('date_d','>',date('Y-m-d'))->get()->groupBy('classroom');
+             if(count($planning)==0)
+              return redirect('/planningpfe');
+             return view('planning.showPFE')->with('planning',$planning->toArray());           
+        }
     }
 
     /**
@@ -228,7 +229,103 @@ class PlanningController extends Controller
             if($defences!=null)
                     foreach($defences as $def)
                         $def->delete();
+       }else{
+             $defences=Defense::whereHas('internships',function($query){
+                $query->where('type','=','pfe');
+            })->where('date_d','>',date('Y-m-d'))->get();
+            if($defences!=null)
+                    foreach($defences as $def)
+                        $def->delete();          
        }
         return redirect(auth()->user()->Dashboard)->with('success','Planning deleted');
+    }
+
+    public function pfeRestrictions(Request $request){
+        $this->validate($request,[
+         'date_first_day'=>'required',
+         'start_time_first_day'=>'required',
+         'end_time_first_day'=>'required',
+         'pfe_duration'=>'required'
+        ]);
+        $nbrDays=$request->input('nbrdays');
+        $pfe_duration=(int)$request->input('pfe_duration');
+
+        $date_first_day=$request->input('date_first_day');
+        $start_time_first_day=$request->input('start_time_first_day');
+        $end_time_first_day=$request->input('end_time_first_day');
+
+        $date_second_day=$request->input('date_second_day');
+        $start_time_second_day=$request->input('start_time_second_day');
+        $end_time_second_day=$request->input('end_time_second_day');
+        
+        $date_third_day=$request->input('date_third_day');
+        $start_time_third_day=$request->input('start_time_third_day');
+        $end_time_third_day=$request->input('end_time_third_day');  
+
+        $data_for_view=[
+           'nbr_days'=>$nbrDays,
+           'date_first_day'=>$date_first_day,
+           'start_time_first_day'=>$start_time_first_day,
+           'date_second_day'=>  $date_second_day,
+           'start_time_second_day'=>$start_time_second_day,
+           'date_third_day'=>$date_third_day,
+           'start_time_third_day'=>$start_time_third_day,
+           'duration'=>$pfe_duration
+        ];
+        if((int)$nbrDays==2){
+          $first_day_legal_internships_duration=PlanningCore::getLegalInternshipsDurationInTheDay($start_time_first_day,$end_time_first_day);  
+          $second_day_legal_internships_duration=PlanningCore::getLegalInternshipsDurationInTheDay($start_time_second_day,$end_time_second_day);
+          $nbr_internships_per_day=PlanningCore::getPFENbrInternshipsPerDay($nbrDays);
+          $nbr_internships_first_day=$nbr_internships_per_day['first_day'];
+          $nbr_internships_second_day=$nbr_internships_per_day['second_day'];
+          $duration_in_first_day=$pfe_duration * $nbr_internships_first_day;
+          $duration_in_second_day=$pfe_duration * $nbr_internships_second_day;
+          $day_1_classrooms_nbr=PlanningCore::getClassroomsNumber($first_day_legal_internships_duration,$duration_in_first_day);
+          $day_2_classrooms_nbr=PlanningCore::getClassroomsNumber($second_day_legal_internships_duration,$duration_in_second_day);
+          $data_for_view['nbr_classrooms_first_day']=$day_1_classrooms_nbr;
+          $data_for_view['nbr_classrooms_second_day']=$day_2_classrooms_nbr;
+        }else if((int)$nbrDays==3){
+          $first_day_legal_internships_duration=PlanningCore::getLegalInternshipsDurationInTheDay($start_time_first_day,$end_time_first_day);  
+          $second_day_legal_internships_duration=PlanningCore::getLegalInternshipsDurationInTheDay($start_time_second_day,$end_time_second_day);
+          $third_day_legal_internships_duration=PlanningCore::getLegalInternshipsDurationInTheDay($start_time_third_day,$end_time_third_day);        
+          $nbr_internships_per_day=PlanningCore::getPFENbrInternshipsPerDay($nbrDays);
+          $nbr_internships_first_day= $nbr_internships_per_day['first_day'];
+          $nbr_internships_second_day=$nbr_internships_per_day['second_day'];          
+          $nbr_internships_third_day=$nbr_internships_per_day['third_day'];         
+          $duration_in_first_day=$pfe_duration * $nbr_internships_first_day;
+          $duration_in_second_day=$pfe_duration * $nbr_internships_second_day;
+          $duration_in_third_day=$pfe_duration * $nbr_internships_third_day;
+          $day_1_classrooms_nbr=PlanningCore::getClassroomsNumber($first_day_legal_internships_duration,$duration_in_first_day);
+          $day_2_classrooms_nbr=PlanningCore::getClassroomsNumber($second_day_legal_internships_duration,$duration_in_second_day);          
+          $day_3_classrooms_nbr=PlanningCore::getClassroomsNumber($third_day_legal_internships_duration,$duration_in_third_day);        
+          $data_for_view['nbr_classrooms_first_day']=$day_1_classrooms_nbr;
+          $data_for_view['nbr_classrooms_second_day']=$day_2_classrooms_nbr;
+          $data_for_view['nbr_classrooms_third_day']=$day_3_classrooms_nbr;
+        }else{
+          $first_day_legal_internships_duration=PlanningCore::getLegalInternshipsDurationInTheDay($start_time_first_day,$end_time_first_day);
+          $nbr_internships_first_day=PlanningCore::getPFENbrInternshipsPerDay($nbrDays);
+          $duration_in_first_day=$pfe_duration *$nbr_internships_first_day;
+          $day_1_classrooms_nbr=PlanningCore::getClassroomsNumber($first_day_legal_internships_duration,$duration_in_first_day);
+          $data_for_view['nbr_classrooms_first_day']=$day_1_classrooms_nbr;
+        }
+        $year=date('Y');
+        $framers=User::whereHas('framerOf',function($query)use($year){
+             $query->whereYear('start_date','=',$year)->where('type','pfe');
+        })->where('role','1')->get()->toArray();
+        $teachersnotframers=User::whereDoesntHave('framerOf',function($query)use($year){
+            $query->whereYear('start_date','=',$year)->where('type','pfe');
+        })->where('role','1')->get()->toArray();
+
+    return view('planning.sharingpfesubjectbetweenclassrooms')->with('data',$data_for_view)->with('framers',$framers)->with('notframers',$teachersnotframers);
+    }
+
+    public function pfePlanningStore(Request $request){
+           if($request->ajax()){
+              $duration=(int)$request->input('duration');
+              $classrooms=$request->input('classrooms');
+              $defensesArray=PlanningCore::doPFEPlanning($classrooms,$duration);
+              if(PlanningCore::savePFEPlanning($defensesArray))
+                 return Response::json($defensesArray,'200');
+           }   
     }
 }
