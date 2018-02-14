@@ -21,6 +21,7 @@ class PlanningControllerCore extends Controller
    public $juriesArray=[];
 
    public function __construct($level,$defArray,$classroomsArray,$juriesArray){
+       $this->middleware('auth');
        $this->classroomsArray=$classroomsArray;
        $this->juriesArray=$juriesArray;
        $this->level=$level;
@@ -54,13 +55,20 @@ class PlanningControllerCore extends Controller
 
     return $res;
    }
+   public static function getFormattedSession(){
+        $month=date('m');
+         if((int)$month>=9)
+             return date('Y').'/'.((int)date('Y')+1);
+            return ((int)date('Y')-1).'/'.date('Y');
+   }
+
 
    public static function generateSpecificArray(array $array,int $offset,int $length){
       return array_slice($array,$offset,$length);
    }
 
     public function getInitAndPerfInternships(){
-     $session=((int)date('Y')-1).'/'.date('Y');   
+     $session=self::getFormattedSession();   
      $internshipsInitAndPerf=DB::table('users')->join('registrations','users.id','=','registrations.student')
      ->join('internships','registrations.id','=','internships.student')
      ->where('registrations.session','=',$session)->where('internships.type','=','init')->orWhere('internships.type','=','perf')->get(['internships.id','internships.type'])->toArray();
@@ -91,7 +99,7 @@ class PlanningControllerCore extends Controller
     } 
 
    public static  function getThisYearFirstLevelInternships(){
-      $session=((int)date('Y')-1).'/'.date('Y');
+      $session=self::getFormattedSession();
       $studentsFirstLevel=DB::table('users')->join('registrations','users.id','=','registrations.student')
       ->join('internships','registrations.id','=','internships.student')
       ->where('registrations.session','=',$session)->where('internships.type','=','init')->get(['internships.id','internships.type','internships.company_framer'])->toArray();
@@ -125,7 +133,7 @@ class PlanningControllerCore extends Controller
    }
 
     public static function getThisYearSecondLevelInternships(){
-       $session=((int)date('Y')-1).'/'.date('Y');
+       $session=self::getFormattedSession();
        $studentsSecondLevel=DB::table('users')->join('registrations','users.id','=','registrations.student')
       ->join('internships','registrations.id','=','internships.student')
       ->where('registrations.session','=',$session)->where('internships.type','=','perf')->get(['internships.id','internships.company_framer','internships.type'])->toArray();
@@ -136,24 +144,21 @@ class PlanningControllerCore extends Controller
     public static function countInternships($level){
        $types=['init','perf','pfe'];  
        $type=$types[(int)$level - 1];
-       $session=((int)date('Y')-1).'/'.date('Y');
+       $session=self::getFormattedSession();
        $nbrInternships=DB::table('users')->join('registrations','users.id','=','registrations.student')
        ->join('internships','registrations.id','=','internships.student')
-       ->where('registrations.session','=',$session)->where('internships.type','=',$type)->count();
-      
+       ->where('internships.type','=',$type)->where('registrations.session','=',$session)->count();
+       // required when application hosted , in testing removed because of faker confusion
+      //->whereYear('internships.start_date','=',date('Y'))
        return $nbrInternships;
     }
 
-
-    public static function getMinClassroomsNbr($durationOfAllDefencesInMinutes,$defenceDurationInMinutes,$nbrDefences,$nbdDays=null){
-        $globaldefencesduration=$defenceDurationInMinutes * $nbrDefences;
-        $res=($globaldefencesduration / $durationOfAllDefencesInMinutes);
- 
-        return round($res);
-    }
-
     public static function getClassroomsNumber($legalDurationInDay,$internshipsDurationInDay){
-      return round($internshipsDurationInDay / $legalDurationInDay);
+      $res=round($internshipsDurationInDay / $legalDurationInDay);
+      if($res==0)
+         return 1;
+
+         return $res;
     }
 
     public function getNbrDefencesPerClassroom($nbrInternships,$nbrClassrooms){
@@ -182,7 +187,7 @@ class PlanningControllerCore extends Controller
         return (($global_duration->hour * 60) + $global_duration->minute);
     }
 
-      public static function getNbrInternshipsPerDay(int $level,$inverse){
+      public static function getNbrInternshipsPerDay(int $level,bool $inverse){
             $types=['init','perf','pfe'];
             $nbrInternships=self::countInternships($level);
             $nbr_internships_per_day=$nbrInternships / 2;
@@ -196,8 +201,37 @@ class PlanningControllerCore extends Controller
         return ['first_day'=>$nbr_in_first_day,'second_day'=>$nbr_in_second_day];
     }
 
+    public static function getPFENbrInternshipsPerDay(int $nbrDays){
+        $nbrInternships=self::countInternships(3);
+        $nbr_internships_per_day=$nbrInternships / $nbrDays;
+        
+        if($nbrDays==1){
+            return  $nbr_internships_per_day;
+        }else if($nbrDays==2){
+           $nbr_in_first_day=floor($nbr_internships_per_day);
+           $nbr_in_second_day=($nbrInternships % 2) + $nbr_in_first_day; 
+           if($nbr_internships_per_day==0)
+               return   1;
+            return ['first_day'=>$nbr_in_first_day,'second_day'=>$nbr_in_second_day];  
+        }else{
+           $nbr_in_first_day=floor($nbr_internships_per_day);
+           if($nbrInternships % 3 ==1){
+               $nbr_in_second_day= $nbr_in_first_day; 
+               $nbr_in_third_day= $nbr_in_first_day + 1;
+               return ['first_day'=>$nbr_in_first_day,'second_day'=>$nbr_in_second_day,'third_day'=>$nbr_in_third_day];
+           }else if($nbrInternships % 3 ==2){
+               $nbr_in_second_day= $nbr_in_first_day +1; 
+               $nbr_in_third_day= $nbr_in_first_day + 1;
+               return ['first_day'=>$nbr_in_first_day,'second_day'=>$nbr_in_second_day,'third_day'=>$nbr_in_third_day];
+           }else{
+               $nbr_in_second_day= $nbr_in_first_day; 
+               $nbr_in_third_day= $nbr_in_first_day;   
+               return ['first_day'=>$nbr_in_first_day,'second_day'=>$nbr_in_second_day,'third_day'=>$nbr_in_third_day];     
+           }   
+        }   
+    }
+
     public function shareClassroomsBetweenDefences($startindex,$arrayinfoclassrooms,$lengthDefencesArray){
-      
           if($lengthDefencesArray - $startindex  == $arrayinfoclassrooms[1]){
              for($i=0;$i<$arrayinfoclassrooms[1];$i++)
                  $this->defencesArray[$startindex++]->classroom=$this->classroomsArray[$i];
@@ -209,7 +243,6 @@ class PlanningControllerCore extends Controller
              $this->shareClassroomsBetweenDefences($startindex,$arrayinfoclassrooms,$lengthDefencesArray);
           }
     }
-
 
     public function shareJuriesBetweenDefences($startindex,$arrayinfoclassrooms,$lengthDefencesArray){
         if($lengthDefencesArray - $startindex  == $arrayinfoclassrooms[1]){
@@ -288,20 +321,90 @@ class PlanningControllerCore extends Controller
             $this->shareTimingBetweenDefences($lengthclassrooms,$defencesperclass[1],0,$lengthdefarray,$startTime,$generic_start_time,$internshipDuration);
     }
 
+    public static function doPFEPlanning(array $classrooms,int $duration){
+     $defensesArray=[];
+     foreach($classrooms as $value){
+       if(array_key_exists('juries',$value)){
+        $juries=$value['juries'];
+        $start_time=Carbon::createFromFormat('H:i',$value['start_time']);
+         foreach($juries as $key=>$jurie){
+            $defensesOfJurie=Internship::where('type','pfe')->whereYear('start_date',date('Y'))->where('framer',$jurie)->get();
+             if($defensesOfJurie!=null){
+                 $i=0;
+                foreach($defensesOfJurie as $internship){
+                    $defense=new \StdClass;
+                    $defense->start_date=$value["start_date"];
+                    $defense->start_time=$start_time->hour.':'.$start_time->minute;
+                    $start_time->addMinute($duration);
+                    $defense->end_time=$start_time->hour.':'.$start_time->minute;
+                    $defense->classroom=$value['classroom'];
+                    $defense->internship=$internship->id;
+                    if($key=='jurie1'){
+                        $i++;
+                        if($i % 2 ==0){
+                            $defense->president=$juries['jurie2'];
+                            $defense->reporter=$juries['jurie3']; 
+                        }else{
+                            $defense->president=$juries['jurie3'];
+                            $defense->reporter=$juries['jurie2']; 
+                        }
+                    }else if($key=='jurie2'){
+                        $i++;
+                        if($i % 2 ==0){
+                            $defense->president=$juries['jurie1'];
+                            $defense->reporter=$juries['jurie3']; 
+                        }else{
+                            $defense->president=$juries['jurie3'];
+                            $defense->reporter=$juries['jurie1'];
+                        }
+                    }else{
+                        $i++;
+                        if($i % 2 ==0){
+                            $defense->president=$juries['jurie1'];
+                            $defense->reporter=$juries['jurie2']; 
+                        }else{
+                            $defense->president=$juries['jurie2'];
+                            $defense->reporter=$juries['jurie1'];                            
+                        }  
+                    }
+                  $defensesArray[]=$defense;
+                }
+            }
+          }
+       }
+     }
+     return $defensesArray;
+    }
+
     public function save(){
-         foreach($this->defencesArray as $value){
-            $defense=new Defense();
-            $defense->date_d=$value->start_d;
-            $defense->start_time=$value->start_time;
-            $defense->end_time=$value->end_time;
-            $defense->classroom=$value->classroom;
-            $defense->internship=$value->id;
-            $defense->reporter=$value->jurie1;
-            $defense->president=$value->jurie2;
-            $defense->created_by=auth()->user()->id;
-            $defense->save();
-        }
+            foreach($this->defencesArray as $value){
+                $defense=new Defense();
+                $defense->date_d=$value->start_d;
+                $defense->start_time=$value->start_time;
+                $defense->end_time=$value->end_time;
+                $defense->classroom=$value->classroom;
+                $defense->internship=$value->id;
+                $defense->reporter=$value->jurie1;
+                $defense->president=$value->jurie2;
+                $defense->created_by=auth()->user()->id;
+                $defense->save();
+            }
         return true;
     }
 
+    public static function savePFEPlanning($defensesArray){
+         foreach($defensesArray as $value){
+                $defense=new Defense();
+                $defense->date_d=$value->start_date;
+                $defense->start_time=$value->start_time;
+                $defense->end_time=$value->end_time;
+                $defense->classroom=$value->classroom;
+                $defense->internship=$value->internship;
+                $defense->reporter=$value->reporter;
+                $defense->president=$value->president;
+                $defense->created_by=auth()->user()->id;
+                $defense->save();
+            }        
+            return true;   
+    }
 }

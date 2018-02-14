@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+@extends('dashboards.admin.appdash')
+@section('dash_content')
 <div class="container">
     <div class="row">
         <table border="2" class="table-bordered stable-stripped">

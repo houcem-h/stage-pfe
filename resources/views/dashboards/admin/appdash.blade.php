@@ -104,13 +104,25 @@
 
 			<li><a href="{{route('settings')}}"><i class="icon-settings"></i> Parametres</a></li>
 			<!-- end-->
-
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					Planning
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="{{URL('/planning/1?l=1')}}">
+						Init &amp; Perf
+					</a>
+					<a class="dropdown-item" href="{{URL('/planning/3?l=3')}}">
+						PFE
+					</a>
+				</div>
+			</li>
 
 		</ul>
 		<ul class="nav navbar-nav ml-auto" id="custom">
 			
 			<li class="nav-item dropdown">
-					<li><a class="btn btn-primary" style="pointer:cursor" href="../teacherhome"><i class="icon-briefcase"></i> Connecter En Tant Qu'Enseignant</a></li>
+					<li><a class="btn btn-primary" style="pointer:cursor" href="../teacherhome"><i class="icon-briefcase"></i>Se Connecter En Tant Qu'Enseignant</a></li>
 				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 					<img src="{{ asset('dashboard_assets/img/avatars/user.png') }}" class="img-avatar" alt="admin@stage.com">
 				</a>
@@ -130,6 +142,9 @@
 							</form>
 				</div>
 			</li>
+
+
+
 		</ul>
 		&nbsp;&nbsp;
 

@@ -35,11 +35,11 @@ $(function(){
    
     if (parseInt($('#counterjuriesfirstday').text()) != parseInt($('#nbrjfd').text()) || parseInt($('#counterjuriessecondday').text()) != parseInt($('#nbrjsd').text())){
           test= false;
-      }
+    }
      if(test==false)
           return false;
           
-      $(this).attr('disabled','true');
+      $(this).attr('disabled','disabled');
      var classrooms_first_day = $('#formclassroomsfirstday').serializeArray();
      var classrooms_second_day = $('#formclassroomssecondday').serializeArray();
      var array_class_first_day=[];
@@ -117,10 +117,11 @@ $(function(){
         },
         dataType:'json',
         success:function(response){
-            window.location.href = "/planning?l="+$('#levelintern').text();
+            // window.location.href = "/planning?l="+$('#levelintern').text();
+            window.location.href="/dashboard";
         },error:function(xhr){
             var errors=xhr.responseJSON['errors'];
-            $('#errorsplanning').show();
+            $('#errorsplanning').show();1
             for(var i in errors)
                 $('#errorsplanning').append('<p>'+errors[i]+'</p>')
         }
