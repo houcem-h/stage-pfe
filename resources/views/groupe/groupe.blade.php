@@ -14,7 +14,7 @@
         <option value="mdw">MDW</option>
       </select>
     </div>
-    
+
   </div><br>
   <div class="row">
     @foreach ($groups as $group)
@@ -26,7 +26,7 @@
             <p class="{{ $group->stream }}">Stream : {{ $group->stream }}</p>
             <p>Created at: {{ $group->created_at }}</p>
             <p>Updated at :{{ $group->updated_at }}</p>
-            
+
             <a href="" data-toggle="modal" data-target="#show_student" class="toggle-modal-show">Show students</a>
           </div>
           <div class="actions">
@@ -45,7 +45,7 @@
 <!-- modal show students -->
 <div class="modal fade" tabindex="-1" role="dialog" id="show_student">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content" id="modalGroup">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">List of students in <span id="group_name"></span></h4>

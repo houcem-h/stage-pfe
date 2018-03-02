@@ -32,3 +32,11 @@
     font-size: 17px;
 }
 
+.customNavDashboardStudent, .menu-section{
+    background-color: #465F78!important;
+    /* border-top: 1px solid white!important; */
+}
+
+.menu-section{
+   border-top: 1px solid white!important;
+}

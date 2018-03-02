@@ -409,7 +409,7 @@ class ComposerStaticInit02d54a9a8e6b19a419cb634ad715bd7b
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\StudentAccessRights' => __DIR__ . '/../..' . '/app/Http/Middleware/StudentAccessRights.php',
         'App\\Http\\Middleware\\StudentPermission' => __DIR__ . '/../..' . '/app/Http/Middleware/StudentPermission.php',
-        'App\\Http\\Middleware\\TeachersAccessRights' => __DIR__ . '/../..' . '/app/Http/Middleware/TeachersAccessRights.php',
+        'App\\Http\\Middleware\\TeacherAccessRights' => __DIR__ . '/../..' . '/app/Http/Middleware/TeacherAccessRights.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',

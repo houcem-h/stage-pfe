@@ -114,19 +114,19 @@ $(function(){
       if(passAct == ""){
         isValid = false;
         $(".Div_Err_PA").addClass("has-error");
-        $(".Span_Err_PA").text("Required");
+        $(".Span_Err_PA").text("Champs obligatoire");
       }
 
       if(passNouv == ""){
         isValid = false;
         $(".Div_Err_PN").addClass("has-error");
-        $(".Span_Err_PN").text("Required");
+        $(".Span_Err_PN").text("Champs obligatoire");
       }
 
       if(passConfirm == ""){
         isValid = false;
         $(".Div_Err_PC").addClass("has-error");
-        $(".Span_Err_PC").text("Required");
+        $(".Span_Err_PC").text("Champs obligatoire");
       }
 
       if(isValid == true){
@@ -213,48 +213,14 @@ $(function(){
 });
 
 
-//when user accept/decline a teacher demande
+//when user check the notifications ==> change the seen field to true
 $(function(){
-    $(".accept").click(function(){
-        var idFrame = $(this).parent().parent().attr('id');
-        var internship = $(this).parent().parent().attr("data-intern");
-        var teacher = $(this).parent().parent().attr("data-teachId");
-        $.post("acceptDemande",{id_frame: idFrame, internship: internship,teacher:teacher},function(data){
-            if(data == "done"){
-              swal({
-                title: "Super!",
-                text: "Votre acceptation sera envoyée à cet enseignant",
-                icon:"success",
-                button: false,
-              });
-
-              //replace the button of the selected teacher (success)
-              $("#"+idFrame+" .actions").html('<span class="text-success"><i class="fa fa-check" aria-hidden="true"></i> Accepté</span>');
-
-              //replace the rest of the non-selected teacher (X)
-              // $("tr [id !='"+idFrame+"']").find(" td .actions").html('<span class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i> Refusée</span>');
-              $(".requests tr").each(function(index){
-                var id = $(this).attr("id");
-                if(id != idFrame)
-                  $("#"+id+" .actions").html('<span class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i> Refusée</span>')
-              });
-            }
-
-            console.log(data);
-        })
-
-
-        //redirect student to his home page when he click "OK"
-        $(document).on("click",".swal-button--confirm",function(){
-          location.reload();
-        });
+  let Url = window.location.href;
+  let splitUrl = Url.split('/');
+  if(splitUrl[splitUrl.length-1] == 'notifications'){
+    // ajax request
+    $.post("changeSeenNotif",{},function(data){
+      console.log(data);
     });
-
-
-    $(".decline").click(function(){
-      var idFrame = $(this).parent().parent().attr('id')
-      $.post("rejectDemande",{id_frame: idFrame},function(data){
-          $("tbody tr#"+idFrame).fadeOut("slow")
-      })
-  });
+  }
 });

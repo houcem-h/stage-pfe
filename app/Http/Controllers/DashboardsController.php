@@ -50,25 +50,25 @@ class DashboardsController extends Controller
 
 
 //
-				   
-							  
-	
-							 
-									 
-																										   
-																					   
-																								 
-																												
-									  
-  
-														   
-															
-							  
-							   
-								
-										
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 public  function calendar()
 {
@@ -83,13 +83,13 @@ public  function calendar()
   $x= Defense::where('reporter', $id)->get()->toArray();
   $y= Defense::where('president', $id)->get()->toArray();
   $xy = array_merge($x,$y);
-							 
-					
-  
-								 
-								
-							  
-  
+
+
+
+
+
+
+
                 //return $x;
                 $jscode = '';
                 foreach($xy as $day) {
@@ -153,7 +153,7 @@ public  function pdf_defensescalendar() {
                     ->orWhere('defenses.president', $id);
                   })
               ->get();
-             
+
 
 
            $pdf = PDF::loadView('pdfs.defensescalendar', ['alldata' => $x]);
@@ -269,42 +269,42 @@ public function Settingspass()
 
 }
 
-    public function edit_pass(Request $request){
-        $password_actuel = $request['password_actuel'];
-        $password_nouv = $request['password_nouv'];
-        $password_confirm = $request['password_confirm'];
-
-        //check if the actuel password is correct
-        if(auth()->user()->tryToConnect($password_actuel)){
-            //length of new password must be >=8
-            if(strlen($password_nouv)>=8){
-                //check if password == password confirmation
-                if($password_nouv == $password_confirm){
-                    //update
-                    User::where("email",auth()->user()->email)->update(['password'=>bcrypt($password_nouv)]);
-                    //delete session, that user must be login with new password
-														  
-														
-												  
-												  
-														  
-                    $request->session()->flush();
-						
-  
-                    return "done";
-                }else{
-                    return "wrong password confirmation";
-                }
-
-            }else{
-                return "length";
-            }
-						  
-
-        }
-
-        return "wrong password";
-    }
+    // public function edit_pass(Request $request){
+    //     $password_actuel = $request['password_actuel'];
+    //     $password_nouv = $request['password_nouv'];
+    //     $password_confirm = $request['password_confirm'];
+    //
+    //     //check if the actuel password is correct
+    //     if(auth()->user()->tryToConnect($password_actuel)){
+    //         //length of new password must be >=8
+    //         if(strlen($password_nouv)>=8){
+    //             //check if password == password confirmation
+    //             if($password_nouv == $password_confirm){
+    //                 //update
+    //                 User::where("email",auth()->user()->email)->update(['password'=>bcrypt($password_nouv)]);
+    //                 //delete session, that user must be login with new password
+    //
+    //
+    //
+    //
+    //
+    //                 $request->session()->flush();
+    //
+    //
+    //                 return "done";
+    //             }else{
+    //                 return "wrong password confirmation";
+    //             }
+    //
+    //         }else{
+    //             return "length";
+    //         }
+    //
+    //
+    //     }
+    //
+    //     return "wrong password";
+    // }
 
 
 }

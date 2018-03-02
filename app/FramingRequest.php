@@ -28,14 +28,15 @@ class FramingRequest extends Model
 
 
     //get notifications
-    public static function getNotifications(){
+    public static function getNotificationsForToast(){
         $myNotif = DB::table("framing_requests")
                    ->join("internships","internships.id","=","framing_requests.internship")
                    ->join("registrations","registrations.id","=","internships.student")
                    ->join("users as student","student.id","=","registrations.student")
                    ->join("users as teacher","teacher.id","=","framing_requests.teacher")
                    ->where("student.id","=",auth()->user()->id)
-                   ->where("status","=","waiting")
+                   ->where("status","=","accepeted")
+                   ->where("seen","=","false")
                    ->where("request_type","=","wish")
                    ->select(
                         "teacher.firstname",
@@ -43,10 +44,33 @@ class FramingRequest extends Model
                         "internships.type",
                         "framing_requests.id",
                         "framing_requests.internship",
-                        "framing_requests.teacher"
+                        "framing_requests.teacher",
+                        "framing_requests.id"
                     )
                    ->get();
         return $myNotif;
     }
 
+    public static  function getNotificationsForBlade(){
+      $myNotif = DB::table("framing_requests")
+                 ->join("internships","internships.id","=","framing_requests.internship")
+                 ->join("registrations","registrations.id","=","internships.student")
+                 ->join("users as student","student.id","=","registrations.student")
+                 ->join("users as teacher","teacher.id","=","framing_requests.teacher")
+                 ->where("student.id","=",auth()->user()->id)
+                 ->where("status","=","accepeted")
+                 ->where("request_type","=","wish")
+                 ->select(
+                      "teacher.firstname",
+                      "teacher.lastname",
+                      "internships.type",
+                      "framing_requests.id",
+                      "framing_requests.internship",
+                      "framing_requests.teacher",
+                      "framing_requests.id",
+                      "framing_requests.created_at"
+                  )
+                 ->get();
+      return $myNotif;
+    }
 }

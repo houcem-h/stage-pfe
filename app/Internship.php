@@ -57,17 +57,25 @@ class Internship extends Model
                    ->join("registrations","registrations.id","=","internships.student")
                    ->join("users as students","students.id","=","registrations.student")
                    ->where("students.id","=",$student_id)
+                   ->orderBy("id", "desc")
                    ->select("users.firstname","users.lastname","internships.start_date","end_date","managers.name","internships.state","internships.type","companies.name as company_name","internships.id")
-                   ->get();
-        
-        
-        $Intern = array();
-        foreach($results as  $res){
-            $startYearIntern = explode("-",$res->start_date)[0]; 
-            if($startYearIntern == Carbon::now()->year)
-                array_push($Intern,$res);
+                   ->get()->first();
+
+
+        // $Intern = array();
+        // foreach($results as  $res){
+        //     $startYearIntern = explode("-",$res->start_date)[0];
+        //     if($startYearIntern == Carbon::now()->year)
+        //         array_push($Intern,$res);
+        // }
+        // return $Intern;
+        $startYearIntern = explode("-",$results->start_date)[0];
+        if($startYearIntern == Carbon::now()->year){
+          return array($results);
         }
-        return $Intern;
+        return [];
+
+
     }
 
     //get details for one intership
@@ -82,39 +90,4 @@ class Internship extends Model
 
         return $result;
     }
-    
-    
-    //get info defense, of the current year," reference by id
-    public static function getInfoDefense($id_internship){
-        $myDefenses = DB::table("defenses")
-                      ->join("users as reporter","reporter.id","=","defenses.reporter")
-                      ->join("users as president","president.id","=","defenses.president")
-                      ->join("internships","internships.id","=","defenses.internship")
-                      ->where("defenses.internship","=",$id_internship)
-                      ->select(
-                          "date_d",
-                          "start_time",
-                          "end_time",
-                          "classroom",
-                          "reporter.firstname as repo_name",
-                          "reporter.lastname as repo_last",
-                          "president.firstname as pres_name",
-                          "president.lastname as pres_last",
-                          "internships.type"
-
-                      )
-                      ->get()->first();
-        #3 : filter the result of the query to get the defenses of this year, means 2018
-        //this methode maybe , it will be changed
-        $result = [];
-        if(empty($myDefenses))
-            return null;
-        $current_year = Carbon::now()->year;
-        $yearDefense = explode("-",$myDefenses->date_d)[0];
-        if($yearDefense == $current_year){
-            return $myDefenses;
-        }
-    }
-
-
 }

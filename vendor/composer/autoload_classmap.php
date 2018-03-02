@@ -45,7 +45,7 @@ return array(
     'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',
     'App\\Http\\Middleware\\StudentAccessRights' => $baseDir . '/app/Http/Middleware/StudentAccessRights.php',
     'App\\Http\\Middleware\\StudentPermission' => $baseDir . '/app/Http/Middleware/StudentPermission.php',
-    'App\\Http\\Middleware\\TeachersAccessRights' => $baseDir . '/app/Http/Middleware/TeachersAccessRights.php',
+    'App\\Http\\Middleware\\TeacherAccessRights' => $baseDir . '/app/Http/Middleware/TeacherAccessRights.php',
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',

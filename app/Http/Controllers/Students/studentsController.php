@@ -8,6 +8,7 @@ use App\rules\check_code_email;
 use App\User;
 use App\Registration;
 use App\Internship;
+use App\Defense;
 use App\FramingRequest;
 use App\Minute;
 use Session;
@@ -38,21 +39,62 @@ class studentsController extends Controller
 
     //show dashboard
     public function show_dashboard(){
+        //variables
+        $defenseInfo = null;
+        $minuteInfo = null;
+        $AcceptedDefense = true;
+        $DateDefensePassed = false;
+
+
         //display the activity table
         $check_result = Internship::getCurrentInternships(auth()->user()->id);
+        if(!empty($check_result)){
+            // check if state of internship is accepted
+            if($check_result[0]->state == "accepted"){
 
-        //if state is accepted, we should load the defense calender for that student
-        $defense = $this->getDefenses($check_result);
+                //search in defense table
+                $defenseChecked = $this->getDefenses($check_result[0]->id);
+                if($defenseChecked[0] != null){
+                    $defenseInfo = $defenseChecked[0];
 
-        if(count($defense) == 0 && $this->getState($check_result) == true)
-            $defense = "no soutenance";
+                    // check of date system is greater than end date of defense
+                    if($this->checkDateDefense($defenseChecked[0]->date_d) == true){
+                        $DateDefensePassed = true;
+                        //now check minute data
+                        if($this->checkMinute($defenseChecked[0]->id_defense)[0] != null){
+                            $minuteInfo = $this->checkMinute($defenseChecked[0]->id_defense);
+                            // return $this->checkMinute($defenseChecked[0]->id_defense);
+                        }else{
+                            // minute not avaible
 
-        // return $defense;
+                        }
+
+                    }else{
+                        // dnt do nothing
+                    }
+
+                }else{
+                    // defense are not availble means defenseInfo = null
+
+                }
+            }else{
+                // nothing to do
+                $AcceptedDefense = false;
+            }
+
+        }
+
         return view("For_students/dashboard")->with([
-            "check_demandes" => $check_result,
-            "defense" => $defense
+            "InternshipResult" => $check_result,
+            "AcceptedDefense" => $AcceptedDefense,
+            "DefenseInfo" => $defenseInfo,
+            "DateDefensePassed" => $DateDefensePassed,
+            "minuteInfo" => $minuteInfo
+
         ]);
+
     }
+
 
 
     //show edit profile form
@@ -116,17 +158,24 @@ class studentsController extends Controller
     }
 
 
-    // get Notifications
+    // get Notifications (javascript toast)
     public function Notifications(){
-        $student_id = auth()->user()->id;
-        $results = FramingRequest::getNotifications();
+        $results = FramingRequest::getNotificationsForToast();
         return $results;
     }
 
+    // change Seen Notif
+    public function changeSeenNotif(){
+      $id_notif = $this::Notifications()->first()->id;
+      $req = FramingRequest::find($id_notif);
+      $req->seen = "true";
+      $req->save();
+    }
 
-    //show notifications
+    //show notifications in page "notifcation"
     public function displayNotification(){
-        return view("For_students/show_notifications")->with("framing",$this->Notifications());
+      $req = FramingRequest::getNotificationsForBlade();
+        return view("For_students/show_notifications")->with("framing",$req);
     }
 
 
@@ -158,22 +207,20 @@ class studentsController extends Controller
 
     //post form edit profile
     public function save_informations(Request $request){
+
       //required fields
       $this->validate($request,
       [
           "firstname" => "required|string",
           "lastname" => "required|string",
-          "cin" => "required|integer|digits:8|unique:users",
           "phone" => "required|string",
-          "date_naissance" => "required|date",
-          "email" => "required|string|email|unique:users"
+          "date_naissance" => "required|date"
       ],
       [
           // required messages
           "date_naissance.required" => "Date de naissance est obligatoire",
           "firstname.required" => "Le nom est obligatoire",
           "lastname.required" => "Le prenom est obligatoire",
-          "cin.required" => "Le numero CIN est obligatoire",
           "phone.required" => "Le numero de telephone est obligatoire",
 
           //string messages
@@ -184,13 +231,6 @@ class studentsController extends Controller
           //date messages
           "date_naissance.date" => "Date de naissance est invalid",
 
-          //integer,digits messages
-          "cin.integer" => "Le numero CIN est numeric",
-          "cin.digits" => "Le numero CIN est composé de 8 chiffres",
-
-          //exist
-          "cin.unique" => "Cin est deja existe",
-
            //email exist
            "email.unique" => "Adresse email existe deja",
 
@@ -199,11 +239,12 @@ class studentsController extends Controller
 
       ]);
 
+
       $user_id = auth()->user()->id;
       $student = User::find($user_id);
+
       $student->firstname = $request['firstname'];
       $student->lastname = $request['lastname'];
-      $student->cin = $request['cin'];
       $student->phone = $request['phone'];
       $student->birthdate = $request['date_naissance'];
 
@@ -294,65 +335,27 @@ class studentsController extends Controller
     }
 
 
-    //when student accept the teacher's demande
-    public function acceptDemande(Request $request){
-        #1: change the statu of request to accepted
-        $requestFind = FramingRequest::find($request['id_frame']);
-        $requestFind->status = "accepeted";
-        if($requestFind->save()){
-            #2: make the rest of the request to rejected
-            $restWish = FramingRequest::whereStatus("waiting")
-            ->whereRequestType("wish")
-            ->whereInternship($requestFind->internship)
-            ->update(["status"=>"rejected"]);
-
-            if($restWish > 0){
-                #3: change the old framer to the new framer that you accept
-                Internship::whereId($request['internship'])->update(['framer'=>$request['teacher']]);
-                return "done";
-            }
-            return "error";
-        }
-        return "error";
-
-
-    }
-
-    //when student reject the teacher's demande
-    public function rejectDemande(Request $request){
-        $requestFind = FramingRequest::find($request['id_frame']);
-        $requestFind->status = "rejected";
-        if($requestFind->save()){
-            return "done";
-        }else{
-            return "error";
-        }
-    }
 
 
 /******************PRIVATE METHODS **************************/
-   //get all the internships of a student as a parametre
-   private function getDefenses($array){
-    $defenses = array();
-    foreach($array as $arr){
-        if($arr->state == "accepted"){
-            $check = Internship::getInfoDefense($arr->id);
-            if($check != null)
-                array_push($defenses,Internship::getInfoDefense($arr->id));
+  private function getDefenses($id_internship){
+      $check = Defense::getInfoDefense($id_internship);
+      return $check;
+  }
 
-        }
-    }
+  private function checkMinute($id_defense){
+      $check = Minute::check($id_defense);
+      return $check;
+   }
 
-    return $defenses;
+  private function checkDateDefense($endDate){
+      $parsedEndDateDefense = Carbon::parse($endDate);
+      if(Carbon::now()->gt($parsedEndDateDefense)){
+          return true;
+      }
+  }
 
-}
 
-private function getState($array){
-    foreach($array as $arr){
-        if($arr->state == "accepted")
-            return true;
-    }
-}
 
 
 private function hasMinute($user_id){

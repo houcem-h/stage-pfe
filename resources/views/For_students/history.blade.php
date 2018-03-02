@@ -15,7 +15,15 @@
         @foreach($result as $r)
             <div class="history">
                 <div class="row page-header">
-                    <h3>Stage {{$r->type}} </h3>
+                    <h3>Stage
+                      @if( $r->type == 'init' )
+                          <td>Initiation</td>
+                      @elseif($r->type == 'perf')
+                        <td>Perfectionnment</td>
+                      @else
+                        <td>PFE</td>
+                      @endif
+                    </h3>
                 </div>
                 <div class="row internship">
                     <h4 style="color:#2C3A47">Information sur le stage:</h4>
@@ -23,7 +31,9 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr style="color:white;background:#58B19F">
-                                    <th>Encadreur</th>
+                                    @if($r->type != "init")
+                                      <th>Encadreur</th>
+                                    @endif
                                     <th>Manager</th>
                                     <th>Entreprise</th>
                                     <th>Date de debut</th>
@@ -32,7 +42,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>{{ $r->framer_firstname}} {{$r->framer_lastname}} </td>
+                                    @if($r->type != "init")
+                                        <td>{{ $r->framer_firstname}} {{$r->framer_lastname}} </td>
+                                    @endif
                                     <td> {{ $r->manager_name }} </td>
                                     <td> {{ $r->company_name }} </td>
                                     <td> {{ $r->start_date }} </td>
@@ -102,7 +114,7 @@
             </div>
         @endforeach
     @else
-    <h1>NO history</h1>
+    <h1>Aucune historique</h1>
     @endif
     <br><br>
 </div>

@@ -39,7 +39,7 @@ class User extends Authenticatable
     public function getPhoneNumberAttribute(){
         return $this->attributes['phone'];
     }
-    
+
     public function getFaxNumberAttribute(){
         return $this->attributes['fax'];
     }
@@ -94,12 +94,12 @@ class User extends Authenticatable
         else
           return "/student/dashboard";
     }
-    
+
     //Methode qui renvoi un tableau contenant les types des internships qu'ils peuvent etres passés par l etudiant
-    //Cette Methode est Utile pour le dashboard du l'etudiant  
+    //Cette Methode est Utile pour le dashboard du l'etudiant
     // Methode qui fait appelle a des methodes du Trait CommonTasks
 
-   
+
      public function getLegalIntershipsTypesAttribute(){
         $formattedYear=$this->getFormattedSessionAttribute();
         $registrations=Registration::where('student',auth()->user()->id)->get();
@@ -111,7 +111,7 @@ class User extends Authenticatable
         $registration=Registration::where('student',auth()->user()->id)->latest()->first();
         if($registration!=null){
         $stages=$this->arrayOfSimpleArrays($internships);
-        $patternInit='/^[a-zA-Z]{2,}1{1}[0-9]+$/';        
+        $patternInit='/^[a-zA-Z]{2,}1{1}[0-9]+$/';
         $patternPerf='/^[a-zA-Z]{2,}2{1}[0-9]+$/';
         $patternPFE='/^[a-zA-Z]{2,}3{1}[0-9]+$/';
         $LegalInternships=[];
@@ -135,16 +135,16 @@ class User extends Authenticatable
                          $LegalInternships['init']='init';
                 }else if(preg_match($patternPerf,$registration->groupRecord->name)){
                     if($this->DoesHaveThisInternshipToPass('init',$stages))
-                         $LegalInternships['init']='init'; 
-                    if($this->DoesHaveThisInternshipToPass('perf',$stages))  
-                         $LegalInternships['perf']='perf';                       
+                         $LegalInternships['init']='init';
+                    if($this->DoesHaveThisInternshipToPass('perf',$stages))
+                         $LegalInternships['perf']='perf';
                 }else{
                     if($this->DoesHaveThisInternshipToPass('init',$stages))
-                          $LegalInternships['init']='init'; 
-                    if($this->DoesHaveThisInternshipToPass('perf',$stages))   
+                          $LegalInternships['init']='init';
+                    if($this->DoesHaveThisInternshipToPass('perf',$stages))
                           $LegalInternships['perf']='perf';
                     if($this->DoesHaveThisInternshipToPass('pfe',$stages))
-                          $LegalInternships['pfe']='pfe'; 
+                          $LegalInternships['pfe']='pfe';
                 }
             }
         }
@@ -172,7 +172,7 @@ class User extends Authenticatable
     }
 
     //Methode qui permet de rechercher un utilisateur par son nom - prenom - email - cin - phone
-    //Cette Methode est Utile pour le dashboard Admin 
+    //Cette Methode est Utile pour le dashboard Admin
 
     public function scopeSearchByKeyword($query, $keyword)
     {
@@ -190,10 +190,18 @@ class User extends Authenticatable
 
 
     /************AMINE BEJAOUI WORK ****************/
-        public function tryToConnect($password){
-          if(Auth::attempt(["email"=>$this->email, "password"=>$password]))
-                return true;
-        }
+    public function tryToConnect($password){
+      if(Auth::attempt(["email"=>$this->email, "password"=>$password]))
+            return true;
+    }
+
+    public function getFirstNameAttribute(){
+      return $this->attributes['firstname'] = ucfirst($this->attributes['firstname']);
+    }
+
+    public function getLastNameAttribute(){
+      return $this->attributes['lastname'] = ucfirst($this->attributes['lastname']);
+    }
 
 
 }

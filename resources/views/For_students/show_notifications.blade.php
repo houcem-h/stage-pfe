@@ -7,32 +7,28 @@
             <div class="row">
                 <div class="col-md-12">
                     <h4 class="page-head-line">
-                        Demandes d'encadrement
+                        Vos notifications
                     </h4>
                 </div>
             </div>
             <div class="col-md-12">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Nom de l'enseignant</th>
-                            <th>Type de stage</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody class="requests">
-                        @foreach($framing as $frame)
-                            <tr id="{{ $frame->id }}" data-intern="{{ $frame->internship}}" data-teachId="{{$frame->teacher}}">
-                                <td>{{ $frame->firstname }} {{ $frame->lastname }}</td>
-                                <td>{{ $frame->type }}</td>
-                                <td class="actions">
-                                    <button class="btn btn-success accept">Accepter</button>
-                                    <button class="btn btn-danger decline">Refuser</button>
-                                </td>
-                            </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+              @foreach ($framing as $frame)
+                <div>
+                    <h4>L'enseignant <b>{{ $frame->firstname }} {{ $frame->lastname }}</b>
+                        vous choisit pour vous encadrer dans votre stage
+                        <span><b>
+                          @if($frame->type == "init")
+                            d'initiation
+                          @elseif($frame->type == "perf")
+                            de perfectionement
+                          @else
+                            de PFE
+                          @endif </b>
+                        </span>
+                    </h4>
+                    <small>Date :   {{ Carbon\Carbon::parse($frame->created_at)->format("Y-m-d") }}</small>
+                </div> <hr>
+              @endforeach
             </div>
         @else
             <h2>Aucun notifications</h2>

@@ -44,15 +44,10 @@
                 </div>
                 <div class="form-group{{ $errors->has('cin') ? ' has-error' : '' }}">
                     <label>Cin : </label>
-                    <input type="text" value="{{old('cin',$informations->cin)}}" name="cin" class="form-control">
-                    @if ($errors->has('cin'))
-                        <span class="text-danger">
-                            <strong>{{ $errors->first('cin') }}</strong>
-                        </span>
-                    @endif
+                    <input type="text" value="{{ $informations->cin }}" name="cin" class="form-control" disabled>
                 </div>
                 <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                    <label>Phone : </label>
+                    <label>Téléphone : </label>
                     <input type="text" value="{{old('phone',$informations->phone)}}" name="phone" class="form-control">
                     @if ($errors->has('phone'))
                         <span class="text-danger">
@@ -60,9 +55,9 @@
                         </span>
                     @endif
                 </div>
-                <span class="text-danger">All fields are required</span>
+                <span class="text-danger">Tous les champs sont obligatoires</span>
                 <div class="form-group">
-                    <input type="submit" class="btn btn-primary btn-group-justified" id="student-save-profile" value="Save changes">
+                    <input type="submit" class="btn btn-primary btn-group-justified" id="student-save-profile" value="Enregistrer les modifications">
                 </div>
             </form>
           </div>

@@ -23,6 +23,7 @@
         //i need to init the errors
         $("#email").parent().attr("data-validate","Adresse email est obligatoire")
         $("#cin").parent().attr("data-validate","Cin est obligatoire")
+        $("#classe").parent().attr("data-validate","")
         // $("#pass").parent().attr("data-validate","Mot de passe est obligatoire")
         var check = true;
         var isValidCin = true;
@@ -65,14 +66,19 @@
 
             if($("#email").val() != ""){
                 if(checkEmail($("#email").val()) == "false"){
-                    showValidate($("#email"));
-                    $("#email").parent().attr("data-validate","Adresse email est deja existe")
-                    isValidEmail = false;
+                  showValidate($("#email"));
+                  $("#email").parent().attr("data-validate","Adresse email est deja existe")
+                  isValidEmail = false;
                 }
             }
 
 
-
+            //check if student dosent select a classe
+            if($("#classe").val() == "default"){
+              showValidate($("#classe"));
+              $("#classe").parent().attr("data-validate","Il faut choisir une classe")
+              check = false;
+            }
 
 
 

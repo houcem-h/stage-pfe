@@ -70,7 +70,7 @@ Route::get('/dashboard/teacherInvitations', "Admin\dashboardController@showTeach
 // upgrade + pdf
 Route::get('/dashboard/UpgradeUser', 'GetStat@upgrade_teacher');
 Route::get('/upgrade_by_id/{id}' , 'GetStat@upgrade_by_id');
-Route::get('/downgrade_by_id/{id}' , 'GetStat@downgrade_by_id');															
+Route::get('/downgrade_by_id/{id}' , 'GetStat@downgrade_by_id');
 Route::get('/dashboard/pdf/soutenances', 'GetStat@pdf_calendar');
 
 /** Ajax Delete User from Dashboard as admin */
@@ -102,7 +102,7 @@ Route::get('/dashboard/pdf/affectation/{date}', 'GetStat@testingPDF' );
 Route::get('/dashboard/pdf/invit/{date}', 'GetStat@invitation' );
 Route::get('/dashboard/pdf/affectation/{date}', 'GetStat@testingPDF' );
 Route::get('/dashboard/pdf/invit/{date}', 'GetStat@invitation' );
-Route::get('/pdf/reports_1/{year}/{egal}/{type}/{note}' , 'GetStat@get_defenses_with_note'); 
+Route::get('/pdf/reports_1/{year}/{egal}/{type}/{note}' , 'GetStat@get_defenses_with_note');
 
 
 /************* Interships **************/
@@ -182,6 +182,7 @@ Route::post("submit_newEmail","Students\studentsController@save_newEmail")->name
 Route::post("student/NotifyMe","Students\studentsController@Notifications");
 Route::post("student/acceptDemande","Students\studentsController@acceptDemande");
 Route::post("student/rejectDemande","Students\studentsController@rejectDemande");
+Route::post("student/changeSeenNotif","Students\studentsController@changeSeenNotif");
 });
 
 

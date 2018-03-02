@@ -28,14 +28,14 @@
     <![endif]-->
 </head>
 <body>
-<div class="navbar navbar-inverse set-radius-zero">
+<div class="navbar navbar-inverse set-radius-zero customNavDashboardStudent">
         <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>    
+                    </button>
                 </div>
             <div class="left-div">
                 <div class="user-settings-wrapper">
@@ -76,10 +76,10 @@
                                     <div>
                                         <a href="{{ route('edit_profile') }}" style="color:black;font-size:12px">Modifier profile</a>
                                     </div>
-                                    <div>   
+                                    <div>
                                         <a href="{{ route('edit_email') }}" style="color:black;font-size:12px">Modifer email</a>
                                     </div>
-                                    <div>   
+                                    <div>
                                         <a href="{{ route('edit_password') }}" style="color:black;font-size:12px">Modifer mot de passe</a>
                                     </div>
                                     <div>
@@ -96,7 +96,7 @@
                         </ul>
                     </div>
                 </div>
-    
+
             </div>
         </div>
 </section>

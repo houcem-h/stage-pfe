@@ -18,7 +18,7 @@ $(function(){
 
       if($("#nom_update").val() == ""){
         $("#Nom_up_err").addClass("has-error");
-        $("#nom_span_err").text("Required field");
+        $("#nom_span_err").text("Champs obligaoire");
         isValid = false;
       }
 
@@ -31,7 +31,7 @@ $(function(){
         $.post($("#saveUpGroup").attr("action"),{id_group: id_group,name:name,stream:stream},function(data){
           console.log(data);
           if(data == "true")
-              swal("Job done!", "Group has been updated with success", "success");
+              swal("Terminé!", "La classe a été modifié avec succes", "success");
 
         });
       }
@@ -47,12 +47,12 @@ $(function(){
         //check if doesn't exist in Registration table
         $.post("./check_group",{id_group: id_group},function(data){
             if(data == "done"){
-              swal("Job done!", "Group has been deleted with success", "success");
-              $(document).on("click",".swal-button--confirm",function(){
+              swal("Terminé!", "La classe a été supprimé avec succes", "success");
+              $(document).on("click",".swal2-confirm",function(){
                 location.reload();
               });
             }else if(data == "error"){
-              swal("Warning!", "You can't delete this group because it's associated with some students", "warning");
+              swal("Erreur !", "Tu ne peut pas supprimer cette classe, car elle contient des etudiants", "warning");
             }
         });
     });
@@ -71,7 +71,7 @@ $(function(){
         if(name.length == 5){
           stream = name.substr(0,name.length-2);
           $("#stream").val(stream.toUpperCase());
-          
+
         }
         //if user type TI..
         if(name.length == 4){
@@ -99,7 +99,7 @@ $(function(){
         }else{
           //ajax
           $.post("./add_group",{name:name,stream:$("#stream").val()},function(data){
-              swal("Job done!", "Group has been added with success", "success");
+              swal("Terminé!", "Classe a été ajouté avec succes", "success");
           });
         }
     });
@@ -116,7 +116,7 @@ $(function(){
             if(data.length != 0){
               $("#group_name").text(data[0]['name']);
               //create table
-              $("#show_student .modal-body").append("<table class='table'><thead><tr><th scope='col'>First name</th><th scope='col'>Last name</th><th scope='col'>Entered at</th></tr></thead><tbody></tbody></table>")
+              $("#modalGroup .modal-body").html("<table class='table'><thead><tr><th scope='col'>First name</th><th scope='col'>Last name</th><th scope='col'>Entered at</th></tr></thead><tbody></tbody></table>")
               while(i<data.length){
                 $(".table tbody").append("<tr><td>"+data[i]['firstname']+"</td><td>"+data[i]['lastname']+"</td><td>"+data[i]['created_at']+"</td></tr>");
                 i=i+1;
