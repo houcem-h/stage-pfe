@@ -79,7 +79,7 @@ $(function(){
     });
 
     $('#planningvalidated').click(function(e){
-            
+         //we must take care of the start date and and date also start time nd end time
             var test=true;
              $('.classesnames').each(function(index){
                  if ($(this).val().length == 0 && !isEmpty($(this).closest('.globalclassroombox ').find('.classroom'))){
@@ -90,6 +90,7 @@ $(function(){
 
             if(test==false)
                return false;
+            $("#maskforloadingspinner").show();
             var classroomsArray=[];
             var classrooms = $('.globalclassroombox').each(function(index){
             var obj = {};
@@ -112,9 +113,10 @@ $(function(){
             data: { classrooms: classroomsArray,duration: $('#pfe_def_dur').text()},
             dataType:'json',
             success:function(data){
-               window.location.href='/dashboard';
+              $("#maskforloadingspinner").hide();
+               window.location.href = '/planning/3?l=3';
             },error:function(xhr){
-
+               $("#maskforloadingspinner").hide();
             }
         });
     });

@@ -9,7 +9,7 @@ use Carbon\Carbon;
 class Internship extends Model
 {
     //j ai changé le nom des méthodes(nom_table_relation."Record") a cause de la confusion entre l attribut du modele qui va etre cree apres le chargement des donnees et le nom de la methode qui effectue la relation avec l'autre table
- public function companyFramer()
+    public function companyFramer()
     {
         return $this->belongsTo('App\Manager','company_framer');
     }
@@ -22,6 +22,10 @@ class Internship extends Model
     public function registration()
     {
         return $this->belongsTo('App\Registration','student');
+    }
+
+    public function registrationSecondStudent() {
+        return $this->belongsTo('App\Registration','student1');
     }
 
     public function defense()

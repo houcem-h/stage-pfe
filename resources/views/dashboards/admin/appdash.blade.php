@@ -10,7 +10,8 @@
 	<meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,AngularJS,Angular,Angular2,Angular 2,Angular4,Angular 4,jQuery,CSS,HTML,RWD,Dashboard,React,React.js,Vue,Vue.js">
 	<link rel="shortcut icon" href="{{ asset('dashboard_assets/img/favicon.png') }}">
 	<title>{{ config('app.name', 'Stage PFE') }}</title>
-	<script src="{{ asset('dashboard_assets/node_modules/jquery/dist/jquery.min.js') }}"></script>
+	<link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+	<script type="text/javascript" src="{{ asset('dashboard_assets/node_modules/jquery/dist/jquery.js') }}"></script>
 	<!-- Icons -->
 	<link href="{{ asset('dashboard_assets/node_modules/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('dashboard_assets/node_modules/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
@@ -28,6 +29,11 @@
   <link href="http://kouki.website/vendor/koukicons/koukicons.min.css" rel="stylesheet">
   <script src="https://cdn.quilljs.com/1.3.4/quill.js"></script>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script
+  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+  integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+  crossorigin="anonymous"></script>
+
 
   <style>
 	  * {
@@ -37,11 +43,27 @@
 		  padding: 10px 10px 10px 10px !important;
 		  font-size: 20px;
 	  }
+	  #maskforloadingspinner {
+		  display:none;
+		  position:fixed;
+		  top:0px;left:0px;
+		  margin:0px;
+		  height:100%
+		  ;width:100%;
+		  background-color:rgba(47, 54, 64,0.6);
+		  z-index:5000;
+	  }
+	  #loadingspinnerimg {
+         position:fixed;
+		 left:45%;
+		 top:40%;
+	  }
   </style>
 </head>
 
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+
 	<header class="app-header navbar">
 		<button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">
 			<span class="navbar-toggler-icon"></span>
@@ -122,7 +144,7 @@
 		<ul class="nav navbar-nav ml-auto  d-md-down-none" id="custom">
 			
 			<li class="nav-item dropdown">
-					<li><a class="btn btn-primary" style="pointer:cursor" href="{{route('teacherhome')}}"><i class="icon-briefcase"></i> Connecter En Tant Qu'Enseignant</a></li>
+					<li><a class="btn btn-primary" style="pointer:cursor" href="{{route('teacherhome')}}"><i class="icon-briefcase"></i> Connecter En Tant Que Enseignant</a></li>
 
 				<a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 					<img src="{{ asset('dashboard_assets/img/avatars/user.png') }}" class="img-avatar" alt="admin@stage.com">
@@ -143,14 +165,14 @@
 							</form>
 				</div>
 			</li>
-
-
-
 		</ul>
 		&nbsp;&nbsp;
-
-
 	</header>
+	{{-- oussama modifications --}}
+		<div id="maskforloadingspinner">
+		  <img id="loadingspinnerimg" src="{{asset('img/Spinner-1s-200px.svg')}}"/>
+		</div>
+	{{--end modifications--}}
 
 	<div class="app-body">
 			<div class="sidebar">
@@ -301,21 +323,11 @@
 							</ul>
 						</li>
 
-
-
-						
-
-
 						<li class="nav-item">
 								<a class="nav-link" href="{{ route('companies')}}">
 									<i class="kk kk-pos"></i> Sociétés
 								</a>
 						</li>
-
-
-						
-
-
 
 						<li class="nav-item">
 							<a class="nav-link" href="{{route('Mailer')}}">
@@ -356,8 +368,7 @@
 				</div>
 			</main>
 	
-	
-	
+
 		</div>
 
 	<footer class="app-footer">
@@ -384,15 +395,6 @@
 				  });
 			 },3000)
 	</script>
-
-
-
-
-
-
-
-
-
 
 
 	<!-- Bootstrap and necessary plugins -->

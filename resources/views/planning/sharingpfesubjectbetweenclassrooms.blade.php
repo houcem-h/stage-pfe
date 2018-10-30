@@ -126,7 +126,7 @@
            <br>
             <hr style="background-color:black;">
             @foreach($framers as $framer)
-             <p class="draggableframers" data="{{$framer['id']}}"><i style="padding:5px;font-size:20px;" class="fa fa-user-circle"></i><strong style="margin-bottom:20px;">{{$framer['firstname']}} {{$framer['lastname']}}</strong><br><small>(have {{App\Internship::where('type','pfe')->where('framer',$framer['id'])->whereYear('start_date',date('Y'))->count()}} internships)</small></p>
+             <p class="draggableframers" data="{{$framer['id']}}"><i style="padding:5px;font-size:20px;" class="fa fa-user-circle"></i><strong style="margin-bottom:20px;">{{$framer['firstname']}} {{$framer['lastname']}}</strong><br><small>(have {{App\User::getNbrInternshipsFramedAttribute($framer['id'])}} internships)</small></p>
             @endforeach
             <br>
           
@@ -134,7 +134,7 @@
               <h3 class="text-center">Teachers</h3><br>
               <hr style="background-color:black;">
              @foreach($notframers as $framer)
-               <p class="draggableframers" data="{{$framer['id']}}"><i  style="padding:5px;font-size:20px;" class="fa fa-user-circle"></i><strong style="margin-bottom:20px;" >{{$framer['firstname']}}</strong></p>
+               <p class="draggableframers" data="{{$framer['id']}}"><i  style="padding:5px;font-size:20px;" class="fa fa-user-circle"></i><strong style="margin-bottom:20px;" >{{$framer['firstname']}} {{$framer['lastname']}}</strong></p>
              @endforeach           
           </div>
         </div>
