@@ -1,17 +1,37 @@
 @extends('dashboards.admin.appdash')
 @section('dash_content')
+{{-- start bs deletion  bs modal--}}
+<div class="modal fade" id="modaldeletedefenses" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Alerte ! </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>voulez vous vraiment supprimer la planification des soutenances ?</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+        {!!Form::open(['method'=>"POST","action"=>["PlanningController@destroy",1]])!!}
+           {{Form::hidden('_method','DELETE')}}
+           {{Form::submit('Supprimer',['class'=>"btn btn-danger pull-right"])}}
+       {!!Form::close()!!}
+      </div>
+    </div>
+  </div>
+</div>
+ {{--end deletion  bs modal --}}
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       @if(count($planning) > 0)
-    
-      <h2 style="color:black;margin-bottom:70px;margin-top:50px;" class="text-center">Planning Init &amp; Perf</h2>
-       {!!Form::open(['method'=>"POST","action"=>["PlanningController@destroy",1]])!!}
-           {{Form::hidden('_method','DELETE')}}
-           {{Form::submit('Delete',['class'=>"btn btn-danger pull-right",'style'=>"margin-bottom:30px;"])}}
-      {!!Form::close()!!}
-      <a class="btn btn-primary" style="margin-bottom:50px;" href="{{URL::previous()}}">Go Back</a>
-
+        <h2 style="color:black;margin-bottom:70px;margin-top:50px;" class="text-center">Planning Init &amp; Perf</h2>
+        <button type="button" class="btn btn-danger pull-right" style="margin-bottom:50px;" data-toggle="modal" data-target="#modaldeletedefenses">Supprimer</button>
+        <a class="btn btn-primary" style="margin-bottom:50px;" href="{{URL::previous()}}">< Arriére</a>
+        <a class="btn btn-warning" style="margin-bottom:50px;" href="/defences/updating">Modifier</a>
         <table border="1" class="table table-bordred table-stripped table-condensed" style="background-color:white;">
             <thead>
                 <th><strong>Classroom</strong></th>
@@ -20,13 +40,13 @@
                 <th><strong>Jurie1/Jurie2</strong></th>
                 <th><strong>Student</strong></th>    
                 <th><strong>Company</strong></th>   
-                <th><strong>Branch</strong></th>    
+                <th><strong>Branch</strong></th>   
             </thead>
             @foreach($planning as $key=>$defense)
                <tr>
-                    <td  rowspan="{{count($defense)}}" style="vertical-align:middle;padding:0px 8px 0px 8px;">
+                    <td  rowspan="{{count($defense)}}" style="vertical-align:middle;padding:0px 12px 0px 12px;">
                       <h3 class="text-center">{{$key}}</h3>
-                      {{$defense[0]['date_d']}}
+                      <p class="text-success">{{Carbon\Carbon::parse($defense[0]['date_d'])->toFormattedDateString()}}</p>
                     </td>
                @foreach($defense as $def)
                     <td>
@@ -36,20 +56,19 @@
                         {{$def['end_time']}}
                     </td> 
                     <td>
-                        {{App\User::find($def['reporter'])->firstname}} {{App\User::find($def['reporter'])->lastname}}/ {{App\User::find($def['president'])->firstname}}/{{App\User::find($def['president'])->lastname}}
+                        {{$def->reporterRecord->firstname}} {{$def->reporterRecord->lastname}}/ {{$def->presidentRecord->firstname}} {{$def->presidentRecord->lastname}}
                     </td>
 
                    <td>
-                        {{App\Internship::find($def['internship'])->registration->studentRecord->firstname}} {{App\Internship::find($def['internship'])->registration->studentRecord->lastname}}
+                       {{$def->internships->registration->studentRecord->firstname}} {{$def->internships->registration->studentRecord->lastname }}
                    </td>
                    <td>
-                       {{App\Internship::find($def['internship'])->companyFramer->managerCompany->name}}
+                       {{$def->internships->companyFramer->managerCompany->name}}
                    </td>
                    <td>
-                       {{App\Internship::find($def['internship'])->registration->groupRecord->stream}}
-                   </td>
-
-                                                                                           
+                       {{$def->internships->registration->groupRecord->stream}}
+                   </td>  
+                                                                   
                 </tr> 
               @endforeach
             @endforeach

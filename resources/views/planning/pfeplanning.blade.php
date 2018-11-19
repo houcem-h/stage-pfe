@@ -18,19 +18,23 @@
                <div class="form-group">
                    {{Form::label('date_first_day','Date Day 1')}}
                    {{Form::date('date_first_day','',['class'=>'form-control','id'=>"date_first_day"])}}
+                   <small class="text-danger small-form-error"></small>
                </div>
                <div class="form-group">
                    {{Form::label('start_time_first_day','Start Time Day 1')}}
                    {{Form::time('start_time_first_day','',['class'=>'form-control','id'=>'start_time_first_day'])}}
+                    <small class="text-danger small-form-error"></small>              
                </div>
                <div class="form-group">
                    {{Form::label('end_time_first_day','End Time Day 1')}}
                    {{Form::time('end_time_first_day','',['class'=>'form-control','id'=>'end_time_first_day'])}}
+                   <small class="text-danger small-form-error"></small> 
                </div>
             </div>
             <div class="form-group">
                  {{Form::label('pfe_duration','PFE Defense duration')}}
-                 {{Form::number('pfe_duration','',['class'=>'form-control','id'=>'pfe_duration'])}}
+                 {{Form::number('pfe_duration','',['min'=>"10",'class'=>'form-control','id'=>'pfe_duration'])}}
+                 <small class="text-danger small-form-error">entrer une durée</small> 
             </div>
             {{Form::submit('Validate',['class'=>'btn btn-default'])}}
             {!!Form::close()!!}

@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Registration;
+use  App\Http\Controllers\PlanningControllerCore as PlanningCore;
 use DB;
 use Auth;
 use App\Traits\CommonTasks;
@@ -58,6 +59,17 @@ class User extends Authenticatable
         return $this->hasMany('App\FramingRequest','teacher');
     }
 
+    public function framerOf(){
+        return $this->hasMany("App\Internship","framer");
+    }
+
+    public static function getNbrInternshipsFramedAttribute($framer) {
+        $session = PlanningCore::getFormattedSession();
+        return Internship::whereHas('registration',function($query)use($session){
+          $query->where('session',$session);
+        })->where('type','pfe')->where('state','accepted')->where('framer','=',$framer)->whereYear('start_date',date('Y'))->count();
+    }
+
 
     public static function studentLevel($ch){
         for($i=0;$i<strlen($ch);$i++){
@@ -84,6 +96,7 @@ class User extends Authenticatable
         }
         return $legal;
     }
+
 
     //Methode(getter) qui retourne la route du dashboard de l'utilisatuer connecté
     public function getDashboardAttribute(){

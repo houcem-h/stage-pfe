@@ -149,6 +149,5 @@
 </div>
  <script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
  <script type="text/javascript" src="{{asset('js/ajaxobject.js')}}"></script>
- 
  <script type="text/javascript" src="{{ asset('js/ajaxstuffinternshipdemand.js') }}"></script>
 @endsection

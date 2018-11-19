@@ -1,6 +1,6 @@
 @extends('dashboards.admin.appdash')
 @section('dash_content')
-      <div class="col-md-12">
+ <div class="col-md-12 col-lg-12">
          @if(Request::instance()->get('l')==1)
            <h2 class="text-center" style="margin:50px 0px 55px 0px;color:black;">Planning Init & Perf  Internships</h2>
          @else
@@ -16,44 +16,45 @@
            
              <div class="panel-body">
                 {!!Form::open(["action"=>"PlanningController@restrictions","method"=>"POST",'id'=>'formplanninginfo'])!!}
-
                    <div class="form-group" id="formgroupforfirstday">
                         {{Form::label('startdate','Start Date')}}
                         {{Form::date('startdate','',['class'=>'form-control','id'=>"startdate"])}}
+                        <small class="text-danger small-form-error"></small> 
                     </div>
-
                     <div class="form-group" id="formgroupforsecondday">
                         {{Form::label('startdate2','Date Second Day')}}
                         {{Form::date('startdate2','',['id'=>"startdate2",'class'=>"form-control"])}}
+                        <small class="text-danger small-form-error"></small> 
                     </div>
-
                     <div class="form-group" >
                         {{Form::label('starttime','Start Time first day')}}
                         {{Form::time('starttime','',['class'=>'form-control','id'=>"starttime"])}}
+                        <small class="text-danger small-form-error"></small> 
                     </div>
-
                     <div class="form-group" id="divendtime">
                         {{Form::label('endtime','End Time first Day')}}
                         {{Form::time('endtime','',['class'=>'form-control','id'=>"endtime"])}}
+                        <small class="text-danger small-form-error"></small> 
                     </div>  
-
                     <div class="form-group">
                         {{Form::label('starttimesecondday','start time second day')}}
                         {{Form::time('starttimesecondday','',['class'=>"form-control",'id'=>"starttimesecondday"])}}
+                        <small class="text-danger small-form-error"></small> 
                     </div>
-
                     <div class='form-group'>
                         {{Form::label('endtimesecondday','end time second day')}}
                         {{Form::time('endtimesecondday','',['class'=>"form-control",'id'=>"endtimesecondday"])}}
+                        <small class="text-danger small-form-error"></small> 
                     </div>
-                
                     <div class="form-group">
                         {{Form::label('defenceduration','Defence Init Duration(in minutes)')}}
-                        {{Form::number('defenceduration','',['class'=>'form-control','id'=>"defenceduration"])}}
+                        {{Form::number('defenceduration','',['min'=>"10",'class'=>'form-control','id'=>"defenceduration"])}}
+                        <small class="text-danger small-form-error"></small> 
                     </div>  
                     <div class="form-group">
                         {{Form::label('defenceperfduration','Defence Perf Duration(in minutes)')}}
-                        {{Form::number('defenceperfduration','',['class'=>'form-control','id'=>"defenceperfduration"])}}
+                        {{Form::number('defenceperfduration','',['min'=>"10",'class'=>'form-control','id'=>"defenceperfduration"])}}
+                        <small class="text-danger small-form-error"></small> 
                     </div>          
                     {{Form::hidden('l',Request::instance()->get('l'))}}                                 
                     {{Form::submit('Validate',['class'=>"btn btn-default"])}}
@@ -64,12 +65,15 @@
              </div>
          </div>
          @else
+         {{-- here we must update UI she's very bad--}}
+         <div  class="row">
+            <div id="donebutton" class="col-lg-offset-10 col-lg-2 pull-right">
+                <h4 class="text-center">Validate Planning</h4>
+            </div>
+          </div>
          <div class="row">    
-               <div id="donebutton" class="col-md-2 pull-right" style="margin:10px 30px 30px 0px;">
-                  <h1 class="text-center">Validate Planning</h1>
-              </div>
-        </div>
-              <div class="panel panel-default col-md-3">
+         
+              <div class="panel panel-default col-lg-3">
                  <div class="panel-heading">
                      <h3 class="text-center">Choose Classrooms First Day</h3>
                  </div>
@@ -87,7 +91,7 @@
                 </div>
               </div>
 
-           <div class="panel panel-default col-md-3">
+           <div class="panel panel-default col-lg-3">
                  <div class="panel-heading">
                      <h3 class="text-center">Choose Classrooms Second Day</h3>
                  </div>
@@ -105,7 +109,7 @@
                 </div>
               </div>
 
-              <div class="panel panel-default col-md-3" >
+              <div class="panel panel-default col-lg-3" >
                  <div class="panel-heading">
                      <h3 class="text-center">First Day Juries</h3>
                  </div>             
@@ -133,24 +137,26 @@
                             @foreach($juries->all() as $jurie)
                                <div class="form-group" id="seconddaysjuiesdiv">
                                   <input type="checkbox" name="jurie_second_day{{$jurie->id}}" id="jurie_second_day{{$jurie->id}}" class="checkedjuries" value="{{$jurie->id}}" style="margin-right:15px;"><label for="jurie{{$jurie->id}}"><strong>{{$jurie->firstname}} {{$jurie->lastname}} : </strong></label>
-                                </div>    
+                               </div>    
                             @endforeach
                      </form>
                  </div>
               </div>
-                     <p style="visibility:hidden;" id="levelintern">{{$level}}</p>
-                     <p style="visibility:hidden;" id="nbrjfd">{{$nbr_juries_first_day}}</p>
-                     <p style="visibility:hidden;" id="nbrjsd">{{$nbr_juries_second_day}}</p>
-                     <p style="visibility:hidden;" id="start_date_first_day">{{$start_date_first_day}}</p>
-                     <p style="visibility:hidden;" id="def_start_time_first_day">{{$start_time_first_day}}</p>
-                     <p style="visibility:hidden;" id="def_legal_duration_first_day">{{$legal_duration_first_day}}</p>
-                     <p style="visibility:hidden;" id="init_duration">{{$init_duration}}</p>
+           
+                <p style="visibility:hidden;" id="levelintern">{{$level}}</p>
+                <p style="visibility:hidden;" id="nbrjfd">{{$nbr_juries_first_day}}</p>
+                <p style="visibility:hidden;" id="nbrjsd">{{$nbr_juries_second_day}}</p>
+                <p style="visibility:hidden;" id="start_date_first_day">{{$start_date_first_day}}</p>
+                <p style="visibility:hidden;" id="def_start_time_first_day">{{$start_time_first_day}}</p>
+                <p style="visibility:hidden;" id="def_legal_duration_first_day">{{$legal_duration_first_day}}</p>
+                <p style="visibility:hidden;" id="init_duration">{{$init_duration}}</p>
 
-                     <p style="visibility:hidden;" id="start_date_second_day">{{$start_date_second_day}}</p>
-                     <p style="visibility:hidden;" id="def_start_time_second_day">{{$start_time_second_day}}</p>
-                     <p style="visibility:hidden;" id="def_legal_duration_second_day">{{$legal_duration_second_day}}</p>
-                     <p style="visibility:hidden;" id="perf_duration">{{$perf_duration}}</p>
-         @endif
+                <p style="visibility:hidden;" id="start_date_second_day">{{$start_date_second_day}}</p>
+                <p style="visibility:hidden;" id="def_start_time_second_day">{{$start_time_second_day}}</p>
+                <p style="visibility:hidden;" id="def_legal_duration_second_day">{{$legal_duration_second_day}}</p>
+                <p style="visibility:hidden;" id="perf_duration">{{$perf_duration}}</p>
+              
+        @endif
     @else
         <div class="jumbotron col-md-6 col-md-offset-3">
             <div class="row">

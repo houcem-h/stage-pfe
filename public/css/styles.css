@@ -9,10 +9,9 @@
     background-color:white;
     padding:50px 30px 30px 30px;
 }
+
 #donebutton{
-    height: 130px;
-    width: 223px;
-    margin-left: 50px;
+    
     color:black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border:solid 1px lightgrey;
@@ -47,7 +46,18 @@
 }
 
 .draggableframers:hover{
-    cursor: move;
+        cursor: move;
+        /* fallback if grab cursor is unsupported */
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+}
+td:hover {
+  cursor: move;
+ /* fallback if grab cursor is unsupported */
+ cursor: grab;
+ cursor: -moz-grab;
+ cursor: -webkit-grab;
 }
 .globalclassroombox {
 
@@ -89,6 +99,9 @@ text-align: center;
     -moz-animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
+}
+.small-form-error {
+    display:none;
 }
 @keyframes loadingbar{
     from{

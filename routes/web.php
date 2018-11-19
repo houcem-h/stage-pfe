@@ -234,13 +234,12 @@ Route::post("FinalResetPassword","customAuth\customAuthReset@StoreNewPassword");
 
 
 // ***************************  Routes Oussama  **********************************
-  Route::resource('/company','CompaniesController');
+    Route::resource('/company','CompaniesController');
     Route::resource('/companiesmanagers','CompaniesManagersController');
     Route::resource('/specifications','SpecificationsController');
     Route::resource('/planning','PlanningController');
     Route::post('/planninggetrestrictions','PlanningController@restrictions');
     Route::group(['middleware'=>['auth']],function(){
-
         //Pour oussema, route dashboard, fi route mte3i  ;)
         Route::get('/studentdashboard','PagesController@studentDashboard');
          Route::get('/teacherhome','DashboardsController@index')->name("teacherhome");
@@ -260,6 +259,12 @@ Route::post("FinalResetPassword","customAuth\customAuthReset@StoreNewPassword");
     Route::get('/planningpfe',function(){
         return view('planning.pfeplanning');
     })->middleware('AdminAccessRights');
+    Route::get('/defences/updating','PlanningController@getEditPlanningsView');
+    Route::get('/defences/test','PlanningController@test');
+    Route::post('/defenses/updateorder','PlanningController@editDefensesOrder');
+    Route::post('/defenses/pfe/updateorder','PlanningController@editPfeDefensesOrder');
+    Route::get('/defenses/pfe/updating','PlanningController@pfeEditView');
+    //->middleware('auth')
 /************************************************ Hazem's Route ************************************************/
 
 
